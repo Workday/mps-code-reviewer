@@ -1,6 +1,8 @@
 # Ignore Gradle files
 .gradle/
 
+.DS_Store
+
 .idea/
 *.iml
 workspace.xml
