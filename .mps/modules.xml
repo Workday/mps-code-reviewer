@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/com.workday.mps.review.lang/com.workday.mps.review.lang.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.workday.mps.flux/com.workday.mps.flux.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.workday.mps.review.ideaPlugin/com.workday.mps.review.ideaPlugin.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.workday.mps.review/com.workday.mps.review.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/dependencies/dependencies.msd" folder="" />
+    </projectModules>
+  </component>
+</project>

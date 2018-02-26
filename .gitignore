@@ -1,0 +1,38 @@
+# Ignore Gradle files
+.gradle/
+
+.idea/
+*.iml
+workspace.xml
+junitvmwatcher*.properties
+build.properties
+artifacts/*
+binaries/*
+*.yar
+
+.DS_Store
+
+# generated java classes and java source files
+#   manually add any custom artifacts that can't be generated from the models
+#   http://confluence.jetbrains.com/display/MPSD25/HowTo+--+MPS+and+Git
+classes_gen
+source_gen
+source_gen.caches
+
+# generated test code and test results
+test_gen
+test_gen.caches
+TEST-*.xml
+junit*.properties
+TESTS-*.xml
+test/html
+tmp/
+
+# Build directories
+/dist/
+/test/
+/build/
+
+# ignore solution library files - these are acquired using gradle script
+dependencies
+solutions/*/lib
