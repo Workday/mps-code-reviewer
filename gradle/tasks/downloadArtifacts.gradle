@@ -15,8 +15,8 @@ configurations {
 }
 
 dependencies {
-  mpsArtifacts "org.iets3:opensource:maintenance-mps20171.0.1.1749.g8188a0e"
-  mps "com.jetbrains:mps:2017.1.2@zip"
+  mpsArtifacts "org.iets3:opensource:0.1.2666.be6cfd9"
+  mps "com.jetbrains:mps:2017.3.5@zip"
   deps "com.google.code.gson:gson:2.8.0"
 }
 
