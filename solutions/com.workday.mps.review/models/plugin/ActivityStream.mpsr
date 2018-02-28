@@ -406,6 +406,22 @@
                                 </node>
                               </node>
                             </node>
+                            <node concept="3cpWs8" id="3REobdwU1ox" role="3cqZAp">
+                              <node concept="3cpWsn" id="3REobdwU1oy" role="3cpWs9">
+                                <property role="TrG5h" value="activity" />
+                                <property role="3TUv4t" value="true" />
+                                <node concept="3uibUv" id="3REobdwU1ow" role="1tU5fm">
+                                  <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+                                </node>
+                                <node concept="2YIFZM" id="3REobdwU1oz" role="33vP2m">
+                                  <ref role="37wK5l" node="3REobdwM6yT" resolve="addPullRequestComment" />
+                                  <ref role="1Pybhc" node="2DOSxD2O3Px" resolve="ReviewToolUtil" />
+                                  <node concept="37vLTw" id="3REobdwU1o$" role="37wK5m">
+                                    <ref role="3cqZAo" node="3REobdwMt07" resolve="comment" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
                             <node concept="3clFbF" id="3c3vDUl7f6d" role="3cqZAp">
                               <node concept="2OqwBi" id="3c3vDUl7fp2" role="3clFbG">
                                 <node concept="2YIFZM" id="3c3vDUl7fkQ" role="2Oq$k0">
@@ -414,13 +430,8 @@
                                 </node>
                                 <node concept="liA8E" id="3c3vDUl7fwl" role="2OqNvi">
                                   <ref role="37wK5l" to="ee8f:3c3vDUkV7T7" resolve="dispatch" />
-                                  <node concept="2ShNRf" id="3c3vDUl7fIX" role="37wK5m">
-                                    <node concept="1pGfFk" id="3c3vDUl7grq" role="2ShVmc">
-                                      <ref role="37wK5l" node="3c3vDUl4FlV" resolve="AddComment" />
-                                      <node concept="37vLTw" id="3c3vDUl7tur" role="37wK5m">
-                                        <ref role="3cqZAo" node="3REobdwMt07" resolve="comment" />
-                                      </node>
-                                    </node>
+                                  <node concept="37vLTw" id="3REobdwU47k" role="37wK5m">
+                                    <ref role="3cqZAo" node="3REobdwU1oy" resolve="activity" />
                                   </node>
                                 </node>
                               </node>
