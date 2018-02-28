@@ -99,10 +99,12 @@
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
+      <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
+      <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -284,12 +286,20 @@
               </node>
             </node>
           </node>
-          <node concept="2ZW3vV" id="A8HCyhXNL_" role="3clFbw">
-            <node concept="3uibUv" id="A8HCyhXNLA" role="2ZW6by">
-              <ref role="3uigEE" to="z1c3:~MPSProject" resolve="MPSProject" />
+          <node concept="1Wc70l" id="3REobdwR0og" role="3clFbw">
+            <node concept="3y3z36" id="3REobdwR0xp" role="3uHU7B">
+              <node concept="10Nm6u" id="3REobdwR0xE" role="3uHU7w" />
+              <node concept="37vLTw" id="3REobdwR0pZ" role="3uHU7B">
+                <ref role="3cqZAo" node="A8HCyhX_06" resolve="project" />
+              </node>
             </node>
-            <node concept="37vLTw" id="A8HCyhXNLB" role="2ZW6bz">
-              <ref role="3cqZAo" node="A8HCyhX_06" resolve="project" />
+            <node concept="2ZW3vV" id="A8HCyhXNL_" role="3uHU7w">
+              <node concept="3uibUv" id="A8HCyhXNLA" role="2ZW6by">
+                <ref role="3uigEE" to="z1c3:~MPSProject" resolve="MPSProject" />
+              </node>
+              <node concept="37vLTw" id="A8HCyhXNLB" role="2ZW6bz">
+                <ref role="3cqZAo" node="A8HCyhX_06" resolve="project" />
+              </node>
             </node>
           </node>
         </node>
