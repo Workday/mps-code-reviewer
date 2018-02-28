@@ -306,26 +306,27 @@
                     <property role="2bfB8j" value="true" />
                     <ref role="1Y3XeK" to="hyam:~KeyAdapter" resolve="KeyAdapter" />
                     <ref role="37wK5l" to="hyam:~KeyAdapter.&lt;init&gt;()" resolve="KeyAdapter" />
-                    <node concept="3Tm1VV" id="3c3vDUl71B5" role="1B3o_S" />
-                    <node concept="3clFb_" id="3c3vDUl71B6" role="jymVt">
+                    <node concept="2tJIrI" id="3QNL$G6UPPA" role="jymVt" />
+                    <node concept="3clFb_" id="3QNL$G6UQ2O" role="jymVt">
                       <property role="1EzhhJ" value="false" />
-                      <property role="TrG5h" value="keyTyped" />
+                      <property role="TrG5h" value="keyPressed" />
                       <property role="DiZV1" value="false" />
                       <property role="od$2w" value="false" />
-                      <node concept="3Tm1VV" id="3c3vDUl71B7" role="1B3o_S" />
-                      <node concept="3cqZAl" id="3c3vDUl71B9" role="3clF45" />
-                      <node concept="37vLTG" id="3c3vDUl71Ba" role="3clF46">
-                        <property role="TrG5h" value="p0" />
-                        <node concept="3uibUv" id="3c3vDUl71Bb" role="1tU5fm">
+                      <node concept="3Tm1VV" id="3QNL$G6UQ2P" role="1B3o_S" />
+                      <node concept="3cqZAl" id="3QNL$G6UQ2R" role="3clF45" />
+                      <node concept="37vLTG" id="3QNL$G6UQ2S" role="3clF46">
+                        <property role="TrG5h" value="event" />
+                        <property role="3TUv4t" value="true" />
+                        <node concept="3uibUv" id="3QNL$G6UQ2T" role="1tU5fm">
                           <ref role="3uigEE" to="hyam:~KeyEvent" resolve="KeyEvent" />
                         </node>
                       </node>
-                      <node concept="3clFbS" id="3c3vDUl71Bc" role="3clF47">
+                      <node concept="3clFbS" id="3QNL$G6UQ2V" role="3clF47">
                         <node concept="3clFbJ" id="3c3vDUl74kI" role="3cqZAp">
                           <node concept="1Wc70l" id="3c3vDUlb0hV" role="3clFbw">
                             <node concept="2OqwBi" id="3c3vDUlb56l" role="3uHU7w">
-                              <node concept="37vLTw" id="3c3vDUlb56m" role="2Oq$k0">
-                                <ref role="3cqZAo" node="3c3vDUl71Ba" resolve="p0" />
+                              <node concept="37vLTw" id="3QNL$G6UUVp" role="2Oq$k0">
+                                <ref role="3cqZAo" node="3QNL$G6UQ2S" resolve="event" />
                               </node>
                               <node concept="liA8E" id="3c3vDUlb56n" role="2OqNvi">
                                 <ref role="37wK5l" to="hyam:~InputEvent.isShiftDown():boolean" resolve="isShiftDown" />
@@ -333,8 +334,8 @@
                             </node>
                             <node concept="3clFbC" id="3c3vDUl8ysx" role="3uHU7B">
                               <node concept="2OqwBi" id="3c3vDUl8uAq" role="3uHU7B">
-                                <node concept="37vLTw" id="3c3vDUl74yW" role="2Oq$k0">
-                                  <ref role="3cqZAo" node="3c3vDUl71Ba" resolve="p0" />
+                                <node concept="37vLTw" id="3QNL$G6UUHg" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="3QNL$G6UQ2S" resolve="event" />
                                 </node>
                                 <node concept="liA8E" id="3c3vDUl8uYt" role="2OqNvi">
                                   <ref role="37wK5l" to="hyam:~KeyEvent.getKeyCode():int" resolve="getKeyCode" />
@@ -350,6 +351,7 @@
                             <node concept="3cpWs8" id="3c3vDUl7gQW" role="3cqZAp">
                               <node concept="3cpWsn" id="3c3vDUl7gQX" role="3cpWs9">
                                 <property role="TrG5h" value="comment" />
+                                <property role="3TUv4t" value="true" />
                                 <node concept="3uibUv" id="3c3vDUl7gQY" role="1tU5fm">
                                   <ref role="3uigEE" node="3c3vDUkwv2A" resolve="ReviewComment" />
                                 </node>
@@ -435,8 +437,8 @@
                             </node>
                             <node concept="3clFbF" id="3c3vDUl8dfE" role="3cqZAp">
                               <node concept="2OqwBi" id="3c3vDUl8ebS" role="3clFbG">
-                                <node concept="37vLTw" id="3c3vDUl8dfC" role="2Oq$k0">
-                                  <ref role="3cqZAo" node="3c3vDUl71Ba" resolve="p0" />
+                                <node concept="37vLTw" id="3QNL$G6UV9y" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="3QNL$G6UQ2S" resolve="event" />
                                 </node>
                                 <node concept="liA8E" id="3c3vDUl8f1S" role="2OqNvi">
                                   <ref role="37wK5l" to="hyam:~InputEvent.consume():void" resolve="consume" />
@@ -446,7 +448,12 @@
                           </node>
                         </node>
                       </node>
+                      <node concept="2AHcQZ" id="3QNL$G6UQ2W" role="2AJF6D">
+                        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                      </node>
                     </node>
+                    <node concept="2tJIrI" id="3QNL$G6UVKA" role="jymVt" />
+                    <node concept="3Tm1VV" id="3c3vDUl71B5" role="1B3o_S" />
                   </node>
                 </node>
               </node>
