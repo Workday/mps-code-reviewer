@@ -117,6 +117,7 @@
       <node concept="3Tm1VV" id="3c3vDUl1o5v" role="1B3o_S" />
       <node concept="37vLTG" id="3c3vDUl1Pab" role="3clF46">
         <property role="TrG5h" value="nodePointer" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="1ctBHPsdW1Z" role="1tU5fm">
           <ref role="3uigEE" to="mhbf:~SNodeReference" resolve="SNodeReference" />
         </node>
