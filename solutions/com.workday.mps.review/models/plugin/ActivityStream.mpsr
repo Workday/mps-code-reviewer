@@ -721,6 +721,14 @@
                                   <node concept="37vLTw" id="3REobdwU1o$" role="37wK5m">
                                     <ref role="3cqZAo" node="3REobdwMt07" resolve="comment" />
                                   </node>
+                                  <node concept="2OqwBi" id="6mNPp2_Pi9N" role="37wK5m">
+                                    <node concept="37vLTw" id="6mNPp2_PhON" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="3c3vDUkzWxV" resolve="factory" />
+                                    </node>
+                                    <node concept="liA8E" id="6mNPp2_Piqj" role="2OqNvi">
+                                      <ref role="37wK5l" node="6mNPp2_OOTj" resolve="getRepository" />
+                                    </node>
+                                  </node>
                                 </node>
                               </node>
                             </node>
