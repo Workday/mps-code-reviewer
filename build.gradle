@@ -1,34 +1,29 @@
-import org.ajoberstar.grgit.Grgit
-import org.apache.tools.ant.util.TeeOutputStream
+// Build script for MpsCodeReview
 
 buildscript {
   repositories {
-    maven {
-      url "https://artifactory.workday.com/artifactory/workday-experimental"
-      credentials {
-        username = "${artifactory_user}"
-        password = "${artifactory_password}"
-      }
-    }
-    maven {
-      url "https://artifactory.workday.com/artifactory/vir${artifactory_codeline}"
-      credentials {
-        username = "${artifactory_user}"
-        password = "${artifactory_password}"
-      }
-    }
+    mavenCentral()
   }
 
   dependencies {
-    classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.4.0'
-    classpath 'org.ajoberstar:gradle-git:1.4.0'
+    // classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.4.0'
+//     classpath 'org.ajoberstar:gradle-git:1.4.0'
     classpath 'org.apache.ant:ant-junit:1.9.7'
   }
 }
 
+plugins {
+    id "de.undercouch.download" version "3.4.2"
+}
+
+ext.mpsMajor = "2017.3"
+ext.mpsBuild = "2017.3.5"
+
 apply plugin: 'base'
 apply from: file('gradle/tasks/downloadArtifacts.gradle')
 // apply from: file('gradle/tasks/publishIdeArtifacts.gradle')
+
+
 
 configurations {
     antJUnit
@@ -60,17 +55,12 @@ clean.doFirst {
     // TODO: better integrate cleaning with gradle task or ant target outputs
 }
 
-// Define the versions of our dependencies. Values extracted from yp's latest ivy descriptor in Artifactory
-// See https://artifactory.workday.com/artifactory/workday-trunk/com/workday/yp/2.2.0/ivy.xml
-def com_workday_util_consume = '[4.0,5.0['
-def commons_lang_version = '2.5'
-def trove4j_version = '3.0.2'
 
 def ANT_FAILURE = "BUILD FAILED"
 
 task syncDependencies(group: "MPS Setup",
-                        description: "Moves dependencies for com.workday.yp to the solution folder",
-                        type: Sync) {
+                      description: "Moves dependencies for com.workday.yp to the solution folder",
+                       type: Sync) {
   def dependencyFolder = "${rootDir}/solutions/dependencies/lib"
 
   from configurations.deps
@@ -97,7 +87,7 @@ task syncDependencies(group: "MPS Setup",
 
 task setup(group: "MPS Setup",
            description: "Initializes the project for development",
-           dependsOn: [syncDependencies, resolveAllArtifacts])
+           dependsOn: [syncDependencies, resolveMpsArtifacts])
 
 // task generateBuildScripts(description: "Generates all Ant build scripts",
 //                           group: "MPS Build",
@@ -207,23 +197,23 @@ task setup(group: "MPS Setup",
 //              dependsOn: [rebuildPlugin, runTests, distribution]) {
 // }
 
-void execAndFailIfTextFound(String textToFind, Object... args) {
-  def taskOutput = new ByteArrayOutputStream()
-  def teeOutput = new TeeOutputStream(taskOutput, System.out)
+// void execAndFailIfTextFound(String textToFind, Object... args) {
+//   def taskOutput = new ByteArrayOutputStream()
+//   def teeOutput = new TeeOutputStream(taskOutput, System.out)
 
-  exec {
-    ignoreExitValue = true
-    commandLine args
-    standardOutput = teeOutput
-    errorOutput = teeOutput
-  }
+//   exec {
+//     ignoreExitValue = true
+//     commandLine args
+//     standardOutput = teeOutput
+//     errorOutput = teeOutput
+//   }
 
-  String testOutput = taskOutput.toString()
+//   String testOutput = taskOutput.toString()
 
-  if (testOutput.contains(textToFind)) {
-      throw new GradleException("ANT build failure")
-  }
-}
+//   if (testOutput.contains(textToFind)) {
+//       throw new GradleException("ANT build failure")
+//   }
+// }
 
 // set the branch name and head commit for use when publishing artifacts
 // ext {

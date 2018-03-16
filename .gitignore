@@ -36,5 +36,5 @@ tmp/
 /build/
 
 # ignore solution library files - these are acquired using gradle script
-dependencies
+dependencies.txt
 solutions/*/lib
