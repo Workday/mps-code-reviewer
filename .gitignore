@@ -1,18 +1,17 @@
+.DS_Store
+
 # Ignore Gradle files
 .gradle/
 
-.DS_Store
-
+# Ignore some MPS-specific files
 .idea/
 *.iml
 workspace.xml
+
+
 junitvmwatcher*.properties
 build.properties
-artifacts/*
-binaries/*
-*.yar
 
-.DS_Store
 
 # generated java classes and java source files
 #   manually add any custom artifacts that can't be generated from the models
@@ -21,20 +20,16 @@ classes_gen
 source_gen
 source_gen.caches
 
-# generated test code and test results
-test_gen
-test_gen.caches
-TEST-*.xml
-junit*.properties
-TESTS-*.xml
-test/html
-tmp/
-
 # Build directories
 /dist/
 /test/
 /build/
 
-# ignore solution library files - these are acquired using gradle script
-dependencies.txt
-solutions/*/lib
+# ignore downloaded artifacts
+/artifacts/
+
+# ignore plugins
+/plugins/
+
+# ignore dependency libraries
+/lib/

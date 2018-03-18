@@ -7,7 +7,7 @@
           <value>
             <Library>
               <option name="name" value="mbeddr" />
-              <option name="path" value="$PROJECT_DIR$/artifacts/com.mbeddr.platform" />
+              <option name="path" value="$PROJECT_DIR$/plugins/com.mbeddr.platform" />
             </Library>
           </value>
         </entry>

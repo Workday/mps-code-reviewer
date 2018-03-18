@@ -1,0 +1,57 @@
+// repositories {
+//   maven {
+//     url "https://projects.itemis.de/nexus/content/groups/OS/"
+//   }
+// }
+
+// configurations {
+//   mbeddr
+// }
+
+// dependencies {
+//   mbeddr "com.mbeddr:platform:1.0.+"
+// }
+
+// def artifactsDir = new File("artifacts")
+
+{ ->
+  def downloadFile = mps.downloadDir + "/MPS-${mps.build}.zip"
+  def eapSuffix = mps.build.contains("EAP") ? " EAP" : ""
+  def unpackedDir = mps.downloadDir + "/MPS ${mps.major}${eapSuffix}"
+
+  task downloadMps(type: Download) {
+    doFirst {
+      def downloadDir = file(mps.downloadDir)
+      if (!downloadDir.exists()) {
+          ant.mkdir(dir: downloadDir)
+      }
+    }
+    src "http://download.jetbrains.com/mps/${mps.major}/MPS-${mps.build}.zip"
+    dest downloadFile
+    overwrite false
+  }
+
+  task unzipMps(type: Copy, dependsOn: downloadMps) {
+    from zipTree(downloadFile)
+    into mps.downloadDir
+    doLast {
+      println "MPS extracted to: " + unpackedDir
+    }
+  }
+
+  task getMps(dependsOn: unzipMps)
+}()
+
+
+// def artifactsDir = file('artifacts')
+// task unzipMbeddr(type: Copy) {
+//   from configurations.mbeddr.resolve().collect { zipTree(it) }
+//   into artifactsDir
+// }
+
+// task getMbeddr(dependsOn: unzipMbeddr)
+
+
+
+
+// task getArtifacts(dependsOn: [getMps, getMbeddr])
