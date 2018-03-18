@@ -1,44 +1,79 @@
-import org.ajoberstar.grgit.Grgit
-import org.apache.tools.ant.util.TeeOutputStream
+// Build script for MpsCodeReview
+
+/*
+Things to add to an MPS Gradle plugin:
+
+- Library dependencies (i.e. mbeddr is used as a library for this project, have gradle download & configure the MPS project for that)
+- MPS ANT script execution (clean, generate, build, test, others?)
+- Solution dependency management?
+- Project structure? (Solutions, etc)
+*/
 
 buildscript {
   repositories {
-    maven {
-      url "https://artifactory.workday.com/artifactory/workday-experimental"
-      credentials {
-        username = "${artifactory_user}"
-        password = "${artifactory_password}"
-      }
-    }
-    maven {
-      url "https://artifactory.workday.com/artifactory/vir${artifactory_codeline}"
-      credentials {
-        username = "${artifactory_user}"
-        password = "${artifactory_password}"
-      }
-    }
+    mavenCentral()
   }
 
   dependencies {
-    classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.4.0'
-    classpath 'org.ajoberstar:gradle-git:1.4.0'
     classpath 'org.apache.ant:ant-junit:1.9.7'
   }
 }
 
+plugins {
+  id "base"
+  id "de.undercouch.download" version "3.4.2"
+}
+
+ext {
+  // Define MPS download properties
+  mps = new Expando(
+    major: "2017.3",
+    build: "2017.3.5",
+    downloadDir: "artifacts/MPS"
+  )
+}
+
 apply plugin: 'base'
-apply from: file('gradle/tasks/downloadArtifacts.gradle')
-// apply from: file('gradle/tasks/publishIdeArtifacts.gradle')
+apply from: file('gradle/tasks/mpsArtifact.gradle')
+
+repositories {
+  maven {
+    mavenCentral()
+    url "https://projects.itemis.de/nexus/content/groups/OS/"
+  }
+}
 
 configurations {
-    antJUnit
+  mpsPlugins
+  compile
 }
 
 dependencies {
-    // this is needed to support junit HTML report generation (optional
-    // ant feature not bundled with gradle ant)
-    antJUnit 'org.apache.ant:ant-junit:1.9.7'
+  // Plugin dependencies for project
+  mpsPlugins "com.mbeddr:platform:1.0.+"
+
+  // Compile-time dependencies
+  compile "com.google.code.gson:gson:2.8.0"
+  compile "org.apache.httpcomponents:httpcore:4.4.9"
+  compile "org.apache.httpcomponents:httpclient:4.5.5"
 }
+
+task unzipPlugins(type: Copy) {
+  from configurations.mpsPlugins.resolve().collect { zipTree(it) }
+  into 'plugins'
+}
+
+task getPlugins(dependsOn: unzipPlugins)
+
+task collectCompileDependencies(type: Copy) {
+  from configurations.compile.resolve()
+  into 'lib'
+}
+
+task setup(group: "Project",
+           description: "Initializes the project for development",
+           dependsOn: [getMps, getPlugins, collectCompileDependencies])
+
 
 clean.doFirst {
     delete "${rootDir}/artifacts/"
@@ -56,48 +91,7 @@ clean.doFirst {
         include(name: "**/test_gen.caches/**")
       }
     }
-    // TODO: execute clean targets for ant scripts (doesn't belong here)
-    // TODO: better integrate cleaning with gradle task or ant target outputs
 }
-
-// Define the versions of our dependencies. Values extracted from yp's latest ivy descriptor in Artifactory
-// See https://artifactory.workday.com/artifactory/workday-trunk/com/workday/yp/2.2.0/ivy.xml
-def com_workday_util_consume = '[4.0,5.0['
-def commons_lang_version = '2.5'
-def trove4j_version = '3.0.2'
-
-def ANT_FAILURE = "BUILD FAILED"
-
-task syncDependencies(group: "MPS Setup",
-                        description: "Moves dependencies for com.workday.yp to the solution folder",
-                        type: Sync) {
-  def dependencyFolder = "${rootDir}/solutions/dependencies/lib"
-
-  from configurations.deps
-  into dependencyFolder
-  rename "(.*)-[0-9.]*\\.(.*)", '$1.$2' // Removes the version number
-
-  doLast {
-    def dependencyListOut = new FileWriter("${rootDir}/dependencies.txt")
-
-    println "Dependency list:"
-    // show dependencies in alphabetical order
-    def depList = [];
-    configurations.deps.each {
-      depList.add(it.getName())
-    }
-    depList.sort().each {
-      println ">> " + it
-      dependencyListOut.write(it + "\n")
-    }
-
-    dependencyListOut.close();
-  }
-}
-
-task setup(group: "MPS Setup",
-           description: "Initializes the project for development",
-           dependsOn: [syncDependencies, resolveAllArtifacts])
 
 // task generateBuildScripts(description: "Generates all Ant build scripts",
 //                           group: "MPS Build",
@@ -106,128 +100,4 @@ task setup(group: "MPS Setup",
 //   execAndFailIfTextFound ANT_FAILURE, "ant", "-buildfile", "${rootDir}/buildscripts/allBuildScripts.xml", "generate"
 //   println "Build Script Generation Completed ############################"
 //   println()
-// }
-//
-// task generatePlugin(group: "MPS Build",
-//                     description: "Generates dependencies for the YP Language MPS Plugin",
-//                     dependsOn: generateBuildScripts) << {
-//   println "Generating YP Plugin Dependencies =============="
-//   execAndFailIfTextFound ANT_FAILURE, "ant", "-buildfile", "${rootDir}/dist/ypPlugin.xml", "clean", "generate"
-//   println "YP Plugin Generation Completed ################"
-//   println()
-// }
-// generatePlugin.mustRunAfter generateBuildScripts
-//
-// task buildPlugin(description: "Builds the YP Language MPS plugin",
-//                  group: "MPS Build",
-//                  dependsOn: generateBuildScripts) << {
-//   println "Building YP Plugin ==========================="
-//   execAndFailIfTextFound ANT_FAILURE, "ant", "-buildfile", "${rootDir}/dist/ypPlugin.xml", "build"
-//   println "YP Plugin Build Completed #####################"
-//   println()
-// }
-// buildPlugin.mustRunAfter generatePlugin
-//
-// task generatePublishedPlugins(group: "MPS Build",
-//                     description: "Generates published YP plugins") << {
-// 	FileTree files = fileTree('solutions') {
-// 		include '**/plugin-*.xml'
-// 	}
-// 	files.each {File script ->
-// 		println "Building YP Plugin ==========================="
-//         execAndFailIfTextFound ANT_FAILURE, "ant", "-buildfile", script, "build"
-// 		println "YP Plugin Build Completed #####################"
-// 		println()
-// 	}
-// }
-//
-// task rebuildPlugin(description: "Regenerates and builds the YP Language MPS plugin",
-//                    group: "MPS Build",
-//                    dependsOn: [generatePlugin, buildPlugin])
-//
-
-// ##################################
-//  * * * * * * * TESTS * * * * * * *
-// ##################################
-
-// task copyYpModulesIntoMPS(description: "Copies the YP modules into the MPS plugins folder, as they are required for running the tests",
-// 						  group: "MPS Test", type : Copy) {
-//     from zipTree('dist/build/artifacts/ypPlugin/com.workday.yp.zip')
-//     from zipTree('dist/build/artifacts/ypPlugin/com.workday.yp.loader.zip')
-//     from file('artifacts/org.iets3.opensource')
-//     from file('artifacts/com.mbeddr.platform')
-//     into file('artifacts/MPS/plugins')
-// }
-// copyYpModulesIntoMPS.mustRunAfter buildPlugin
-//
-// task runUnitTests(description: "Runs MPS unit tests for the YP-MPS project",
-//                   group : "MPS Test", dependsOn: copyYpModulesIntoMPS) << {
-//     execAndFailIfTextFound(ANT_FAILURE, "ant", "-buildfile", "${rootDir}/test/utests.xml", "clean", "generate", "check")
-// }
-// runUnitTests.mustRunAfter buildPlugin
-//
-// task generateJUnitReport(description: "Generates JUnit HTML for test results",
-//                          group: "MPS Test") << {
-//   // generate junit HTML reports from the test results
-//   // TODO: generate/move the results to a better place, like xml and html subdirs
-//   ant.taskdef(name: 'ypjunitreport', classname: 'org.apache.tools.ant.taskdefs.optional.junit.XMLResultAggregator', classpath: configurations.antJUnit.asPath)
-//   ant.ypjunitreport(todir: "${rootDir}/test") {
-//     fileset(dir: "${rootDir}/test") {
-//       include(name: "TEST-*.xml")
-//       include(name: "stest/*/*-suite.xml")
-//     }
-//     report(format: "frames", todir: "${rootDir}/test/html")
-//   }
-//   println "JUnit Reports: ${rootDir}/test/html"
-// }
-// generateJUnitReport.mustRunAfter runUnitTests
-//
-// task runTests(description: "Runs tests on the YP language project",
-//               group : "MPS Test",
-//               dependsOn: [runUnitTests, generateJUnitReport]) << {
-//   println "All Tests Completed ###########################"
-//   println()
-// }
-// runTests.mustRunAfter buildPlugin
-
-// build.dependsOn buildPlugin
-
-// task rebuild(description: "Performs a full build",
-//              group: "MPS Build",
-//              dependsOn: [rebuildPlugin, distribution]) {
-// }
-//
-// task buildAndTest(description: "Performs a full build including tests",
-//            group: "MPS Build",
-//            dependsOn: [buildPlugin, runTests, distribution]){
-// }
-//
-// task rebuildAndTest(description: "Performs a full build including tests",
-//              group: "MPS Build",
-//              dependsOn: [rebuildPlugin, runTests, distribution]) {
-// }
-
-void execAndFailIfTextFound(String textToFind, Object... args) {
-  def taskOutput = new ByteArrayOutputStream()
-  def teeOutput = new TeeOutputStream(taskOutput, System.out)
-
-  exec {
-    ignoreExitValue = true
-    commandLine args
-    standardOutput = teeOutput
-    errorOutput = teeOutput
-  }
-
-  String testOutput = taskOutput.toString()
-
-  if (testOutput.contains(textToFind)) {
-      throw new GradleException("ANT build failure")
-  }
-}
-
-// set the branch name and head commit for use when publishing artifacts
-// ext {
-//   repo = Grgit.open(project.file('.'))
-//   currentBranchName = repo.branch.getCurrent().getName()
-//   headCommitId = repo.head().id
 // }
