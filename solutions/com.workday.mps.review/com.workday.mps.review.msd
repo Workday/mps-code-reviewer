@@ -4,16 +4,16 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="/Users/Tyler.Hodgkins/code/MpsCodeReview/lib" type="java_classes">
+    <modelRoot contentPath="${module}/lib" type="java_classes">
       <sourceRoot location="gson-2.8.0.jar" />
       <sourceRoot location="httpclient-4.5.5.jar" />
       <sourceRoot location="httpcore-4.4.9.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="/Users/Tyler.Hodgkins/code/MpsCodeReview/lib/gson-2.8.0.jar" />
-    <stubModelEntry path="/Users/Tyler.Hodgkins/code/MpsCodeReview/lib/httpclient-4.5.5.jar" />
-    <stubModelEntry path="/Users/Tyler.Hodgkins/code/MpsCodeReview/lib/httpcore-4.4.9.jar" />
+    <stubModelEntry path="${module}/lib/gson-2.8.0.jar" />
+    <stubModelEntry path="${module}/lib/httpclient-4.5.5.jar" />
+    <stubModelEntry path="${module}/lib/httpcore-4.4.9.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

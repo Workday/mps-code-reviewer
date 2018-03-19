@@ -45,17 +45,21 @@ repositories {
 
 configurations {
   mpsPlugins
-  compile
+  com_workday_mps_reviewCompile
+  com_workday_mps_review_git4mpsCompile
 }
 
 dependencies {
   // Plugin dependencies for project
-  mpsPlugins "com.mbeddr:platform:1.0.+"
+  mpsPlugins "com.mbeddr:platform:1.0.20107.+"
 
   // Compile-time dependencies
-  compile "com.google.code.gson:gson:2.8.0"
-  compile "org.apache.httpcomponents:httpcore:4.4.9"
-  compile "org.apache.httpcomponents:httpclient:4.5.5"
+  com_workday_mps_reviewCompile "com.google.code.gson:gson:2.8.0"
+  com_workday_mps_reviewCompile "org.apache.httpcomponents:httpcore:4.4.9"
+  com_workday_mps_reviewCompile "org.apache.httpcomponents:httpclient:4.5.5"
+
+  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS ${mps.major}/plugins/git4idea/lib/git4idea.jar")
+  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS ${mps.major}/plugins/git4idea/lib/git4idea-rt.jar")
 }
 
 task unzipPlugins(type: Copy) {
@@ -65,14 +69,22 @@ task unzipPlugins(type: Copy) {
 
 task getPlugins(dependsOn: unzipPlugins)
 
-task collectCompileDependencies(type: Copy) {
-  from configurations.compile.resolve()
-  into 'lib'
+task com_workday_mps_reviewCompileDependencies(type: Copy) {
+  from configurations.com_workday_mps_reviewCompile.resolve()
+  into 'solutions/com.workday.mps.review/lib'
+}
+
+task com_workday_mps_review_git4mpsCompileDependencies(type: Copy) {
+  from configurations.com_workday_mps_review_git4mpsCompile.resolve()
+  into 'solutions/com.workday.mps.review.git4mps/lib'
 }
 
 task setup(group: "Project",
            description: "Initializes the project for development",
-           dependsOn: [getMps, getPlugins, collectCompileDependencies])
+           dependsOn: [getMps, 
+                       getPlugins, 
+                       com_workday_mps_reviewCompileDependencies, 
+                       com_workday_mps_review_git4mpsCompileDependencies])
 
 
 clean.doFirst {

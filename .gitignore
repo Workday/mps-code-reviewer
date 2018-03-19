@@ -32,4 +32,4 @@ source_gen.caches
 /plugins/
 
 # ignore dependency libraries
-/lib/
+solutions/*/lib/

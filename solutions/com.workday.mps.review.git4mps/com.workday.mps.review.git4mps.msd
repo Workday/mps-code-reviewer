@@ -4,7 +4,7 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="/Users/Tyler.Hodgkins/code/MpsCodeReview/artifacts/MPS/MPS 2017.3/plugins/git4idea/lib" type="java_classes">
+    <modelRoot contentPath="${module}/lib" type="java_classes">
       <sourceRoot location="git4idea-rt.jar" />
       <sourceRoot location="git4idea.jar" />
     </modelRoot>
@@ -13,8 +13,8 @@
     <facet type="ideaPlugin" pluginId="Git4Idea" />
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="/Users/Tyler.Hodgkins/code/MpsCodeReview/artifacts/MPS/MPS 2017.3/plugins/git4idea/lib/git4idea-rt.jar" />
-    <stubModelEntry path="/Users/Tyler.Hodgkins/code/MpsCodeReview/artifacts/MPS/MPS 2017.3/plugins/git4idea/lib/git4idea.jar" />
+    <stubModelEntry path="${module}/lib/git4idea-rt.jar" />
+    <stubModelEntry path="${module}/lib/git4idea.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
