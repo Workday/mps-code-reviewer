@@ -1276,6 +1276,9 @@
       </node>
     </node>
     <node concept="2tJIrI" id="3c3vDUl5upY" role="jymVt" />
+    <node concept="3uibUv" id="4GdANuvWUwz" role="EKbjA">
+      <ref role="3uigEE" node="3c3vDUlbPqv" resolve="SwingComponent" />
+    </node>
     <node concept="3uibUv" id="3c3vDUl4ZZO" role="EKbjA">
       <ref role="3uigEE" to="ee8f:3c3vDUl44tr" resolve="ChangeEventListener" />
     </node>
@@ -1358,6 +1361,23 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="q2HDcpwbMD" role="1B3o_S" />
+    <node concept="3clFb_" id="7Ndzh9v41k5" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="2aFKle" value="false" />
+      <property role="TrG5h" value="render" />
+      <node concept="3Tm1VV" id="7Ndzh9v41k7" role="1B3o_S" />
+      <node concept="3uibUv" id="7Ndzh9v41kb" role="3clF45">
+        <ref role="3uigEE" to="dxuu:~JComponent" resolve="JComponent" />
+      </node>
+      <node concept="3clFbS" id="7Ndzh9v41kc" role="3clF47">
+        <node concept="3cpWs6" id="7Ndzh9v43VK" role="3cqZAp">
+          <node concept="10Nm6u" id="7Ndzh9v446O" role="3cqZAk" />
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="7Ndzh9v41kd" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
   </node>
 </model>
 

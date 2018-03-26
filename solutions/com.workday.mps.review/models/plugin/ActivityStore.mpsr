@@ -70,6 +70,7 @@
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
+        <child id="1206060520071" name="elsifClauses" index="3eNLev" />
       </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
@@ -83,6 +84,10 @@
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
+      <concept id="1206060495898" name="jetbrains.mps.baseLanguage.structure.ElsifClause" flags="ng" index="3eNFk2">
+        <child id="1206060619838" name="condition" index="3eO9$A" />
+        <child id="1206060644605" name="statementList" index="3eOfB_" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -178,53 +183,70 @@
         </node>
       </node>
       <node concept="3clFbS" id="3c3vDUl4ImB" role="3clF47">
-        <node concept="3clFbJ" id="3c3vDUl4ICq" role="3cqZAp">
-          <node concept="2ZW3vV" id="3c3vDUl4IZ1" role="3clFbw">
-            <node concept="3uibUv" id="3REobdwOhru" role="2ZW6by">
-              <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+        <node concept="3clFbJ" id="168JFiafQ0I" role="3cqZAp">
+          <node concept="3clFbS" id="168JFiafQ0K" role="3clFbx">
+            <node concept="3clFbF" id="168JFiafS8I" role="3cqZAp">
+              <node concept="1rXfSq" id="168JFiafS8G" role="3clFbG">
+                <ref role="37wK5l" to="ee8f:3c3vDUl4aO_" resolve="emitChangeEvent" />
+              </node>
             </node>
-            <node concept="37vLTw" id="3c3vDUl4IJA" role="2ZW6bz">
+          </node>
+          <node concept="2ZW3vV" id="168JFiafQid" role="3clFbw">
+            <node concept="3uibUv" id="168JFiafRRI" role="2ZW6by">
+              <ref role="3uigEE" node="168JFiafRsM" resolve="RefreshReview" />
+            </node>
+            <node concept="37vLTw" id="168JFiafQ6y" role="2ZW6bz">
               <ref role="3cqZAo" node="3c3vDUl4Im_" resolve="action" />
             </node>
           </node>
-          <node concept="3clFbS" id="3c3vDUl4ICs" role="3clFbx">
-            <node concept="3cpWs8" id="3c3vDUl4No_" role="3cqZAp">
-              <node concept="3cpWsn" id="3c3vDUl4NoA" role="3cpWs9">
-                <property role="TrG5h" value="activity" />
-                <node concept="3uibUv" id="3REobdwOh_s" role="1tU5fm">
-                  <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
-                </node>
-                <node concept="0kSF2" id="3c3vDUl4NoB" role="33vP2m">
-                  <node concept="3uibUv" id="3REobdwOZXA" role="0kSFW">
+          <node concept="3eNFk2" id="168JFiafQ$s" role="3eNLev">
+            <node concept="3clFbS" id="168JFiafQ$u" role="3eOfB_">
+              <node concept="3cpWs8" id="3c3vDUl4No_" role="3cqZAp">
+                <node concept="3cpWsn" id="3c3vDUl4NoA" role="3cpWs9">
+                  <property role="TrG5h" value="activity" />
+                  <node concept="3uibUv" id="3REobdwOh_s" role="1tU5fm">
                     <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
                   </node>
-                  <node concept="37vLTw" id="3c3vDUl4NoD" role="0kSFX">
-                    <ref role="3cqZAo" node="3c3vDUl4Im_" resolve="action" />
+                  <node concept="0kSF2" id="3c3vDUl4NoB" role="33vP2m">
+                    <node concept="3uibUv" id="3REobdwOZXA" role="0kSFW">
+                      <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+                    </node>
+                    <node concept="37vLTw" id="3c3vDUl4NoD" role="0kSFX">
+                      <ref role="3cqZAo" node="3c3vDUl4Im_" resolve="action" />
+                    </node>
                   </node>
                 </node>
               </node>
-            </node>
-            <node concept="3clFbF" id="3c3vDUl4L7N" role="3cqZAp">
-              <node concept="2OqwBi" id="3c3vDUl4Lg7" role="3clFbG">
-                <node concept="37vLTw" id="3c3vDUl4L7M" role="2Oq$k0">
-                  <ref role="3cqZAo" node="3c3vDUl4Jn6" resolve="connection" />
-                </node>
-                <node concept="liA8E" id="3c3vDUl4M0X" role="2OqNvi">
-                  <ref role="37wK5l" node="3c3vDUl4LCd" resolve="addActivity" />
-                  <node concept="37vLTw" id="3c3vDUl4NoE" role="37wK5m">
-                    <ref role="3cqZAo" node="3c3vDUl4NoA" resolve="activity" />
+              <node concept="3clFbF" id="3c3vDUl4L7N" role="3cqZAp">
+                <node concept="2OqwBi" id="3c3vDUl4Lg7" role="3clFbG">
+                  <node concept="37vLTw" id="3c3vDUl4L7M" role="2Oq$k0">
+                    <ref role="3cqZAo" node="3c3vDUl4Jn6" resolve="connection" />
+                  </node>
+                  <node concept="liA8E" id="3c3vDUl4M0X" role="2OqNvi">
+                    <ref role="37wK5l" node="3c3vDUl4LCd" resolve="addActivity" />
+                    <node concept="37vLTw" id="3c3vDUl4NoE" role="37wK5m">
+                      <ref role="3cqZAo" node="3c3vDUl4NoA" resolve="activity" />
+                    </node>
                   </node>
                 </node>
               </node>
-            </node>
-            <node concept="3SKdUt" id="3c3vDUl4O9s" role="3cqZAp">
-              <node concept="3SKdUq" id="3c3vDUl4O9u" role="3SKWNk">
-                <property role="3SKdUp" value="TODO: If failed, emit appropriate event" />
+              <node concept="3SKdUt" id="3c3vDUl4O9s" role="3cqZAp">
+                <node concept="3SKdUq" id="3c3vDUl4O9u" role="3SKWNk">
+                  <property role="3SKdUp" value="TODO: If failed, emit appropriate event" />
+                </node>
+              </node>
+              <node concept="3clFbF" id="3c3vDUl4OkH" role="3cqZAp">
+                <node concept="1rXfSq" id="3c3vDUl4OkF" role="3clFbG">
+                  <ref role="37wK5l" to="ee8f:3c3vDUl4aO_" resolve="emitChangeEvent" />
+                </node>
               </node>
             </node>
-            <node concept="3clFbF" id="3c3vDUl4OkH" role="3cqZAp">
-              <node concept="1rXfSq" id="3c3vDUl4OkF" role="3clFbG">
-                <ref role="37wK5l" to="ee8f:3c3vDUl4aO_" resolve="emitChangeEvent" />
+            <node concept="2ZW3vV" id="3c3vDUl4IZ1" role="3eO9$A">
+              <node concept="3uibUv" id="3REobdwOhru" role="2ZW6by">
+                <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+              </node>
+              <node concept="37vLTw" id="3c3vDUl4IJA" role="2ZW6bz">
+                <ref role="3cqZAo" node="3c3vDUl4Im_" resolve="action" />
               </node>
             </node>
           </node>
