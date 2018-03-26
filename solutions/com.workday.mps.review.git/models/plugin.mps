@@ -3,6 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
+    <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
   </languages>
   <imports>
     <import index="4nm9" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.project(MPS.IDEA/)" />
@@ -15,8 +16,7 @@
     <import index="4b2m" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.util.messages(MPS.IDEA/)" />
     <import index="v23q" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi(MPS.IDEA/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
-    <import index="ii13" ref="r:a13717ec-0f28-4c83-aaaa-0b10931768b8(com.workday.mps.review.plugin)" implicit="true" />
-    <import index="ee8f" ref="r:76b35c96-0206-4f74-890e-e39504808bf8(com.workday.mps.flux.core)" implicit="true" />
+    <import index="1m72" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.components(MPS.IDEA/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -47,9 +47,6 @@
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
-      <concept id="1182160077978" name="jetbrains.mps.baseLanguage.structure.AnonymousClassCreator" flags="nn" index="YeOm9">
-        <child id="1182160096073" name="cls" index="YeSDq" />
-      </concept>
       <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
@@ -72,7 +69,7 @@
       </concept>
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
         <property id="1075300953594" name="abstractClass" index="1sVAO0" />
-        <property id="1221565133444" name="isFinal" index="1EXbeo" />
+        <child id="1095933932569" name="implementedInterface" index="EKbjA" />
       </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
@@ -127,13 +124,15 @@
       <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
         <child id="1079359253376" name="expression" index="1eOMHV" />
       </concept>
+      <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
+        <child id="1081516765348" name="expression" index="3fr31v" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
       <concept id="1212685548494" name="jetbrains.mps.baseLanguage.structure.ClassCreator" flags="nn" index="1pGfFk" />
       <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
-        <property id="521412098689998745" name="nonStatic" index="2bfB8j" />
         <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
       </concept>
       <concept id="7812454656619025416" name="jetbrains.mps.baseLanguage.structure.MethodDeclaration" flags="ng" index="1rXfSm">
@@ -160,23 +159,19 @@
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
-      <concept id="1170345865475" name="jetbrains.mps.baseLanguage.structure.AnonymousClass" flags="ig" index="1Y3b0j">
-        <reference id="1170346070688" name="classifier" index="1Y3XeK" />
+    </language>
+    <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
+      <concept id="1199542442495" name="jetbrains.mps.baseLanguage.closures.structure.FunctionType" flags="in" index="1ajhzC">
+        <child id="1199542457201" name="resultType" index="1ajl9A" />
+        <child id="1199542501692" name="parameterType" index="1ajw0F" />
+      </concept>
+      <concept id="1225797177491" name="jetbrains.mps.baseLanguage.closures.structure.InvokeFunctionOperation" flags="nn" index="1Bd96e">
+        <child id="1225797361612" name="parameter" index="1BdPVh" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
-      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
   </registry>
@@ -393,399 +388,520 @@
     <node concept="2tJIrI" id="3Amrg3qeij7" role="jymVt" />
     <node concept="3Tm1VV" id="3Amrg3qeiiA" role="1B3o_S" />
   </node>
-  <node concept="312cEu" id="4GdANuvX6db">
-    <property role="TrG5h" value="GitRemoteBranchChangeListener" />
-    <property role="1sVAO0" value="true" />
-    <property role="1EXbeo" value="false" />
-    <node concept="312cEg" id="4GdANuvX9sY" role="jymVt">
+  <node concept="312cEu" id="57bl67CHuVr">
+    <property role="TrG5h" value="GitBranchChangeListener" />
+    <property role="1sVAO0" value="false" />
+    <node concept="2tJIrI" id="57bl67CHuZn" role="jymVt" />
+    <node concept="312cEg" id="57bl67CHzO0" role="jymVt">
       <property role="34CwA1" value="false" />
       <property role="eg7rD" value="false" />
-      <property role="TrG5h" value="changeListener" />
-      <property role="3TUv4t" value="false" />
-      <node concept="3Tm6S6" id="4GdANuvX9sA" role="1B3o_S" />
-      <node concept="3uibUv" id="4GdANuvX9sO" role="1tU5fm">
-        <ref role="3uigEE" to="5mlj:~GitRepositoryChangeListener" resolve="GitRepositoryChangeListener" />
+      <property role="TrG5h" value="connection" />
+      <property role="3TUv4t" value="true" />
+      <node concept="3Tm6S6" id="57bl67CHzDc" role="1B3o_S" />
+      <node concept="3uibUv" id="57bl67CHzMR" role="1tU5fm">
+        <ref role="3uigEE" to="4b2m:~MessageBusConnection" resolve="MessageBusConnection" />
       </node>
     </node>
-    <node concept="312cEg" id="4GdANuvXNTA" role="jymVt">
+    <node concept="312cEg" id="57bl67CH_XJ" role="jymVt">
+      <property role="TrG5h" value="remoteBranchHandler" />
+      <property role="3TUv4t" value="true" />
+      <node concept="3Tm6S6" id="57bl67CH_XK" role="1B3o_S" />
+      <node concept="1ajhzC" id="57bl67CH_XM" role="1tU5fm">
+        <node concept="17QB3L" id="57bl67CH_XN" role="1ajw0F" />
+        <node concept="3uibUv" id="57bl67CH_XO" role="1ajl9A">
+          <ref role="3uigEE" to="wyt6:~Void" resolve="Void" />
+        </node>
+      </node>
+    </node>
+    <node concept="312cEg" id="57bl67CHDeb" role="jymVt">
       <property role="34CwA1" value="false" />
       <property role="eg7rD" value="false" />
-      <property role="TrG5h" value="currentRemote" />
+      <property role="TrG5h" value="currentRemoteBranch" />
       <property role="3TUv4t" value="false" />
-      <node concept="3Tm6S6" id="4GdANuvX6hy" role="1B3o_S" />
-      <node concept="3uibUv" id="4GdANuvX9oG" role="1tU5fm">
-        <ref role="3uigEE" to="hr4p:~GitRemoteBranch" resolve="GitRemoteBranch" />
+      <node concept="3Tm6S6" id="57bl67CHCYw" role="1B3o_S" />
+      <node concept="3uibUv" id="57bl67CHDd3" role="1tU5fm">
+        <ref role="3uigEE" to="hr4p:~GitBranch" resolve="GitBranch" />
       </node>
     </node>
-    <node concept="2tJIrI" id="2RxdB75IGst" role="jymVt" />
-    <node concept="3clFb_" id="2RxdB75IGNV" role="jymVt">
-      <property role="1EzhhJ" value="false" />
-      <property role="TrG5h" value="SAMPLE_USAGE" />
+    <node concept="2tJIrI" id="57bl67CHzv$" role="jymVt" />
+    <node concept="2YIFZL" id="57bl67CHxyv" role="jymVt">
+      <property role="TrG5h" value="register" />
       <property role="od$2w" value="false" />
       <property role="DiZV1" value="false" />
       <property role="2aFKle" value="false" />
-      <node concept="3clFbS" id="2RxdB75IGNY" role="3clF47">
-        <node concept="1X3_iC" id="2RxdB75IJ64" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="2RxdB75IIsL" role="8Wnug">
-            <node concept="2ShNRf" id="7Ndzh9v4oP9" role="3clFbG">
-              <node concept="YeOm9" id="7Ndzh9v4Fu4" role="2ShVmc">
-                <node concept="1Y3b0j" id="7Ndzh9v4Fu7" role="YeSDq">
-                  <property role="2bfB8j" value="true" />
-                  <ref role="1Y3XeK" node="4GdANuvX6db" resolve="GitRemoteBranchChangeListener" />
-                  <ref role="37wK5l" node="4GdANuvX9u9" resolve="GitRemoteBranchChangeListener" />
-                  <node concept="3Tm1VV" id="7Ndzh9v4Fu8" role="1B3o_S" />
-                  <node concept="3clFb_" id="2RxdB75IIsN" role="jymVt">
-                    <property role="1EzhhJ" value="false" />
-                    <property role="TrG5h" value="handleBranchChange" />
-                    <property role="od$2w" value="false" />
-                    <property role="DiZV1" value="false" />
-                    <property role="2aFKle" value="false" />
-                    <node concept="3Tm1VV" id="2RxdB75IIsO" role="1B3o_S" />
-                    <node concept="3cqZAl" id="2RxdB75IIsP" role="3clF45" />
-                    <node concept="37vLTG" id="2RxdB75IIsQ" role="3clF46">
-                      <property role="TrG5h" value="newBranchName" />
-                      <node concept="17QB3L" id="2RxdB75IIsR" role="1tU5fm" />
-                    </node>
-                    <node concept="3clFbS" id="2RxdB75IIsS" role="3clF47">
-                      <node concept="3clFbF" id="2RxdB75IIsT" role="3cqZAp">
-                        <node concept="2OqwBi" id="2RxdB75IIsU" role="3clFbG">
-                          <node concept="37vLTw" id="2RxdB75IIsV" role="2Oq$k0">
-                            <ref role="3cqZAo" to="ii13:168JFiaglBC" resolve="dispatcher" />
-                          </node>
-                          <node concept="liA8E" id="2RxdB75IIsW" role="2OqNvi">
-                            <ref role="37wK5l" to="ee8f:3c3vDUkV7T7" resolve="dispatch" />
-                            <node concept="2ShNRf" id="2RxdB75IIsX" role="37wK5m">
-                              <node concept="1pGfFk" id="2RxdB75IIsY" role="2ShVmc">
-                                <ref role="37wK5l" to="ii13:7Ndzh9v4KRs" resolve="BranchChange" />
-                                <node concept="37vLTw" id="2RxdB75IIsZ" role="37wK5m">
-                                  <ref role="3cqZAo" node="2RxdB75IIsQ" resolve="newBranchName" />
-                                </node>
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="2OqwBi" id="7Ndzh9v4G3m" role="37wK5m">
-                    <node concept="Xjq3P" id="7Ndzh9v4FIY" role="2Oq$k0" />
-                    <node concept="2OwXpG" id="7Ndzh9v4Gfs" role="2OqNvi">
-                      <ref role="2Oxat5" to="ii13:4GdANuvXt_9" resolve="messageBusConnection" />
-                    </node>
-                  </node>
+      <node concept="3clFbS" id="57bl67CHxyy" role="3clF47">
+        <node concept="3cpWs8" id="57bl67CHzoy" role="3cqZAp">
+          <node concept="3cpWsn" id="57bl67CHzoz" role="3cpWs9">
+            <property role="TrG5h" value="connection" />
+            <property role="3TUv4t" value="true" />
+            <node concept="3uibUv" id="57bl67CHzos" role="1tU5fm">
+              <ref role="3uigEE" to="4b2m:~MessageBusConnection" resolve="MessageBusConnection" />
+            </node>
+            <node concept="2OqwBi" id="57bl67CHzo$" role="33vP2m">
+              <node concept="2OqwBi" id="57bl67CHzo_" role="2Oq$k0">
+                <node concept="37vLTw" id="57bl67CHzoA" role="2Oq$k0">
+                  <ref role="3cqZAo" node="57bl67CHxHp" resolve="project" />
+                </node>
+                <node concept="liA8E" id="57bl67CHzoB" role="2OqNvi">
+                  <ref role="37wK5l" to="1m72:~ComponentManager.getMessageBus():com.intellij.util.messages.MessageBus" resolve="getMessageBus" />
+                </node>
+              </node>
+              <node concept="liA8E" id="57bl67CHzoC" role="2OqNvi">
+                <ref role="37wK5l" to="4b2m:~MessageBus.connect():com.intellij.util.messages.MessageBusConnection" resolve="connect" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="57bl67CIT6k" role="3cqZAp">
+          <node concept="3cpWsn" id="57bl67CIT6l" role="3cpWs9">
+            <property role="TrG5h" value="listener" />
+            <property role="3TUv4t" value="true" />
+            <node concept="3uibUv" id="57bl67CIT5Z" role="1tU5fm">
+              <ref role="3uigEE" node="57bl67CHuVr" resolve="GitBranchChangeListener" />
+            </node>
+            <node concept="2ShNRf" id="57bl67CIT6m" role="33vP2m">
+              <node concept="1pGfFk" id="57bl67CIT6n" role="2ShVmc">
+                <ref role="37wK5l" node="57bl67CHysz" resolve="GitBranchChangeListener" />
+                <node concept="37vLTw" id="57bl67CIT6o" role="37wK5m">
+                  <ref role="3cqZAo" node="57bl67CHzcZ" resolve="branchHandler" />
+                </node>
+                <node concept="37vLTw" id="57bl67CIT6p" role="37wK5m">
+                  <ref role="3cqZAo" node="57bl67CHzoz" resolve="connection" />
                 </node>
               </node>
             </node>
           </node>
         </node>
-      </node>
-      <node concept="3Tm1VV" id="2RxdB75IGwQ" role="1B3o_S" />
-      <node concept="3cqZAl" id="2RxdB75IGz6" role="3clF45" />
-    </node>
-    <node concept="2tJIrI" id="4GdANuvX9tg" role="jymVt" />
-    <node concept="3clFbW" id="4GdANuvX9u9" role="jymVt">
-      <node concept="37vLTG" id="4GdANuvX$gc" role="3clF46">
-        <property role="TrG5h" value="connection" />
-        <node concept="3uibUv" id="4GdANuvXJzz" role="1tU5fm">
-          <ref role="3uigEE" to="4b2m:~MessageBusConnection" resolve="MessageBusConnection" />
-        </node>
-      </node>
-      <node concept="3cqZAl" id="4GdANuvX9ua" role="3clF45" />
-      <node concept="3clFbS" id="4GdANuvX9uc" role="3clF47">
-        <node concept="3clFbF" id="4GdANuvX9vc" role="3cqZAp">
-          <node concept="37vLTI" id="4GdANuvX9Gm" role="3clFbG">
-            <node concept="2ShNRf" id="4GdANuvX9Js" role="37vLTx">
-              <node concept="YeOm9" id="4GdANuvXexs" role="2ShVmc">
-                <node concept="1Y3b0j" id="4GdANuvXexv" role="YeSDq">
-                  <property role="2bfB8j" value="true" />
-                  <ref role="1Y3XeK" to="5mlj:~GitRepositoryChangeListener" resolve="GitRepositoryChangeListener" />
-                  <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
-                  <node concept="3Tm1VV" id="4GdANuvXexw" role="1B3o_S" />
-                  <node concept="3clFb_" id="4GdANuvXexx" role="jymVt">
-                    <property role="1EzhhJ" value="false" />
-                    <property role="TrG5h" value="repositoryChanged" />
-                    <property role="DiZV1" value="false" />
-                    <property role="od$2w" value="false" />
-                    <node concept="3Tm1VV" id="4GdANuvXexy" role="1B3o_S" />
-                    <node concept="3cqZAl" id="4GdANuvXex$" role="3clF45" />
-                    <node concept="37vLTG" id="4GdANuvXex_" role="3clF46">
-                      <property role="TrG5h" value="repo" />
-                      <node concept="3uibUv" id="4GdANuvXexA" role="1tU5fm">
-                        <ref role="3uigEE" to="5mlj:~GitRepository" resolve="GitRepository" />
-                      </node>
-                      <node concept="2AHcQZ" id="4GdANuvXexB" role="2AJF6D">
-                        <ref role="2AI5Lk" to="mhfm:~NotNull" resolve="NotNull" />
-                      </node>
-                    </node>
-                    <node concept="3clFbS" id="4GdANuvXexC" role="3clF47">
-                      <node concept="3cpWs8" id="4GdANuvXLHL" role="3cqZAp">
-                        <node concept="3cpWsn" id="4GdANuvXLHM" role="3cpWs9">
-                          <property role="TrG5h" value="newLocal" />
-                          <node concept="3uibUv" id="4GdANuvXLHG" role="1tU5fm">
-                            <ref role="3uigEE" to="hr4p:~GitLocalBranch" resolve="GitLocalBranch" />
-                          </node>
-                          <node concept="2OqwBi" id="4GdANuvXLHN" role="33vP2m">
-                            <node concept="37vLTw" id="4GdANuvXLHO" role="2Oq$k0">
-                              <ref role="3cqZAo" node="4GdANuvXex_" resolve="repo" />
-                            </node>
-                            <node concept="liA8E" id="4GdANuvXLHP" role="2OqNvi">
-                              <ref role="37wK5l" to="5mlj:~GitRepository.getCurrentBranch():git4idea.GitLocalBranch" resolve="getCurrentBranch" />
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                      <node concept="3clFbJ" id="4GdANuvXM5v" role="3cqZAp">
-                        <node concept="3clFbS" id="4GdANuvXM5x" role="3clFbx">
-                          <node concept="3cpWs8" id="4GdANuvXLRJ" role="3cqZAp">
-                            <node concept="3cpWsn" id="4GdANuvXLRK" role="3cpWs9">
-                              <property role="TrG5h" value="newRemote" />
-                              <node concept="3uibUv" id="4GdANuvXLRA" role="1tU5fm">
-                                <ref role="3uigEE" to="hr4p:~GitRemoteBranch" resolve="GitRemoteBranch" />
-                              </node>
-                              <node concept="2OqwBi" id="4GdANuvXLRL" role="33vP2m">
-                                <node concept="37vLTw" id="4GdANuvXLRM" role="2Oq$k0">
-                                  <ref role="3cqZAo" node="4GdANuvXLHM" resolve="newLocal" />
-                                </node>
-                                <node concept="liA8E" id="4GdANuvXLRN" role="2OqNvi">
-                                  <ref role="37wK5l" to="hr4p:~GitLocalBranch.findTrackedBranch(git4idea.repo.GitRepository):git4idea.GitRemoteBranch" resolve="findTrackedBranch" />
-                                  <node concept="37vLTw" id="4GdANuvXLRO" role="37wK5m">
-                                    <ref role="3cqZAo" node="4GdANuvXex_" resolve="repo" />
-                                  </node>
-                                </node>
-                              </node>
-                            </node>
-                          </node>
-                          <node concept="3clFbH" id="7Ndzh9v3RpT" role="3cqZAp" />
-                          <node concept="3clFbJ" id="4GdANuvXNhe" role="3cqZAp">
-                            <node concept="3clFbS" id="4GdANuvXNhg" role="3clFbx">
-                              <node concept="3SKdUt" id="7Ndzh9v3TIW" role="3cqZAp">
-                                <node concept="3SKdUq" id="7Ndzh9v3TIY" role="3SKWNk">
-                                  <property role="3SKdUp" value="We had no previous branch &amp; do have a new branch" />
-                                </node>
-                              </node>
-                              <node concept="3clFbF" id="4GdANuvXQyY" role="3cqZAp">
-                                <node concept="37vLTI" id="4GdANuvXRvT" role="3clFbG">
-                                  <node concept="37vLTw" id="4GdANuvXRBu" role="37vLTx">
-                                    <ref role="3cqZAo" node="4GdANuvXLRK" resolve="newRemote" />
-                                  </node>
-                                  <node concept="37vLTw" id="4GdANuvXQF8" role="37vLTJ">
-                                    <ref role="3cqZAo" node="4GdANuvXNTA" resolve="currentRemote" />
-                                  </node>
-                                </node>
-                              </node>
-                              <node concept="3clFbF" id="7Ndzh9v3XEv" role="3cqZAp">
-                                <node concept="1rXfSq" id="7Ndzh9v3XEn" role="3clFbG">
-                                  <ref role="37wK5l" node="4GdANuvXPvX" resolve="handleBranchChange" />
-                                  <node concept="2OqwBi" id="7Ndzh9v3XSM" role="37wK5m">
-                                    <node concept="37vLTw" id="7Ndzh9v3XJO" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="4GdANuvXLRK" resolve="newRemote" />
-                                    </node>
-                                    <node concept="liA8E" id="7Ndzh9v3Y0e" role="2OqNvi">
-                                      <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
-                                    </node>
-                                  </node>
-                                </node>
-                              </node>
-                            </node>
-                            <node concept="1Wc70l" id="4GdANuvXTag" role="3clFbw">
-                              <node concept="3y3z36" id="4GdANuvXTuq" role="3uHU7w">
-                                <node concept="10Nm6u" id="4GdANuvXTuT" role="3uHU7w" />
-                                <node concept="37vLTw" id="4GdANuvXTeV" role="3uHU7B">
-                                  <ref role="3cqZAo" node="4GdANuvXLRK" resolve="newRemote" />
-                                </node>
-                              </node>
-                              <node concept="3clFbC" id="4GdANuvXT2M" role="3uHU7B">
-                                <node concept="37vLTw" id="4GdANuvXS_m" role="3uHU7B">
-                                  <ref role="3cqZAo" node="4GdANuvXNTA" resolve="currentRemote" />
-                                </node>
-                                <node concept="10Nm6u" id="4GdANuvXT79" role="3uHU7w" />
-                              </node>
-                            </node>
-                            <node concept="3eNFk2" id="7Ndzh9v3V_Z" role="3eNLev">
-                              <node concept="3y3z36" id="7Ndzh9v3WgP" role="3eO9$A">
-                                <node concept="37vLTw" id="7Ndzh9v3VOS" role="3uHU7B">
-                                  <ref role="3cqZAo" node="4GdANuvXNTA" resolve="currentRemote" />
-                                </node>
-                                <node concept="10Nm6u" id="7Ndzh9v3Whk" role="3uHU7w" />
-                              </node>
-                              <node concept="3clFbS" id="7Ndzh9v3VA1" role="3eOfB_">
-                                <node concept="3clFbJ" id="7Ndzh9v3ZHN" role="3cqZAp">
-                                  <node concept="3clFbS" id="7Ndzh9v3ZHP" role="3clFbx">
-                                    <node concept="3SKdUt" id="7Ndzh9v3WSA" role="3cqZAp">
-                                      <node concept="3SKdUq" id="7Ndzh9v3WSB" role="3SKWNk">
-                                        <property role="3SKdUp" value="We had a previous branch &amp; do not have a new branch" />
-                                      </node>
-                                    </node>
-                                    <node concept="3clFbF" id="7Ndzh9v3WTD" role="3cqZAp">
-                                      <node concept="37vLTI" id="7Ndzh9v3Xhb" role="3clFbG">
-                                        <node concept="10Nm6u" id="7Ndzh9v3XjW" role="37vLTx" />
-                                        <node concept="37vLTw" id="7Ndzh9v3WTB" role="37vLTJ">
-                                          <ref role="3cqZAo" node="4GdANuvXNTA" resolve="currentRemote" />
-                                        </node>
-                                      </node>
-                                    </node>
-                                    <node concept="3clFbF" id="7Ndzh9v3XxG" role="3cqZAp">
-                                      <node concept="1rXfSq" id="7Ndzh9v3XxD" role="3clFbG">
-                                        <ref role="37wK5l" node="4GdANuvXPvX" resolve="handleBranchChange" />
-                                        <node concept="10Nm6u" id="7Ndzh9v3XAE" role="37wK5m" />
-                                      </node>
-                                    </node>
-                                  </node>
-                                  <node concept="3clFbC" id="7Ndzh9v3ZXJ" role="3clFbw">
-                                    <node concept="10Nm6u" id="7Ndzh9v3ZYe" role="3uHU7w" />
-                                    <node concept="37vLTw" id="7Ndzh9v3ZOx" role="3uHU7B">
-                                      <ref role="3cqZAo" node="4GdANuvXLRK" resolve="newRemote" />
-                                    </node>
-                                  </node>
-                                  <node concept="3eNFk2" id="7Ndzh9v40a2" role="3eNLev">
-                                    <node concept="3clFbS" id="7Ndzh9v40a3" role="3eOfB_">
-                                      <node concept="3SKdUt" id="7Ndzh9v40wo" role="3cqZAp">
-                                        <node concept="3SKdUq" id="7Ndzh9v40wp" role="3SKWNk">
-                                          <property role="3SKdUp" value="We had a previous branch and it is different than the new branch" />
-                                        </node>
-                                      </node>
-                                      <node concept="3clFbF" id="7Ndzh9v40wq" role="3cqZAp">
-                                        <node concept="37vLTI" id="7Ndzh9v40wr" role="3clFbG">
-                                          <node concept="37vLTw" id="7Ndzh9v40ws" role="37vLTx">
-                                            <ref role="3cqZAo" node="4GdANuvXLRK" resolve="newRemote" />
-                                          </node>
-                                          <node concept="37vLTw" id="7Ndzh9v40wt" role="37vLTJ">
-                                            <ref role="3cqZAo" node="4GdANuvXNTA" resolve="currentRemote" />
-                                          </node>
-                                        </node>
-                                      </node>
-                                      <node concept="3clFbF" id="7Ndzh9v40wu" role="3cqZAp">
-                                        <node concept="1rXfSq" id="7Ndzh9v40wv" role="3clFbG">
-                                          <ref role="37wK5l" node="4GdANuvXPvX" resolve="handleBranchChange" />
-                                          <node concept="2OqwBi" id="7Ndzh9v40ww" role="37wK5m">
-                                            <node concept="37vLTw" id="7Ndzh9v40wx" role="2Oq$k0">
-                                              <ref role="3cqZAo" node="4GdANuvXLRK" resolve="newRemote" />
-                                            </node>
-                                            <node concept="liA8E" id="7Ndzh9v40wy" role="2OqNvi">
-                                              <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
-                                            </node>
-                                          </node>
-                                        </node>
-                                      </node>
-                                    </node>
-                                    <node concept="2OqwBi" id="7Ndzh9v3UsI" role="3eO9$A">
-                                      <node concept="2OqwBi" id="7Ndzh9v3U9Q" role="2Oq$k0">
-                                        <node concept="37vLTw" id="7Ndzh9v3TYQ" role="2Oq$k0">
-                                          <ref role="3cqZAo" node="4GdANuvXNTA" resolve="currentRemote" />
-                                        </node>
-                                        <node concept="liA8E" id="7Ndzh9v3UhW" role="2OqNvi">
-                                          <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
-                                        </node>
-                                      </node>
-                                      <node concept="liA8E" id="7Ndzh9v3UUe" role="2OqNvi">
-                                        <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
-                                        <node concept="2OqwBi" id="7Ndzh9v3VfP" role="37wK5m">
-                                          <node concept="37vLTw" id="7Ndzh9v3V2K" role="2Oq$k0">
-                                            <ref role="3cqZAo" node="4GdANuvXLRK" resolve="newRemote" />
-                                          </node>
-                                          <node concept="liA8E" id="7Ndzh9v3Vyi" role="2OqNvi">
-                                            <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
-                                          </node>
-                                        </node>
-                                      </node>
-                                    </node>
-                                  </node>
-                                </node>
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="3y3z36" id="4GdANuvXMwo" role="3clFbw">
-                          <node concept="37vLTw" id="4GdANuvXMhc" role="3uHU7B">
-                            <ref role="3cqZAo" node="4GdANuvXLHM" resolve="newLocal" />
-                          </node>
-                          <node concept="10Nm6u" id="4GdANuvXMwP" role="3uHU7w" />
-                        </node>
-                        <node concept="3eNFk2" id="7Ndzh9v3Nb6" role="3eNLev">
-                          <node concept="3y3z36" id="7Ndzh9v3NJS" role="3eO9$A">
-                            <node concept="10Nm6u" id="7Ndzh9v3NKn" role="3uHU7w" />
-                            <node concept="37vLTw" id="7Ndzh9v3NjX" role="3uHU7B">
-                              <ref role="3cqZAo" node="4GdANuvXNTA" resolve="currentRemote" />
-                            </node>
-                          </node>
-                          <node concept="3clFbS" id="7Ndzh9v3Nb8" role="3eOfB_">
-                            <node concept="3SKdUt" id="7Ndzh9v3TFp" role="3cqZAp">
-                              <node concept="3SKdUq" id="7Ndzh9v3TFr" role="3SKWNk">
-                                <property role="3SKdUp" value="In the odd case where we have no local branch but came from a branch with a remote" />
-                              </node>
-                            </node>
-                            <node concept="3clFbF" id="7Ndzh9v3NNx" role="3cqZAp">
-                              <node concept="37vLTI" id="7Ndzh9v3Ofs" role="3clFbG">
-                                <node concept="10Nm6u" id="7Ndzh9v3RaH" role="37vLTx" />
-                                <node concept="37vLTw" id="7Ndzh9v3NNw" role="37vLTJ">
-                                  <ref role="3cqZAo" node="4GdANuvXNTA" resolve="currentRemote" />
-                                </node>
-                              </node>
-                            </node>
-                            <node concept="3clFbF" id="7Ndzh9v3T_i" role="3cqZAp">
-                              <node concept="1rXfSq" id="7Ndzh9v3T_g" role="3clFbG">
-                                <ref role="37wK5l" node="4GdANuvXPvX" resolve="handleBranchChange" />
-                                <node concept="10Nm6u" id="7Ndzh9v3TCQ" role="37wK5m" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
+        <node concept="3clFbF" id="57bl67CITgD" role="3cqZAp">
+          <node concept="2OqwBi" id="57bl67CITlR" role="3clFbG">
+            <node concept="37vLTw" id="57bl67CITgB" role="2Oq$k0">
+              <ref role="3cqZAo" node="57bl67CHzoz" resolve="connection" />
             </node>
-            <node concept="2OqwBi" id="4GdANuvX9wO" role="37vLTJ">
-              <node concept="Xjq3P" id="4GdANuvX9vb" role="2Oq$k0" />
-              <node concept="2OwXpG" id="4GdANuvX9zc" role="2OqNvi">
-                <ref role="2Oxat5" node="4GdANuvX9sY" resolve="changeListener" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbH" id="4GdANuvX$IH" role="3cqZAp" />
-        <node concept="3clFbF" id="4GdANuvX$Rj" role="3cqZAp">
-          <node concept="2OqwBi" id="4GdANuvX$Wo" role="3clFbG">
-            <node concept="37vLTw" id="4GdANuvX$Rh" role="2Oq$k0">
-              <ref role="3cqZAo" node="4GdANuvX$gc" resolve="connection" />
-            </node>
-            <node concept="liA8E" id="4GdANuvX_0N" role="2OqNvi">
+            <node concept="liA8E" id="57bl67CITro" role="2OqNvi">
               <ref role="37wK5l" to="4b2m:~MessageBusConnection.subscribe(com.intellij.util.messages.Topic,java.lang.Object):void" resolve="subscribe" />
-              <node concept="10M0yZ" id="4GdANuvX_al" role="37wK5m">
+              <node concept="10M0yZ" id="57bl67CITzB" role="37wK5m">
                 <ref role="3cqZAo" to="5mlj:~GitRepository.GIT_REPO_CHANGE" resolve="GIT_REPO_CHANGE" />
                 <ref role="1PxDUh" to="5mlj:~GitRepository" resolve="GitRepository" />
               </node>
-              <node concept="2OqwBi" id="4GdANuvX_$6" role="37wK5m">
-                <node concept="Xjq3P" id="4GdANuvX_ul" role="2Oq$k0" />
-                <node concept="2OwXpG" id="4GdANuvX_Ca" role="2OqNvi">
-                  <ref role="2Oxat5" node="4GdANuvX9sY" resolve="changeListener" />
+              <node concept="37vLTw" id="57bl67CITHx" role="37wK5m">
+                <ref role="3cqZAo" node="57bl67CIT6l" resolve="listener" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="57bl67CHBgY" role="3cqZAp">
+          <node concept="37vLTw" id="57bl67CIT6q" role="3cqZAk">
+            <ref role="3cqZAo" node="57bl67CIT6l" resolve="listener" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="57bl67CHxlt" role="1B3o_S" />
+      <node concept="3uibUv" id="57bl67CHCHj" role="3clF45">
+        <ref role="3uigEE" node="57bl67CHuVr" resolve="GitBranchChangeListener" />
+      </node>
+      <node concept="37vLTG" id="57bl67CHzcZ" role="3clF46">
+        <property role="TrG5h" value="branchHandler" />
+        <property role="3TUv4t" value="true" />
+        <node concept="1ajhzC" id="57bl67CHzjk" role="1tU5fm">
+          <node concept="17QB3L" id="57bl67CHzjK" role="1ajw0F" />
+          <node concept="3uibUv" id="57bl67CHzka" role="1ajl9A">
+            <ref role="3uigEE" to="wyt6:~Void" resolve="Void" />
+          </node>
+        </node>
+      </node>
+      <node concept="37vLTG" id="57bl67CHxHp" role="3clF46">
+        <property role="TrG5h" value="project" />
+        <property role="3TUv4t" value="true" />
+        <node concept="3uibUv" id="57bl67CHxHo" role="1tU5fm">
+          <ref role="3uigEE" to="4nm9:~Project" resolve="Project" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="57bl67CHx1y" role="jymVt" />
+    <node concept="3clFb_" id="57bl67CH$Lq" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="unregister" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="57bl67CH$Lt" role="3clF47">
+        <node concept="3clFbF" id="57bl67CH$VO" role="3cqZAp">
+          <node concept="2OqwBi" id="57bl67CH_cs" role="3clFbG">
+            <node concept="2OqwBi" id="57bl67CH$Ym" role="2Oq$k0">
+              <node concept="Xjq3P" id="57bl67CH$VM" role="2Oq$k0" />
+              <node concept="2OwXpG" id="57bl67CH_4x" role="2OqNvi">
+                <ref role="2Oxat5" node="57bl67CHzO0" resolve="connection" />
+              </node>
+            </node>
+            <node concept="liA8E" id="57bl67CH_ix" role="2OqNvi">
+              <ref role="37wK5l" to="4b2m:~MessageBusConnection.disconnect():void" resolve="disconnect" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="57bl67CH$A$" role="1B3o_S" />
+      <node concept="3cqZAl" id="57bl67CH$Kj" role="3clF45" />
+    </node>
+    <node concept="2tJIrI" id="57bl67CH$sS" role="jymVt" />
+    <node concept="3clFbW" id="57bl67CHysz" role="jymVt">
+      <node concept="37vLTG" id="57bl67CH_IC" role="3clF46">
+        <property role="TrG5h" value="branchHandler" />
+        <property role="3TUv4t" value="true" />
+        <node concept="1ajhzC" id="57bl67CH_ID" role="1tU5fm">
+          <node concept="17QB3L" id="57bl67CH_IE" role="1ajw0F" />
+          <node concept="3uibUv" id="57bl67CH_IF" role="1ajl9A">
+            <ref role="3uigEE" to="wyt6:~Void" resolve="Void" />
+          </node>
+        </node>
+      </node>
+      <node concept="37vLTG" id="57bl67CH_F5" role="3clF46">
+        <property role="TrG5h" value="connection" />
+        <property role="3TUv4t" value="true" />
+        <node concept="3uibUv" id="57bl67CH_Gv" role="1tU5fm">
+          <ref role="3uigEE" to="4b2m:~MessageBusConnection" resolve="MessageBusConnection" />
+        </node>
+      </node>
+      <node concept="3cqZAl" id="57bl67CHys$" role="3clF45" />
+      <node concept="3clFbS" id="57bl67CHysA" role="3clF47">
+        <node concept="3clFbF" id="57bl67CHA$B" role="3cqZAp">
+          <node concept="37vLTI" id="57bl67CHAPd" role="3clFbG">
+            <node concept="37vLTw" id="57bl67CHARo" role="37vLTx">
+              <ref role="3cqZAo" node="57bl67CH_F5" resolve="connection" />
+            </node>
+            <node concept="2OqwBi" id="57bl67CHAAU" role="37vLTJ">
+              <node concept="Xjq3P" id="57bl67CHA$_" role="2Oq$k0" />
+              <node concept="2OwXpG" id="57bl67CHAH9" role="2OqNvi">
+                <ref role="2Oxat5" node="57bl67CHzO0" resolve="connection" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="57bl67CHAUQ" role="3cqZAp">
+          <node concept="37vLTI" id="57bl67CHBa1" role="3clFbG">
+            <node concept="37vLTw" id="57bl67CHBcN" role="37vLTx">
+              <ref role="3cqZAo" node="57bl67CH_IC" resolve="branchHandler" />
+            </node>
+            <node concept="2OqwBi" id="57bl67CHAYJ" role="37vLTJ">
+              <node concept="Xjq3P" id="57bl67CHAUO" role="2Oq$k0" />
+              <node concept="2OwXpG" id="57bl67CHB4W" role="2OqNvi">
+                <ref role="2Oxat5" node="57bl67CH_XJ" resolve="remoteBranchHandler" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="57bl67CHyhC" role="1B3o_S" />
+    </node>
+    <node concept="2tJIrI" id="57bl67CHy6K" role="jymVt" />
+    <node concept="3clFb_" id="57bl67CHv4y" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="repositoryChanged" />
+      <property role="DiZV1" value="false" />
+      <property role="od$2w" value="false" />
+      <node concept="3Tm1VV" id="57bl67CHv4z" role="1B3o_S" />
+      <node concept="3cqZAl" id="57bl67CHv4$" role="3clF45" />
+      <node concept="37vLTG" id="57bl67CHv4_" role="3clF46">
+        <property role="TrG5h" value="repository" />
+        <property role="3TUv4t" value="true" />
+        <node concept="3uibUv" id="57bl67CHv4A" role="1tU5fm">
+          <ref role="3uigEE" to="5mlj:~GitRepository" resolve="GitRepository" />
+        </node>
+        <node concept="2AHcQZ" id="57bl67CHv4B" role="2AJF6D">
+          <ref role="2AI5Lk" to="mhfm:~NotNull" resolve="NotNull" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="57bl67CHv4C" role="3clF47">
+        <node concept="3cpWs8" id="57bl67CHv4D" role="3cqZAp">
+          <node concept="3cpWsn" id="57bl67CHv4E" role="3cpWs9">
+            <property role="TrG5h" value="newLocalBranch" />
+            <property role="3TUv4t" value="true" />
+            <node concept="3uibUv" id="57bl67CHv4F" role="1tU5fm">
+              <ref role="3uigEE" to="hr4p:~GitLocalBranch" resolve="GitLocalBranch" />
+            </node>
+            <node concept="2OqwBi" id="57bl67CHv4G" role="33vP2m">
+              <node concept="37vLTw" id="57bl67CHv4H" role="2Oq$k0">
+                <ref role="3cqZAo" node="57bl67CHv4_" resolve="repository" />
+              </node>
+              <node concept="liA8E" id="57bl67CHv4I" role="2OqNvi">
+                <ref role="37wK5l" to="5mlj:~GitRepository.getCurrentBranch():git4idea.GitLocalBranch" resolve="getCurrentBranch" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="57bl67CHv4J" role="3cqZAp">
+          <node concept="3clFbS" id="57bl67CHv4K" role="3clFbx">
+            <node concept="3cpWs8" id="57bl67CHv4L" role="3cqZAp">
+              <node concept="3cpWsn" id="57bl67CHv4M" role="3cpWs9">
+                <property role="TrG5h" value="newRemoteBranch" />
+                <property role="3TUv4t" value="true" />
+                <node concept="3uibUv" id="57bl67CHv4N" role="1tU5fm">
+                  <ref role="3uigEE" to="hr4p:~GitRemoteBranch" resolve="GitRemoteBranch" />
+                </node>
+                <node concept="2OqwBi" id="57bl67CHv4O" role="33vP2m">
+                  <node concept="37vLTw" id="57bl67CHv4P" role="2Oq$k0">
+                    <ref role="3cqZAo" node="57bl67CHv4E" resolve="newLocalBranch" />
+                  </node>
+                  <node concept="liA8E" id="57bl67CHv4Q" role="2OqNvi">
+                    <ref role="37wK5l" to="hr4p:~GitLocalBranch.findTrackedBranch(git4idea.repo.GitRepository):git4idea.GitRemoteBranch" resolve="findTrackedBranch" />
+                    <node concept="37vLTw" id="57bl67CHv4R" role="37wK5m">
+                      <ref role="3cqZAo" node="57bl67CHv4_" resolve="repository" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbH" id="57bl67CHv4S" role="3cqZAp" />
+            <node concept="3clFbJ" id="57bl67CIYMM" role="3cqZAp">
+              <node concept="3clFbS" id="57bl67CIYMO" role="3clFbx">
+                <node concept="3clFbJ" id="57bl67CJ2Ic" role="3cqZAp">
+                  <node concept="3clFbS" id="57bl67CJ2Ie" role="3clFbx">
+                    <node concept="3SKdUt" id="57bl67CIZS7" role="3cqZAp">
+                      <node concept="3SKdUq" id="57bl67CIZS9" role="3SKWNk">
+                        <property role="3SKdUp" value="NO previous, NO new" />
+                      </node>
+                    </node>
+                    <node concept="3clFbF" id="57bl67CIZZ6" role="3cqZAp">
+                      <node concept="2OqwBi" id="57bl67CIZZ7" role="3clFbG">
+                        <node concept="2OqwBi" id="57bl67CIZZ8" role="2Oq$k0">
+                          <node concept="Xjq3P" id="57bl67CIZZ9" role="2Oq$k0" />
+                          <node concept="2OwXpG" id="57bl67CIZZa" role="2OqNvi">
+                            <ref role="2Oxat5" node="57bl67CH_XJ" resolve="remoteBranchHandler" />
+                          </node>
+                        </node>
+                        <node concept="1Bd96e" id="57bl67CIZZb" role="2OqNvi">
+                          <node concept="10Nm6u" id="57bl67CJ0bW" role="1BdPVh" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbC" id="57bl67CIZNc" role="3clFbw">
+                    <node concept="10Nm6u" id="57bl67CIZPF" role="3uHU7w" />
+                    <node concept="37vLTw" id="57bl67CIZCu" role="3uHU7B">
+                      <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
+                    </node>
+                  </node>
+                  <node concept="9aQIb" id="57bl67CJ2PC" role="9aQIa">
+                    <node concept="3clFbS" id="57bl67CJ2PD" role="9aQI4">
+                      <node concept="3SKdUt" id="57bl67CHv4V" role="3cqZAp">
+                        <node concept="3SKdUq" id="57bl67CHv4W" role="3SKWNk">
+                          <property role="3SKdUp" value="NO previous, YES new" />
+                        </node>
+                      </node>
+                      <node concept="3clFbF" id="57bl67CHv4X" role="3cqZAp">
+                        <node concept="37vLTI" id="57bl67CHv4Y" role="3clFbG">
+                          <node concept="37vLTw" id="57bl67CHv4Z" role="37vLTx">
+                            <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
+                          </node>
+                          <node concept="2OqwBi" id="57bl67CHEPC" role="37vLTJ">
+                            <node concept="Xjq3P" id="57bl67CHEMZ" role="2Oq$k0" />
+                            <node concept="2OwXpG" id="57bl67CHEVR" role="2OqNvi">
+                              <ref role="2Oxat5" node="57bl67CHDeb" resolve="currentRemoteBranch" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3clFbF" id="57bl67CHEZO" role="3cqZAp">
+                        <node concept="2OqwBi" id="57bl67CHFgk" role="3clFbG">
+                          <node concept="2OqwBi" id="57bl67CHF58" role="2Oq$k0">
+                            <node concept="Xjq3P" id="57bl67CHEZM" role="2Oq$k0" />
+                            <node concept="2OwXpG" id="57bl67CHFbj" role="2OqNvi">
+                              <ref role="2Oxat5" node="57bl67CH_XJ" resolve="remoteBranchHandler" />
+                            </node>
+                          </node>
+                          <node concept="1Bd96e" id="57bl67CHFlR" role="2OqNvi">
+                            <node concept="2OqwBi" id="57bl67CHFmP" role="1BdPVh">
+                              <node concept="37vLTw" id="57bl67CHFmQ" role="2Oq$k0">
+                                <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
+                              </node>
+                              <node concept="liA8E" id="57bl67CHFmR" role="2OqNvi">
+                                <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbC" id="57bl67CIZnY" role="3clFbw">
+                <node concept="2OqwBi" id="57bl67CIZ4G" role="3uHU7B">
+                  <node concept="Xjq3P" id="57bl67CIZ0d" role="2Oq$k0" />
+                  <node concept="2OwXpG" id="57bl67CIZaX" role="2OqNvi">
+                    <ref role="2Oxat5" node="57bl67CHDeb" resolve="currentRemoteBranch" />
+                  </node>
+                </node>
+                <node concept="10Nm6u" id="57bl67CIZom" role="3uHU7w" />
+              </node>
+              <node concept="9aQIb" id="57bl67CJ3DA" role="9aQIa">
+                <node concept="3clFbS" id="57bl67CJ3DB" role="9aQI4">
+                  <node concept="3clFbJ" id="57bl67CHv5i" role="3cqZAp">
+                    <node concept="3clFbS" id="57bl67CHv5j" role="3clFbx">
+                      <node concept="3SKdUt" id="57bl67CHv5k" role="3cqZAp">
+                        <node concept="3SKdUq" id="57bl67CHv5l" role="3SKWNk">
+                          <property role="3SKdUp" value="YES previous, NO new" />
+                        </node>
+                      </node>
+                      <node concept="3clFbF" id="57bl67CHv5m" role="3cqZAp">
+                        <node concept="37vLTI" id="57bl67CHv5n" role="3clFbG">
+                          <node concept="10Nm6u" id="57bl67CHv5o" role="37vLTx" />
+                          <node concept="2OqwBi" id="57bl67CHFN7" role="37vLTJ">
+                            <node concept="Xjq3P" id="57bl67CHFN8" role="2Oq$k0" />
+                            <node concept="2OwXpG" id="57bl67CHFN9" role="2OqNvi">
+                              <ref role="2Oxat5" node="57bl67CHDeb" resolve="currentRemoteBranch" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3clFbF" id="57bl67CHFVZ" role="3cqZAp">
+                        <node concept="2OqwBi" id="57bl67CHFW0" role="3clFbG">
+                          <node concept="2OqwBi" id="57bl67CHFW1" role="2Oq$k0">
+                            <node concept="Xjq3P" id="57bl67CHFW2" role="2Oq$k0" />
+                            <node concept="2OwXpG" id="57bl67CHFW3" role="2OqNvi">
+                              <ref role="2Oxat5" node="57bl67CH_XJ" resolve="remoteBranchHandler" />
+                            </node>
+                          </node>
+                          <node concept="1Bd96e" id="57bl67CHFW4" role="2OqNvi">
+                            <node concept="10Nm6u" id="57bl67CHG48" role="1BdPVh" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3clFbC" id="57bl67CHv5t" role="3clFbw">
+                      <node concept="10Nm6u" id="57bl67CHv5u" role="3uHU7w" />
+                      <node concept="37vLTw" id="57bl67CHv5v" role="3uHU7B">
+                        <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
+                      </node>
+                    </node>
+                    <node concept="3eNFk2" id="57bl67CHv5w" role="3eNLev">
+                      <node concept="3clFbS" id="57bl67CHv5x" role="3eOfB_">
+                        <node concept="3SKdUt" id="57bl67CHv5y" role="3cqZAp">
+                          <node concept="3SKdUq" id="57bl67CHv5z" role="3SKWNk">
+                            <property role="3SKdUp" value="YES previous, YES new" />
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="57bl67CHv5$" role="3cqZAp">
+                          <node concept="37vLTI" id="57bl67CHv5_" role="3clFbG">
+                            <node concept="37vLTw" id="57bl67CHv5A" role="37vLTx">
+                              <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
+                            </node>
+                            <node concept="2OqwBi" id="57bl67CHFJ7" role="37vLTJ">
+                              <node concept="Xjq3P" id="57bl67CHFJ8" role="2Oq$k0" />
+                              <node concept="2OwXpG" id="57bl67CHFJ9" role="2OqNvi">
+                                <ref role="2Oxat5" node="57bl67CHDeb" resolve="currentRemoteBranch" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="57bl67CHGdn" role="3cqZAp">
+                          <node concept="2OqwBi" id="57bl67CHGdo" role="3clFbG">
+                            <node concept="2OqwBi" id="57bl67CHGdp" role="2Oq$k0">
+                              <node concept="Xjq3P" id="57bl67CHGdq" role="2Oq$k0" />
+                              <node concept="2OwXpG" id="57bl67CHGdr" role="2OqNvi">
+                                <ref role="2Oxat5" node="57bl67CH_XJ" resolve="remoteBranchHandler" />
+                              </node>
+                            </node>
+                            <node concept="1Bd96e" id="57bl67CHGds" role="2OqNvi">
+                              <node concept="2OqwBi" id="57bl67CHGdt" role="1BdPVh">
+                                <node concept="37vLTw" id="57bl67CHGdu" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
+                                </node>
+                                <node concept="liA8E" id="57bl67CHGdv" role="2OqNvi">
+                                  <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3fqX7Q" id="57bl67CJ4TM" role="3eO9$A">
+                        <node concept="2OqwBi" id="57bl67CJ4TO" role="3fr31v">
+                          <node concept="2OqwBi" id="57bl67CJ4TP" role="2Oq$k0">
+                            <node concept="2OqwBi" id="57bl67CJ4TQ" role="2Oq$k0">
+                              <node concept="Xjq3P" id="57bl67CJ4TR" role="2Oq$k0" />
+                              <node concept="2OwXpG" id="57bl67CJ4TS" role="2OqNvi">
+                                <ref role="2Oxat5" node="57bl67CHDeb" resolve="currentRemoteBranch" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="57bl67CJ4TT" role="2OqNvi">
+                              <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="57bl67CJ4TU" role="2OqNvi">
+                            <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                            <node concept="2OqwBi" id="57bl67CJ4TV" role="37wK5m">
+                              <node concept="37vLTw" id="57bl67CJ4TW" role="2Oq$k0">
+                                <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
+                              </node>
+                              <node concept="liA8E" id="57bl67CJ4TX" role="2OqNvi">
+                                <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3y3z36" id="57bl67CHv5P" role="3clFbw">
+            <node concept="37vLTw" id="57bl67CHv5Q" role="3uHU7B">
+              <ref role="3cqZAo" node="57bl67CHv4E" resolve="newLocalBranch" />
+            </node>
+            <node concept="10Nm6u" id="57bl67CHv5R" role="3uHU7w" />
+          </node>
+          <node concept="3eNFk2" id="57bl67CHv5S" role="3eNLev">
+            <node concept="3y3z36" id="57bl67CHv5T" role="3eO9$A">
+              <node concept="10Nm6u" id="57bl67CHv5U" role="3uHU7w" />
+              <node concept="2OqwBi" id="57bl67CHFFG" role="3uHU7B">
+                <node concept="Xjq3P" id="57bl67CHFFH" role="2Oq$k0" />
+                <node concept="2OwXpG" id="57bl67CHFFI" role="2OqNvi">
+                  <ref role="2Oxat5" node="57bl67CHDeb" resolve="currentRemoteBranch" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="57bl67CHv5W" role="3eOfB_">
+              <node concept="3SKdUt" id="57bl67CHv5X" role="3cqZAp">
+                <node concept="3SKdUq" id="57bl67CHv5Y" role="3SKWNk">
+                  <property role="3SKdUp" value="odd case, no local branch, but we had a remote" />
+                </node>
+              </node>
+              <node concept="3clFbF" id="57bl67CHv5Z" role="3cqZAp">
+                <node concept="37vLTI" id="57bl67CHv60" role="3clFbG">
+                  <node concept="10Nm6u" id="57bl67CHv61" role="37vLTx" />
+                  <node concept="2OqwBi" id="57bl67CHFCj" role="37vLTJ">
+                    <node concept="Xjq3P" id="57bl67CHFCk" role="2Oq$k0" />
+                    <node concept="2OwXpG" id="57bl67CHFCl" role="2OqNvi">
+                      <ref role="2Oxat5" node="57bl67CHDeb" resolve="currentRemoteBranch" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbF" id="57bl67CHH5a" role="3cqZAp">
+                <node concept="2OqwBi" id="57bl67CHH5b" role="3clFbG">
+                  <node concept="2OqwBi" id="57bl67CHH5c" role="2Oq$k0">
+                    <node concept="Xjq3P" id="57bl67CHH5d" role="2Oq$k0" />
+                    <node concept="2OwXpG" id="57bl67CHH5e" role="2OqNvi">
+                      <ref role="2Oxat5" node="57bl67CH_XJ" resolve="remoteBranchHandler" />
+                    </node>
+                  </node>
+                  <node concept="1Bd96e" id="57bl67CHH5f" role="2OqNvi">
+                    <node concept="10Nm6u" id="57bl67CHH5g" role="1BdPVh" />
+                  </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
       </node>
-      <node concept="3Tm1VV" id="4GdANuvX9tB" role="1B3o_S" />
     </node>
-    <node concept="2tJIrI" id="4GdANuvXKpc" role="jymVt" />
-    <node concept="3clFb_" id="4GdANuvXPvX" role="jymVt">
-      <property role="1EzhhJ" value="true" />
-      <property role="TrG5h" value="handleBranchChange" />
-      <property role="od$2w" value="false" />
-      <property role="DiZV1" value="false" />
-      <property role="2aFKle" value="false" />
-      <node concept="3clFbS" id="4GdANuvXPw0" role="3clF47" />
-      <node concept="3Tm1VV" id="4GdANuvXKw2" role="1B3o_S" />
-      <node concept="3cqZAl" id="4GdANuvXPvT" role="3clF45" />
-      <node concept="37vLTG" id="4GdANuvXPM3" role="3clF46">
-        <property role="TrG5h" value="newBranchName" />
-        <node concept="17QB3L" id="4GdANuvXPM2" role="1tU5fm" />
-      </node>
+    <node concept="2tJIrI" id="57bl67CHuZp" role="jymVt" />
+    <node concept="3Tm1VV" id="57bl67CHuVs" role="1B3o_S" />
+    <node concept="3uibUv" id="57bl67CHuZP" role="EKbjA">
+      <ref role="3uigEE" to="5mlj:~GitRepositoryChangeListener" resolve="GitRepositoryChangeListener" />
     </node>
-    <node concept="3Tm1VV" id="4GdANuvX6dc" role="1B3o_S" />
   </node>
 </model>
 
