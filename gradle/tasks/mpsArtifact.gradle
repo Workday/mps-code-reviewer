@@ -1,7 +1,6 @@
 { ->
   def downloadFile = mps.downloadDir + "/MPS-${mps.build}.zip"
   def eapSuffix = mps.build.contains("EAP") ? " EAP" : ""
-  def unpackedDir = mps.downloadDir + "/MPS ${mps.major}${eapSuffix}"
 
   task downloadMps(type: Download) {
     doFirst {
@@ -17,9 +16,16 @@
 
   task unzipMps(type: Copy, dependsOn: downloadMps) {
     from zipTree(downloadFile)
-    into mps.downloadDir
-    doLast {
-      println "MPS extracted to: " + unpackedDir
+    into mps.downloadDir + "/MPS"
+    eachFile { FileCopyDetails fcp ->
+		if (fcp.relativePath.pathString.startsWith("MPS ${mps.major}")) {
+        	// remap the file to the root
+			def segments = fcp.relativePath.segments
+			def pathsegments =segments[1..-1] as String[]
+			fcp.relativePath = new RelativePath(!fcp.file.isDirectory(), pathsegments)
+		} else {
+			fcp.exclude()
+		}
     }
   }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="com.workday.mps.review.build" uuid="aa79ef09-da8f-4761-af89-e6223d0e9718" moduleVersion="0" compileInMPS="true">
+<solution name="com.workday.mps.review.build.meta" uuid="647b24df-0989-4dda-8a80-df171228d489" moduleVersion="0" compileInMPS="true">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -19,7 +19,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="3ae9cfda-f938-4524-b4ca-fbcba3b0525b(com.mbeddr.platform)" version="0" />
-    <module reference="aa79ef09-da8f-4761-af89-e6223d0e9718(com.workday.mps.review.build)" version="0" />
+    <module reference="647b24df-0989-4dda-8a80-df171228d489(com.workday.mps.review.build.meta)" version="0" />
     <module reference="422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)" version="0" />
   </dependencyVersions>
 </solution>

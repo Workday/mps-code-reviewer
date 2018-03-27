@@ -1,4 +1,5 @@
 // Build script for MpsCodeReview
+import org.apache.tools.ant.util.TeeOutputStream
 
 /*
 Things to add to an MPS Gradle plugin:
@@ -29,7 +30,7 @@ ext {
   mps = new Expando(
     major: "2017.3",
     build: "2017.3.5",
-    downloadDir: "artifacts/MPS"
+    downloadDir: "artifacts"
   )
 }
 
@@ -58,13 +59,13 @@ dependencies {
   com_workday_mps_reviewCompile "org.apache.httpcomponents:httpcore:4.4.9"
   com_workday_mps_reviewCompile "org.apache.httpcomponents:httpclient:4.5.5"
 
-  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS ${mps.major}/plugins/git4idea/lib/git4idea.jar")
-  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS ${mps.major}/plugins/git4idea/lib/git4idea-rt.jar")
+  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS/plugins/git4idea/lib/git4idea.jar")
+  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS/plugins/git4idea/lib/git4idea-rt.jar")
 }
 
 task unzipPlugins(type: Copy) {
   from configurations.mpsPlugins.resolve().collect { zipTree(it) }
-  into 'plugins'
+  into 'artifacts'
 }
 
 task getPlugins(dependsOn: unzipPlugins)
@@ -74,10 +75,14 @@ task com_workday_mps_reviewCompileDependencies(type: Copy) {
   into 'solutions/com.workday.mps.review/lib'
 }
 
+com_workday_mps_reviewCompileDependencies.mustRunAfter getMps
+
 task com_workday_mps_review_git4mpsCompileDependencies(type: Copy) {
   from configurations.com_workday_mps_review_git4mpsCompile.resolve()
   into 'solutions/com.workday.mps.review.git4mps/lib'
 }
+
+com_workday_mps_review_git4mpsCompileDependencies.mustRunAfter getMps
 
 task setup(group: "Project",
            description: "Initializes the project for development",
@@ -85,7 +90,6 @@ task setup(group: "Project",
                        getPlugins, 
                        com_workday_mps_reviewCompileDependencies, 
                        com_workday_mps_review_git4mpsCompileDependencies])
-
 
 clean.doFirst {
     delete "${rootDir}/artifacts/"
@@ -105,11 +109,54 @@ clean.doFirst {
     }
 }
 
-// task generateBuildScripts(description: "Generates all Ant build scripts",
-//                           group: "MPS Build",
-//                           dependsOn: setup) << {
-//   println "Generating Ant Build Scripts ============================="
-//   execAndFailIfTextFound ANT_FAILURE, "ant", "-buildfile", "${rootDir}/buildscripts/allBuildScripts.xml", "generate"
-//   println "Build Script Generation Completed ############################"
-//   println()
-// }
+task generateBuildScripts(description: "Generates all Ant build scripts",
+                           group: "MPS Build",
+                           dependsOn: setup) << {
+	println "Generating ant scripts ==========================================="
+	runAnt "${rootDir}/buildScripts/reviewPluginBuildScripts.xml", "generate"
+	println "Ant scripts have been successfully generated ====================="
+	println()
+}
+
+generateBuildScripts.mustRunAfter setup
+
+task buildPlugin(group: "MPS Build",
+        description: "Generates the code reviewer plugin",
+        dependsOn: generateBuildScripts) << {
+	println "Building code reviewer plugin ===================================="
+	runAnt "${rootDir}/dist/reviewPlugin.xml", "clean", "generate", "build"
+    println "Code reviewer plugin has been successfully built ================="
+    println()
+}
+
+buildPlugin.mustRunAfter generateBuildScripts
+
+defaultTasks 'buildPlugin'
+
+void runAnt(Object buildfile, String... targets) {
+    exec "BUILD FAILED", ["ant", "-buildfile", buildfile, *targets] as Object[]
+}
+
+void exec(String textToFind, Object... args) {
+    exec {
+        commandLine = args
+    }
+}
+
+void execAndFailIfTextFound(String textToFind, Object... args) {
+    def taskOutput = new ByteArrayOutputStream()
+    def teeOutput = new TeeOutputStream(taskOutput, System.out)
+
+    exec {
+        ignoreExitValue = true
+        commandLine = args
+        standardOutput = teeOutput
+        errorOutput = teeOutput
+    }
+
+    String testOutput = taskOutput.toString()
+
+    if (testOutput.contains(textToFind)) {
+        throw new GradleException("ANT build failure")
+    }
+}
