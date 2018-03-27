@@ -300,17 +300,6 @@
         </node>
       </node>
     </node>
-    <node concept="Wx3nA" id="3REobdwK49A" role="jymVt">
-      <property role="2dlcS1" value="false" />
-      <property role="2dld4O" value="false" />
-      <property role="TrG5h" value="TOKEN" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="3REobdwK3LR" role="1B3o_S" />
-      <node concept="17QB3L" id="3REobdwK49u" role="1tU5fm" />
-      <node concept="Xl_RD" id="3REobdwK4mR" role="33vP2m">
-        <property role="Xl_RC" value="ODM5MTgyNDE0NzkxOj5yW9PkVKjKTpOs/foU90z0TbJc" />
-      </node>
-    </node>
     <node concept="Wx3nA" id="3REobdwK4wN" role="jymVt">
       <property role="2dlcS1" value="false" />
       <property role="2dld4O" value="false" />
@@ -1712,8 +1701,14 @@
                     <node concept="Xl_RD" id="3REobdwHT2T" role="3uHU7B">
                       <property role="Xl_RC" value="Bearer " />
                     </node>
-                    <node concept="37vLTw" id="3u71fW_Q5uT" role="3uHU7w">
-                      <ref role="3cqZAo" node="3REobdwK49A" resolve="TOKEN" />
+                    <node concept="2OqwBi" id="1ICP8fcT1Mt" role="3uHU7w">
+                      <node concept="2YIFZM" id="1ICP8fcT1yM" role="2Oq$k0">
+                        <ref role="37wK5l" node="24HfET2rY9t" resolve="getCurrentConfig" />
+                        <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="AuthenticationTokenConfig" />
+                      </node>
+                      <node concept="2OwXpG" id="1ICP8fcT21T" role="2OqNvi">
+                        <ref role="2Oxat5" node="3vXSZsAPOW2" resolve="token" />
+                      </node>
                     </node>
                   </node>
                 </node>
