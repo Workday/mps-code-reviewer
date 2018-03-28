@@ -106,6 +106,7 @@
       <concept id="7812454656619025416" name="jetbrains.mps.baseLanguage.structure.MethodDeclaration" flags="ng" index="1rXfSm">
         <property id="8355037393041754995" name="isNative" index="2aFKle" />
       </concept>
+      <concept id="7812454656619025412" name="jetbrains.mps.baseLanguage.structure.LocalMethodCall" flags="nn" index="1rXfSq" />
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
         <child id="1109201940907" name="parameter" index="11_B2D" />
@@ -279,7 +280,6 @@
       <property role="DiZV1" value="true" />
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="3c3vDUkV7Ta" role="3clF47">
-        <node concept="3clFbH" id="7Ndzh9v5hCO" role="3cqZAp" />
         <node concept="3clFbJ" id="3c3vDUkVoGH" role="3cqZAp">
           <property role="TyiWK" value="true" />
           <property role="TyiWL" value="false" />
@@ -295,20 +295,8 @@
               </node>
             </node>
           </node>
-          <node concept="2OqwBi" id="168JFiafvWK" role="3clFbw">
-            <node concept="2YIFZM" id="168JFiafvQX" role="2Oq$k0">
-              <ref role="37wK5l" to="wyt6:~Thread.currentThread():java.lang.Thread" resolve="currentThread" />
-              <ref role="1Pybhc" to="wyt6:~Thread" resolve="Thread" />
-            </node>
-            <node concept="liA8E" id="168JFiafw1O" role="2OqNvi">
-              <ref role="37wK5l" to="wyt6:~Object.equals(java.lang.Object):boolean" resolve="equals" />
-              <node concept="2OqwBi" id="168JFiafBW$" role="37wK5m">
-                <node concept="Xjq3P" id="168JFiafBRL" role="2Oq$k0" />
-                <node concept="2OwXpG" id="168JFiafC2E" role="2OqNvi">
-                  <ref role="2Oxat5" node="168JFiafB8W" resolve="dispatchThread" />
-                </node>
-              </node>
-            </node>
+          <node concept="1rXfSq" id="4Ew7qBDhIAn" role="3clFbw">
+            <ref role="37wK5l" node="4Ew7qBDhG8L" resolve="isDispatchThread" />
           </node>
         </node>
         <node concept="3clFbH" id="3c3vDUkWpOK" role="3cqZAp" />
@@ -427,7 +415,7 @@
     <node concept="2tJIrI" id="3c3vDUkVpK2" role="jymVt" />
     <node concept="3clFb_" id="3c3vDUkW0uf" role="jymVt">
       <property role="1EzhhJ" value="false" />
-      <property role="TrG5h" value="isDispatching" />
+      <property role="TrG5h" value="currentlyDispatching" />
       <property role="od$2w" value="false" />
       <property role="DiZV1" value="true" />
       <property role="2aFKle" value="false" />
@@ -446,6 +434,35 @@
       </node>
       <node concept="3Tm1VV" id="3c3vDUkVZMz" role="1B3o_S" />
       <node concept="10P_77" id="3c3vDUkW0u6" role="3clF45" />
+    </node>
+    <node concept="2tJIrI" id="4Ew7qBDhENv" role="jymVt" />
+    <node concept="3clFb_" id="4Ew7qBDhG8L" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="isDispatchThread" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="true" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="4Ew7qBDhG8O" role="3clF47">
+        <node concept="3cpWs6" id="4Ew7qBDhGMA" role="3cqZAp">
+          <node concept="2OqwBi" id="4Ew7qBDhHqH" role="3cqZAk">
+            <node concept="2YIFZM" id="4Ew7qBDhHqI" role="2Oq$k0">
+              <ref role="37wK5l" to="wyt6:~Thread.currentThread():java.lang.Thread" resolve="currentThread" />
+              <ref role="1Pybhc" to="wyt6:~Thread" resolve="Thread" />
+            </node>
+            <node concept="liA8E" id="4Ew7qBDhHqJ" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~Object.equals(java.lang.Object):boolean" resolve="equals" />
+              <node concept="2OqwBi" id="4Ew7qBDhHqK" role="37wK5m">
+                <node concept="Xjq3P" id="4Ew7qBDhHqL" role="2Oq$k0" />
+                <node concept="2OwXpG" id="4Ew7qBDhHqM" role="2OqNvi">
+                  <ref role="2Oxat5" node="168JFiafB8W" resolve="dispatchThread" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="4Ew7qBDhFuI" role="1B3o_S" />
+      <node concept="10P_77" id="4Ew7qBDhG8i" role="3clF45" />
     </node>
     <node concept="3Tm1VV" id="3c3vDUkV4xC" role="1B3o_S" />
     <node concept="3UR2Jj" id="3c3vDUkV4y6" role="lGtFl">
