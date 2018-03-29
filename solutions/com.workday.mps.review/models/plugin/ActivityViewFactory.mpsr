@@ -279,7 +279,7 @@
         <property role="TrG5h" value="activity" />
         <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="3REobdwNemP" role="1tU5fm">
-          <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+          <ref role="3uigEE" node="3REobdwLfZz" resolve="BBActivity" />
         </node>
       </node>
       <node concept="3clFbS" id="3c3vDUkzeFK" role="3clF47">
@@ -290,7 +290,7 @@
                 <property role="TrG5h" value="comment" />
                 <property role="3TUv4t" value="true" />
                 <node concept="3uibUv" id="3REobdwNmBF" role="1tU5fm">
-                  <ref role="3uigEE" node="3REobdwLi2e" resolve="Comment" />
+                  <ref role="3uigEE" node="3REobdwLi2e" resolve="BBComment" />
                 </node>
                 <node concept="2OqwBi" id="3REobdwNntB" role="33vP2m">
                   <node concept="37vLTw" id="3REobdwNnlb" role="2Oq$k0">

@@ -6,14 +6,22 @@
     </modelRoot>
     <modelRoot contentPath="${module}/lib" type="java_classes">
       <sourceRoot location="gson-2.8.0.jar" />
+      <sourceRoot location="commons-codec-1.10.jar" />
+      <sourceRoot location="commons-logging-1.2.jar" />
       <sourceRoot location="httpclient-4.5.5.jar" />
       <sourceRoot location="httpcore-4.4.9.jar" />
+      <sourceRoot location="okhttp-3.10.0.jar" />
+      <sourceRoot location="okio-1.14.0.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
     <stubModelEntry path="${module}/lib/gson-2.8.0.jar" />
+    <stubModelEntry path="${module}/lib/commons-codec-1.10.jar" />
+    <stubModelEntry path="${module}/lib/commons-logging-1.2.jar" />
     <stubModelEntry path="${module}/lib/httpclient-4.5.5.jar" />
     <stubModelEntry path="${module}/lib/httpcore-4.4.9.jar" />
+    <stubModelEntry path="${module}/lib/okhttp-3.10.0.jar" />
+    <stubModelEntry path="${module}/lib/okio-1.14.0.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

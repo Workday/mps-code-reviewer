@@ -608,11 +608,11 @@
                                 <property role="TrG5h" value="comment" />
                                 <property role="3TUv4t" value="true" />
                                 <node concept="3uibUv" id="3REobdwMt08" role="1tU5fm">
-                                  <ref role="3uigEE" node="3REobdwLi2e" resolve="Comment" />
+                                  <ref role="3uigEE" node="3REobdwLi2e" resolve="BBComment" />
                                 </node>
                                 <node concept="2ShNRf" id="3REobdwMt_6" role="33vP2m">
                                   <node concept="HV5vD" id="3REobdwMvdB" role="2ShVmc">
-                                    <ref role="HV5vE" node="3REobdwLi2e" resolve="Comment" />
+                                    <ref role="HV5vE" node="3REobdwLi2e" resolve="BBComment" />
                                   </node>
                                 </node>
                               </node>
@@ -713,7 +713,7 @@
                                 <property role="TrG5h" value="activity" />
                                 <property role="3TUv4t" value="true" />
                                 <node concept="3uibUv" id="3REobdwU1ow" role="1tU5fm">
-                                  <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+                                  <ref role="3uigEE" node="3REobdwLfZz" resolve="BBActivity" />
                                 </node>
                                 <node concept="2YIFZM" id="3REobdwU1oz" role="33vP2m">
                                   <ref role="37wK5l" node="3REobdwM6yT" resolve="addPullRequestComment" />
@@ -1270,7 +1270,7 @@
         <property role="TrG5h" value="activities" />
         <node concept="_YKpA" id="3c3vDUkzZSe" role="1tU5fm">
           <node concept="3uibUv" id="3REobdwO7im" role="_ZDj9">
-            <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+            <ref role="3uigEE" node="3REobdwLfZz" resolve="BBActivity" />
           </node>
         </node>
       </node>
@@ -1279,21 +1279,12 @@
     <node concept="3uibUv" id="4GdANuvWUwz" role="EKbjA">
       <ref role="3uigEE" node="3c3vDUlbPqv" resolve="SwingComponent" />
     </node>
-    <node concept="3uibUv" id="3c3vDUl4ZZO" role="EKbjA">
-      <ref role="3uigEE" to="ee8f:3c3vDUl44tr" resolve="ChangeEventListener" />
-    </node>
     <node concept="3clFb_" id="3c3vDUl50wp" role="jymVt">
       <property role="1EzhhJ" value="false" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="onChange" />
       <node concept="3Tm1VV" id="3c3vDUl50wr" role="1B3o_S" />
       <node concept="3cqZAl" id="3c3vDUl50ws" role="3clF45" />
-      <node concept="37vLTG" id="3c3vDUl50wt" role="3clF46">
-        <property role="TrG5h" value="event" />
-        <node concept="3uibUv" id="3c3vDUl50wu" role="1tU5fm">
-          <ref role="3uigEE" to="ee8f:3c3vDUl3Zzv" resolve="ChangeEvent" />
-        </node>
-      </node>
       <node concept="3clFbS" id="3c3vDUl50wv" role="3clF47">
         <node concept="3clFbJ" id="3c3vDUl5zN1" role="3cqZAp">
           <node concept="3clFbS" id="3c3vDUl5zN3" role="3clFbx">
@@ -1355,9 +1346,6 @@
             </node>
           </node>
         </node>
-      </node>
-      <node concept="2AHcQZ" id="3c3vDUl50ww" role="2AJF6D">
-        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
     </node>
     <node concept="3Tm1VV" id="q2HDcpwbMD" role="1B3o_S" />

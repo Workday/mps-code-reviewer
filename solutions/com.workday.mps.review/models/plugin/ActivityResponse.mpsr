@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:a13717ec-0f28-4c83-aaaa-0b10931768b8(com.workday.mps.review.plugin)" content="root">
   <persistence version="9" />
-  <imports>
-    <import index="ee8f" ref="r:76b35c96-0206-4f74-890e-e39504808bf8(com.workday.mps.flux.core)" implicit="true" />
-  </imports>
+  <imports />
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
-        <child id="1095933932569" name="implementedInterface" index="EKbjA" />
-      </concept>
-      <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
-        <reference id="1107535924139" name="classifier" index="3uigEE" />
-      </concept>
+      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
@@ -26,13 +19,10 @@
       </concept>
     </language>
   </registry>
-  <node concept="312cEu" id="168JFiafRsM">
+  <node concept="312cEu" id="4Ew7qBDi6_M">
     <property role="3GE5qa" value="actions" />
-    <property role="TrG5h" value="RefreshReview" />
-    <node concept="3Tm1VV" id="168JFiafRsN" role="1B3o_S" />
-    <node concept="3uibUv" id="168JFiafR$y" role="EKbjA">
-      <ref role="3uigEE" to="ee8f:3c3vDUkV812" resolve="Action" />
-    </node>
+    <property role="TrG5h" value="ActivityResponse" />
+    <node concept="3Tm1VV" id="4Ew7qBDi6_N" role="1B3o_S" />
   </node>
 </model>
 

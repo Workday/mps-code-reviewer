@@ -149,7 +149,7 @@
       <property role="3TUv4t" value="true" />
       <node concept="_YKpA" id="3c3vDUkyg5L" role="1tU5fm">
         <node concept="3uibUv" id="3REobdwPE25" role="_ZDj9">
-          <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+          <ref role="3uigEE" node="3REobdwLfZz" resolve="BBActivity" />
         </node>
       </node>
       <node concept="3Tmbuc" id="3REobdwSnzr" role="1B3o_S" />
@@ -198,7 +198,7 @@
     <node concept="2tJIrI" id="3c3vDUkycUc" role="jymVt" />
     <node concept="3Tm1VV" id="3c3vDUkycEx" role="1B3o_S" />
     <node concept="3uibUv" id="3c3vDUkycFx" role="EKbjA">
-      <ref role="3uigEE" node="3c3vDUkybjq" resolve="ReviewConnection" />
+      <ref role="3uigEE" node="3c3vDUkybjq" resolve="ReviewConnectionOld" />
     </node>
     <node concept="3clFb_" id="3c3vDUkycMK" role="jymVt">
       <property role="1EzhhJ" value="false" />
@@ -207,7 +207,7 @@
       <node concept="3Tm1VV" id="3c3vDUkycMM" role="1B3o_S" />
       <node concept="_YKpA" id="3c3vDUkycMN" role="3clF45">
         <node concept="3uibUv" id="3REobdwPIzQ" role="_ZDj9">
-          <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+          <ref role="3uigEE" node="3REobdwLfZz" resolve="BBActivity" />
         </node>
       </node>
       <node concept="3clFbS" id="3c3vDUkycMQ" role="3clF47">
@@ -218,7 +218,7 @@
                 <ref role="3cqZAo" node="3c3vDUkygxX" resolve="activities" />
               </node>
               <node concept="3uibUv" id="3REobdwPOlI" role="HW$YZ">
-                <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+                <ref role="3uigEE" node="3REobdwLfZz" resolve="BBActivity" />
               </node>
             </node>
           </node>
@@ -235,7 +235,7 @@
       <property role="TrG5h" value="getActivity" />
       <node concept="3Tm1VV" id="3c3vDUkycN4" role="1B3o_S" />
       <node concept="3uibUv" id="3REobdwPYdV" role="3clF45">
-        <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+        <ref role="3uigEE" node="3REobdwLfZz" resolve="BBActivity" />
       </node>
       <node concept="37vLTG" id="3c3vDUkycN6" role="3clF46">
         <property role="TrG5h" value="id" />
@@ -290,7 +290,7 @@
       <node concept="37vLTG" id="3c3vDUl58cQ" role="3clF46">
         <property role="TrG5h" value="activity" />
         <node concept="3uibUv" id="3REobdwQ1ev" role="1tU5fm">
-          <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+          <ref role="3uigEE" node="3REobdwLfZz" resolve="BBActivity" />
         </node>
       </node>
       <node concept="3clFbS" id="3c3vDUl58cT" role="3clF47">

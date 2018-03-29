@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:a13717ec-0f28-4c83-aaaa-0b10931768b8(com.workday.mps.review.plugin)" content="root">
   <persistence version="9" />
-  <imports />
+  <imports>
+    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
+    <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
+  </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
-      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
+        <property id="4276006055363816570" name="isSynchronized" index="od$2w" />
+        <property id="1181808852946" name="isFinal" index="DiZV1" />
         <child id="1068580123133" name="returnType" index="3clF45" />
         <child id="1068580123134" name="parameter" index="3clF46" />
         <child id="1068580123135" name="body" index="3clF47" />
@@ -31,6 +36,7 @@
       </concept>
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
+        <child id="1109201940907" name="parameter" index="11_B2D" />
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
@@ -38,64 +44,109 @@
       <concept id="1107796713796" name="jetbrains.mps.baseLanguage.structure.Interface" flags="ig" index="3HP615" />
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
     </language>
+    <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
+      <concept id="1199542442495" name="jetbrains.mps.baseLanguage.closures.structure.FunctionType" flags="in" index="1ajhzC">
+        <child id="1199542457201" name="resultType" index="1ajl9A" />
+        <child id="1199542501692" name="parameterType" index="1ajw0F" />
+      </concept>
+      <concept id="1229708828035" name="jetbrains.mps.baseLanguage.closures.structure.UnrestrictedFunctionType" flags="in" index="1gmTMt">
+        <child id="1232020907791" name="terminateType" index="3qaMoh" />
+      </concept>
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
-    <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
-      <concept id="1151688443754" name="jetbrains.mps.baseLanguage.collections.structure.ListType" flags="in" index="_YKpA">
-        <child id="1151688676805" name="elementType" index="_ZDj9" />
-      </concept>
-    </language>
   </registry>
-  <node concept="3HP615" id="3c3vDUkybjq">
+  <node concept="3HP615" id="4Ew7qBDr4JM">
+    <property role="3GE5qa" value="data" />
     <property role="TrG5h" value="ReviewConnection" />
-    <node concept="2tJIrI" id="3REobdwOiq0" role="jymVt" />
-    <node concept="3clFb_" id="3c3vDUkybPD" role="jymVt">
+    <node concept="3clFb_" id="4Ew7qBDr4YG" role="jymVt">
       <property role="1EzhhJ" value="true" />
+      <property role="TrG5h" value="requestReviewForBranchName" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
       <property role="2aFKle" value="false" />
-      <property role="TrG5h" value="getAllActivities" />
-      <node concept="3clFbS" id="3c3vDUkybPG" role="3clF47" />
-      <node concept="3Tm1VV" id="3c3vDUkybPH" role="1B3o_S" />
-      <node concept="_YKpA" id="3c3vDUkybYK" role="3clF45">
-        <node concept="3uibUv" id="3REobdwOhWj" role="_ZDj9">
-          <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+      <node concept="3clFbS" id="4Ew7qBDr4YH" role="3clF47" />
+      <node concept="3Tm1VV" id="4Ew7qBDr4ZN" role="1B3o_S" />
+      <node concept="3cqZAl" id="4Ew7qBDr4ZO" role="3clF45" />
+      <node concept="37vLTG" id="4Ew7qBDr4ZP" role="3clF46">
+        <property role="TrG5h" value="branchName" />
+        <property role="3TUv4t" value="true" />
+        <node concept="17QB3L" id="4Ew7qBDr4ZQ" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="4Ew7qBDr4ZR" role="3clF46">
+        <property role="TrG5h" value="onSuccess" />
+        <property role="3TUv4t" value="true" />
+        <node concept="1gmTMt" id="4Ew7qBDr4ZS" role="1tU5fm">
+          <node concept="3uibUv" id="4Ew7qBDr4ZT" role="1ajw0F">
+            <ref role="3uigEE" node="4Ew7qBDj1oK" resolve="Review" />
+          </node>
+          <node concept="3cqZAl" id="4Ew7qBDr4ZU" role="1ajl9A" />
+          <node concept="3cqZAl" id="4Ew7qBDr4ZV" role="3qaMoh" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="4Ew7qBDr4ZW" role="3clF46">
+        <property role="TrG5h" value="onFailure" />
+        <property role="3TUv4t" value="true" />
+        <node concept="1gmTMt" id="4Ew7qBDr4ZX" role="1tU5fm">
+          <node concept="3cqZAl" id="4Ew7qBDr4ZY" role="1ajl9A" />
+          <node concept="3cqZAl" id="4Ew7qBDr4ZZ" role="3qaMoh" />
+          <node concept="3uibUv" id="4Ew7qBDr500" role="1ajw0F">
+            <ref role="3uigEE" to="guwi:~IOException" resolve="IOException" />
+          </node>
         </node>
       </node>
     </node>
-    <node concept="3clFb_" id="3c3vDUkyc$v" role="jymVt">
+    <node concept="3clFb_" id="4Ew7qBDr8Oa" role="jymVt">
       <property role="1EzhhJ" value="true" />
+      <property role="TrG5h" value="requestActivitiesForReview" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
       <property role="2aFKle" value="false" />
-      <property role="TrG5h" value="getActivity" />
-      <node concept="3clFbS" id="3c3vDUkyc$y" role="3clF47" />
-      <node concept="3Tm1VV" id="3c3vDUkyc$z" role="1B3o_S" />
-      <node concept="3uibUv" id="3REobdwOi75" role="3clF45">
-        <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
-      </node>
-      <node concept="37vLTG" id="3c3vDUkycDw" role="3clF46">
-        <property role="TrG5h" value="id" />
+      <node concept="3clFbS" id="4Ew7qBDr8Ob" role="3clF47" />
+      <node concept="3Tm1VV" id="4Ew7qBDr8Oc" role="1B3o_S" />
+      <node concept="3cqZAl" id="4Ew7qBDr8Od" role="3clF45" />
+      <node concept="37vLTG" id="4Ew7qBDr8Oe" role="3clF46">
+        <property role="TrG5h" value="review" />
         <property role="3TUv4t" value="true" />
-        <node concept="10Oyi0" id="3REobdwOicu" role="1tU5fm" />
+        <node concept="3uibUv" id="4Ew7qBDr97Y" role="1tU5fm">
+          <ref role="3uigEE" node="4Ew7qBDj1oK" resolve="Review" />
+        </node>
       </node>
-    </node>
-    <node concept="3clFb_" id="3c3vDUl4LCd" role="jymVt">
-      <property role="1EzhhJ" value="true" />
-      <property role="2aFKle" value="false" />
-      <property role="TrG5h" value="addActivity" />
-      <node concept="3clFbS" id="3c3vDUl4LCg" role="3clF47" />
-      <node concept="3Tm1VV" id="3c3vDUl4LCh" role="1B3o_S" />
-      <node concept="3cqZAl" id="3c3vDUl4LBn" role="3clF45" />
-      <node concept="37vLTG" id="3c3vDUl4LMw" role="3clF46">
-        <property role="TrG5h" value="activity" />
+      <node concept="37vLTG" id="4Ew7qBDr8Og" role="3clF46">
+        <property role="TrG5h" value="onSuccess" />
         <property role="3TUv4t" value="true" />
-        <node concept="3uibUv" id="3REobdwOimp" role="1tU5fm">
-          <ref role="3uigEE" node="3REobdwLfZz" resolve="Activity" />
+        <node concept="1gmTMt" id="4Ew7qBDr8Oh" role="1tU5fm">
+          <node concept="3uibUv" id="4Ew7qBDrBLK" role="1ajw0F">
+            <ref role="3uigEE" to="33ny:~List" resolve="List" />
+            <node concept="3uibUv" id="4Ew7qBDrBWr" role="11_B2D">
+              <ref role="3uigEE" node="4Ew7qBDj1ou" resolve="Activity" />
+            </node>
+          </node>
+          <node concept="3cqZAl" id="4Ew7qBDr8Oj" role="1ajl9A" />
+          <node concept="3cqZAl" id="4Ew7qBDr8Ok" role="3qaMoh" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="4Ew7qBDr8Ol" role="3clF46">
+        <property role="TrG5h" value="onFailure" />
+        <property role="3TUv4t" value="true" />
+        <node concept="1gmTMt" id="4Ew7qBDr8Om" role="1tU5fm">
+          <node concept="3cqZAl" id="4Ew7qBDr8On" role="1ajl9A" />
+          <node concept="3cqZAl" id="4Ew7qBDr8Oo" role="3qaMoh" />
+          <node concept="3uibUv" id="4Ew7qBDr8Op" role="1ajw0F">
+            <ref role="3uigEE" to="guwi:~IOException" resolve="IOException" />
+          </node>
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="3REobdwOip0" role="jymVt" />
-    <node concept="3Tm1VV" id="3c3vDUkybjr" role="1B3o_S" />
+    <node concept="2tJIrI" id="4Ew7qBDr5OQ" role="jymVt" />
+    <node concept="2tJIrI" id="4Ew7qBDr4JW" role="jymVt" />
+    <node concept="3Tm1VV" id="4Ew7qBDr4JN" role="1B3o_S" />
   </node>
 </model>
 
