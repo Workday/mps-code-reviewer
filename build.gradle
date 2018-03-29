@@ -78,13 +78,10 @@ task com_workday_mps_reviewCompileDependencies(type: Sync) {
   into 'solutions/com.workday.mps.review/lib'
 }
 
-com_workday_mps_reviewCompileDependencies.mustRunAfter getMps
-
 task com_workday_mps_review_git4mpsCompileDependencies(type: Copy) {
   from configurations.com_workday_mps_review_git4mpsCompile.resolve()
   into 'solutions/com.workday.mps.review.git4mps/lib'
 }
-
 com_workday_mps_review_git4mpsCompileDependencies.mustRunAfter getMps
 
 task setup(group: "Project",
@@ -115,22 +112,27 @@ clean.doFirst {
 
 task generateBuildScripts(description: "Generates all Ant build scripts",
                            group: "MPS Build",
-                           dependsOn: setup) << {
-	println "Generating ant scripts ==========================================="
-	runAnt "${rootDir}/buildScripts/reviewPluginBuildScripts.xml", "generate"
-	println "Ant scripts have been successfully generated ====================="
-	println()
+                           dependsOn: setup) {
+  doLast {
+  	println "Generating ant scripts ==========================================="
+  	runAnt "${rootDir}/buildScripts/reviewPluginBuildScripts.xml", "generate"
+  	println "Ant scripts have been successfully generated ====================="
+  	println()
+  }
 }
 
 generateBuildScripts.mustRunAfter setup
 
 task buildPlugin(group: "MPS Build",
         description: "Generates the code reviewer plugin",
-        dependsOn: generateBuildScripts) << {
-	println "Building code reviewer plugin ===================================="
-	runAnt "${rootDir}/dist/reviewPlugin.xml", "clean", "generate", "build"
+        dependsOn: generateBuildScripts) {
+  doLast {
+    println "Building code reviewer plugin ===================================="
+    runAnt "${rootDir}/dist/reviewPlugin.xml", "clean", "generate", "build"
     println "Code reviewer plugin has been successfully built ================="
     println()
+  }
+	
 }
 
 buildPlugin.mustRunAfter generateBuildScripts

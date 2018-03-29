@@ -2,12 +2,12 @@
 <model ref="r:a13717ec-0f28-4c83-aaaa-0b10931768b8(com.workday.mps.review.plugin)" content="root">
   <persistence version="9" />
   <imports>
+    <import index="ee8f" ref="r:76b35c96-0206-4f74-890e-e39504808bf8(com.workday.mps.flux.core)" implicit="true" />
     <import index="6t7w" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time.format(JDK/)" implicit="true" />
     <import index="lui2" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.module(MPS.OpenAPI/)" implicit="true" />
     <import index="dxuu" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing(JDK/)" implicit="true" />
     <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" implicit="true" />
     <import index="hyam" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt.event(JDK/)" implicit="true" />
-    <import index="ee8f" ref="r:76b35c96-0206-4f74-890e-e39504808bf8(com.workday.mps.flux.core)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="28m1" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time(JDK/)" implicit="true" />
   </imports>
@@ -146,6 +146,7 @@
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
+      <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
       <concept id="1146644641414" name="jetbrains.mps.baseLanguage.structure.ProtectedVisibility" flags="nn" index="3Tmbuc" />
       <concept id="1170345865475" name="jetbrains.mps.baseLanguage.structure.AnonymousClass" flags="ig" index="1Y3b0j">
         <reference id="1170346070688" name="classifier" index="1Y3XeK" />
@@ -169,9 +170,18 @@
     </language>
   </registry>
   <node concept="312cEu" id="3c3vDUkzeyD">
-    <property role="3GE5qa" value="sample" />
+    <property role="3GE5qa" value="sample_OLD" />
     <property role="TrG5h" value="ActivityViewFactory" />
-    <node concept="2tJIrI" id="3REobdwNexn" role="jymVt" />
+    <node concept="312cEg" id="3yDmncoygvm" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="dispatcher" />
+      <property role="3TUv4t" value="true" />
+      <node concept="3Tm6S6" id="3yDmncoyfWO" role="1B3o_S" />
+      <node concept="3uibUv" id="3yDmncoygv5" role="1tU5fm">
+        <ref role="3uigEE" to="ee8f:3c3vDUkV4xB" resolve="Dispatcher" />
+      </node>
+    </node>
     <node concept="Wx3nA" id="3c3vDUkD3so" role="jymVt">
       <property role="2dlcS1" value="false" />
       <property role="2dld4O" value="false" />
@@ -219,6 +229,12 @@
     </node>
     <node concept="2tJIrI" id="7Ch0QDHxRWP" role="jymVt" />
     <node concept="3clFbW" id="7Ch0QDHxPx6" role="jymVt">
+      <node concept="37vLTG" id="3yDmncoyfL$" role="3clF46">
+        <property role="TrG5h" value="dispatcher" />
+        <node concept="3uibUv" id="3yDmncoyfRz" role="1tU5fm">
+          <ref role="3uigEE" to="ee8f:3c3vDUkV4xB" resolve="Dispatcher" />
+        </node>
+      </node>
       <node concept="37vLTG" id="7Ch0QDHxQ2j" role="3clF46">
         <property role="TrG5h" value="repository" />
         <node concept="3uibUv" id="7Ch0QDHxRqH" role="1tU5fm">
@@ -227,6 +243,19 @@
       </node>
       <node concept="3cqZAl" id="7Ch0QDHxPx7" role="3clF45" />
       <node concept="3clFbS" id="7Ch0QDHxPx9" role="3clF47">
+        <node concept="3clFbF" id="3yDmncoyh0X" role="3cqZAp">
+          <node concept="37vLTI" id="3yDmncoyhKV" role="3clFbG">
+            <node concept="37vLTw" id="3yDmncoyhTD" role="37vLTx">
+              <ref role="3cqZAo" node="3yDmncoyfL$" resolve="dispatcher" />
+            </node>
+            <node concept="2OqwBi" id="3yDmncoyhfm" role="37vLTJ">
+              <node concept="Xjq3P" id="3yDmncoyh0V" role="2Oq$k0" />
+              <node concept="2OwXpG" id="3yDmncoyhmh" role="2OqNvi">
+                <ref role="2Oxat5" node="3yDmncoygvm" resolve="dispatcher" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="7Ch0QDHxTSJ" role="3cqZAp">
           <node concept="37vLTI" id="7Ch0QDHxULv" role="3clFbG">
             <node concept="37vLTw" id="7Ch0QDHxUU5" role="37vLTx">
@@ -391,9 +420,8 @@
                         <node concept="3clFbS" id="3c3vDUl2pvi" role="3clF47">
                           <node concept="3clFbF" id="3c3vDUl2pvj" role="3cqZAp">
                             <node concept="2OqwBi" id="3c3vDUl2pvk" role="3clFbG">
-                              <node concept="2YIFZM" id="3c3vDUl2pvl" role="2Oq$k0">
-                                <ref role="37wK5l" node="3c3vDUkWxhZ" resolve="getInstance" />
-                                <ref role="1Pybhc" node="3c3vDUkV3jo" resolve="ReviewPluginDispatcher" />
+                              <node concept="37vLTw" id="3yDmncoyij4" role="2Oq$k0">
+                                <ref role="3cqZAo" node="3yDmncoygvm" resolve="dispatcher" />
                               </node>
                               <node concept="liA8E" id="3c3vDUl2pvm" role="2OqNvi">
                                 <ref role="37wK5l" to="ee8f:3c3vDUkV7T7" resolve="dispatch" />

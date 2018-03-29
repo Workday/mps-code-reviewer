@@ -127,7 +127,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="7Ch0QDH$dJY">
-    <property role="3GE5qa" value="sample" />
+    <property role="3GE5qa" value="view" />
     <property role="TrG5h" value="CommentBorder" />
     <node concept="2tJIrI" id="7Ch0QDH$j8W" role="jymVt" />
     <node concept="312cEg" id="7Ch0QDH$nGd" role="jymVt">

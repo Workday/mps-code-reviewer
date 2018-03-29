@@ -80,9 +80,9 @@
     </language>
   </registry>
   <node concept="1DFvN4" id="3vXSZsAPQky">
-    <property role="TrG5h" value="Authentication Token" />
+    <property role="TrG5h" value="Bitbucket Review Configuration" />
     <property role="3NeIjD" value="1" />
-    <property role="3GE5qa" value="preference" />
+    <property role="3GE5qa" value="bitbucket.preference" />
     <node concept="1DGssV" id="7Uvm6D4D5Pz" role="1DEjpx">
       <property role="TrG5h" value="token" />
       <property role="1DGssU" value=" " />
@@ -98,11 +98,11 @@
       <node concept="3clFbS" id="3vXSZsAPQkE" role="2VODD2">
         <node concept="3clFbF" id="24HfET2s2D$" role="3cqZAp">
           <node concept="2YIFZM" id="24HfET2s2D_" role="3clFbG">
-            <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="AuthenticationTokenConfig" />
+            <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="BitbucketPreferences" />
             <ref role="37wK5l" node="24HfET2s0Ve" resolve="setCurrentConfig" />
             <node concept="2ShNRf" id="7Uvm6D4Dbyq" role="37wK5m">
               <node concept="1pGfFk" id="7Uvm6D4Dbyr" role="2ShVmc">
-                <ref role="37wK5l" node="3vXSZsAPOZP" resolve="AuthenticationTokenConfig" />
+                <ref role="37wK5l" node="3vXSZsAPOZP" resolve="BitbucketPreferences" />
                 <node concept="2OqwBi" id="7Uvm6D4Dbys" role="37wK5m">
                   <node concept="2WthIp" id="7Uvm6D4Dbyt" role="2Oq$k0" />
                   <node concept="1DZHhv" id="7Uvm6D4Dbyu" role="2OqNvi">
@@ -120,10 +120,10 @@
         <node concept="3clFbF" id="24HfET2s2_E" role="3cqZAp">
           <node concept="2YIFZM" id="24HfET2s2C4" role="3clFbG">
             <ref role="37wK5l" node="24HfET2s0Ve" resolve="setCurrentConfig" />
-            <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="AuthenticationTokenConfig" />
+            <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="BitbucketPreferences" />
             <node concept="2ShNRf" id="24HfET2s4Bp" role="37wK5m">
               <node concept="1pGfFk" id="24HfET2s4Bq" role="2ShVmc">
-                <ref role="37wK5l" node="3vXSZsAPOZP" resolve="AuthenticationTokenConfig" />
+                <ref role="37wK5l" node="3vXSZsAPOZP" resolve="BitbucketPreferences" />
                 <node concept="2OqwBi" id="7Uvm6D4Dbqi" role="37wK5m">
                   <node concept="2WthIp" id="7Uvm6D4Dbmg" role="2Oq$k0" />
                   <node concept="1DZHhv" id="7Uvm6D4Dbuc" role="2OqNvi">

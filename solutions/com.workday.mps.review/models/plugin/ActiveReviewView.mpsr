@@ -163,9 +163,11 @@
             <node concept="2ShNRf" id="3c3vDUlmF_g" role="37vLTx">
               <node concept="1pGfFk" id="3c3vDUlmFpi" role="2ShVmc">
                 <ref role="37wK5l" node="3c3vDUkzWnR" resolve="ActivityStream" />
+                <node concept="10Nm6u" id="3yDmncoyDbh" role="37wK5m" />
                 <node concept="2ShNRf" id="7Ch0QDHydPL" role="37wK5m">
                   <node concept="1pGfFk" id="7Ch0QDHyerU" role="2ShVmc">
                     <ref role="37wK5l" node="7Ch0QDHxPx6" resolve="ActivityViewFactory" />
+                    <node concept="10Nm6u" id="3yDmncoyD00" role="37wK5m" />
                     <node concept="10Nm6u" id="7Ch0QDHyeA6" role="37wK5m" />
                   </node>
                 </node>
