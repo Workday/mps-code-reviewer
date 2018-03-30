@@ -2,6 +2,7 @@
 <model ref="r:a13717ec-0f28-4c83-aaaa-0b10931768b8(com.workday.mps.review.plugin)" content="root">
   <persistence version="9" />
   <imports>
+    <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -105,7 +106,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="4Ew7qBDsnV5">
-    <property role="3GE5qa" value="bitbucket.data" />
+    <property role="3GE5qa" value="bitbucket.model" />
     <property role="TrG5h" value="BitbucketReviewParticipant" />
     <node concept="312cEg" id="4Ew7qBDsvp8" role="jymVt">
       <property role="34CwA1" value="false" />
@@ -136,7 +137,7 @@
     <node concept="2tJIrI" id="4Ew7qBDsv35" role="jymVt" />
     <node concept="3Tm1VV" id="4Ew7qBDsnV6" role="1B3o_S" />
     <node concept="3uibUv" id="4Ew7qBDsnVu" role="EKbjA">
-      <ref role="3uigEE" node="4Ew7qBDrv7X" resolve="ReviewParticipant" />
+      <ref role="3uigEE" to="m3q8:4Ew7qBDrv7X" resolve="ReviewParticipant" />
     </node>
     <node concept="3clFb_" id="4Ew7qBDsnVE" role="jymVt">
       <property role="1EzhhJ" value="false" />
@@ -144,7 +145,7 @@
       <property role="TrG5h" value="getUser" />
       <node concept="3Tm1VV" id="4Ew7qBDsnVG" role="1B3o_S" />
       <node concept="3uibUv" id="4Ew7qBDsnVH" role="3clF45">
-        <ref role="3uigEE" node="4Ew7qBDrsxM" resolve="User" />
+        <ref role="3uigEE" to="m3q8:4Ew7qBDrsxM" resolve="User" />
       </node>
       <node concept="3clFbS" id="4Ew7qBDsnVI" role="3clF47">
         <node concept="3cpWs6" id="4Ew7qBDsAKH" role="3cqZAp">
@@ -166,15 +167,15 @@
       <property role="TrG5h" value="getRole" />
       <node concept="3Tm1VV" id="4Ew7qBDsnVO" role="1B3o_S" />
       <node concept="3uibUv" id="4Ew7qBDsnVP" role="3clF45">
-        <ref role="3uigEE" node="4Ew7qBDrvnj" resolve="ReviewParticipant.ReviewerRole" />
+        <ref role="3uigEE" to="m3q8:4Ew7qBDrvnj" resolve="ReviewParticipant.ReviewerRole" />
       </node>
       <node concept="3clFbS" id="4Ew7qBDsnVQ" role="3clF47">
         <node concept="3clFbJ" id="4Ew7qBDsx17" role="3cqZAp">
           <node concept="3clFbS" id="4Ew7qBDsx18" role="3clFbx">
             <node concept="3cpWs6" id="4Ew7qBDsx19" role="3cqZAp">
               <node concept="Rm8GO" id="4Ew7qBDsxD0" role="3cqZAk">
-                <ref role="Rm8GQ" node="4Ew7qBDrvoY" resolve="AUTHOR" />
-                <ref role="1Px2BO" node="4Ew7qBDrvnj" resolve="ReviewParticipant.ReviewerRole" />
+                <ref role="1Px2BO" to="m3q8:4Ew7qBDrvnj" resolve="ReviewParticipant.ReviewerRole" />
+                <ref role="Rm8GQ" to="m3q8:4Ew7qBDrvoY" resolve="AUTHOR" />
               </node>
             </node>
           </node>
@@ -196,8 +197,8 @@
             <node concept="3clFbS" id="4Ew7qBDsx1g" role="3eOfB_">
               <node concept="3cpWs6" id="4Ew7qBDsx1h" role="3cqZAp">
                 <node concept="Rm8GO" id="4Ew7qBDsxVr" role="3cqZAk">
-                  <ref role="Rm8GQ" node="4Ew7qBDrvq4" resolve="REVIEWER" />
-                  <ref role="1Px2BO" node="4Ew7qBDrvnj" resolve="ReviewParticipant.ReviewerRole" />
+                  <ref role="1Px2BO" to="m3q8:4Ew7qBDrvnj" resolve="ReviewParticipant.ReviewerRole" />
+                  <ref role="Rm8GQ" to="m3q8:4Ew7qBDrvq4" resolve="REVIEWER" />
                 </node>
               </node>
             </node>
@@ -220,8 +221,8 @@
             <node concept="3clFbS" id="4Ew7qBDsx1o" role="3eOfB_">
               <node concept="3cpWs6" id="4Ew7qBDsx1p" role="3cqZAp">
                 <node concept="Rm8GO" id="4Ew7qBDsy26" role="3cqZAk">
-                  <ref role="Rm8GQ" node="4Ew7qBDrw8g" resolve="PARTICIPANT" />
-                  <ref role="1Px2BO" node="4Ew7qBDrvnj" resolve="ReviewParticipant.ReviewerRole" />
+                  <ref role="1Px2BO" to="m3q8:4Ew7qBDrvnj" resolve="ReviewParticipant.ReviewerRole" />
+                  <ref role="Rm8GQ" to="m3q8:4Ew7qBDrw8g" resolve="PARTICIPANT" />
                 </node>
               </node>
             </node>
@@ -264,15 +265,15 @@
       <property role="TrG5h" value="getStatus" />
       <node concept="3Tm1VV" id="4Ew7qBDsnVW" role="1B3o_S" />
       <node concept="3uibUv" id="4Ew7qBDsnVX" role="3clF45">
-        <ref role="3uigEE" node="4Ew7qBDrvMJ" resolve="ReviewParticipant.ReviewerStatus" />
+        <ref role="3uigEE" to="m3q8:4Ew7qBDrvMJ" resolve="ReviewParticipant.ReviewerStatus" />
       </node>
       <node concept="3clFbS" id="4Ew7qBDsnVY" role="3clF47">
         <node concept="3clFbJ" id="4Ew7qBDs$PW" role="3cqZAp">
           <node concept="3clFbS" id="4Ew7qBDs$PX" role="3clFbx">
             <node concept="3cpWs6" id="4Ew7qBDs$PY" role="3cqZAp">
               <node concept="Rm8GO" id="4Ew7qBDs_gY" role="3cqZAk">
-                <ref role="Rm8GQ" node="4Ew7qBDrvOB" resolve="APPROVED" />
-                <ref role="1Px2BO" node="4Ew7qBDrvMJ" resolve="ReviewParticipant.ReviewerStatus" />
+                <ref role="1Px2BO" to="m3q8:4Ew7qBDrvMJ" resolve="ReviewParticipant.ReviewerStatus" />
+                <ref role="Rm8GQ" to="m3q8:4Ew7qBDrvOB" resolve="APPROVED" />
               </node>
             </node>
           </node>
@@ -294,8 +295,8 @@
             <node concept="3clFbS" id="4Ew7qBDs$Q7" role="3eOfB_">
               <node concept="3cpWs6" id="4Ew7qBDs$Q8" role="3cqZAp">
                 <node concept="Rm8GO" id="4Ew7qBDs_z2" role="3cqZAk">
-                  <ref role="Rm8GQ" node="4Ew7qBDrvQu" resolve="UNAPPROVED" />
-                  <ref role="1Px2BO" node="4Ew7qBDrvMJ" resolve="ReviewParticipant.ReviewerStatus" />
+                  <ref role="1Px2BO" to="m3q8:4Ew7qBDrvMJ" resolve="ReviewParticipant.ReviewerStatus" />
+                  <ref role="Rm8GQ" to="m3q8:4Ew7qBDrvQu" resolve="UNAPPROVED" />
                 </node>
               </node>
             </node>

@@ -3,6 +3,7 @@
   <persistence version="9" />
   <imports>
     <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" implicit="true" />
+    <import index="czez" ref="r:31cec7e7-dd44-4ba6-ae3f-ee48ddd83b42(com.workday.mps.review.store)" implicit="true" />
     <import index="ee8f" ref="r:76b35c96-0206-4f74-890e-e39504808bf8(com.workday.mps.flux.core)" implicit="true" />
   </imports>
   <registry>
@@ -459,11 +460,11 @@
                   <property role="TrG5h" value="store" />
                   <property role="3TUv4t" value="true" />
                   <node concept="3uibUv" id="1ctBHPseBEL" role="1tU5fm">
-                    <ref role="3uigEE" node="3c3vDUl3ZbU" resolve="ActivityStore" />
+                    <ref role="3uigEE" to="czez:3c3vDUl3ZbU" resolve="ActivityStore" />
                   </node>
                   <node concept="0kSF2" id="1ctBHPseBEM" role="33vP2m">
                     <node concept="3uibUv" id="1ctBHPseBEN" role="0kSFW">
-                      <ref role="3uigEE" node="3c3vDUl3ZbU" resolve="ActivityStore" />
+                      <ref role="3uigEE" to="czez:3c3vDUl3ZbU" resolve="ActivityStore" />
                     </node>
                     <node concept="2OqwBi" id="1ctBHPseBEO" role="0kSFX">
                       <node concept="37vLTw" id="1ctBHPseBEP" role="2Oq$k0">
@@ -495,7 +496,7 @@
             </node>
             <node concept="2ZW3vV" id="1ctBHPseBF0" role="3clFbw">
               <node concept="3uibUv" id="1ctBHPseBF1" role="2ZW6by">
-                <ref role="3uigEE" node="3c3vDUl3ZbU" resolve="ActivityStore" />
+                <ref role="3uigEE" to="czez:3c3vDUl3ZbU" resolve="ActivityStore" />
               </node>
               <node concept="2OqwBi" id="1ctBHPseBF2" role="2ZW6bz">
                 <node concept="37vLTw" id="1ctBHPseBF3" role="2Oq$k0">

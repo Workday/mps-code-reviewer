@@ -7,7 +7,9 @@
     <import index="lui2" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.module(MPS.OpenAPI/)" implicit="true" />
     <import index="dxuu" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing(JDK/)" implicit="true" />
     <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" implicit="true" />
+    <import index="rm1r" ref="r:54ab0316-9f2c-44c5-97f8-2a56eee98fda(com.workday.mps.review.ui.swing)" implicit="true" />
     <import index="hyam" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt.event(JDK/)" implicit="true" />
+    <import index="2jep" ref="r:a3993581-a780-46ec-a6e0-1dd024d2037c(com.workday.mps.review.actions)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="28m1" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time(JDK/)" implicit="true" />
   </imports>
@@ -369,7 +371,7 @@
                   <ref role="37wK5l" to="dxuu:~JComponent.setBorder(javax.swing.border.Border):void" resolve="setBorder" />
                   <node concept="2ShNRf" id="7Ch0QDH$UEH" role="37wK5m">
                     <node concept="1pGfFk" id="7Ch0QDH$Vbf" role="2ShVmc">
-                      <ref role="37wK5l" node="7Ch0QDH$jEJ" resolve="CommentBorder" />
+                      <ref role="37wK5l" to="rm1r:7Ch0QDH$jEJ" resolve="CommentBorder" />
                       <node concept="3cmrfG" id="7Ch0QDHAUzz" role="37wK5m">
                         <property role="3cmrfH" value="20" />
                       </node>
@@ -427,7 +429,7 @@
                                 <ref role="37wK5l" to="ee8f:3c3vDUkV7T7" resolve="dispatch" />
                                 <node concept="2ShNRf" id="3c3vDUl2pvn" role="37wK5m">
                                   <node concept="1pGfFk" id="3c3vDUl2pvo" role="2ShVmc">
-                                    <ref role="37wK5l" node="3c3vDUl1obS" resolve="NavigateToNode" />
+                                    <ref role="37wK5l" to="2jep:3c3vDUl1obS" resolve="NavigateToNode" />
                                     <node concept="2OqwBi" id="3c3vDUl2pvp" role="37wK5m">
                                       <node concept="37vLTw" id="3REobdwNrC7" role="2Oq$k0">
                                         <ref role="3cqZAo" node="3REobdwNmBE" resolve="comment" />
