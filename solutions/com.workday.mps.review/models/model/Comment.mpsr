@@ -29,6 +29,9 @@
       <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
         <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
       </concept>
+      <concept id="1171903916106" name="jetbrains.mps.baseLanguage.structure.UpperBoundType" flags="in" index="3qUE_q">
+        <child id="1171903916107" name="bound" index="3qUE_r" />
+      </concept>
       <concept id="7812454656619025416" name="jetbrains.mps.baseLanguage.structure.MethodDeclaration" flags="ng" index="1rXfSm">
         <property id="8355037393041754995" name="isNative" index="2aFKle" />
       </concept>
@@ -158,8 +161,10 @@
       <node concept="3Tm1VV" id="4Ew7qBDr$PK" role="1B3o_S" />
       <node concept="3uibUv" id="4Ew7qBDr$$F" role="3clF45">
         <ref role="3uigEE" to="33ny:~List" resolve="List" />
-        <node concept="3uibUv" id="4Ew7qBDr$P9" role="11_B2D">
-          <ref role="3uigEE" node="4Ew7qBDrroM" resolve="Comment" />
+        <node concept="3qUE_q" id="2hVa5m$2nvd" role="11_B2D">
+          <node concept="3uibUv" id="2hVa5m$2nvC" role="3qUE_r">
+            <ref role="3uigEE" node="4Ew7qBDrroM" resolve="Comment" />
+          </node>
         </node>
       </node>
       <node concept="P$JXv" id="4Ew7qBDrAoL" role="lGtFl">

@@ -55,6 +55,9 @@
         <child id="1182160096073" name="cls" index="YeSDq" />
       </concept>
       <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
+      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
+        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
@@ -172,17 +175,9 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
-        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -264,16 +259,104 @@
           </node>
         </node>
         <node concept="3clFbH" id="4Ew7qBDvJ0m" role="3cqZAp" />
-        <node concept="1X3_iC" id="4Ew7qBD$F4B" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4Ew7qBDvHRj" role="8Wnug">
-            <node concept="2OqwBi" id="4Ew7qBDvILB" role="3clFbG">
-              <node concept="37vLTw" id="4Ew7qBDvID2" role="2Oq$k0">
-                <ref role="3cqZAo" node="4Ew7qBDvICZ" resolve="builder" />
+        <node concept="3cpWs8" id="2hVa5m$1sgE" role="3cqZAp">
+          <node concept="3cpWsn" id="2hVa5m$1sgF" role="3cpWs9">
+            <property role="TrG5h" value="activityAdapter" />
+            <node concept="3uibUv" id="2hVa5m$1sgx" role="1tU5fm">
+              <ref role="3uigEE" node="4Ew7qBDtNjW" resolve="RuntimeTypeAdapterFactory" />
+              <node concept="3uibUv" id="2hVa5m$1sg$" role="11_B2D">
+                <ref role="3uigEE" node="4Ew7qBDtNjy" resolve="BitbucketActivity" />
               </node>
-              <node concept="liA8E" id="4Ew7qBDvIYJ" role="2OqNvi">
-                <ref role="37wK5l" to="wy2b:~GsonBuilder.registerTypeAdapterFactory(com.google.gson.TypeAdapterFactory):com.google.gson.GsonBuilder" resolve="registerTypeAdapterFactory" />
+            </node>
+            <node concept="2YIFZM" id="2hVa5m$1sgG" role="33vP2m">
+              <ref role="1Pybhc" node="4Ew7qBDtNjW" resolve="RuntimeTypeAdapterFactory" />
+              <ref role="37wK5l" node="4Ew7qBDtNmm" resolve="of" />
+              <node concept="3VsKOn" id="2hVa5m$1sgH" role="37wK5m">
+                <ref role="3VsUkX" node="4Ew7qBDtNjy" resolve="BitbucketActivity" />
+              </node>
+              <node concept="Xl_RD" id="2hVa5m$1sgI" role="37wK5m">
+                <property role="Xl_RC" value="action" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="2hVa5m$1jmg" role="3cqZAp">
+          <node concept="2OqwBi" id="2hVa5m$1u4a" role="3clFbG">
+            <node concept="37vLTw" id="2hVa5m$1sgJ" role="2Oq$k0">
+              <ref role="3cqZAo" node="2hVa5m$1sgF" resolve="activityAdapter" />
+            </node>
+            <node concept="liA8E" id="2hVa5m$1ujP" role="2OqNvi">
+              <ref role="37wK5l" node="4Ew7qBDtNmQ" resolve="registerSubtype" />
+              <node concept="3VsKOn" id="2hVa5m$1rsU" role="37wK5m">
+                <ref role="3VsUkX" node="2hVa5m$1dBY" resolve="BitbucketCommentActivity" />
+              </node>
+              <node concept="Xl_RD" id="2hVa5m$1rDn" role="37wK5m">
+                <property role="Xl_RC" value="COMMENTED" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="2hVa5m$3doI" role="3cqZAp">
+          <node concept="2OqwBi" id="2hVa5m$3doJ" role="3clFbG">
+            <node concept="37vLTw" id="2hVa5m$3doK" role="2Oq$k0">
+              <ref role="3cqZAo" node="2hVa5m$1sgF" resolve="activityAdapter" />
+            </node>
+            <node concept="liA8E" id="2hVa5m$3doL" role="2OqNvi">
+              <ref role="37wK5l" node="4Ew7qBDtNmQ" resolve="registerSubtype" />
+              <node concept="3VsKOn" id="2hVa5m$3doM" role="37wK5m">
+                <ref role="3VsUkX" node="2hVa5m$3q$k" resolve="BitbucketApprovedActivity" />
+              </node>
+              <node concept="Xl_RD" id="2hVa5m$3doN" role="37wK5m">
+                <property role="Xl_RC" value="APPROVED" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="2hVa5m$3fb$" role="3cqZAp">
+          <node concept="2OqwBi" id="2hVa5m$3fb_" role="3clFbG">
+            <node concept="37vLTw" id="2hVa5m$3fbA" role="2Oq$k0">
+              <ref role="3cqZAo" node="2hVa5m$1sgF" resolve="activityAdapter" />
+            </node>
+            <node concept="liA8E" id="2hVa5m$3fbB" role="2OqNvi">
+              <ref role="37wK5l" node="4Ew7qBDtNmQ" resolve="registerSubtype" />
+              <node concept="3VsKOn" id="2hVa5m$3fbC" role="37wK5m">
+                <ref role="3VsUkX" node="2hVa5m$3qAF" resolve="BitbucketMergedActivity" />
+              </node>
+              <node concept="Xl_RD" id="2hVa5m$3fbD" role="37wK5m">
+                <property role="Xl_RC" value="MERGED" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="2hVa5m$3hcj" role="3cqZAp">
+          <node concept="2OqwBi" id="2hVa5m$3hck" role="3clFbG">
+            <node concept="37vLTw" id="2hVa5m$3hcl" role="2Oq$k0">
+              <ref role="3cqZAo" node="2hVa5m$1sgF" resolve="activityAdapter" />
+            </node>
+            <node concept="liA8E" id="2hVa5m$3hcm" role="2OqNvi">
+              <ref role="37wK5l" node="4Ew7qBDtNmQ" resolve="registerSubtype" />
+              <node concept="3VsKOn" id="2hVa5m$3hcn" role="37wK5m">
+                <ref role="3VsUkX" node="2hVa5m$3qBh" resolve="BitbucketOpenedActivity" />
+              </node>
+              <node concept="Xl_RD" id="2hVa5m$3hco" role="37wK5m">
+                <property role="Xl_RC" value="OPENED" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="2hVa5m$3hb_" role="3cqZAp" />
+        <node concept="3clFbH" id="2hVa5m$3eOD" role="3cqZAp" />
+        <node concept="3clFbH" id="2hVa5m$3ckE" role="3cqZAp" />
+        <node concept="3clFbH" id="2hVa5m$1uxj" role="3cqZAp" />
+        <node concept="3clFbF" id="4Ew7qBDvHRj" role="3cqZAp">
+          <node concept="2OqwBi" id="4Ew7qBDvILB" role="3clFbG">
+            <node concept="37vLTw" id="4Ew7qBDvID2" role="2Oq$k0">
+              <ref role="3cqZAo" node="4Ew7qBDvICZ" resolve="builder" />
+            </node>
+            <node concept="liA8E" id="4Ew7qBDvIYJ" role="2OqNvi">
+              <ref role="37wK5l" to="wy2b:~GsonBuilder.registerTypeAdapterFactory(com.google.gson.TypeAdapterFactory):com.google.gson.GsonBuilder" resolve="registerTypeAdapterFactory" />
+              <node concept="37vLTw" id="2hVa5m$1ySE" role="37wK5m">
+                <ref role="3cqZAo" node="2hVa5m$1sgF" resolve="activityAdapter" />
               </node>
             </node>
           </node>
@@ -1679,7 +1762,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="4Ew7qBDt4gI" role="3cqZAp" />
         <node concept="3cpWs6" id="4Ew7qBDt4su" role="3cqZAp">
           <node concept="37vLTw" id="4Ew7qBDt4wt" role="3cqZAk">
             <ref role="3cqZAo" node="4Ew7qBDt42B" resolve="review" />
