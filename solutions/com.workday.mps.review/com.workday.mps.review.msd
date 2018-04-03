@@ -6,14 +6,14 @@
     </modelRoot>
     <modelRoot contentPath="${module}/lib" type="java_classes">
       <sourceRoot location="gson-2.8.0.jar" />
-      <sourceRoot location="httpclient-4.5.5.jar" />
-      <sourceRoot location="httpcore-4.4.9.jar" />
+      <sourceRoot location="okhttp-3.10.0.jar" />
+      <sourceRoot location="okio-1.14.0.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
     <stubModelEntry path="${module}/lib/gson-2.8.0.jar" />
-    <stubModelEntry path="${module}/lib/httpclient-4.5.5.jar" />
-    <stubModelEntry path="${module}/lib/httpcore-4.4.9.jar" />
+    <stubModelEntry path="${module}/lib/okhttp-3.10.0.jar" />
+    <stubModelEntry path="${module}/lib/okio-1.14.0.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
@@ -22,7 +22,7 @@
     <dependency reexport="false">6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)</dependency>
     <dependency reexport="false">742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)</dependency>
     <dependency reexport="false">8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)</dependency>
-    <dependency reexport="false">498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)</dependency>
+    <dependency reexport="true">498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)</dependency>
     <dependency reexport="false">b7b6b13b-3ca1-4444-85ae-5f7f691136b9(com.workday.mps.review.git)</dependency>
   </dependencies>
   <languageVersions>
@@ -36,6 +36,7 @@
     <language slang="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" version="0" />
     <language slang="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" version="0" />
     <language slang="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" version="2" />
+    <language slang="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" version="0" />
     <language slang="l:63650c59-16c8-498a-99c8-005c7ee9515d:jetbrains.mps.lang.access" version="0" />
     <language slang="l:fe9d76d7-5809-45c9-ae28-a40915b4d6ff:jetbrains.mps.lang.checkedName" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="1" />

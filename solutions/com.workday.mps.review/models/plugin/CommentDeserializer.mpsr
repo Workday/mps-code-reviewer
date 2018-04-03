@@ -125,7 +125,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="1jOKzczQjUE">
-    <property role="3GE5qa" value="sample" />
+    <property role="3GE5qa" value="sample_OLD" />
     <property role="TrG5h" value="CommentDeserializer" />
     <node concept="2tJIrI" id="1jOKzczQjYS" role="jymVt" />
     <node concept="3clFb_" id="1jOKzczQjZc" role="jymVt">
@@ -135,7 +135,7 @@
       <property role="od$2w" value="false" />
       <node concept="3Tm1VV" id="1jOKzczQjZd" role="1B3o_S" />
       <node concept="3uibUv" id="1jOKzczQjZn" role="3clF45">
-        <ref role="3uigEE" node="3REobdwLi2e" resolve="Comment" />
+        <ref role="3uigEE" node="3REobdwLi2e" resolve="BBComment" />
       </node>
       <node concept="37vLTG" id="1jOKzczQjZg" role="3clF46">
         <property role="TrG5h" value="element" />
@@ -167,7 +167,7 @@
             <property role="TrG5h" value="comment" />
             <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="1jOKzczRc0l" role="1tU5fm">
-              <ref role="3uigEE" node="3REobdwLi2e" resolve="Comment" />
+              <ref role="3uigEE" node="3REobdwLi2e" resolve="BBComment" />
             </node>
             <node concept="2OqwBi" id="1jOKzczRc0v" role="33vP2m">
               <node concept="2ShNRf" id="1jOKzczRc0w" role="2Oq$k0">
@@ -181,7 +181,7 @@
                   <ref role="3cqZAo" node="1jOKzczQjZg" resolve="element" />
                 </node>
                 <node concept="3VsKOn" id="1jOKzczRc0$" role="37wK5m">
-                  <ref role="3VsUkX" node="3REobdwLi2e" resolve="Comment" />
+                  <ref role="3VsUkX" node="3REobdwLi2e" resolve="BBComment" />
                 </node>
               </node>
             </node>
@@ -207,7 +207,7 @@
             <property role="TrG5h" value="inner" />
             <property role="3TUv4t" value="false" />
             <node concept="3uibUv" id="1jOKzczRf2W" role="1tU5fm">
-              <ref role="3uigEE" node="3REobdwLi2e" resolve="Comment" />
+              <ref role="3uigEE" node="3REobdwLi2e" resolve="BBComment" />
             </node>
             <node concept="10Nm6u" id="q2HDcpsC0f" role="33vP2m" />
           </node>
@@ -231,7 +231,7 @@
                       <ref role="3cqZAo" node="1jOKzczRdY9" resolve="text" />
                     </node>
                     <node concept="3VsKOn" id="q2HDcpsErQ" role="37wK5m">
-                      <ref role="3VsUkX" node="3REobdwLi2e" resolve="Comment" />
+                      <ref role="3VsUkX" node="3REobdwLi2e" resolve="BBComment" />
                     </node>
                   </node>
                 </node>
@@ -366,7 +366,7 @@
     <node concept="3uibUv" id="1jOKzczQjVl" role="EKbjA">
       <ref role="3uigEE" to="wy2b:~JsonDeserializer" resolve="JsonDeserializer" />
       <node concept="3uibUv" id="1jOKzczQjYB" role="11_B2D">
-        <ref role="3uigEE" node="3REobdwLi2e" resolve="Comment" />
+        <ref role="3uigEE" node="3REobdwLi2e" resolve="BBComment" />
       </node>
     </node>
   </node>
