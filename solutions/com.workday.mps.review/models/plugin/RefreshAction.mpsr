@@ -7,10 +7,10 @@
     <import index="1x68" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.roots.ui.configuration.actions(MPS.IDEA/)" implicit="true" />
     <import index="z2i8" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.icons(MPS.IDEA/)" implicit="true" />
     <import index="czez" ref="r:31cec7e7-dd44-4ba6-ae3f-ee48ddd83b42(com.workday.mps.review.store)" implicit="true" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
-    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
     <import index="qkt" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.actionSystem(MPS.IDEA/)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="2jep" ref="r:a3993581-a780-46ec-a6e0-1dd024d2037c(com.workday.mps.review.actions)" implicit="true" />
+    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -282,28 +282,6 @@
                         </node>
                         <node concept="liA8E" id="78s6gAknh_9" role="2OqNvi">
                           <ref role="37wK5l" to="m3q8:4Ew7qBDrt3G" resolve="getTitle" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3clFbF" id="6j8xKyAtDNf" role="3cqZAp">
-                    <node concept="2OqwBi" id="6j8xKyAtDNc" role="3clFbG">
-                      <node concept="10M0yZ" id="6j8xKyAtDNd" role="2Oq$k0">
-                        <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-                        <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-                      </node>
-                      <node concept="liA8E" id="6j8xKyAtDNe" role="2OqNvi">
-                        <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
-                        <node concept="3cpWs3" id="6j8xKyAtFFS" role="37wK5m">
-                          <node concept="2OqwBi" id="6j8xKyAtH1B" role="3uHU7w">
-                            <node concept="Xjq3P" id="6j8xKyAtGx6" role="2Oq$k0" />
-                            <node concept="2OwXpG" id="6j8xKyAtHvK" role="2OqNvi">
-                              <ref role="2Oxat5" node="10pXjD6biov" resolve="currentReviewId" />
-                            </node>
-                          </node>
-                          <node concept="Xl_RD" id="6j8xKyAtE43" role="3uHU7B">
-                            <property role="Xl_RC" value="Changed da action" />
-                          </node>
                         </node>
                       </node>
                     </node>

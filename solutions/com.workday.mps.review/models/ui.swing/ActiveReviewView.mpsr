@@ -6,7 +6,6 @@
     <import index="dxuu" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing(JDK/)" implicit="true" />
     <import index="qqrq" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.ui.components(MPS.IDEA/)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
-    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
     <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" implicit="true" />
     <import index="ee8f" ref="r:76b35c96-0206-4f74-890e-e39504808bf8(com.workday.mps.flux.core)" implicit="true" />
     <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" implicit="true" />
@@ -352,23 +351,6 @@
                 <node concept="Xjq3P" id="6hum7g6NkLO" role="2Oq$k0" />
                 <node concept="2OwXpG" id="6hum7g6Nl9M" role="2OqNvi">
                   <ref role="2Oxat5" node="6hum7g6LidC" resolve="review" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3clFbF" id="6hum7g6P2i5" role="3cqZAp">
-            <node concept="2OqwBi" id="6hum7g6P2i2" role="3clFbG">
-              <node concept="10M0yZ" id="6hum7g6P2i3" role="2Oq$k0">
-                <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-                <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-              </node>
-              <node concept="liA8E" id="6hum7g6P2i4" role="2OqNvi">
-                <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.Object):void" resolve="println" />
-                <node concept="2OqwBi" id="6hum7g6P2WR" role="37wK5m">
-                  <node concept="Xjq3P" id="6hum7g6P2yq" role="2Oq$k0" />
-                  <node concept="2OwXpG" id="6hum7g6P3nb" role="2OqNvi">
-                    <ref role="2Oxat5" node="6hum7g6LidC" resolve="review" />
-                  </node>
                 </node>
               </node>
             </node>
