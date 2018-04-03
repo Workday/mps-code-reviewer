@@ -539,6 +539,23 @@
       </node>
       <node concept="3Tm6S6" id="168JFi9LQYq" role="1B3o_S" />
     </node>
+    <node concept="2XrIbr" id="3okjBs8jnLB" role="2XNbBy">
+      <property role="TrG5h" value="getPlugin" />
+      <node concept="3uibUv" id="3okjBs8jpdf" role="3clF45">
+        <ref role="3uigEE" node="168JFiagldf" resolve="ReviewPlugin" />
+      </node>
+      <node concept="3clFbS" id="3okjBs8jnLD" role="3clF47">
+        <node concept="3cpWs6" id="3okjBs8jphb" role="3cqZAp">
+          <node concept="2OqwBi" id="3okjBs8jpv$" role="3cqZAk">
+            <node concept="2WthIp" id="3okjBs8jphu" role="2Oq$k0" />
+            <node concept="2BZ7hE" id="3okjBs8jpEb" role="2OqNvi">
+              <ref role="2WH_rO" node="7Ndzh9v56Df" resolve="plugin" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="3okjBs8jpa6" role="1B3o_S" />
+    </node>
     <node concept="2XrIbr" id="q2HDcpwheB" role="2XNbBy">
       <property role="TrG5h" value="getActivityStream" />
       <node concept="3uibUv" id="q2HDcpwhVl" role="3clF45">

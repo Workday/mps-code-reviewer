@@ -259,6 +259,17 @@
         <ref role="3uigEE" to="czez:3c3vDUl3ZbU" resolve="ActivityStore" />
       </node>
     </node>
+    <node concept="2tJIrI" id="3okjBs8jeYk" role="jymVt" />
+    <node concept="312cEg" id="3okjBs8jgTJ" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="inlineCommentManager" />
+      <property role="3TUv4t" value="true" />
+      <node concept="3Tm6S6" id="3okjBs8jfUM" role="1B3o_S" />
+      <node concept="3uibUv" id="3okjBs8jgMp" role="1tU5fm">
+        <ref role="3uigEE" node="3okjBs8glGa" resolve="InlineCommentManager" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="4GdANuvXt_y" role="jymVt" />
     <node concept="3clFbW" id="4GdANuvXtJP" role="jymVt">
       <node concept="3cqZAl" id="4GdANuvXtJQ" role="3clF45" />
@@ -395,6 +406,28 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="3okjBs8jhJ5" role="3cqZAp" />
+        <node concept="3clFbF" id="3okjBs8jie_" role="3cqZAp">
+          <node concept="37vLTI" id="3okjBs8jjgk" role="3clFbG">
+            <node concept="2ShNRf" id="3okjBs8jjFi" role="37vLTx">
+              <node concept="1pGfFk" id="3okjBs8jjuu" role="2ShVmc">
+                <ref role="37wK5l" node="3okjBs8gurg" resolve="InlineCommentManager" />
+                <node concept="2OqwBi" id="3okjBs8jkar" role="37wK5m">
+                  <node concept="Xjq3P" id="3okjBs8jjQO" role="2Oq$k0" />
+                  <node concept="2OwXpG" id="3okjBs8jklL" role="2OqNvi">
+                    <ref role="2Oxat5" node="7Ndzh9v5bDS" resolve="activityStore" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="3okjBs8jizt" role="37vLTJ">
+              <node concept="Xjq3P" id="3okjBs8jiez" role="2Oq$k0" />
+              <node concept="2OwXpG" id="3okjBs8jiLy" role="2OqNvi">
+                <ref role="2Oxat5" node="3okjBs8jgTJ" resolve="inlineCommentManager" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="3Tm1VV" id="4GdANuvXtEM" role="1B3o_S" />
       <node concept="37vLTG" id="4GdANuvXtP2" role="3clF46">
@@ -484,6 +517,28 @@
       <node concept="3Tm1VV" id="6j8xKyAAkC1" role="1B3o_S" />
       <node concept="3uibUv" id="6j8xKyAAl_Z" role="3clF45">
         <ref role="3uigEE" to="czez:3c3vDUl3ZbU" resolve="ActivityStore" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="3okjBs8jrSN" role="jymVt" />
+    <node concept="3clFb_" id="3okjBs8juuP" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="getInlineCommentManager" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="3okjBs8juuS" role="3clF47">
+        <node concept="3cpWs6" id="3okjBs8jy8a" role="3cqZAp">
+          <node concept="2OqwBi" id="3okjBs8jziI" role="3cqZAk">
+            <node concept="Xjq3P" id="3okjBs8jynS" role="2Oq$k0" />
+            <node concept="2OwXpG" id="3okjBs8j$aD" role="2OqNvi">
+              <ref role="2Oxat5" node="3okjBs8jgTJ" resolve="inlineCommentManager" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="3okjBs8jt$z" role="1B3o_S" />
+      <node concept="3uibUv" id="3okjBs8jutE" role="3clF45">
+        <ref role="3uigEE" node="3okjBs8glGa" resolve="InlineCommentManager" />
       </node>
     </node>
     <node concept="2tJIrI" id="78s6gAkkhoj" role="jymVt" />
@@ -935,6 +990,7 @@
       </node>
     </node>
     <node concept="2tJIrI" id="78s6gAkldC8" role="jymVt" />
+    <node concept="3Tm1VV" id="3okjBs8k0Vq" role="1B3o_S" />
   </node>
 </model>
 

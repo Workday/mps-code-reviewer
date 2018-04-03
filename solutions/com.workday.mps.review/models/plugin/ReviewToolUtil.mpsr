@@ -287,6 +287,40 @@
         <property role="Xl_RC" value="refs/heads/feature/YP-1787" />
       </node>
     </node>
+    <node concept="2tJIrI" id="3okjBs8jkwX" role="jymVt" />
+    <node concept="2YIFZL" id="3okjBs8jl9E" role="jymVt">
+      <property role="TrG5h" value="getPlugin" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="3okjBs8jl9H" role="3clF47">
+        <node concept="3cpWs6" id="3okjBs8jlyt" role="3cqZAp">
+          <node concept="2OqwBi" id="3okjBs8jnbt" role="3cqZAk">
+            <node concept="2OqwBi" id="3okjBs8jm5Z" role="2Oq$k0">
+              <node concept="37vLTw" id="3okjBs8jlN0" role="2Oq$k0">
+                <ref role="3cqZAo" node="3okjBs8jlH2" resolve="project" />
+              </node>
+              <node concept="LR4U6" id="3okjBs8jmZd" role="2OqNvi">
+                <ref role="LR4U5" node="7Ch0QDHzurd" resolve="Reviewer" />
+              </node>
+            </node>
+            <node concept="2XshWL" id="3okjBs8jpZZ" role="2OqNvi">
+              <ref role="2WH_rO" node="3okjBs8jnLB" resolve="getPlugin" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="3okjBs8jkLx" role="1B3o_S" />
+      <node concept="3uibUv" id="3okjBs8jl9w" role="3clF45">
+        <ref role="3uigEE" node="168JFiagldf" resolve="ReviewPlugin" />
+      </node>
+      <node concept="37vLTG" id="3okjBs8jlH2" role="3clF46">
+        <property role="TrG5h" value="project" />
+        <node concept="3uibUv" id="3okjBs8jmFw" role="1tU5fm">
+          <ref role="3uigEE" to="4nm9:~Project" resolve="Project" />
+        </node>
+      </node>
+    </node>
     <node concept="2tJIrI" id="3REobdwMXk7" role="jymVt" />
     <node concept="2YIFZL" id="3REobdwMY1M" role="jymVt">
       <property role="TrG5h" value="getExampleUser" />
