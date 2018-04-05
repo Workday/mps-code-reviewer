@@ -70,6 +70,7 @@
     <import index="czez" ref="r:31cec7e7-dd44-4ba6-ae3f-ee48ddd83b42(com.workday.mps.review.store)" />
     <import index="2jep" ref="r:a3993581-a780-46ec-a6e0-1dd024d2037c(com.workday.mps.review.actions)" />
     <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" />
+    <import index="z8iw" ref="r:dfdf3542-dbcf-43df-870a-3c3504b3c840(jetbrains.mps.baseLanguage.collections.custom)" implicit="true" />
     <import index="71xd" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.tools(MPS.Platform/)" implicit="true" />
     <import index="frz3" ref="301737e2-0a75-4665-a1a3-af0218114a24/java:org.apache.http.client.methods(com.workday.mps.review/)" implicit="true" />
     <import index="l0ab" ref="301737e2-0a75-4665-a1a3-af0218114a24/java:org.apache.http.entity(com.workday.mps.review/)" implicit="true" />

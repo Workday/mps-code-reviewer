@@ -28,9 +28,6 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
-      <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
-        <reference id="1144433057691" name="classifier" index="1PxDUh" />
-      </concept>
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
         <property id="8606350594693632173" name="isTransient" index="eg7rD" />
         <property id="1240249534625" name="isVolatile" index="34CwA1" />
@@ -41,10 +38,6 @@
       </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
-        <child id="1068431790190" name="initializer" index="33vP2m" />
-      </concept>
-      <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
-        <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
@@ -66,11 +59,7 @@
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
-      <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
-        <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
-      </concept>
       <concept id="1068581242867" name="jetbrains.mps.baseLanguage.structure.LongType" flags="in" index="3cpWsb" />
-      <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -134,60 +123,28 @@
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="getDate" />
       <node concept="3Tm1VV" id="2hVa5m$31xH" role="1B3o_S" />
-      <node concept="3uibUv" id="2hVa5m$31xI" role="3clF45">
-        <ref role="3uigEE" to="28m1:~ZonedDateTime" resolve="ZonedDateTime" />
+      <node concept="3uibUv" id="__fp3c_CMZ" role="3clF45">
+        <ref role="3uigEE" to="28m1:~Instant" resolve="Instant" />
       </node>
       <node concept="2AHcQZ" id="2hVa5m$31xM" role="2AJF6D">
         <ref role="2AI5Lk" to="mhfm:~NotNull" resolve="NotNull" />
       </node>
       <node concept="3clFbS" id="2hVa5m$31xN" role="3clF47">
-        <node concept="3cpWs8" id="2hVa5m$31P0" role="3cqZAp">
-          <node concept="3cpWsn" id="2hVa5m$31P1" role="3cpWs9">
-            <property role="3TUv4t" value="true" />
-            <property role="TrG5h" value="instant" />
-            <node concept="3uibUv" id="2hVa5m$31P2" role="1tU5fm">
-              <ref role="3uigEE" to="28m1:~Instant" resolve="Instant" />
-            </node>
-            <node concept="2YIFZM" id="2hVa5m$31P3" role="33vP2m">
-              <ref role="1Pybhc" to="28m1:~Instant" resolve="Instant" />
-              <ref role="37wK5l" to="28m1:~Instant.ofEpochSecond(long):java.time.Instant" resolve="ofEpochSecond" />
-              <node concept="FJ1c_" id="2hVa5m$31P4" role="37wK5m">
-                <node concept="3cmrfG" id="2hVa5m$31P5" role="3uHU7w">
-                  <property role="3cmrfH" value="1000" />
-                </node>
-                <node concept="2OqwBi" id="2hVa5m$31P6" role="3uHU7B">
-                  <node concept="Xjq3P" id="2hVa5m$31P7" role="2Oq$k0" />
-                  <node concept="2OwXpG" id="2hVa5m$32uc" role="2OqNvi">
-                    <ref role="2Oxat5" node="2hVa5m$1$6L" resolve="createdDate" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3cpWs8" id="2hVa5m$31Pf" role="3cqZAp">
-          <node concept="3cpWsn" id="2hVa5m$31Pg" role="3cpWs9">
-            <property role="3TUv4t" value="true" />
-            <property role="TrG5h" value="createdDateTime" />
-            <node concept="3uibUv" id="2hVa5m$31Ph" role="1tU5fm">
-              <ref role="3uigEE" to="28m1:~ZonedDateTime" resolve="ZonedDateTime" />
-            </node>
-            <node concept="2YIFZM" id="2hVa5m$31Pi" role="33vP2m">
-              <ref role="37wK5l" to="28m1:~ZonedDateTime.ofInstant(java.time.Instant,java.time.ZoneId):java.time.ZonedDateTime" resolve="ofInstant" />
-              <ref role="1Pybhc" to="28m1:~ZonedDateTime" resolve="ZonedDateTime" />
-              <node concept="37vLTw" id="2hVa5m$31Pj" role="37wK5m">
-                <ref role="3cqZAo" node="2hVa5m$31P1" resolve="instant" />
-              </node>
-              <node concept="10M0yZ" id="2hVa5m$31Pk" role="37wK5m">
-                <ref role="1PxDUh" to="28m1:~ZoneOffset" resolve="ZoneOffset" />
-                <ref role="3cqZAo" to="28m1:~ZoneOffset.UTC" resolve="UTC" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3cpWs6" id="2hVa5m$31Pn" role="3cqZAp">
-          <node concept="37vLTw" id="2hVa5m$31Po" role="3cqZAk">
-            <ref role="3cqZAo" node="2hVa5m$31Pg" resolve="createdDateTime" />
+          <node concept="2YIFZM" id="__fp3c_D8$" role="3cqZAk">
+            <ref role="37wK5l" to="28m1:~Instant.ofEpochSecond(long):java.time.Instant" resolve="ofEpochSecond" />
+            <ref role="1Pybhc" to="28m1:~Instant" resolve="Instant" />
+            <node concept="FJ1c_" id="__fp3c_D8_" role="37wK5m">
+              <node concept="3cmrfG" id="__fp3c_D8A" role="3uHU7w">
+                <property role="3cmrfH" value="1000" />
+              </node>
+              <node concept="2OqwBi" id="__fp3c_D8B" role="3uHU7B">
+                <node concept="Xjq3P" id="__fp3c_D8C" role="2Oq$k0" />
+                <node concept="2OwXpG" id="__fp3c_D8D" role="2OqNvi">
+                  <ref role="2Oxat5" node="2hVa5m$1$6L" resolve="createdDate" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>

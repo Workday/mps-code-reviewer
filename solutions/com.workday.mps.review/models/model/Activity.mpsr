@@ -68,8 +68,8 @@
       <property role="TrG5h" value="getDate" />
       <node concept="3clFbS" id="4Ew7qBDtzBu" role="3clF47" />
       <node concept="3Tm1VV" id="4Ew7qBDtzBv" role="1B3o_S" />
-      <node concept="3uibUv" id="4Ew7qBDtzBw" role="3clF45">
-        <ref role="3uigEE" to="28m1:~ZonedDateTime" resolve="ZonedDateTime" />
+      <node concept="3uibUv" id="__fp3c$GvR" role="3clF45">
+        <ref role="3uigEE" to="28m1:~Instant" resolve="Instant" />
       </node>
       <node concept="P$JXv" id="4Ew7qBDtzBx" role="lGtFl">
         <node concept="TZ5HA" id="4Ew7qBDtzBy" role="TZ5H$">

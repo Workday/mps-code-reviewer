@@ -3,9 +3,10 @@
   <persistence version="9" />
   <imports>
     <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
     <import index="9z78" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing.border(JDK/)" implicit="true" />
     <import index="fbzs" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt.geom(JDK/)" implicit="true" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -13,6 +14,7 @@
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
+      <concept id="1153422305557" name="jetbrains.mps.baseLanguage.structure.LessThanOrEqualsExpression" flags="nn" index="2dkUwp" />
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
       <concept id="1188207840427" name="jetbrains.mps.baseLanguage.structure.AnnotationInstance" flags="nn" index="2AHcQZ">
@@ -33,6 +35,15 @@
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
+      </concept>
+      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
+        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
+      <concept id="1164991038168" name="jetbrains.mps.baseLanguage.structure.ThrowStatement" flags="nn" index="YS8fn">
+        <child id="1164991057263" name="throwable" index="YScLw" />
+      </concept>
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
@@ -76,6 +87,10 @@
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
+      <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
+        <child id="1068580123160" name="condition" index="3clFbw" />
+        <child id="1068580123161" name="ifTrue" index="3clFbx" />
+      </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
@@ -84,6 +99,7 @@
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
+      <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
@@ -96,6 +112,7 @@
       <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
         <child id="1079359253376" name="expression" index="1eOMHV" />
       </concept>
+      <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -170,6 +187,61 @@
     <node concept="3clFbW" id="7Ch0QDH$jEJ" role="jymVt">
       <node concept="3cqZAl" id="7Ch0QDH$jEK" role="3clF45" />
       <node concept="3clFbS" id="7Ch0QDH$jEM" role="3clF47">
+        <node concept="3clFbJ" id="__fp3crNmC" role="3cqZAp">
+          <node concept="3clFbS" id="__fp3crNmE" role="3clFbx">
+            <node concept="YS8fn" id="__fp3crQ43" role="3cqZAp">
+              <node concept="2ShNRf" id="__fp3crQb2" role="YScLw">
+                <node concept="1pGfFk" id="__fp3crQ_J" role="2ShVmc">
+                  <ref role="37wK5l" to="wyt6:~IllegalArgumentException.&lt;init&gt;(java.lang.String)" resolve="IllegalArgumentException" />
+                  <node concept="3cpWs3" id="__fp3crROu" role="37wK5m">
+                    <node concept="37vLTw" id="__fp3crRVu" role="3uHU7w">
+                      <ref role="3cqZAo" node="7Ch0QDH$jPz" resolve="radius" />
+                    </node>
+                    <node concept="Xl_RD" id="__fp3crQMh" role="3uHU7B">
+                      <property role="Xl_RC" value="Radius must be greater than 0, provided: " />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2dkUwp" id="__fp3crPI$" role="3clFbw">
+            <node concept="3cmrfG" id="__fp3crPPQ" role="3uHU7w">
+              <property role="3cmrfH" value="0" />
+            </node>
+            <node concept="37vLTw" id="__fp3crNDi" role="3uHU7B">
+              <ref role="3cqZAo" node="7Ch0QDH$jPz" resolve="radius" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="__fp3crSwy" role="3cqZAp">
+          <node concept="3clFbS" id="__fp3crSw$" role="3clFbx">
+            <node concept="YS8fn" id="__fp3crV$t" role="3cqZAp">
+              <node concept="2ShNRf" id="__fp3crVFs" role="YScLw">
+                <node concept="1pGfFk" id="__fp3crW69" role="2ShVmc">
+                  <ref role="37wK5l" to="wyt6:~IllegalArgumentException.&lt;init&gt;(java.lang.String)" resolve="IllegalArgumentException" />
+                  <node concept="3cpWs3" id="__fp3crXN0" role="37wK5m">
+                    <node concept="37vLTw" id="__fp3crY43" role="3uHU7w">
+                      <ref role="3cqZAo" node="7Ch0QDH$jTx" resolve="thickness" />
+                    </node>
+                    <node concept="Xl_RD" id="__fp3crWiJ" role="3uHU7B">
+                      <property role="Xl_RC" value="Thickness must be greater than or equal to 0, provided: " />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3eOVzh" id="__fp3crUxX" role="3clFbw">
+            <node concept="3cmrfG" id="__fp3crVfj" role="3uHU7w">
+              <property role="3cmrfH" value="0" />
+            </node>
+            <node concept="37vLTw" id="__fp3crSO1" role="3uHU7B">
+              <ref role="3cqZAo" node="7Ch0QDH$jTx" resolve="thickness" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="__fp3crV2O" role="3cqZAp" />
         <node concept="3clFbF" id="7Ch0QDH$nYh" role="3cqZAp">
           <node concept="37vLTI" id="7Ch0QDH$qAG" role="3clFbG">
             <node concept="37vLTw" id="7Ch0QDH$qVO" role="37vLTx">
@@ -198,8 +270,12 @@
         </node>
         <node concept="3clFbF" id="7Ch0QDHAuWT" role="3cqZAp">
           <node concept="37vLTI" id="7Ch0QDHAuWU" role="3clFbG">
-            <node concept="37vLTw" id="7Ch0QDHAvkV" role="37vLTx">
-              <ref role="3cqZAo" node="7Ch0QDHAu1A" resolve="borderColor" />
+            <node concept="2YIFZM" id="__fp3crYCA" role="37vLTx">
+              <ref role="37wK5l" to="33ny:~Objects.requireNonNull(java.lang.Object):java.lang.Object" resolve="requireNonNull" />
+              <ref role="1Pybhc" to="33ny:~Objects" resolve="Objects" />
+              <node concept="37vLTw" id="__fp3crYLp" role="37wK5m">
+                <ref role="3cqZAo" node="7Ch0QDHAu1A" resolve="borderColor" />
+              </node>
             </node>
             <node concept="2OqwBi" id="7Ch0QDHAuWW" role="37vLTJ">
               <node concept="Xjq3P" id="7Ch0QDHAuWX" role="2Oq$k0" />
@@ -211,13 +287,17 @@
         </node>
         <node concept="3clFbF" id="7Ch0QDHAs_t" role="3cqZAp">
           <node concept="37vLTI" id="7Ch0QDHAtAj" role="3clFbG">
-            <node concept="37vLTw" id="7Ch0QDHAtVV" role="37vLTx">
-              <ref role="3cqZAo" node="7Ch0QDHAqBt" resolve="backgroundColor" />
-            </node>
             <node concept="2OqwBi" id="7Ch0QDHAsNR" role="37vLTJ">
               <node concept="Xjq3P" id="7Ch0QDHAs_r" role="2Oq$k0" />
               <node concept="2OwXpG" id="7Ch0QDHAsY9" role="2OqNvi">
                 <ref role="2Oxat5" node="7Ch0QDHArQe" resolve="backgroundColor" />
+              </node>
+            </node>
+            <node concept="2YIFZM" id="__fp3crYNt" role="37vLTx">
+              <ref role="37wK5l" to="33ny:~Objects.requireNonNull(java.lang.Object):java.lang.Object" resolve="requireNonNull" />
+              <ref role="1Pybhc" to="33ny:~Objects" resolve="Objects" />
+              <node concept="37vLTw" id="__fp3crYZM" role="37wK5m">
+                <ref role="3cqZAo" node="7Ch0QDHAqBt" resolve="backgroundColor" />
               </node>
             </node>
           </node>
@@ -517,18 +597,20 @@
           <node concept="3cpWsn" id="7Ch0QDH$KQs" role="3cpWs9">
             <property role="TrG5h" value="value" />
             <node concept="10Oyi0" id="7Ch0QDH$KQn" role="1tU5fm" />
-            <node concept="FJ1c_" id="7Ch0QDH$Oz1" role="33vP2m">
-              <node concept="1eOMI4" id="7Ch0QDHBxUz" role="3uHU7B">
-                <node concept="3cpWsd" id="7Ch0QDHBrfl" role="1eOMHV">
-                  <node concept="37vLTw" id="7Ch0QDH$Lsx" role="3uHU7B">
-                    <ref role="3cqZAo" node="7Ch0QDH$nGd" resolve="radius" />
+            <node concept="3cpWs3" id="__fp3ct4XX" role="33vP2m">
+              <node concept="1eOMI4" id="__fp3ctb9s" role="3uHU7B">
+                <node concept="FJ1c_" id="7Ch0QDH$Oz1" role="1eOMHV">
+                  <node concept="1eOMI4" id="7Ch0QDHBxUz" role="3uHU7B">
+                    <node concept="37vLTw" id="7Ch0QDH$Lsx" role="1eOMHV">
+                      <ref role="3cqZAo" node="7Ch0QDH$nGd" resolve="radius" />
+                    </node>
                   </node>
-                  <node concept="3cmrfG" id="7Ch0QDHBrm9" role="3uHU7w">
-                    <property role="3cmrfH" value="1" />
+                  <node concept="3cmrfG" id="__fp3ctl$p" role="3uHU7w">
+                    <property role="3cmrfH" value="4" />
                   </node>
                 </node>
               </node>
-              <node concept="3cmrfG" id="7Ch0QDHBHeP" role="3uHU7w">
+              <node concept="3cmrfG" id="__fp3ct81L" role="3uHU7w">
                 <property role="3cmrfH" value="2" />
               </node>
             </node>

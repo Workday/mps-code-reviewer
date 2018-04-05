@@ -138,8 +138,8 @@
       <property role="TrG5h" value="getUpdatedDate" />
       <node concept="3clFbS" id="4Ew7qBDr$tC" role="3clF47" />
       <node concept="3Tm1VV" id="4Ew7qBDr$tD" role="1B3o_S" />
-      <node concept="3uibUv" id="4Ew7qBDr$rN" role="3clF45">
-        <ref role="3uigEE" to="28m1:~ZonedDateTime" resolve="ZonedDateTime" />
+      <node concept="3uibUv" id="__fp3c$Gum" role="3clF45">
+        <ref role="3uigEE" to="28m1:~Instant" resolve="Instant" />
       </node>
       <node concept="P$JXv" id="4Ew7qBDrAg3" role="lGtFl">
         <node concept="TZ5HA" id="4Ew7qBDrAg4" role="TZ5H$">

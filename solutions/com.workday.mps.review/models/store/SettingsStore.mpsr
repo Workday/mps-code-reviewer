@@ -64,7 +64,6 @@
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
-      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
@@ -116,7 +115,7 @@
   </registry>
   <node concept="312cEu" id="4Ew7qBDg_9q">
     <property role="3GE5qa" value="store" />
-    <property role="TrG5h" value="PluginConfigurationStore" />
+    <property role="TrG5h" value="SettingsStore" />
     <node concept="2tJIrI" id="4Ew7qBDid2E" role="jymVt" />
     <node concept="3clFbW" id="4Ew7qBDidkI" role="jymVt">
       <node concept="3cqZAl" id="4Ew7qBDidkJ" role="3clF45" />
@@ -215,7 +214,6 @@
                   <ref role="37wK5l" to="ee8f:3c3vDUl4aO_" resolve="emitChangeEvent" />
                 </node>
               </node>
-              <node concept="3clFbH" id="4Ew7qBDgHSX" role="3cqZAp" />
             </node>
           </node>
         </node>

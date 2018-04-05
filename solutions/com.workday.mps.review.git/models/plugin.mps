@@ -406,6 +406,15 @@
     </node>
     <node concept="2tJIrI" id="57bl67CH$sS" role="jymVt" />
     <node concept="3clFbW" id="57bl67CHysz" role="jymVt">
+      <node concept="37vLTG" id="__fp3coHcw" role="3clF46">
+        <property role="TrG5h" value="project" />
+        <node concept="3uibUv" id="__fp3coTJU" role="1tU5fm">
+          <ref role="3uigEE" to="4nm9:~Project" resolve="Project" />
+        </node>
+        <node concept="2AHcQZ" id="__fp3coUyp" role="2AJF6D">
+          <ref role="2AI5Lk" to="mhfm:~NotNull" resolve="NotNull" />
+        </node>
+      </node>
       <node concept="37vLTG" id="57bl67CH_F5" role="3clF46">
         <property role="TrG5h" value="connection" />
         <property role="3TUv4t" value="true" />
@@ -415,6 +424,39 @@
       </node>
       <node concept="3cqZAl" id="57bl67CHys$" role="3clF45" />
       <node concept="3clFbS" id="57bl67CHysA" role="3clF47">
+        <node concept="3cpWs8" id="__fp3coU_6" role="3cqZAp">
+          <node concept="3cpWsn" id="__fp3coU_7" role="3cpWs9">
+            <property role="TrG5h" value="currentRepository" />
+            <node concept="3uibUv" id="__fp3coU_3" role="1tU5fm">
+              <ref role="3uigEE" to="5mlj:~GitRepository" resolve="GitRepository" />
+            </node>
+            <node concept="2YIFZM" id="__fp3coU_8" role="33vP2m">
+              <ref role="37wK5l" to="rfyv:~GitBranchUtil.getCurrentRepository(com.intellij.openapi.project.Project):git4idea.repo.GitRepository" resolve="getCurrentRepository" />
+              <ref role="1Pybhc" to="rfyv:~GitBranchUtil" resolve="GitBranchUtil" />
+              <node concept="37vLTw" id="__fp3coU_9" role="37wK5m">
+                <ref role="3cqZAo" node="__fp3coHcw" resolve="project" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="__fp3coUHQ" role="3cqZAp">
+          <node concept="3clFbS" id="__fp3coUHS" role="3clFbx">
+            <node concept="3clFbF" id="__fp3coTO_" role="3cqZAp">
+              <node concept="1rXfSq" id="__fp3coUbz" role="3clFbG">
+                <ref role="37wK5l" node="57bl67CHv4y" resolve="repositoryChanged" />
+                <node concept="37vLTw" id="__fp3coU_a" role="37wK5m">
+                  <ref role="3cqZAo" node="__fp3coU_7" resolve="currentRepository" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3y3z36" id="__fp3coV1$" role="3clFbw">
+            <node concept="10Nm6u" id="__fp3coV1V" role="3uHU7w" />
+            <node concept="37vLTw" id="__fp3coUOD" role="3uHU7B">
+              <ref role="3cqZAo" node="__fp3coU_7" resolve="currentRepository" />
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="4Ew7qBDgfmU" role="3cqZAp">
           <node concept="2OqwBi" id="4Ew7qBDgfmV" role="3clFbG">
             <node concept="37vLTw" id="4Ew7qBDgfmW" role="2Oq$k0">
@@ -703,7 +745,6 @@
                   <node concept="10Nm6u" id="4Ew7qBDgeFX" role="37wK5m" />
                 </node>
               </node>
-              <node concept="3clFbH" id="4Ew7qBDget6" role="3cqZAp" />
             </node>
           </node>
         </node>

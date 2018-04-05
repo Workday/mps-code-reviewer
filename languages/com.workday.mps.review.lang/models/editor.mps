@@ -92,12 +92,18 @@
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
+      <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
+        <child id="1068580123156" name="expression" index="3clFbG" />
+      </concept>
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
       <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
         <property id="1068580123138" name="value" index="3clFbU" />
+      </concept>
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
@@ -319,12 +325,32 @@
                     </node>
                   </node>
                 </node>
+                <node concept="3clFbF" id="__fp3cmb5t" role="3cqZAp">
+                  <node concept="2OqwBi" id="__fp3cmbFm" role="3clFbG">
+                    <node concept="37vLTw" id="__fp3cmb5r" role="2Oq$k0">
+                      <ref role="3cqZAo" node="3okjBs8mbaB" resolve="inlineComponent" />
+                    </node>
+                    <node concept="liA8E" id="__fp3cmcJE" role="2OqNvi">
+                      <ref role="37wK5l" to="dxuu:~JComponent.setMaximumSize(java.awt.Dimension):void" resolve="setMaximumSize" />
+                      <node concept="2ShNRf" id="__fp3cmd35" role="37wK5m">
+                        <node concept="1pGfFk" id="__fp3cmlFh" role="2ShVmc">
+                          <ref role="37wK5l" to="z60i:~Dimension.&lt;init&gt;(int,int)" resolve="Dimension" />
+                          <node concept="3cmrfG" id="__fp3cmmaJ" role="37wK5m">
+                            <property role="3cmrfH" value="600" />
+                          </node>
+                          <node concept="3cmrfG" id="__fp3cmttl" role="37wK5m">
+                            <property role="3cmrfH" value="10000" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
                 <node concept="3cpWs6" id="3okjBs8jDsh" role="3cqZAp">
                   <node concept="37vLTw" id="3okjBs8mbaG" role="3cqZAk">
                     <ref role="3cqZAo" node="3okjBs8mbaB" resolve="inlineComponent" />
                   </node>
                 </node>
-                <node concept="3clFbH" id="3okjBs8kkao" role="3cqZAp" />
               </node>
               <node concept="TDmWw" id="3okjBs8klEa" role="TEbGg">
                 <node concept="3cpWsn" id="3okjBs8klEb" role="TDEfY">
