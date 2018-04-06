@@ -22,20 +22,9 @@ buildscript {
 
 plugins {
   id "base"
-  id "de.undercouch.download" version "3.4.2"
-}
-
-ext {
-  // Define MPS download properties
-  mps = new Expando(
-    major: "2017.3",
-    build: "2017.3.5",
-    downloadDir: "artifacts"
-  )
 }
 
 apply plugin: 'base'
-apply from: file('gradle/tasks/mpsArtifact.gradle')
 
 repositories {
   maven {
@@ -45,12 +34,15 @@ repositories {
 }
 
 configurations {
+  mps
   mpsPlugins
   com_workday_mps_reviewCompile
   com_workday_mps_review_git4mpsCompile
 }
 
 dependencies {
+  mps group: "com.jetbrains", name: "mps", version: "2017.3.5"
+
   // Plugin dependencies for project
   mpsPlugins group: "com.mbeddr", name: "platform", version: "1.0.20107.+"
 
@@ -62,8 +54,8 @@ dependencies {
   // com_workday_mps_reviewCompile group: "org.apache.httpcomponents", name: "httpclient", version: "4.5.5"
   // com_workday_mps_reviewCompile group: "org.apache.httpcomponents:httpasyncclient:4.1.3"
 
-  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS/plugins/git4idea/lib/git4idea.jar")
-  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS/plugins/git4idea/lib/git4idea-rt.jar")
+  com_workday_mps_review_git4mpsCompile files("artifacts/MPS/plugins/git4idea/lib/git4idea.jar")
+  com_workday_mps_review_git4mpsCompile files("artifacts/MPS/plugins/git4idea/lib/git4idea-rt.jar")
 }
 
 task unzipPlugins(type: Copy) {
@@ -71,8 +63,14 @@ task unzipPlugins(type: Copy) {
   into 'artifacts'
 }
 
-task getPlugins(dependsOn: unzipPlugins)
-
+task unzipMps(type: Copy) {
+  dependsOn configurations.mps
+  from {
+      configurations.mps.resolve().collect { zipTree(it) }
+  }
+  into file("artifacts/MPS")
+}
+    
 task com_workday_mps_reviewCompileDependencies(type: Sync) {
   from configurations.com_workday_mps_reviewCompile.resolve()
   into 'solutions/com.workday.mps.review/lib'
@@ -82,12 +80,12 @@ task com_workday_mps_review_git4mpsCompileDependencies(type: Copy) {
   from configurations.com_workday_mps_review_git4mpsCompile.resolve()
   into 'solutions/com.workday.mps.review.git4mps/lib'
 }
-com_workday_mps_review_git4mpsCompileDependencies.mustRunAfter getMps
+com_workday_mps_review_git4mpsCompileDependencies.mustRunAfter unzipMps
 
 task setup(group: "Project",
            description: "Initializes the project for development",
-           dependsOn: [getMps, 
-                       getPlugins, 
+           dependsOn: [unzipMps,
+                       unzipPlugins, 
                        com_workday_mps_reviewCompileDependencies, 
                        com_workday_mps_review_git4mpsCompileDependencies])
 
@@ -111,8 +109,8 @@ clean.doFirst {
 }
 
 task generateBuildScripts(description: "Generates all Ant build scripts",
-                           group: "MPS Build",
-                           dependsOn: setup) {
+                          group: "MPS Build",
+                          dependsOn: setup) {
   doLast {
   	println "Generating ant scripts ==========================================="
   	runAnt "${rootDir}/buildScripts/reviewPluginBuildScripts.xml", "generate"
@@ -120,21 +118,18 @@ task generateBuildScripts(description: "Generates all Ant build scripts",
   	println()
   }
 }
-
 generateBuildScripts.mustRunAfter setup
 
 task buildPlugin(group: "MPS Build",
-        description: "Generates the code reviewer plugin",
-        dependsOn: generateBuildScripts) {
+                 description: "Generates the code reviewer plugin",
+                 dependsOn: generateBuildScripts) {
   doLast {
     println "Building code reviewer plugin ===================================="
     runAnt "${rootDir}/dist/reviewPlugin.xml", "clean", "generate", "build"
     println "Code reviewer plugin has been successfully built ================="
     println()
-  }
-	
+  }	
 }
-
 buildPlugin.mustRunAfter generateBuildScripts
 
 defaultTasks 'buildPlugin'
