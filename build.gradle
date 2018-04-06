@@ -16,131 +16,133 @@ buildscript {
   }
 
   dependencies {
-    classpath 'org.apache.ant:ant-junit:1.9.7'
+    classpath group: 'org.apache.ant', name: 'ant-junit', version: '1.9.7'
   }
 }
 
-plugins {
-  id "base"
-  id "de.undercouch.download" version "3.4.2"
-}
-
-ext {
-  // Define MPS download properties
-  mps = new Expando(
-    major: "2017.3",
-    build: "2017.3.5",
-    downloadDir: "artifacts"
-  )
-}
-
 apply plugin: 'base'
-apply from: file('gradle/tasks/mpsArtifact.gradle')
 
 repositories {
   maven {
     mavenCentral()
-    url "https://projects.itemis.de/nexus/content/groups/OS/"
+    url 'https://projects.itemis.de/nexus/content/groups/OS'
   }
 }
 
 configurations {
+  mps
   mpsPlugins
-  com_workday_mps_reviewCompile
-  com_workday_mps_review_git4mpsCompile
+  compile
+  git4mpsCompile
+}
+
+ext {
+  mpsVersion = '2017.3.5'
+  mbeddrPlatformVersion = '1.0.20107.+'
+  gsonVersion = '2.8.0'
+  okhttpVersion = '3.10.0'
 }
 
 dependencies {
   // Plugin dependencies for project
-  mpsPlugins group: "com.mbeddr", name: "platform", version: "1.0.20107.+"
+  mpsPlugins group: 'com.mbeddr', name: 'platform', version: mbeddrPlatformVersion
 
   // Compile-time dependencies
-  com_workday_mps_reviewCompile group: "com.google.code.gson", name: "gson", version: "2.8.0"
-  com_workday_mps_reviewCompile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.10.0'
+  // Multiple configurations allow us to easily copy the deps to the required locations
+  compile group: 'com.google.code.gson', name: 'gson', version: gsonVersion
+  compile group: 'com.squareup.okhttp3', name: 'okhttp', version: okhttpVersion
+  mps group: 'com.jetbrains', name: 'mps', version: mpsVersion
+  git4mpsCompile files('artifacts/MPS/plugins/git4idea/lib/git4idea.jar')
+  git4mpsCompile files('artifacts/MPS/plugins/git4idea/lib/git4idea-rt.jar')
+}
 
-  // com_workday_mps_reviewCompile group: "org.apache.httpcomponents", name: "httpcore", version: "4.4.9"
-  // com_workday_mps_reviewCompile group: "org.apache.httpcomponents", name: "httpclient", version: "4.5.5"
-  // com_workday_mps_reviewCompile group: "org.apache.httpcomponents:httpasyncclient:4.1.3"
-
-  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS/plugins/git4idea/lib/git4idea.jar")
-  com_workday_mps_review_git4mpsCompile files(mps.downloadDir + "/MPS/plugins/git4idea/lib/git4idea-rt.jar")
+task unzipMps(type: Copy) {
+  dependsOn configurations.mps
+  from {
+    configurations.mps.resolve().collect { zipTree(it) }
+  }
+  into 'artifacts/MPS'
 }
 
 task unzipPlugins(type: Copy) {
-  from configurations.mpsPlugins.resolve().collect { zipTree(it) }
+  dependsOn configurations.mpsPlugins
+  from {
+    configurations.mpsPlugins.resolve().collect { zipTree(it) }
+  }
   into 'artifacts'
 }
-
-task getPlugins(dependsOn: unzipPlugins)
-
-task com_workday_mps_reviewCompileDependencies(type: Sync) {
-  from configurations.com_workday_mps_reviewCompile.resolve()
+    
+task syncCompileDependenciesToLib(type: Sync) {
+  // sync because these should be the only files in this lib directory
+  from {
+    configurations.compile.resolve()
+  }
   into 'solutions/com.workday.mps.review/lib'
 }
 
-task com_workday_mps_review_git4mpsCompileDependencies(type: Copy) {
-  from configurations.com_workday_mps_review_git4mpsCompile.resolve()
+task copyGit4mpsCompileDependenciesToLib(type: Copy) {
+  from {
+    configurations.git4mpsCompile.resolve()
+  }
   into 'solutions/com.workday.mps.review.git4mps/lib'
 }
-com_workday_mps_review_git4mpsCompileDependencies.mustRunAfter getMps
+copyGit4mpsCompileDependenciesToLib.mustRunAfter unzipMps
 
-task setup(group: "Project",
-           description: "Initializes the project for development",
-           dependsOn: [getMps, 
-                       getPlugins, 
-                       com_workday_mps_reviewCompileDependencies, 
-                       com_workday_mps_review_git4mpsCompileDependencies])
+task copyCompileDependenciesToLib(dependsOn: [copyGit4mpsCompileDependenciesToLib,
+                                              syncCompileDependenciesToLib])
+
+task setup(group: 'Project',
+           description: 'Initializes the project for development',
+           dependsOn: [unzipMps,
+                       unzipPlugins, 
+                       copyCompileDependenciesToLib])
 
 clean.doFirst {
-    delete "${rootDir}/artifacts/"
-    delete "${rootDir}/dist/"
-    delete "${rootDir}/test/"
-
-    // delete all generated code
-    ant.delete(includeemptydirs: true) {
-      fileset(dir: "${rootDir}", defaultexcludes: false) {
-        include(name: "**/lib/**")
-        include(name: "**/source_gen/**")
-        include(name: "**/source_gen.caches/**")
-        include(name: "**/classes_gen/**")
-        include(name: "**/classes_gen.caches/**")
-        include(name: "**/test_gen/**")
-        include(name: "**/test_gen.caches/**")
-      }
+  delete 'artifacts'
+  delete 'dist'
+  delete 'test'
+  // delete all generated code
+  ant.delete(includeemptydirs: true) {
+    fileset(dir: "${rootDir}", defaultexcludes: false) {
+      include(name: '**/lib/**')
+      include(name: '**/source_gen/**')
+      include(name: '**/source_gen.caches/**')
+      include(name: '**/classes_gen/**')
+      include(name: '**/classes_gen.caches/**')
+      include(name: '**/test_gen/**')
+      include(name: '**/test_gen.caches/**')
     }
+  }
 }
 
-task generateBuildScripts(description: "Generates all Ant build scripts",
-                           group: "MPS Build",
-                           dependsOn: setup) {
+task generateBuildScripts(description: 'Generates all Ant build scripts',
+                          group: 'MPS Build',
+                          dependsOn: setup) {
   doLast {
-  	println "Generating ant scripts ==========================================="
-  	runAnt "${rootDir}/buildScripts/reviewPluginBuildScripts.xml", "generate"
-  	println "Ant scripts have been successfully generated ====================="
+  	println 'Generating ant scripts ==========================================='
+  	runAnt "${rootDir}/buildScripts/reviewPluginBuildScripts.xml", 'generate'
+  	println 'Ant scripts have been successfully generated ====================='
   	println()
   }
 }
 
-generateBuildScripts.mustRunAfter setup
-
-task buildPlugin(group: "MPS Build",
-        description: "Generates the code reviewer plugin",
-        dependsOn: generateBuildScripts) {
+task buildPlugin(group: 'MPS Build',
+                 description: 'Generates the code reviewer plugin',
+                 dependsOn: generateBuildScripts) {
   doLast {
-    println "Building code reviewer plugin ===================================="
-    runAnt "${rootDir}/dist/reviewPlugin.xml", "clean", "generate", "build"
-    println "Code reviewer plugin has been successfully built ================="
+    println 'Building code reviewer plugin ===================================='
+    runAnt "${rootDir}/dist/reviewPlugin.xml", 'clean', 'generate', 'build'
+    println 'Code reviewer plugin has been successfully built ================='
     println()
   }
-	
 }
-
-buildPlugin.mustRunAfter generateBuildScripts
-
-defaultTasks 'buildPlugin'
+defaultTasks 'build'
+assemble.dependsOn buildPlugin
+// TODO: run tests as part of build task
+build.dependsOn buildPlugin
 
 void runAnt(Object buildfile, String... targets) {
-    exec "BUILD FAILED", ["ant", "-buildfile", buildfile, *targets] as Object[]
+    exec 'BUILD FAILED', ['ant', '-buildfile', buildfile, *targets] as Object[]
 }
 
 void exec(String textToFind, Object... args) {
@@ -150,19 +152,16 @@ void exec(String textToFind, Object... args) {
 }
 
 void execAndFailIfTextFound(String textToFind, Object... args) {
-    def taskOutput = new ByteArrayOutputStream()
-    def teeOutput = new TeeOutputStream(taskOutput, System.out)
-
-    exec {
-        ignoreExitValue = true
-        commandLine = args
-        standardOutput = teeOutput
-        errorOutput = teeOutput
-    }
-
-    String testOutput = taskOutput.toString()
-
-    if (testOutput.contains(textToFind)) {
-        throw new GradleException("ANT build failure")
-    }
+  def taskOutput = new ByteArrayOutputStream()
+  def teeOutput = new TeeOutputStream(taskOutput, System.out)
+  exec {
+      ignoreExitValue = true
+      commandLine = args
+      standardOutput = teeOutput
+      errorOutput = teeOutput
+  }
+  String testOutput = taskOutput.toString()
+  if (testOutput.contains(textToFind)) {
+      throw new GradleException('ANT build failure')
+  }
 }
