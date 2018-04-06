@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:a3993581-a780-46ec-a6e0-1dd024d2037c(com.workday.mps.review.actions)" content="root">
   <persistence version="9" />
-  <imports />
+  <imports>
+    <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" implicit="true" />
+  </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
@@ -18,6 +20,9 @@
       </concept>
       <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
         <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
+      </concept>
+      <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
+        <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
@@ -40,6 +45,16 @@
       <property role="3TUv4t" value="false" />
       <node concept="3Tm6S6" id="__fp3cnjSN" role="1B3o_S" />
       <node concept="10Oyi0" id="__fp3cnjSY" role="1tU5fm" />
+    </node>
+    <node concept="312cEg" id="4dp0YvdwSLv" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="comment" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tm6S6" id="4dp0YvdwSL9" role="1B3o_S" />
+      <node concept="3uibUv" id="4dp0YvdwSLn" role="1tU5fm">
+        <ref role="3uigEE" to="m3q8:4Ew7qBDrroM" resolve="Comment" />
+      </node>
     </node>
     <node concept="3Tm1VV" id="__fp3cnjSi" role="1B3o_S" />
   </node>

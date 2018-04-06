@@ -85,7 +85,7 @@
   </registry>
   <node concept="312cEu" id="168JFiafRsM">
     <property role="3GE5qa" value="" />
-    <property role="TrG5h" value="RefreshReviewRequest" />
+    <property role="TrG5h" value="RefreshReviewRequested" />
     <node concept="312cEg" id="4Ew7qBDrcjY" role="jymVt">
       <property role="34CwA1" value="false" />
       <property role="eg7rD" value="false" />

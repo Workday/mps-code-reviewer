@@ -5,6 +5,7 @@
     <import index="wy2b" ref="301737e2-0a75-4665-a1a3-af0218114a24/java:com.google.gson(com.workday.mps.review/)" implicit="true" />
     <import index="t6h5" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang.reflect(JDK/)" implicit="true" />
     <import index="14ci" ref="301737e2-0a75-4665-a1a3-af0218114a24/java:com.google.gson.reflect(com.workday.mps.review/)" implicit="true" />
+    <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -395,6 +396,45 @@
         <property role="TrG5h" value="data" />
         <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="__fp3cxxcf" role="1tU5fm" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="4dp0Yvdwl3C" role="jymVt" />
+    <node concept="3clFb_" id="4dp0YvdwoAC" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="toJsonString" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="4dp0YvdwoAF" role="3clF47">
+        <node concept="3cpWs6" id="4dp0YvdwpLc" role="3cqZAp">
+          <node concept="2OqwBi" id="4dp0Yvdwr5D" role="3cqZAk">
+            <node concept="2OqwBi" id="4dp0Yvdwq3f" role="2Oq$k0">
+              <node concept="Xjq3P" id="4dp0YvdwpQO" role="2Oq$k0" />
+              <node concept="2OwXpG" id="4dp0Yvdwqyi" role="2OqNvi">
+                <ref role="2Oxat5" node="FcpLTGVkcl" resolve="gson" />
+              </node>
+            </node>
+            <node concept="liA8E" id="4dp0Yvdwr$R" role="2OqNvi">
+              <ref role="37wK5l" to="wy2b:~Gson.toJson(java.lang.Object):java.lang.String" resolve="toJson" />
+              <node concept="2ShNRf" id="4dp0YvdwyjF" role="37wK5m">
+                <node concept="1pGfFk" id="4dp0YvdwzsO" role="2ShVmc">
+                  <ref role="37wK5l" node="4dp0YvdvrfC" resolve="BitbucketCommentRequestBody" />
+                  <node concept="37vLTw" id="4dp0YvdwzZP" role="37wK5m">
+                    <ref role="3cqZAo" node="4dp0YvdwpaV" resolve="request" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="4dp0Yvdwmxr" role="3clF45" />
+      <node concept="37vLTG" id="4dp0YvdwpaV" role="3clF46">
+        <property role="TrG5h" value="request" />
+        <property role="3TUv4t" value="true" />
+        <node concept="3uibUv" id="4dp0YvdwwNK" role="1tU5fm">
+          <ref role="3uigEE" to="m3q8:4dp0Yvdvjqg" resolve="PostCommentRequest" />
+        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="FcpLTGVL0t" role="jymVt" />
