@@ -15,6 +15,10 @@
       </concept>
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
+      <concept id="1224575136086" name="jetbrains.mps.baseLanguage.structure.EnumValueOfExpression" flags="nn" index="unr1b">
+        <reference id="1224575174120" name="enumClass" index="un$jP" />
+        <child id="1224575157853" name="value" index="unwt0" />
+      </concept>
       <concept id="1188207840427" name="jetbrains.mps.baseLanguage.structure.AnnotationInstance" flags="nn" index="2AHcQZ">
         <reference id="1188208074048" name="annotation" index="2AI5Lk" />
       </concept>
@@ -46,9 +50,7 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
-      <concept id="1164991038168" name="jetbrains.mps.baseLanguage.structure.ThrowStatement" flags="nn" index="YS8fn">
-        <child id="1164991057263" name="throwable" index="YScLw" />
-      </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
         <property id="8606350594693632173" name="isTransient" index="eg7rD" />
         <property id="1240249534625" name="isVolatile" index="34CwA1" />
@@ -97,7 +99,6 @@
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
       <concept id="1068580123140" name="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" flags="ig" index="3clFbW" />
-      <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
@@ -134,6 +135,7 @@
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
+      <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
@@ -468,22 +470,23 @@
             <property role="TyiWK" value="true" />
             <property role="TyiWL" value="false" />
             <node concept="3clFbS" id="Jm1BRJQGDK" role="3clFbx">
-              <node concept="YS8fn" id="Jm1BRJQN2E" role="3cqZAp">
-                <node concept="2ShNRf" id="Jm1BRJQNpC" role="YScLw">
-                  <node concept="1pGfFk" id="FcpLTGS4BV" role="2ShVmc">
-                    <ref role="37wK5l" to="wyt6:~IllegalStateException.&lt;init&gt;(java.lang.String)" resolve="IllegalStateException" />
-                    <node concept="3cpWs3" id="FcpLTGRNf$" role="37wK5m">
-                      <node concept="Xl_RD" id="FcpLTGRN$t" role="3uHU7w">
-                        <property role="Xl_RC" value=" member!" />
-                      </node>
-                      <node concept="3cpWs3" id="FcpLTGRLGb" role="3uHU7B">
-                        <node concept="Xl_RD" id="FcpLTGRK7V" role="3uHU7B">
-                          <property role="Xl_RC" value="BitbucketActivity has no " />
-                        </node>
-                        <node concept="37vLTw" id="FcpLTGVAoP" role="3uHU7w">
-                          <ref role="3cqZAo" node="FcpLTGRvyC" resolve="ACTIVITY_TYPE_MEMBER" />
-                        </node>
-                      </node>
+              <node concept="3SKdUt" id="4xwNC9qCM6Q" role="3cqZAp">
+                <node concept="3SKdUq" id="4xwNC9qCM6R" role="3SKWNk">
+                  <property role="3SKdUp" value="unknown action type, return a generic activity as a placeholder" />
+                </node>
+              </node>
+              <node concept="3cpWs6" id="24VqSbHfEA3" role="3cqZAp">
+                <node concept="2OqwBi" id="4xwNC9qBZXs" role="3cqZAk">
+                  <node concept="37vLTw" id="4xwNC9qBZhD" role="2Oq$k0">
+                    <ref role="3cqZAo" node="Jm1BRJQBzU" resolve="context" />
+                  </node>
+                  <node concept="liA8E" id="4xwNC9qC0vx" role="2OqNvi">
+                    <ref role="37wK5l" to="wy2b:~JsonDeserializationContext.deserialize(com.google.gson.JsonElement,java.lang.reflect.Type):java.lang.Object" resolve="deserialize" />
+                    <node concept="37vLTw" id="4xwNC9qC1aL" role="37wK5m">
+                      <ref role="3cqZAo" node="Jm1BRJQBzQ" resolve="element" />
+                    </node>
+                    <node concept="3VsKOn" id="4xwNC9qC2ie" role="37wK5m">
+                      <ref role="3VsUkX" node="4Ew7qBDtNjy" resolve="BitbucketActivity" />
                     </node>
                   </node>
                 </node>
@@ -504,11 +507,6 @@
             </node>
           </node>
           <node concept="3clFbH" id="FcpLTGQY$d" role="3cqZAp" />
-          <node concept="3SKdUt" id="FcpLTGZdfk" role="3cqZAp">
-            <node concept="3SKdUq" id="FcpLTGZdfm" role="3SKWNk">
-              <property role="3SKdUp" value="TODO: Could use context.deserialize() with each subclass, but not much point so long as there's no data on them?" />
-            </node>
-          </node>
           <node concept="3cpWs8" id="Jm1BRJQPVa" role="3cqZAp">
             <node concept="3cpWsn" id="Jm1BRJQPV8" role="3cpWs9">
               <property role="3TUv4t" value="true" />
@@ -563,83 +561,52 @@
               </node>
             </node>
             <node concept="3eNFk2" id="FcpLTGP4V7" role="3eNLev">
-              <node concept="2OqwBi" id="FcpLTGP6oY" role="3eO9$A">
-                <node concept="37vLTw" id="FcpLTGP5GI" role="2Oq$k0">
-                  <ref role="3cqZAo" node="Jm1BRJQPV8" resolve="activityType" />
-                </node>
-                <node concept="liA8E" id="FcpLTGP6Mk" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
-                  <node concept="Xl_RD" id="FcpLTGP7dK" role="37wK5m">
-                    <property role="Xl_RC" value="OPENED" />
+              <node concept="3y3z36" id="24VqSbHgB1U" role="3eO9$A">
+                <node concept="10Nm6u" id="24VqSbHgBDO" role="3uHU7w" />
+                <node concept="unr1b" id="4xwNC9qB5KB" role="3uHU7B">
+                  <ref role="un$jP" node="24VqSbHfHST" resolve="BitbucketActionType" />
+                  <node concept="37vLTw" id="4xwNC9qB63s" role="unwt0">
+                    <ref role="3cqZAo" node="Jm1BRJQPV8" resolve="activityType" />
                   </node>
                 </node>
               </node>
               <node concept="3clFbS" id="FcpLTGP4V9" role="3eOfB_">
                 <node concept="3cpWs6" id="FcpLTGP7RK" role="3cqZAp">
-                  <node concept="2ShNRf" id="FcpLTGP8Gv" role="3cqZAk">
-                    <node concept="HV5vD" id="FcpLTGPz8c" role="2ShVmc">
-                      <ref role="HV5vE" node="2hVa5m$3qBh" resolve="BitbucketOpenedActivity" />
+                  <node concept="2OqwBi" id="FcpLTH8UYc" role="3cqZAk">
+                    <node concept="37vLTw" id="FcpLTH8Ufj" role="2Oq$k0">
+                      <ref role="3cqZAo" node="Jm1BRJQBzU" resolve="context" />
                     </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3eNFk2" id="FcpLTGQsJQ" role="3eNLev">
-              <node concept="2OqwBi" id="FcpLTGQupj" role="3eO9$A">
-                <node concept="37vLTw" id="FcpLTGQtGr" role="2Oq$k0">
-                  <ref role="3cqZAo" node="Jm1BRJQPV8" resolve="activityType" />
-                </node>
-                <node concept="liA8E" id="FcpLTGQuNh" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
-                  <node concept="Xl_RD" id="FcpLTGQvfl" role="37wK5m">
-                    <property role="Xl_RC" value="MERGED" />
-                  </node>
-                </node>
-              </node>
-              <node concept="3clFbS" id="FcpLTGQsJS" role="3eOfB_">
-                <node concept="3cpWs6" id="FcpLTGQvPP" role="3cqZAp">
-                  <node concept="2ShNRf" id="FcpLTGQwaB" role="3cqZAk">
-                    <node concept="HV5vD" id="FcpLTGQy8j" role="2ShVmc">
-                      <ref role="HV5vE" node="2hVa5m$3qAF" resolve="BitbucketMergedActivity" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3eNFk2" id="FcpLTGQyL7" role="3eNLev">
-              <node concept="2OqwBi" id="FcpLTGQ$sx" role="3eO9$A">
-                <node concept="37vLTw" id="FcpLTGQzIZ" role="2Oq$k0">
-                  <ref role="3cqZAo" node="Jm1BRJQPV8" resolve="activityType" />
-                </node>
-                <node concept="liA8E" id="FcpLTGQ$R9" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
-                  <node concept="Xl_RD" id="FcpLTGQ_jR" role="37wK5m">
-                    <property role="Xl_RC" value="APPROVED" />
-                  </node>
-                </node>
-              </node>
-              <node concept="3clFbS" id="FcpLTGQyL9" role="3eOfB_">
-                <node concept="3cpWs6" id="FcpLTGQAbf" role="3cqZAp">
-                  <node concept="2ShNRf" id="FcpLTGQAw1" role="3cqZAk">
-                    <node concept="HV5vD" id="FcpLTGQCun" role="2ShVmc">
-                      <ref role="HV5vE" node="2hVa5m$3q$k" resolve="BitbucketApprovedActivity" />
+                    <node concept="liA8E" id="FcpLTH8V$8" role="2OqNvi">
+                      <ref role="37wK5l" to="wy2b:~JsonDeserializationContext.deserialize(com.google.gson.JsonElement,java.lang.reflect.Type):java.lang.Object" resolve="deserialize" />
+                      <node concept="37vLTw" id="FcpLTH8Wjf" role="37wK5m">
+                        <ref role="3cqZAo" node="Jm1BRJQBzQ" resolve="element" />
+                      </node>
+                      <node concept="3VsKOn" id="FcpLTH8XKp" role="37wK5m">
+                        <ref role="3VsUkX" node="2hVa5m$3q$k" resolve="BitbucketSimpleUserActivity" />
+                      </node>
                     </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="YS8fn" id="FcpLTGPJQ1" role="3cqZAp">
-            <node concept="2ShNRf" id="FcpLTGPKc7" role="YScLw">
-              <node concept="1pGfFk" id="FcpLTGSbUN" role="2ShVmc">
-                <ref role="37wK5l" to="wyt6:~IllegalStateException.&lt;init&gt;(java.lang.String)" resolve="IllegalStateException" />
-                <node concept="3cpWs3" id="FcpLTGRVd4" role="37wK5m">
-                  <node concept="37vLTw" id="FcpLTGRVUX" role="3uHU7w">
-                    <ref role="3cqZAo" node="Jm1BRJQPV8" resolve="activityType" />
-                  </node>
-                  <node concept="Xl_RD" id="FcpLTGRTzU" role="3uHU7B">
-                    <property role="Xl_RC" value="Unknown Bitbucket activity type: " />
-                  </node>
+          <node concept="3SKdUt" id="4xwNC9qCLEv" role="3cqZAp">
+            <node concept="3SKdUq" id="4xwNC9qCLEx" role="3SKWNk">
+              <property role="3SKdUp" value="unknown action type, return a generic activity as a placeholder" />
+            </node>
+          </node>
+          <node concept="3cpWs6" id="4xwNC9qBTon" role="3cqZAp">
+            <node concept="2OqwBi" id="4xwNC9qBUJ1" role="3cqZAk">
+              <node concept="37vLTw" id="4xwNC9qBU3v" role="2Oq$k0">
+                <ref role="3cqZAo" node="Jm1BRJQBzU" resolve="context" />
+              </node>
+              <node concept="liA8E" id="4xwNC9qBVgO" role="2OqNvi">
+                <ref role="37wK5l" to="wy2b:~JsonDeserializationContext.deserialize(com.google.gson.JsonElement,java.lang.reflect.Type):java.lang.Object" resolve="deserialize" />
+                <node concept="37vLTw" id="4xwNC9qBXHF" role="37wK5m">
+                  <ref role="3cqZAo" node="Jm1BRJQBzQ" resolve="element" />
+                </node>
+                <node concept="3VsKOn" id="4xwNC9qBWB6" role="37wK5m">
+                  <ref role="3VsUkX" node="4Ew7qBDtNjy" resolve="BitbucketActivity" />
                 </node>
               </node>
             </node>

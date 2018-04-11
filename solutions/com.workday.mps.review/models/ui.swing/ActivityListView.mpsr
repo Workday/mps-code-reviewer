@@ -92,6 +92,7 @@
         <child id="1082485599094" name="ifFalseStatement" index="9aQIa" />
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
+        <child id="1206060520071" name="elsifClauses" index="3eNLev" />
       </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
@@ -108,6 +109,10 @@
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
+      <concept id="1206060495898" name="jetbrains.mps.baseLanguage.structure.ElsifClause" flags="ng" index="3eNFk2">
+        <child id="1206060619838" name="condition" index="3eO9$A" />
+        <child id="1206060644605" name="statementList" index="3eOfB_" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -315,7 +320,7 @@
           <node concept="2GrKxI" id="6j8xKyA$lqo" role="2Gsz3X">
             <property role="TrG5h" value="activity" />
           </node>
-          <node concept="37vLTw" id="6j8xKyA$m0C" role="2GsD0m">
+          <node concept="37vLTw" id="3PiydVXk7d$" role="2GsD0m">
             <ref role="3cqZAo" node="6j8xKyAyLvA" resolve="activities" />
           </node>
           <node concept="3clFbS" id="6j8xKyA$lqs" role="2LFqv$">
@@ -325,6 +330,7 @@
               </node>
             </node>
             <node concept="3clFbJ" id="6j8xKyA$rJ$" role="3cqZAp">
+              <node concept="15s5l7" id="3okjBs8uGft" role="lGtFl" />
               <node concept="3clFbS" id="6j8xKyA$rJA" role="3clFbx">
                 <node concept="3SKdUt" id="6j8xKyA$W0w" role="3cqZAp">
                   <node concept="3SKdUq" id="6j8xKyA$W0y" role="3SKWNk">
@@ -371,22 +377,35 @@
                   <ref role="2Gs0qQ" node="6j8xKyA$lqo" resolve="activity" />
                 </node>
               </node>
-              <node concept="9aQIb" id="6j8xKyAAEHS" role="9aQIa">
-                <node concept="3clFbS" id="6j8xKyAAEHT" role="9aQI4">
-                  <node concept="3clFbF" id="6j8xKyAAF9o" role="3cqZAp">
-                    <node concept="2OqwBi" id="6j8xKyAAH6H" role="3clFbG">
-                      <node concept="2OqwBi" id="6j8xKyAAFN1" role="2Oq$k0">
-                        <node concept="Xjq3P" id="6j8xKyAAF9n" role="2Oq$k0" />
-                        <node concept="2OwXpG" id="6j8xKyAAG6O" role="2OqNvi">
+              <node concept="3eNFk2" id="3PiydVXf2VL" role="3eNLev">
+                <node concept="2ZW3vV" id="3PiydVXf9Ft" role="3eO9$A">
+                  <node concept="3uibUv" id="3PiydVXfWz0" role="2ZW6by">
+                    <ref role="3uigEE" to="m3q8:3PiydVXfg5W" resolve="SimpleUserActivity" />
+                  </node>
+                  <node concept="2GrUjf" id="3PiydVXf3Bh" role="2ZW6bz">
+                    <ref role="2Gs0qQ" node="6j8xKyA$lqo" resolve="activity" />
+                  </node>
+                </node>
+                <node concept="3clFbS" id="3PiydVXf2VN" role="3eOfB_">
+                  <node concept="3clFbF" id="3PiydVXg0kD" role="3cqZAp">
+                    <node concept="2OqwBi" id="3PiydVXg5KN" role="3clFbG">
+                      <node concept="2OqwBi" id="3PiydVXg2VA" role="2Oq$k0">
+                        <node concept="Xjq3P" id="3PiydVXg23y" role="2Oq$k0" />
+                        <node concept="2OwXpG" id="3PiydVXg3U$" role="2OqNvi">
                           <ref role="2Oxat5" node="6j8xKyAzxpo" resolve="activityViews" />
                         </node>
                       </node>
-                      <node concept="TSZUe" id="6j8xKyAAI4C" role="2OqNvi">
-                        <node concept="2ShNRf" id="6j8xKyAAImB" role="25WWJ7">
-                          <node concept="1pGfFk" id="6j8xKyAAJdG" role="2ShVmc">
-                            <ref role="37wK5l" node="6j8xKyAA$UY" resolve="GenericActivityView" />
-                            <node concept="2GrUjf" id="6j8xKyAAJFJ" role="37wK5m">
-                              <ref role="2Gs0qQ" node="6j8xKyA$lqo" resolve="activity" />
+                      <node concept="TSZUe" id="3PiydVXg6EF" role="2OqNvi">
+                        <node concept="2ShNRf" id="3PiydVXg7dh" role="25WWJ7">
+                          <node concept="1pGfFk" id="3PiydVXg9ad" role="2ShVmc">
+                            <ref role="37wK5l" node="6j8xKyAA$UY" resolve="SimpleUserActivityView" />
+                            <node concept="0kSF2" id="3PiydVXkAx7" role="37wK5m">
+                              <node concept="3uibUv" id="3PiydVXkAxa" role="0kSFW">
+                                <ref role="3uigEE" to="m3q8:3PiydVXfg5W" resolve="SimpleUserActivity" />
+                              </node>
+                              <node concept="2GrUjf" id="3PiydVXku_Q" role="0kSFX">
+                                <ref role="2Gs0qQ" node="6j8xKyA$lqo" resolve="activity" />
+                              </node>
                             </node>
                           </node>
                         </node>
@@ -395,7 +414,15 @@
                   </node>
                 </node>
               </node>
-              <node concept="15s5l7" id="3okjBs8uGft" role="lGtFl" />
+              <node concept="9aQIb" id="3PiydVXhyI3" role="9aQIa">
+                <node concept="3clFbS" id="3PiydVXhyI4" role="9aQI4">
+                  <node concept="3SKdUt" id="4xwNC9qGDRC" role="3cqZAp">
+                    <node concept="3SKdUq" id="4xwNC9qGDRD" role="3SKWNk">
+                      <property role="3SKdUp" value="do not show, not yet supported" />
+                    </node>
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
         </node>
