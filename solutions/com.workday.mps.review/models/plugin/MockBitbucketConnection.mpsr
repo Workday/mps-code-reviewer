@@ -375,8 +375,8 @@
           <node concept="10Oyi0" id="__fp3cwLmu" role="1ajw0F" />
           <node concept="3uibUv" id="78s6gAkq4Zx" role="1ajw0F">
             <ref role="3uigEE" to="33ny:~List" resolve="List" />
-            <node concept="3uibUv" id="78s6gAkq4Zy" role="11_B2D">
-              <ref role="3uigEE" to="m3q8:4Ew7qBDj1ou" resolve="Activity" />
+            <node concept="3uibUv" id="FcpLTGYLOx" role="11_B2D">
+              <ref role="3uigEE" node="4Ew7qBDtNjy" resolve="BitbucketActivity" />
             </node>
           </node>
           <node concept="3cqZAl" id="78s6gAkq4Zz" role="1ajl9A" />

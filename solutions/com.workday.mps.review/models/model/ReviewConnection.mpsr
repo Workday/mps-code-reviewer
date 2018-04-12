@@ -9,6 +9,15 @@
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
       </concept>
+      <concept id="1109279763828" name="jetbrains.mps.baseLanguage.structure.TypeVariableDeclaration" flags="ng" index="16euLQ">
+        <child id="1214996921760" name="bound" index="3ztrMU" />
+      </concept>
+      <concept id="1109279851642" name="jetbrains.mps.baseLanguage.structure.GenericDeclaration" flags="ng" index="16eOlS">
+        <child id="1109279881614" name="typeVariableDeclaration" index="16eVyc" />
+      </concept>
+      <concept id="1109283449304" name="jetbrains.mps.baseLanguage.structure.TypeVariableReference" flags="in" index="16syzq">
+        <reference id="1109283546497" name="typeVariableDeclaration" index="16sUi3" />
+      </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
@@ -184,8 +193,8 @@
         <node concept="1ajhzC" id="3yDmncoAdye" role="1tU5fm">
           <node concept="10Oyi0" id="__fp3cwACc" role="1ajw0F" />
           <node concept="_YKpA" id="3yDmncozLo4" role="1ajw0F">
-            <node concept="3uibUv" id="3yDmncozLo6" role="_ZDj9">
-              <ref role="3uigEE" node="4Ew7qBDj1ou" resolve="Activity" />
+            <node concept="16syzq" id="FcpLTGYszG" role="_ZDj9">
+              <ref role="16sUi3" node="FcpLTGYsvN" resolve="A" />
             </node>
           </node>
           <node concept="3cqZAl" id="4Ew7qBDr8Oj" role="1ajl9A" />
@@ -251,6 +260,12 @@
     </node>
     <node concept="2tJIrI" id="4Ew7qBDr4JW" role="jymVt" />
     <node concept="3Tm1VV" id="4Ew7qBDr4JN" role="1B3o_S" />
+    <node concept="16euLQ" id="FcpLTGYsvN" role="16eVyc">
+      <property role="TrG5h" value="A" />
+      <node concept="3uibUv" id="FcpLTGYsxp" role="3ztrMU">
+        <ref role="3uigEE" node="4Ew7qBDj1ou" resolve="Activity" />
+      </node>
+    </node>
   </node>
 </model>
 
