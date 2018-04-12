@@ -89,7 +89,7 @@
   <node concept="1DFvN4" id="3vXSZsAPQky">
     <property role="TrG5h" value="Bitbucket Review Configuration" />
     <property role="3NeIjD" value="1" />
-    <property role="3GE5qa" value="bitbucket.preference" />
+    <property role="3GE5qa" value="bitbucket.preferences" />
     <node concept="1DGssV" id="7Uvm6D4D5Pz" role="1DEjpx">
       <property role="TrG5h" value="token" />
       <property role="1DGssU" value=" " />

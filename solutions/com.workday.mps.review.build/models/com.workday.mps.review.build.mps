@@ -365,12 +365,6 @@
             <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
-        <node concept="1SiIV0" id="NvAZPok17y" role="3bR37C">
-          <node concept="3bR9La" id="NvAZPok17z" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
-          </node>
-        </node>
         <node concept="3rtmxn" id="7Uvm6D4BW1i" role="3bR31x">
           <node concept="3LXTmp" id="7Uvm6D4BW1j" role="3rtmxm">
             <node concept="3qWCbU" id="7Uvm6D4BW1k" role="3LXTna">
@@ -518,6 +512,12 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4dp0YvdNW$1" role="3bR37C">
+          <node concept="3bR9La" id="4dp0YvdNW$2" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
           </node>
         </node>
       </node>

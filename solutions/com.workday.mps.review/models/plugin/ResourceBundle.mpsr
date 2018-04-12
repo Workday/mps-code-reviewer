@@ -24,7 +24,7 @@
   <node concept="3MtHw5" id="7Hbe8h753rI">
     <property role="TrG5h" value="ResourceBundle" />
     <property role="1JSPRp" value="com.workday.mps.review" />
-    <property role="3GE5qa" value="bitbucket.preference" />
+    <property role="3GE5qa" value="bitbucket.preferences" />
     <node concept="3MtHw9" id="3e72Pa5HHrZ" role="3MtHw3">
       <property role="3MtHw8" value=" " />
       <property role="TrG5h" value="Scheme" />
