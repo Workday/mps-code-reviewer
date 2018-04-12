@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" content="root">
   <persistence version="9" />
-  <imports />
+  <imports>
+    <import index="2jep" ref="r:a3993581-a780-46ec-a6e0-1dd024d2037c(com.workday.mps.review.actions)" implicit="true" />
+  </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
@@ -225,15 +227,10 @@
       <node concept="3clFbS" id="__fp3cw3b8" role="3clF47" />
       <node concept="3Tm1VV" id="__fp3cw3b9" role="1B3o_S" />
       <node concept="10Oyi0" id="__fp3cw39c" role="3clF45" />
-      <node concept="37vLTG" id="__fp3cw3df" role="3clF46">
-        <property role="TrG5h" value="reviewId" />
-        <property role="3TUv4t" value="false" />
-        <node concept="10Oyi0" id="__fp3cw3de" role="1tU5fm" />
-      </node>
       <node concept="37vLTG" id="4dp0Yvdvw8H" role="3clF46">
         <property role="TrG5h" value="request" />
         <node concept="3uibUv" id="4dp0Yvdvw8E" role="1tU5fm">
-          <ref role="3uigEE" node="4dp0Yvdvjqg" resolve="PostCommentRequest" />
+          <ref role="3uigEE" to="2jep:4dp0Yvdvjqg" resolve="PostCommentRequest" />
         </node>
       </node>
       <node concept="37vLTG" id="__fp3cw3fx" role="3clF46">

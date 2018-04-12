@@ -2,8 +2,8 @@
 <model ref="r:a3993581-a780-46ec-a6e0-1dd024d2037c(com.workday.mps.review.actions)" content="root">
   <persistence version="9" />
   <imports>
-    <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" implicit="true" />
     <import index="mhfm" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/java:org.jetbrains.annotations(Annotations/)" implicit="true" />
+    <import index="ee8f" ref="r:76b35c96-0206-4f74-890e-e39504808bf8(com.workday.mps.flux.core)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -31,7 +31,9 @@
         <property id="8606350594693632173" name="isTransient" index="eg7rD" />
         <property id="1240249534625" name="isVolatile" index="34CwA1" />
       </concept>
-      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
+      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
+        <child id="1095933932569" name="implementedInterface" index="EKbjA" />
+      </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
       </concept>
@@ -102,7 +104,7 @@
       <property role="3TUv4t" value="true" />
       <node concept="3Tm6S6" id="4dp0YvdvsXs" role="1B3o_S" />
       <node concept="3uibUv" id="4dp0Yvdvt3C" role="1tU5fm">
-        <ref role="3uigEE" to="m3q8:4dp0Yvdvjqg" resolve="PostCommentRequest" />
+        <ref role="3uigEE" node="4dp0Yvdvjqg" resolve="PostCommentRequest" />
       </node>
     </node>
     <node concept="2tJIrI" id="__fp3cnMq4" role="jymVt" />
@@ -145,7 +147,7 @@
       <node concept="37vLTG" id="4dp0Yvdvtt0" role="3clF46">
         <property role="TrG5h" value="comment" />
         <node concept="3uibUv" id="4dp0Yvdvt_R" role="1tU5fm">
-          <ref role="3uigEE" to="m3q8:4dp0Yvdvjqg" resolve="PostCommentRequest" />
+          <ref role="3uigEE" node="4dp0Yvdvjqg" resolve="PostCommentRequest" />
         </node>
       </node>
     </node>
@@ -191,7 +193,7 @@
       </node>
       <node concept="3Tm1VV" id="__fp3cnQUt" role="1B3o_S" />
       <node concept="3uibUv" id="4dp0YvdvulL" role="3clF45">
-        <ref role="3uigEE" to="m3q8:4dp0Yvdvjqg" resolve="PostCommentRequest" />
+        <ref role="3uigEE" node="4dp0Yvdvjqg" resolve="PostCommentRequest" />
       </node>
       <node concept="2AHcQZ" id="__fp3cocVz" role="2AJF6D">
         <ref role="2AI5Lk" to="mhfm:~NotNull" resolve="NotNull" />
@@ -200,6 +202,9 @@
     <node concept="2tJIrI" id="__fp3cnQXa" role="jymVt" />
     <node concept="2tJIrI" id="__fp3cnQTg" role="jymVt" />
     <node concept="3Tm1VV" id="__fp3cnjPo" role="1B3o_S" />
+    <node concept="3uibUv" id="4dp0YvdJ$TH" role="EKbjA">
+      <ref role="3uigEE" to="ee8f:3c3vDUkV812" resolve="Action" />
+    </node>
   </node>
 </model>
 

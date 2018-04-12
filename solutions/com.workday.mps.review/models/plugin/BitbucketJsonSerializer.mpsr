@@ -5,7 +5,7 @@
     <import index="wy2b" ref="301737e2-0a75-4665-a1a3-af0218114a24/java:com.google.gson(com.workday.mps.review/)" implicit="true" />
     <import index="t6h5" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang.reflect(JDK/)" implicit="true" />
     <import index="14ci" ref="301737e2-0a75-4665-a1a3-af0218114a24/java:com.google.gson.reflect(com.workday.mps.review/)" implicit="true" />
-    <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" implicit="true" />
+    <import index="2jep" ref="r:a3993581-a780-46ec-a6e0-1dd024d2037c(com.workday.mps.review.actions)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -361,6 +361,89 @@
         <node concept="17QB3L" id="4Ew7qBDr0Gi" role="1tU5fm" />
       </node>
     </node>
+    <node concept="2tJIrI" id="4dp0YvdFh_H" role="jymVt" />
+    <node concept="3clFb_" id="4dp0YvdFfVH" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="parseReviewQuery" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="4dp0YvdFfVI" role="3clF47">
+        <node concept="3cpWs8" id="4dp0YvdFiAx" role="3cqZAp">
+          <node concept="3cpWsn" id="4dp0YvdFiAy" role="3cpWs9">
+            <property role="TrG5h" value="reviewQueryType" />
+            <property role="3TUv4t" value="true" />
+            <node concept="3uibUv" id="4dp0YvdFiAz" role="1tU5fm">
+              <ref role="3uigEE" to="t6h5:~Type" resolve="Type" />
+            </node>
+            <node concept="2OqwBi" id="4dp0YvdFiA$" role="33vP2m">
+              <node concept="2YIFZM" id="4dp0YvdFiA_" role="2Oq$k0">
+                <ref role="37wK5l" to="14ci:~TypeToken.getParameterized(java.lang.reflect.Type,java.lang.reflect.Type...):com.google.gson.reflect.TypeToken" resolve="getParameterized" />
+                <ref role="1Pybhc" to="14ci:~TypeToken" resolve="TypeToken" />
+                <node concept="3VsKOn" id="4dp0YvdFiAA" role="37wK5m">
+                  <ref role="3VsUkX" node="3c3vDUlrFZ5" resolve="QueryJson" />
+                </node>
+                <node concept="3VsKOn" id="4dp0YvdFiAB" role="37wK5m">
+                  <ref role="3VsUkX" node="4Ew7qBDrCpm" resolve="BitbucketReview" />
+                </node>
+              </node>
+              <node concept="liA8E" id="4dp0YvdFiAC" role="2OqNvi">
+                <ref role="37wK5l" to="14ci:~TypeToken.getType():java.lang.reflect.Type" resolve="getType" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="4dp0YvdFiAD" role="3cqZAp">
+          <node concept="3cpWsn" id="4dp0YvdFiAE" role="3cpWs9">
+            <property role="TrG5h" value="query" />
+            <property role="3TUv4t" value="true" />
+            <node concept="3uibUv" id="4dp0YvdFiAF" role="1tU5fm">
+              <ref role="3uigEE" node="3c3vDUlrFZ5" resolve="QueryJson" />
+              <node concept="3uibUv" id="4dp0YvdFnD8" role="11_B2D">
+                <ref role="3uigEE" node="4Ew7qBDrCpm" resolve="BitbucketReview" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="4dp0YvdFiAH" role="33vP2m">
+              <node concept="2OqwBi" id="4dp0YvdFiAI" role="2Oq$k0">
+                <node concept="Xjq3P" id="4dp0YvdFiAJ" role="2Oq$k0" />
+                <node concept="2OwXpG" id="4dp0YvdFiAK" role="2OqNvi">
+                  <ref role="2Oxat5" node="FcpLTGVkcl" resolve="gson" />
+                </node>
+              </node>
+              <node concept="liA8E" id="4dp0YvdFiAL" role="2OqNvi">
+                <ref role="37wK5l" to="wy2b:~Gson.fromJson(java.lang.String,java.lang.reflect.Type):java.lang.Object" resolve="fromJson" />
+                <node concept="37vLTw" id="4dp0YvdFiAM" role="37wK5m">
+                  <ref role="3cqZAo" node="4dp0YvdFfVS" resolve="data" />
+                </node>
+                <node concept="37vLTw" id="4dp0YvdFiAN" role="37wK5m">
+                  <ref role="3cqZAo" node="4dp0YvdFiAy" resolve="reviewQueryType" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="4dp0YvdFiAU" role="3cqZAp">
+          <node concept="2OqwBi" id="4dp0YvdFiAV" role="3cqZAk">
+            <node concept="37vLTw" id="4dp0YvdFiAW" role="2Oq$k0">
+              <ref role="3cqZAo" node="4dp0YvdFiAE" resolve="query" />
+            </node>
+            <node concept="2OwXpG" id="4dp0YvdFiAX" role="2OqNvi">
+              <ref role="2Oxat5" node="6j8xKyA_8vM" resolve="values" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="_YKpA" id="4dp0YvdFD3p" role="3clF45">
+        <node concept="3uibUv" id="4dp0YvdFD3q" role="_ZDj9">
+          <ref role="3uigEE" node="4Ew7qBDrCpm" resolve="BitbucketReview" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="4dp0YvdFfVS" role="3clF46">
+        <property role="TrG5h" value="data" />
+        <property role="3TUv4t" value="true" />
+        <node concept="17QB3L" id="4dp0YvdFfVT" role="1tU5fm" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="6j8xKyA_3tO" role="jymVt" />
     <node concept="3clFb_" id="__fp3cxuZm" role="jymVt">
       <property role="1EzhhJ" value="false" />
@@ -433,7 +516,7 @@
         <property role="TrG5h" value="request" />
         <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="4dp0YvdwwNK" role="1tU5fm">
-          <ref role="3uigEE" to="m3q8:4dp0Yvdvjqg" resolve="PostCommentRequest" />
+          <ref role="3uigEE" to="2jep:4dp0Yvdvjqg" resolve="PostCommentRequest" />
         </node>
       </node>
     </node>
