@@ -4,6 +4,7 @@
   <imports />
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -62,6 +63,12 @@
       </concept>
     </language>
     <language id="1e7c1f95-336c-4cec-b00e-8cc6e0c2b265" name="com.mbeddr.mpsutil.preferenceform">
+      <concept id="8201243288561455947" name="com.mbeddr.mpsutil.preferenceform.structure.PredefinedComboBoxPreferenceFormProperty" flags="ng" index="3i$Vwq">
+        <child id="8201243288561455948" name="entries" index="3i$Vwt" />
+      </concept>
+      <concept id="8201243288561455979" name="com.mbeddr.mpsutil.preferenceform.structure.PredefinedComboBoxEntry" flags="ng" index="3i$VwU">
+        <property id="8201243288561456781" name="key" index="3i$VRs" />
+      </concept>
       <concept id="1210676672555" name="com.mbeddr.mpsutil.preferenceform.structure.OnBeforeWriteBlockApplication" flags="in" index="3xWZ$M" />
       <concept id="1210676879526" name="com.mbeddr.mpsutil.preferenceform.structure.OnAfterReadBlockApplication" flags="in" index="3xXM6Z" />
       <concept id="145956936283289547" name="com.mbeddr.mpsutil.preferenceform.structure.PreferenceForm" flags="ng" index="1DFvN4">
@@ -82,7 +89,7 @@
   <node concept="1DFvN4" id="3vXSZsAPQky">
     <property role="TrG5h" value="Bitbucket Review Configuration" />
     <property role="3NeIjD" value="1" />
-    <property role="3GE5qa" value="bitbucket.preference" />
+    <property role="3GE5qa" value="bitbucket.preferences" />
     <node concept="1DGssV" id="7Uvm6D4D5Pz" role="1DEjpx">
       <property role="TrG5h" value="token" />
       <property role="1DGssU" value=" " />
@@ -90,23 +97,114 @@
       <node concept="3ZQQOj" id="7Uvm6D4D5PB" role="XGeyX">
         <ref role="3ZOmrH" node="7Hbe8h753s1" resolve="Token" />
       </node>
-      <node concept="Xl_RD" id="7Uvm6D4D68T" role="33vP2m">
-        <property role="Xl_RC" value=" " />
+      <node concept="Xl_RD" id="7Uvm6D4D68T" role="33vP2m" />
+    </node>
+    <node concept="3i$Vwq" id="3e72Pa5HGSc" role="1DEjpx">
+      <property role="TrG5h" value="scheme" />
+      <node concept="3i$VwU" id="3e72Pa5HH2a" role="3i$Vwt">
+        <property role="3i$VRs" value="http" />
+        <property role="TrG5h" value="http" />
       </node>
+      <node concept="3i$VwU" id="3e72Pa5HHx_" role="3i$Vwt">
+        <property role="3i$VRs" value="https" />
+        <property role="TrG5h" value="https" />
+      </node>
+      <node concept="17QB3L" id="3e72Pa5HGSd" role="1tU5fm" />
+      <node concept="Xl_RD" id="3e72Pa5HGSe" role="33vP2m">
+        <property role="Xl_RC" value="https" />
+      </node>
+      <node concept="3ZQQOj" id="3e72Pa5HGSj" role="XGeyX">
+        <ref role="3ZOmrH" node="3e72Pa5HHrZ" resolve="Scheme" />
+      </node>
+    </node>
+    <node concept="1DGssV" id="3e72Pa5HFm0" role="1DEjpx">
+      <property role="TrG5h" value="hostname" />
+      <property role="1DGssU" value="bitbucket.com" />
+      <node concept="17QB3L" id="3e72Pa5HFm1" role="1tU5fm" />
+      <node concept="3ZQQOj" id="3e72Pa5HFm4" role="XGeyX">
+        <ref role="3ZOmrH" node="3e72Pa5HGI_" resolve="Hostname" />
+      </node>
+      <node concept="Xl_RD" id="3e72Pa5HRUu" role="33vP2m">
+        <property role="Xl_RC" value="bitbucket.com" />
+      </node>
+    </node>
+    <node concept="1DGssV" id="3e72Pa5HGCw" role="1DEjpx">
+      <property role="TrG5h" value="apiVersion" />
+      <property role="1DGssU" value="1.0" />
+      <node concept="17QB3L" id="3e72Pa5HGCx" role="1tU5fm" />
+      <node concept="3ZQQOj" id="3e72Pa5HGC$" role="XGeyX">
+        <ref role="3ZOmrH" node="3e72Pa5HGIL" resolve="ApiVersion" />
+      </node>
+      <node concept="Xl_RD" id="3e72Pa5HRVr" role="33vP2m">
+        <property role="Xl_RC" value="1.0" />
+      </node>
+    </node>
+    <node concept="1DGssV" id="3e72Pa5HFpQ" role="1DEjpx">
+      <property role="TrG5h" value="project" />
+      <property role="1DGssU" value=" " />
+      <node concept="17QB3L" id="3e72Pa5HFpR" role="1tU5fm" />
+      <node concept="3ZQQOj" id="3e72Pa5HFpU" role="XGeyX">
+        <ref role="3ZOmrH" node="3e72Pa5HGIC" resolve="Project" />
+      </node>
+      <node concept="Xl_RD" id="3e72Pa5HS36" role="33vP2m" />
+    </node>
+    <node concept="1DGssV" id="3e72Pa5HGFx" role="1DEjpx">
+      <property role="TrG5h" value="repository" />
+      <property role="1DGssU" value=" " />
+      <node concept="17QB3L" id="3e72Pa5HGFy" role="1tU5fm" />
+      <node concept="3ZQQOj" id="3e72Pa5HGF_" role="XGeyX">
+        <ref role="3ZOmrH" node="3e72Pa5HGIG" resolve="Repository" />
+      </node>
+      <node concept="Xl_RD" id="3e72Pa5HS3Z" role="33vP2m" />
     </node>
     <node concept="3xWZ$M" id="3vXSZsAPQkD" role="3NKUvU">
       <node concept="3clFbS" id="3vXSZsAPQkE" role="2VODD2">
         <node concept="3clFbF" id="24HfET2s2D$" role="3cqZAp">
-          <node concept="2YIFZM" id="24HfET2s2D_" role="3clFbG">
-            <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="BitbucketPreferences" />
-            <ref role="37wK5l" node="24HfET2s0Ve" resolve="setCurrentConfig" />
-            <node concept="2ShNRf" id="7Uvm6D4Dbyq" role="37wK5m">
-              <node concept="1pGfFk" id="7Uvm6D4Dbyr" role="2ShVmc">
-                <ref role="37wK5l" node="3vXSZsAPOZP" resolve="BitbucketPreferences" />
-                <node concept="2OqwBi" id="7Uvm6D4Dbys" role="37wK5m">
-                  <node concept="2WthIp" id="7Uvm6D4Dbyt" role="2Oq$k0" />
-                  <node concept="1DZHhv" id="7Uvm6D4Dbyu" role="2OqNvi">
-                    <ref role="2WH_rO" node="7Uvm6D4D5Pz" resolve="token" />
+          <node concept="2OqwBi" id="3e72Pa5IBw8" role="3clFbG">
+            <node concept="2YIFZM" id="3e72Pa5IBcd" role="2Oq$k0">
+              <ref role="37wK5l" node="3e72Pa5IA1n" resolve="getInstance" />
+              <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="ReviewPreferences" />
+            </node>
+            <node concept="liA8E" id="3e72Pa5IBBr" role="2OqNvi">
+              <ref role="37wK5l" node="3e72Pa5I$rc" resolve="setBitbucketConfiguration" />
+              <node concept="2ShNRf" id="3e72Pa5IBce" role="37wK5m">
+                <node concept="1pGfFk" id="3e72Pa5IBcf" role="2ShVmc">
+                  <ref role="37wK5l" node="78s6gAko0FB" resolve="BitbucketConfiguration" />
+                  <node concept="2OqwBi" id="3e72Pa5IBcg" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IBch" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IBci" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HGSc" resolve="scheme" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IBcj" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IBck" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IBcl" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HFm0" resolve="hostname" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IBcm" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IBcn" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IBco" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HGCw" resolve="apiVersion" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IBcp" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IBcq" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IBcr" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HFpQ" resolve="project" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IBcs" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IBct" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IBcu" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HGFx" resolve="repository" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IBcv" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IBcw" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IBcx" role="2OqNvi">
+                      <ref role="2WH_rO" node="7Uvm6D4D5Pz" resolve="token" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -118,16 +216,51 @@
     <node concept="3xXM6Z" id="24HfET2s4cG" role="3NKUo6">
       <node concept="3clFbS" id="24HfET2s4cH" role="2VODD2">
         <node concept="3clFbF" id="24HfET2s2_E" role="3cqZAp">
-          <node concept="2YIFZM" id="24HfET2s2C4" role="3clFbG">
-            <ref role="37wK5l" node="24HfET2s0Ve" resolve="setCurrentConfig" />
-            <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="BitbucketPreferences" />
-            <node concept="2ShNRf" id="24HfET2s4Bp" role="37wK5m">
-              <node concept="1pGfFk" id="24HfET2s4Bq" role="2ShVmc">
-                <ref role="37wK5l" node="3vXSZsAPOZP" resolve="BitbucketPreferences" />
-                <node concept="2OqwBi" id="7Uvm6D4Dbqi" role="37wK5m">
-                  <node concept="2WthIp" id="7Uvm6D4Dbmg" role="2Oq$k0" />
-                  <node concept="1DZHhv" id="7Uvm6D4Dbuc" role="2OqNvi">
-                    <ref role="2WH_rO" node="7Uvm6D4D5Pz" resolve="token" />
+          <node concept="2OqwBi" id="3e72Pa5IBYz" role="3clFbG">
+            <node concept="2YIFZM" id="3e72Pa5IBSx" role="2Oq$k0">
+              <ref role="37wK5l" node="3e72Pa5IA1n" resolve="getInstance" />
+              <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="ReviewPreferences" />
+            </node>
+            <node concept="liA8E" id="3e72Pa5IC5Q" role="2OqNvi">
+              <ref role="37wK5l" node="3e72Pa5I$rc" resolve="setBitbucketConfiguration" />
+              <node concept="2ShNRf" id="3e72Pa5IfS$" role="37wK5m">
+                <node concept="1pGfFk" id="3e72Pa5IfS_" role="2ShVmc">
+                  <ref role="37wK5l" node="78s6gAko0FB" resolve="BitbucketConfiguration" />
+                  <node concept="2OqwBi" id="3e72Pa5IfSA" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IfSB" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IfSC" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HGSc" resolve="scheme" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IfSD" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IfSE" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IfSF" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HFm0" resolve="hostname" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IfSG" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IfSH" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IfSI" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HGCw" resolve="apiVersion" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IfSJ" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IfSK" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IfSL" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HFpQ" resolve="project" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IfSM" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IfSN" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IfSO" role="2OqNvi">
+                      <ref role="2WH_rO" node="3e72Pa5HGFx" resolve="repository" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="3e72Pa5IfSP" role="37wK5m">
+                    <node concept="2WthIp" id="3e72Pa5IfSQ" role="2Oq$k0" />
+                    <node concept="1DZHhv" id="3e72Pa5IfSR" role="2OqNvi">
+                      <ref role="2WH_rO" node="7Uvm6D4D5Pz" resolve="token" />
+                    </node>
                   </node>
                 </node>
               </node>

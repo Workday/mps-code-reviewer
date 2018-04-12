@@ -21,13 +21,6 @@
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
       </concept>
-      <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
-        <child id="1145553007750" name="creator" index="2ShVmc" />
-      </concept>
-      <concept id="1070462154015" name="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" flags="ig" index="Wx3nA">
-        <property id="6468716278899126575" name="isVolatile" index="2dlcS1" />
-        <property id="6468716278899125786" name="isTransient" index="2dld4O" />
-      </concept>
       <concept id="1070475587102" name="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" flags="nn" index="XkiVB" />
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
@@ -41,7 +34,6 @@
       </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
-        <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
@@ -81,7 +73,6 @@
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
       <concept id="1073063089578" name="jetbrains.mps.baseLanguage.structure.SuperMethodCall" flags="nn" index="3nyPlj" />
-      <concept id="1212685548494" name="jetbrains.mps.baseLanguage.structure.ClassCreator" flags="nn" index="1pGfFk" />
       <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
         <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
       </concept>
@@ -110,105 +101,32 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
-        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
   </registry>
   <node concept="312cEu" id="78s6gAknHcB">
     <property role="3GE5qa" value="bitbucket" />
     <property role="TrG5h" value="MockBitbucketConnection" />
-    <node concept="Wx3nA" id="78s6gAkoWX3" role="jymVt">
-      <property role="2dlcS1" value="false" />
-      <property role="2dld4O" value="false" />
-      <property role="TrG5h" value="tyler_test_config" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3uibUv" id="78s6gAkoWVd" role="1tU5fm">
-        <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
-      </node>
-      <node concept="2ShNRf" id="78s6gAkoX4W" role="33vP2m">
-        <node concept="1pGfFk" id="78s6gAkoWXC" role="2ShVmc">
-          <ref role="37wK5l" node="78s6gAko0FB" resolve="BitbucketConfiguration" />
-          <node concept="Xl_RD" id="78s6gAkoXcq" role="37wK5m">
-            <property role="Xl_RC" value="https" />
-          </node>
-          <node concept="Xl_RD" id="78s6gAkoXWi" role="37wK5m">
-            <property role="Xl_RC" value="bitbucket-test.workday.com" />
-          </node>
-          <node concept="Xl_RD" id="78s6gAkoY4x" role="37wK5m">
-            <property role="Xl_RC" value="1.0" />
-          </node>
-          <node concept="Xl_RD" id="78s6gAkoYdt" role="37wK5m">
-            <property role="Xl_RC" value="OMS" />
-          </node>
-          <node concept="Xl_RD" id="78s6gAkoYmE" role="37wK5m">
-            <property role="Xl_RC" value="yp-mps" />
-          </node>
-          <node concept="Xl_RD" id="6j8xKyAq_Wg" role="37wK5m">
-            <property role="Xl_RC" value="NDYwNzQ5OTA1NDgzOsmSn6LZhRp/dfaIxwqCkXbtrPef" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="6j8xKyAqDOc" role="jymVt" />
-    <node concept="1X3_iC" id="6j8xKyAqIcN" role="lGtFl">
-      <property role="3V$3am" value="member" />
-      <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1107461130800/5375687026011219971" />
-      <node concept="Wx3nA" id="6j8xKyAqDcD" role="8Wnug">
-        <property role="2dlcS1" value="false" />
-        <property role="2dld4O" value="false" />
-        <property role="TrG5h" value="tamas_test_config" />
-        <property role="3TUv4t" value="true" />
-        <node concept="3uibUv" id="6j8xKyAqDcE" role="1tU5fm">
-          <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
-        </node>
-        <node concept="2ShNRf" id="6j8xKyAqDcF" role="33vP2m">
-          <node concept="1pGfFk" id="6j8xKyAqDcG" role="2ShVmc">
-            <ref role="37wK5l" node="78s6gAko0FB" resolve="BitbucketConfiguration" />
-            <node concept="Xl_RD" id="6j8xKyAqDcH" role="37wK5m">
-              <property role="Xl_RC" value="https" />
-            </node>
-            <node concept="Xl_RD" id="6j8xKyAqDcI" role="37wK5m">
-              <property role="Xl_RC" value="bitbucket-test.workday.com" />
-            </node>
-            <node concept="Xl_RD" id="6j8xKyAqDcJ" role="37wK5m">
-              <property role="Xl_RC" value="1.0" />
-            </node>
-            <node concept="Xl_RD" id="6j8xKyAqDcK" role="37wK5m">
-              <property role="Xl_RC" value="OMS" />
-            </node>
-            <node concept="Xl_RD" id="6j8xKyAqDcL" role="37wK5m">
-              <property role="Xl_RC" value="yp-mps" />
-            </node>
-            <node concept="Xl_RD" id="6j8xKyAqDcM" role="37wK5m">
-              <property role="Xl_RC" value="NDYwNzQ5OTA1NDgzOsmSn6LZhRp/dfaIxwqCkXbtrPef" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="6j8xKyAqCA6" role="jymVt" />
-    <node concept="2tJIrI" id="78s6gAkoW1t" role="jymVt" />
     <node concept="3clFbW" id="78s6gAkoV_W" role="jymVt">
       <node concept="3cqZAl" id="78s6gAkoV_X" role="3clF45" />
       <node concept="3clFbS" id="78s6gAkoV_Z" role="3clF47">
         <node concept="XkiVB" id="78s6gAkoW19" role="3cqZAp">
           <ref role="37wK5l" node="78s6gAknN2h" resolve="BitbucketConnection" />
-          <node concept="37vLTw" id="78s6gAkoYwo" role="37wK5m">
-            <ref role="3cqZAo" node="78s6gAkoWX3" resolve="tyler_test_config" />
+          <node concept="37vLTw" id="3e72Pa5J$sF" role="37wK5m">
+            <ref role="3cqZAo" node="3e72Pa5JzKt" resolve="configuration" />
           </node>
         </node>
       </node>
       <node concept="3Tm1VV" id="78s6gAkoVo8" role="1B3o_S" />
+      <node concept="37vLTG" id="3e72Pa5JzKt" role="3clF46">
+        <property role="TrG5h" value="configuration" />
+        <node concept="3uibUv" id="3e72Pa5JzKs" role="1tU5fm">
+          <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
+        </node>
+      </node>
     </node>
     <node concept="2tJIrI" id="78s6gAkq4BU" role="jymVt" />
     <node concept="3clFb_" id="78s6gAkq4Vv" role="jymVt">
