@@ -17,6 +17,7 @@
         <child id="568377005202317276" name="keys" index="3MtHw3" />
       </concept>
       <concept id="568377005202317270" name="com.mbeddr.mpsutil.multilingual.common.structure.MessageKey" flags="ng" index="3MtHw9">
+        <property id="568377005202317272" name="default" index="3MtHw7" />
         <property id="568377005202317271" name="technicalKey" index="3MtHw8" />
       </concept>
     </language>
@@ -44,10 +45,16 @@
     <node concept="3MtHw9" id="3e72Pa5HGIL" role="3MtHw3">
       <property role="3MtHw8" value=" " />
       <property role="TrG5h" value="ApiVersion" />
+      <property role="3MtHw7" value="API Version" />
     </node>
     <node concept="3MtHw9" id="7Hbe8h753s1" role="3MtHw3">
       <property role="3MtHw8" value=" " />
       <property role="TrG5h" value="Token" />
+    </node>
+    <node concept="3MtHw9" id="3LQpZV9_kli" role="3MtHw3">
+      <property role="3MtHw8" value=" " />
+      <property role="TrG5h" value="TestPullRequestId" />
+      <property role="3MtHw7" value="Pull Request ID" />
     </node>
   </node>
 </model>
