@@ -2278,7 +2278,7 @@
             </node>
             <node concept="liA8E" id="6hum7g6MncJ" role="2OqNvi">
               <ref role="37wK5l" to="z60i:~Container.add(java.awt.Component):java.awt.Component" resolve="add" />
-              <node concept="37vLTw" id="__fp3cs_NN" role="37wK5m">
+              <node concept="37vLTw" id="5jaFXd_Bd3h" role="37wK5m">
                 <ref role="3cqZAo" node="__fp3csfnx" resolve="stateLabelPanel" />
               </node>
             </node>
@@ -2611,13 +2611,13 @@
                 <node concept="1pGfFk" id="__fp3cl556" role="2ShVmc">
                   <ref role="37wK5l" to="z60i:~Color.&lt;init&gt;(float,float,float)" resolve="Color" />
                   <node concept="2$xPTn" id="__fp3cl5WE" role="37wK5m">
-                    <property role="2$xPTl" value="0.96f" />
+                    <property role="2$xPTl" value="0.95f" />
                   </node>
                   <node concept="2$xPTn" id="__fp3cl734" role="37wK5m">
-                    <property role="2$xPTl" value="0.96f" />
+                    <property role="2$xPTl" value="0.95f" />
                   </node>
                   <node concept="2$xPTn" id="__fp3cl7Ib" role="37wK5m">
-                    <property role="2$xPTl" value="0.96f" />
+                    <property role="2$xPTl" value="0.95f" />
                   </node>
                 </node>
               </node>
