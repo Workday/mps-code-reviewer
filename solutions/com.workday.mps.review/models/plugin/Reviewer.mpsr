@@ -401,26 +401,6 @@
     </node>
     <node concept="2UmK3q" id="7Ch0QDHzure" role="2Um5zG">
       <node concept="3clFbS" id="7Ch0QDHzurf" role="2VODD2">
-        <node concept="3clFbF" id="7Ch0QDHzRWn" role="3cqZAp">
-          <node concept="37vLTI" id="7Ch0QDHzTdi" role="3clFbG">
-            <node concept="2ShNRf" id="7Ch0QDHzTzg" role="37vLTx">
-              <node concept="1pGfFk" id="7Ch0QDHzTsC" role="2ShVmc">
-                <ref role="37wK5l" to="dxuu:~JPanel.&lt;init&gt;(java.awt.LayoutManager)" resolve="JPanel" />
-                <node concept="2ShNRf" id="7Ch0QDHzTNU" role="37wK5m">
-                  <node concept="1pGfFk" id="7Ch0QDHzUuy" role="2ShVmc">
-                    <ref role="37wK5l" to="z60i:~BorderLayout.&lt;init&gt;()" resolve="BorderLayout" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="2OqwBi" id="7Ch0QDHzSdT" role="37vLTJ">
-              <node concept="2WthIp" id="7Ch0QDHzRWl" role="2Oq$k0" />
-              <node concept="2BZ7hE" id="7Ch0QDHzSB9" role="2OqNvi">
-                <ref role="2WH_rO" node="7Ch0QDHzHd1" resolve="rootPanel" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3cpWs6" id="7Ch0QDHzLR9" role="3cqZAp">
           <node concept="2OqwBi" id="7Ch0QDHzMix" role="3cqZAk">
             <node concept="2WthIp" id="7Ch0QDHzM2F" role="2Oq$k0" />

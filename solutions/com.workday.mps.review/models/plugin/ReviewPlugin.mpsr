@@ -33,6 +33,13 @@
       </concept>
     </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1224071154655" name="jetbrains.mps.baseLanguage.structure.AsExpression" flags="nn" index="0kSF2">
+        <child id="1224071154657" name="classifierType" index="0kSFW" />
+        <child id="1224071154656" name="expression" index="0kSFX" />
+      </concept>
+      <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
+        <child id="1082485599096" name="statements" index="9aQI4" />
+      </concept>
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
@@ -69,6 +76,10 @@
       </concept>
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
+      <concept id="1081256982272" name="jetbrains.mps.baseLanguage.structure.InstanceOfExpression" flags="nn" index="2ZW3vV">
+        <child id="1081256993305" name="classType" index="2ZW6by" />
+        <child id="1081256993304" name="leftExpression" index="2ZW6bz" />
       </concept>
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
@@ -111,6 +122,7 @@
       </concept>
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
+        <child id="1082485599094" name="ifFalseStatement" index="9aQIa" />
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
       </concept>
@@ -415,26 +427,76 @@
             <property role="3SKdUp" value="Connect to the review" />
           </node>
         </node>
-        <node concept="3clFbF" id="3yDmncoys1g" role="3cqZAp">
-          <node concept="37vLTI" id="3yDmncoysZH" role="3clFbG">
-            <node concept="2ShNRf" id="3yDmncoytiJ" role="37vLTx">
-              <node concept="1pGfFk" id="3e72Pa5IIMF" role="2ShVmc">
-                <ref role="37wK5l" node="78s6gAkoV_W" resolve="MockBitbucketConnection" />
-                <node concept="2OqwBi" id="3e72Pa5IJ9E" role="37wK5m">
-                  <node concept="2YIFZM" id="3e72Pa5IJ2f" role="2Oq$k0">
-                    <ref role="37wK5l" node="3e72Pa5IA1n" resolve="getInstance" />
-                    <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="ReviewPreferences" />
+        <node concept="3cpWs8" id="2uD4oyGhaea" role="3cqZAp">
+          <node concept="3cpWsn" id="2uD4oyGhaeb" role="3cpWs9">
+            <property role="TrG5h" value="bitbucketConfiguration" />
+            <node concept="3uibUv" id="2uD4oyGhae8" role="1tU5fm">
+              <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
+            </node>
+            <node concept="2OqwBi" id="2uD4oyGhaec" role="33vP2m">
+              <node concept="2YIFZM" id="2uD4oyGhaed" role="2Oq$k0">
+                <ref role="37wK5l" node="3e72Pa5IA1n" resolve="getInstance" />
+                <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="ReviewPreferences" />
+              </node>
+              <node concept="liA8E" id="2uD4oyGhaee" role="2OqNvi">
+                <ref role="37wK5l" node="3e72Pa5I$p7" resolve="getBitbucketConfiguration" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="2uD4oyGhcs0" role="3cqZAp">
+          <node concept="3clFbS" id="2uD4oyGhcs2" role="3clFbx">
+            <node concept="3clFbF" id="3yDmncoys1g" role="3cqZAp">
+              <node concept="37vLTI" id="3yDmncoysZH" role="3clFbG">
+                <node concept="2ShNRf" id="3yDmncoytiJ" role="37vLTx">
+                  <node concept="1pGfFk" id="3e72Pa5IIMF" role="2ShVmc">
+                    <ref role="37wK5l" node="78s6gAkoV_W" resolve="MockBitbucketConnection" />
+                    <node concept="0kSF2" id="2uD4oyGhhuv" role="37wK5m">
+                      <node concept="3uibUv" id="2uD4oyGhhuy" role="0kSFW">
+                        <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketConfiguration" />
+                      </node>
+                      <node concept="37vLTw" id="2uD4oyGhaef" role="0kSFX">
+                        <ref role="3cqZAo" node="2uD4oyGhaeb" resolve="bitbucketConfiguration" />
+                      </node>
+                    </node>
                   </node>
-                  <node concept="liA8E" id="3e72Pa5IJjS" role="2OqNvi">
-                    <ref role="37wK5l" node="3e72Pa5I$p7" resolve="getBitbucketConfiguration" />
+                </node>
+                <node concept="2OqwBi" id="3yDmncoysjV" role="37vLTJ">
+                  <node concept="Xjq3P" id="3yDmncoys1e" role="2Oq$k0" />
+                  <node concept="2OwXpG" id="3yDmncoyszR" role="2OqNvi">
+                    <ref role="2Oxat5" node="3yDmncoyqIu" resolve="reviewConnection" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="2OqwBi" id="3yDmncoysjV" role="37vLTJ">
-              <node concept="Xjq3P" id="3yDmncoys1e" role="2Oq$k0" />
-              <node concept="2OwXpG" id="3yDmncoyszR" role="2OqNvi">
-                <ref role="2Oxat5" node="3yDmncoyqIu" resolve="reviewConnection" />
+          </node>
+          <node concept="2ZW3vV" id="2uD4oyGhdrB" role="3clFbw">
+            <node concept="3uibUv" id="2uD4oyGhgEx" role="2ZW6by">
+              <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketConfiguration" />
+            </node>
+            <node concept="37vLTw" id="2uD4oyGhd2x" role="2ZW6bz">
+              <ref role="3cqZAo" node="2uD4oyGhaeb" resolve="bitbucketConfiguration" />
+            </node>
+          </node>
+          <node concept="9aQIb" id="2uD4oyGhhOk" role="9aQIa">
+            <node concept="3clFbS" id="2uD4oyGhhOl" role="9aQI4">
+              <node concept="3clFbF" id="2uD4oyGhhWt" role="3cqZAp">
+                <node concept="37vLTI" id="2uD4oyGhhWu" role="3clFbG">
+                  <node concept="2ShNRf" id="2uD4oyGhhWv" role="37vLTx">
+                    <node concept="1pGfFk" id="2uD4oyGhhWw" role="2ShVmc">
+                      <ref role="37wK5l" node="78s6gAknN2h" resolve="BitbucketConnection" />
+                      <node concept="37vLTw" id="2uD4oyGhhWz" role="37wK5m">
+                        <ref role="3cqZAo" node="2uD4oyGhaeb" resolve="bitbucketConfiguration" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="2uD4oyGhhW$" role="37vLTJ">
+                    <node concept="Xjq3P" id="2uD4oyGhhW_" role="2Oq$k0" />
+                    <node concept="2OwXpG" id="2uD4oyGhhWA" role="2OqNvi">
+                      <ref role="2Oxat5" node="3yDmncoyqIu" resolve="reviewConnection" />
+                    </node>
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -1529,49 +1591,75 @@
       <node concept="3Tm1VV" id="3e72Pa5IQx1" role="1B3o_S" />
       <node concept="3cqZAl" id="3e72Pa5IQx2" role="3clF45" />
       <node concept="3clFbS" id="3e72Pa5IQx3" role="3clF47">
-        <node concept="3clFbF" id="3e72Pa5JNUl" role="3cqZAp">
-          <node concept="2OqwBi" id="3e72Pa5JNUi" role="3clFbG">
-            <node concept="10M0yZ" id="3e72Pa5JNUj" role="2Oq$k0">
-              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+        <node concept="3cpWs8" id="2uD4oyGhA1u" role="3cqZAp">
+          <node concept="3cpWsn" id="2uD4oyGhA1v" role="3cpWs9">
+            <property role="TrG5h" value="bitbucketConfiguration" />
+            <node concept="3uibUv" id="2uD4oyGhA1w" role="1tU5fm">
+              <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
             </node>
-            <node concept="liA8E" id="3e72Pa5JNUk" role="2OqNvi">
-              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
-              <node concept="3cpWs3" id="3e72Pa5JP9m" role="37wK5m">
-                <node concept="2OqwBi" id="3e72Pa5JQr_" role="3uHU7w">
-                  <node concept="37vLTw" id="3e72Pa5JQ00" role="2Oq$k0">
-                    <ref role="3cqZAo" node="3e72Pa5IQwY" resolve="preferences" />
-                  </node>
-                  <node concept="liA8E" id="3e72Pa5JQAw" role="2OqNvi">
-                    <ref role="37wK5l" node="3e72Pa5I$p7" resolve="getBitbucketConfiguration" />
-                  </node>
-                </node>
-                <node concept="Xl_RD" id="3e72Pa5JOd8" role="3uHU7B">
-                  <property role="Xl_RC" value="New review connection: " />
-                </node>
+            <node concept="2OqwBi" id="2uD4oyGhA1x" role="33vP2m">
+              <node concept="37vLTw" id="2uD4oyGhAH4" role="2Oq$k0">
+                <ref role="3cqZAo" node="3e72Pa5IQwY" resolve="preferences" />
+              </node>
+              <node concept="liA8E" id="2uD4oyGhA1z" role="2OqNvi">
+                <ref role="37wK5l" node="3e72Pa5I$p7" resolve="getBitbucketConfiguration" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="3e72Pa5IRNL" role="3cqZAp">
-          <node concept="37vLTI" id="3e72Pa5ISXG" role="3clFbG">
-            <node concept="2ShNRf" id="3e72Pa5ITxA" role="37vLTx">
-              <node concept="1pGfFk" id="3e72Pa5IUqk" role="2ShVmc">
-                <ref role="37wK5l" node="78s6gAkoV_W" resolve="MockBitbucketConnection" />
-                <node concept="2OqwBi" id="3e72Pa5IVCi" role="37wK5m">
-                  <node concept="37vLTw" id="3e72Pa5IVfy" role="2Oq$k0">
-                    <ref role="3cqZAo" node="3e72Pa5IQwY" resolve="preferences" />
+        <node concept="3clFbJ" id="2uD4oyGhA1$" role="3cqZAp">
+          <node concept="3clFbS" id="2uD4oyGhA1_" role="3clFbx">
+            <node concept="3clFbF" id="2uD4oyGhA1A" role="3cqZAp">
+              <node concept="37vLTI" id="2uD4oyGhA1B" role="3clFbG">
+                <node concept="2ShNRf" id="2uD4oyGhA1C" role="37vLTx">
+                  <node concept="1pGfFk" id="2uD4oyGhA1D" role="2ShVmc">
+                    <ref role="37wK5l" node="78s6gAkoV_W" resolve="MockBitbucketConnection" />
+                    <node concept="0kSF2" id="2uD4oyGhA1E" role="37wK5m">
+                      <node concept="3uibUv" id="2uD4oyGhA1F" role="0kSFW">
+                        <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketConfiguration" />
+                      </node>
+                      <node concept="37vLTw" id="2uD4oyGhA1G" role="0kSFX">
+                        <ref role="3cqZAo" node="2uD4oyGhA1v" resolve="bitbucketConfiguration" />
+                      </node>
+                    </node>
                   </node>
-                  <node concept="liA8E" id="3e72Pa5IVOd" role="2OqNvi">
-                    <ref role="37wK5l" node="3e72Pa5I$p7" resolve="getBitbucketConfiguration" />
+                </node>
+                <node concept="2OqwBi" id="2uD4oyGhA1H" role="37vLTJ">
+                  <node concept="Xjq3P" id="2uD4oyGhA1I" role="2Oq$k0" />
+                  <node concept="2OwXpG" id="2uD4oyGhA1J" role="2OqNvi">
+                    <ref role="2Oxat5" node="3yDmncoyqIu" resolve="reviewConnection" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="2OqwBi" id="3e72Pa5ISeb" role="37vLTJ">
-              <node concept="Xjq3P" id="3e72Pa5IRNK" role="2Oq$k0" />
-              <node concept="2OwXpG" id="3e72Pa5ISs5" role="2OqNvi">
-                <ref role="2Oxat5" node="3yDmncoyqIu" resolve="reviewConnection" />
+          </node>
+          <node concept="2ZW3vV" id="2uD4oyGhA1K" role="3clFbw">
+            <node concept="3uibUv" id="2uD4oyGhA1L" role="2ZW6by">
+              <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketConfiguration" />
+            </node>
+            <node concept="37vLTw" id="2uD4oyGhA1M" role="2ZW6bz">
+              <ref role="3cqZAo" node="2uD4oyGhA1v" resolve="bitbucketConfiguration" />
+            </node>
+          </node>
+          <node concept="9aQIb" id="2uD4oyGhA1N" role="9aQIa">
+            <node concept="3clFbS" id="2uD4oyGhA1O" role="9aQI4">
+              <node concept="3clFbF" id="2uD4oyGhA1P" role="3cqZAp">
+                <node concept="37vLTI" id="2uD4oyGhA1Q" role="3clFbG">
+                  <node concept="2ShNRf" id="2uD4oyGhA1R" role="37vLTx">
+                    <node concept="1pGfFk" id="2uD4oyGhA1S" role="2ShVmc">
+                      <ref role="37wK5l" node="78s6gAknN2h" resolve="BitbucketConnection" />
+                      <node concept="37vLTw" id="2uD4oyGhA1T" role="37wK5m">
+                        <ref role="3cqZAo" node="2uD4oyGhA1v" resolve="bitbucketConfiguration" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="2uD4oyGhA1U" role="37vLTJ">
+                    <node concept="Xjq3P" id="2uD4oyGhA1V" role="2Oq$k0" />
+                    <node concept="2OwXpG" id="2uD4oyGhA1W" role="2OqNvi">
+                      <ref role="2Oxat5" node="3yDmncoyqIu" resolve="reviewConnection" />
+                    </node>
+                  </node>
+                </node>
               </node>
             </node>
           </node>

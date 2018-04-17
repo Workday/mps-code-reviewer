@@ -142,6 +142,7 @@
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
       <concept id="1146644641414" name="jetbrains.mps.baseLanguage.structure.ProtectedVisibility" flags="nn" index="3Tmbuc" />
       <concept id="1178893518978" name="jetbrains.mps.baseLanguage.structure.ThisConstructorInvocation" flags="nn" index="1VxSAg" />
+      <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
       <concept id="1170345865475" name="jetbrains.mps.baseLanguage.structure.AnonymousClass" flags="ig" index="1Y3b0j">
         <reference id="1170346070688" name="classifier" index="1Y3XeK" />
       </concept>
@@ -535,18 +536,29 @@
             </node>
             <node concept="liA8E" id="__fp3czBcJ" role="2OqNvi">
               <ref role="37wK5l" to="dxuu:~JComponent.setVisible(boolean):void" resolve="setVisible" />
-              <node concept="3y3z36" id="__fp3czrqg" role="37wK5m">
-                <node concept="10Nm6u" id="__fp3czsci" role="3uHU7w" />
-                <node concept="2OqwBi" id="__fp3czone" role="3uHU7B">
-                  <node concept="2OqwBi" id="__fp3cznb7" role="2Oq$k0">
-                    <node concept="Xjq3P" id="__fp3czmrw" role="2Oq$k0" />
-                    <node concept="2OwXpG" id="__fp3cznNG" role="2OqNvi">
-                      <ref role="2Oxat5" node="6hum7g6Ly1j" resolve="comment" />
+              <node concept="1Wc70l" id="7412O20lrvx" role="37wK5m">
+                <node concept="3y3z36" id="7412O20ltCg" role="3uHU7w">
+                  <node concept="10Nm6u" id="7412O20ltJk" role="3uHU7w" />
+                  <node concept="2OqwBi" id="7412O20lsOE" role="3uHU7B">
+                    <node concept="Xjq3P" id="7412O20lstk" role="2Oq$k0" />
+                    <node concept="2OwXpG" id="7412O20lt4R" role="2OqNvi">
+                      <ref role="2Oxat5" node="6j8xKyAvLj1" resolve="dispatcher" />
                     </node>
                   </node>
-                  <node concept="liA8E" id="__fp3czp0E" role="2OqNvi">
-                    <ref role="37wK5l" to="m3q8:4Ew7qBDr_4A" resolve="getCommentedNode" />
+                </node>
+                <node concept="3y3z36" id="__fp3czrqg" role="3uHU7B">
+                  <node concept="2OqwBi" id="__fp3czone" role="3uHU7B">
+                    <node concept="2OqwBi" id="__fp3cznb7" role="2Oq$k0">
+                      <node concept="Xjq3P" id="__fp3czmrw" role="2Oq$k0" />
+                      <node concept="2OwXpG" id="__fp3cznNG" role="2OqNvi">
+                        <ref role="2Oxat5" node="6hum7g6Ly1j" resolve="comment" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="__fp3czp0E" role="2OqNvi">
+                      <ref role="37wK5l" to="m3q8:4Ew7qBDr_4A" resolve="getCommentedNode" />
+                    </node>
                   </node>
+                  <node concept="10Nm6u" id="__fp3czsci" role="3uHU7w" />
                 </node>
               </node>
             </node>
@@ -995,6 +1007,26 @@
               <node concept="Xjq3P" id="3okjBs8i5ys" role="2Oq$k0" />
               <node concept="2OwXpG" id="3okjBs8i7t2" role="2OqNvi">
                 <ref role="2Oxat5" node="6j8xKyAvLj1" resolve="dispatcher" />
+              </node>
+            </node>
+          </node>
+          <node concept="9aQIb" id="7412O20lb_f" role="9aQIa">
+            <node concept="3clFbS" id="7412O20lb_g" role="9aQI4">
+              <node concept="3clFbF" id="7412O20lcEG" role="3cqZAp">
+                <node concept="2OqwBi" id="7412O20ldh8" role="3clFbG">
+                  <node concept="2OqwBi" id="7412O20lcQv" role="2Oq$k0">
+                    <node concept="Xjq3P" id="7412O20lcEF" role="2Oq$k0" />
+                    <node concept="2OwXpG" id="7412O20lcXt" role="2OqNvi">
+                      <ref role="2Oxat5" node="__fp3cy3R7" resolve="navigateLabel" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="7412O20ldUU" role="2OqNvi">
+                    <ref role="37wK5l" to="dxuu:~JComponent.setVisible(boolean):void" resolve="setVisible" />
+                    <node concept="3clFbT" id="7412O20le1Q" role="37wK5m">
+                      <property role="3clFbU" value="false" />
+                    </node>
+                  </node>
+                </node>
               </node>
             </node>
           </node>
