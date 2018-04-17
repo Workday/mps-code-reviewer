@@ -427,77 +427,12 @@
             <property role="3SKdUp" value="Connect to the review" />
           </node>
         </node>
-        <node concept="3cpWs8" id="2uD4oyGhaea" role="3cqZAp">
-          <node concept="3cpWsn" id="2uD4oyGhaeb" role="3cpWs9">
-            <property role="TrG5h" value="bitbucketConfiguration" />
-            <node concept="3uibUv" id="2uD4oyGhae8" role="1tU5fm">
-              <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
-            </node>
-            <node concept="2OqwBi" id="2uD4oyGhaec" role="33vP2m">
-              <node concept="2YIFZM" id="2uD4oyGhaed" role="2Oq$k0">
-                <ref role="37wK5l" node="3e72Pa5IA1n" resolve="getInstance" />
-                <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="ReviewPreferences" />
-              </node>
-              <node concept="liA8E" id="2uD4oyGhaee" role="2OqNvi">
-                <ref role="37wK5l" node="3e72Pa5I$p7" resolve="getBitbucketConfiguration" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbJ" id="2uD4oyGhcs0" role="3cqZAp">
-          <node concept="3clFbS" id="2uD4oyGhcs2" role="3clFbx">
-            <node concept="3clFbF" id="3yDmncoys1g" role="3cqZAp">
-              <node concept="37vLTI" id="3yDmncoysZH" role="3clFbG">
-                <node concept="2ShNRf" id="3yDmncoytiJ" role="37vLTx">
-                  <node concept="1pGfFk" id="3e72Pa5IIMF" role="2ShVmc">
-                    <ref role="37wK5l" node="78s6gAkoV_W" resolve="MockBitbucketConnection" />
-                    <node concept="0kSF2" id="2uD4oyGhhuv" role="37wK5m">
-                      <node concept="3uibUv" id="2uD4oyGhhuy" role="0kSFW">
-                        <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketConfiguration" />
-                      </node>
-                      <node concept="37vLTw" id="2uD4oyGhaef" role="0kSFX">
-                        <ref role="3cqZAo" node="2uD4oyGhaeb" resolve="bitbucketConfiguration" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-                <node concept="2OqwBi" id="3yDmncoysjV" role="37vLTJ">
-                  <node concept="Xjq3P" id="3yDmncoys1e" role="2Oq$k0" />
-                  <node concept="2OwXpG" id="3yDmncoyszR" role="2OqNvi">
-                    <ref role="2Oxat5" node="3yDmncoyqIu" resolve="reviewConnection" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="2ZW3vV" id="2uD4oyGhdrB" role="3clFbw">
-            <node concept="3uibUv" id="2uD4oyGhgEx" role="2ZW6by">
-              <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketConfiguration" />
-            </node>
-            <node concept="37vLTw" id="2uD4oyGhd2x" role="2ZW6bz">
-              <ref role="3cqZAo" node="2uD4oyGhaeb" resolve="bitbucketConfiguration" />
-            </node>
-          </node>
-          <node concept="9aQIb" id="2uD4oyGhhOk" role="9aQIa">
-            <node concept="3clFbS" id="2uD4oyGhhOl" role="9aQI4">
-              <node concept="3clFbF" id="2uD4oyGhhWt" role="3cqZAp">
-                <node concept="37vLTI" id="2uD4oyGhhWu" role="3clFbG">
-                  <node concept="2ShNRf" id="2uD4oyGhhWv" role="37vLTx">
-                    <node concept="1pGfFk" id="2uD4oyGhhWw" role="2ShVmc">
-                      <ref role="37wK5l" node="78s6gAknN2h" resolve="BitbucketConnection" />
-                      <node concept="37vLTw" id="2uD4oyGhhWz" role="37wK5m">
-                        <ref role="3cqZAo" node="2uD4oyGhaeb" resolve="bitbucketConfiguration" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="2OqwBi" id="2uD4oyGhhW$" role="37vLTJ">
-                    <node concept="Xjq3P" id="2uD4oyGhhW_" role="2Oq$k0" />
-                    <node concept="2OwXpG" id="2uD4oyGhhWA" role="2OqNvi">
-                      <ref role="2Oxat5" node="3yDmncoyqIu" resolve="reviewConnection" />
-                    </node>
-                  </node>
-                </node>
-              </node>
+        <node concept="3clFbF" id="2uD4oyGl0SS" role="3cqZAp">
+          <node concept="1rXfSq" id="2uD4oyGl0SQ" role="3clFbG">
+            <ref role="37wK5l" node="3e72Pa5IQwX" resolve="onPreferencesChange" />
+            <node concept="2YIFZM" id="2uD4oyGl1s8" role="37wK5m">
+              <ref role="37wK5l" node="3e72Pa5IA1n" resolve="getInstance" />
+              <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="ReviewPreferences" />
             </node>
           </node>
         </node>
