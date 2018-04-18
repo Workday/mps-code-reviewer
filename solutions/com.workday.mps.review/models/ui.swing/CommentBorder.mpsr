@@ -322,20 +322,24 @@
       <node concept="3Tm1VV" id="7Ch0QDH$jw3" role="1B3o_S" />
       <node concept="37vLTG" id="7Ch0QDH$jPz" role="3clF46">
         <property role="TrG5h" value="radius" />
+        <property role="3TUv4t" value="true" />
         <node concept="10Oyi0" id="7Ch0QDH$jPy" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="7Ch0QDH$jTx" role="3clF46">
         <property role="TrG5h" value="thickness" />
+        <property role="3TUv4t" value="true" />
         <node concept="10OMs4" id="7Ch0QDH$D3K" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="7Ch0QDHAu1A" role="3clF46">
         <property role="TrG5h" value="borderColor" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="7Ch0QDHAulb" role="1tU5fm">
           <ref role="3uigEE" to="z60i:~Color" resolve="Color" />
         </node>
       </node>
       <node concept="37vLTG" id="7Ch0QDHAqBt" role="3clF46">
         <property role="TrG5h" value="backgroundColor" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="7Ch0QDHAqU2" role="1tU5fm">
           <ref role="3uigEE" to="z60i:~Color" resolve="Color" />
         </node>
@@ -355,36 +359,42 @@
       <node concept="3cqZAl" id="7Ch0QDH$j2D" role="3clF45" />
       <node concept="37vLTG" id="7Ch0QDH$j2E" role="3clF46">
         <property role="TrG5h" value="component" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="7Ch0QDH$j2F" role="1tU5fm">
           <ref role="3uigEE" to="z60i:~Component" resolve="Component" />
         </node>
       </node>
       <node concept="37vLTG" id="7Ch0QDH$j2G" role="3clF46">
         <property role="TrG5h" value="graphics" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="7Ch0QDH$j2H" role="1tU5fm">
           <ref role="3uigEE" to="z60i:~Graphics" resolve="Graphics" />
         </node>
       </node>
       <node concept="37vLTG" id="7Ch0QDH$j2I" role="3clF46">
         <property role="TrG5h" value="x" />
+        <property role="3TUv4t" value="true" />
         <node concept="10Oyi0" id="7Ch0QDH$j2J" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="7Ch0QDH$j2K" role="3clF46">
         <property role="TrG5h" value="y" />
+        <property role="3TUv4t" value="true" />
         <node concept="10Oyi0" id="7Ch0QDH$j2L" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="7Ch0QDH$j2M" role="3clF46">
         <property role="TrG5h" value="width" />
+        <property role="3TUv4t" value="true" />
         <node concept="10Oyi0" id="7Ch0QDH$j2N" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="7Ch0QDH$j2O" role="3clF46">
         <property role="TrG5h" value="height" />
+        <property role="3TUv4t" value="true" />
         <node concept="10Oyi0" id="7Ch0QDH$j2P" role="1tU5fm" />
       </node>
       <node concept="3clFbS" id="7Ch0QDH$j2Q" role="3clF47">
         <node concept="3cpWs8" id="7Ch0QDH$keT" role="3cqZAp">
           <node concept="3cpWsn" id="7Ch0QDH$keS" role="3cpWs9">
-            <property role="3TUv4t" value="false" />
+            <property role="3TUv4t" value="true" />
             <property role="TrG5h" value="g2d" />
             <node concept="3uibUv" id="7Ch0QDH$keU" role="1tU5fm">
               <ref role="3uigEE" to="z60i:~Graphics2D" resolve="Graphics2D" />
@@ -431,6 +441,7 @@
         <node concept="3cpWs8" id="7Ch0QDHAblO" role="3cqZAp">
           <node concept="3cpWsn" id="7Ch0QDHAblP" role="3cpWs9">
             <property role="TrG5h" value="borderRect" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="7Ch0QDHAblM" role="1tU5fm">
               <ref role="3uigEE" to="fbzs:~RoundRectangle2D$Double" resolve="RoundRectangle2D.Double" />
             </node>
@@ -478,6 +489,7 @@
         <node concept="3cpWs8" id="5jaFXd_zsph" role="3cqZAp">
           <node concept="3cpWsn" id="5jaFXd_zspi" role="3cpWs9">
             <property role="TrG5h" value="insets" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="5jaFXd_zspf" role="1tU5fm">
               <ref role="3uigEE" to="z60i:~Insets" resolve="Insets" />
             </node>
@@ -490,6 +502,7 @@
         <node concept="3cpWs8" id="5jaFXd_zV4Z" role="3cqZAp">
           <node concept="3cpWsn" id="5jaFXd_zV50" role="3cpWs9">
             <property role="TrG5h" value="innerRect" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="5jaFXd_zV4S" role="1tU5fm">
               <ref role="3uigEE" to="fbzs:~Rectangle2D$Double" resolve="Rectangle2D.Double" />
             </node>
@@ -580,6 +593,7 @@
         <node concept="3cpWs8" id="5jaFXd_$3Zh" role="3cqZAp">
           <node concept="3cpWsn" id="5jaFXd_$3Zi" role="3cpWs9">
             <property role="TrG5h" value="fillArea" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="5jaFXd_$3Z0" role="1tU5fm">
               <ref role="3uigEE" to="fbzs:~Area" resolve="Area" />
             </node>
@@ -654,6 +668,7 @@
         <node concept="3cpWs8" id="7Ch0QDH$_h8" role="3cqZAp">
           <node concept="3cpWsn" id="7Ch0QDH$_h9" role="3cpWs9">
             <property role="TrG5h" value="oldStroke" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="7Ch0QDH$_h3" role="1tU5fm">
               <ref role="3uigEE" to="z60i:~Stroke" resolve="Stroke" />
             </node>
@@ -677,8 +692,11 @@
               <node concept="2ShNRf" id="7Ch0QDH$Bm6" role="37wK5m">
                 <node concept="1pGfFk" id="7Ch0QDH$BVI" role="2ShVmc">
                   <ref role="37wK5l" to="z60i:~BasicStroke.&lt;init&gt;(float)" resolve="BasicStroke" />
-                  <node concept="37vLTw" id="7Ch0QDH$ClI" role="37wK5m">
-                    <ref role="3cqZAo" node="7Ch0QDH$s3N" resolve="thickness" />
+                  <node concept="2OqwBi" id="5IbzmGeyD5d" role="37wK5m">
+                    <node concept="Xjq3P" id="5IbzmGeyD5b" role="2Oq$k0" />
+                    <node concept="2OwXpG" id="5IbzmGeyD5c" role="2OqNvi">
+                      <ref role="2Oxat5" node="7Ch0QDH$s3N" resolve="thickness" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -755,6 +773,7 @@
       </node>
       <node concept="37vLTG" id="7Ch0QDH$j2W" role="3clF46">
         <property role="TrG5h" value="component" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="7Ch0QDH$j2X" role="1tU5fm">
           <ref role="3uigEE" to="z60i:~Component" resolve="Component" />
         </node>
@@ -763,12 +782,16 @@
         <node concept="3cpWs8" id="7Ch0QDH$KQp" role="3cqZAp">
           <node concept="3cpWsn" id="7Ch0QDH$KQs" role="3cpWs9">
             <property role="TrG5h" value="value" />
+            <property role="3TUv4t" value="true" />
             <node concept="10Oyi0" id="7Ch0QDH$KQn" role="1tU5fm" />
             <node concept="3cpWs3" id="__fp3ct4XX" role="33vP2m">
               <node concept="1eOMI4" id="5jaFXd__WhG" role="3uHU7B">
                 <node concept="FJ1c_" id="7Ch0QDH$Oz1" role="1eOMHV">
-                  <node concept="37vLTw" id="7Ch0QDH$Lsx" role="3uHU7B">
-                    <ref role="3cqZAo" node="7Ch0QDH$nGd" resolve="radius" />
+                  <node concept="2OqwBi" id="5IbzmGeyD5i" role="3uHU7B">
+                    <node concept="Xjq3P" id="5IbzmGeyD5g" role="2Oq$k0" />
+                    <node concept="2OwXpG" id="5IbzmGeyD5h" role="2OqNvi">
+                      <ref role="2Oxat5" node="7Ch0QDH$nGd" resolve="radius" />
+                    </node>
                   </node>
                   <node concept="3cmrfG" id="__fp3ctl$p" role="3uHU7w">
                     <property role="3cmrfH" value="4" />

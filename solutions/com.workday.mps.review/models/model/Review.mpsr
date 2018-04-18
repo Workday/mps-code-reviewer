@@ -323,6 +323,7 @@
         </node>
         <node concept="37vLTG" id="6hum7g6NNij" role="3clF46">
           <property role="TrG5h" value="uiText" />
+          <property role="3TUv4t" value="true" />
           <node concept="17QB3L" id="6hum7g6NNii" role="1tU5fm" />
         </node>
         <node concept="3Tm6S6" id="6hum7g6NOkB" role="1B3o_S" />

@@ -33,6 +33,7 @@
       </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
+        <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
@@ -196,6 +197,7 @@
             <node concept="3cpWs8" id="6AMQKPcB5hR" role="3cqZAp">
               <node concept="3cpWsn" id="6AMQKPcB5hS" role="3cpWs9">
                 <property role="TrG5h" value="requestId" />
+                <property role="3TUv4t" value="true" />
                 <node concept="10Oyi0" id="6AMQKPcB5zq" role="1tU5fm" />
                 <node concept="2YIFZM" id="6AMQKPcB9jJ" role="33vP2m">
                   <ref role="37wK5l" to="wyt6:~Integer.parseInt(java.lang.String):int" resolve="parseInt" />
@@ -268,6 +270,7 @@
           <node concept="TDmWw" id="6AMQKPcBnnt" role="TEbGg">
             <node concept="3cpWsn" id="6AMQKPcBnnv" role="TDEfY">
               <property role="TrG5h" value="numEx" />
+              <property role="3TUv4t" value="true" />
               <node concept="3uibUv" id="6AMQKPcBt_x" role="1tU5fm">
                 <ref role="3uigEE" to="wyt6:~NumberFormatException" resolve="NumberFormatException" />
               </node>
@@ -337,6 +340,7 @@
             <node concept="3cpWs8" id="6AMQKPcBK2M" role="3cqZAp">
               <node concept="3cpWsn" id="6AMQKPcBK2N" role="3cpWs9">
                 <property role="TrG5h" value="requestId" />
+                <property role="3TUv4t" value="true" />
                 <node concept="10Oyi0" id="6AMQKPcBK2O" role="1tU5fm" />
                 <node concept="2YIFZM" id="6AMQKPcBK2P" role="33vP2m">
                   <ref role="37wK5l" to="wyt6:~Integer.parseInt(java.lang.String):int" resolve="parseInt" />
@@ -409,6 +413,7 @@
           <node concept="TDmWw" id="6AMQKPcBK3i" role="TEbGg">
             <node concept="3cpWsn" id="6AMQKPcBK3j" role="TDEfY">
               <property role="TrG5h" value="numEx" />
+              <property role="3TUv4t" value="true" />
               <node concept="3uibUv" id="6AMQKPcBK3k" role="1tU5fm">
                 <ref role="3uigEE" to="wyt6:~NumberFormatException" resolve="NumberFormatException" />
               </node>

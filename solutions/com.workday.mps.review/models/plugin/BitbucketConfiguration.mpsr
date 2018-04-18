@@ -241,26 +241,32 @@
       <node concept="3Tm1VV" id="78s6gAko0Ak" role="1B3o_S" />
       <node concept="37vLTG" id="78s6gAko0L4" role="3clF46">
         <property role="TrG5h" value="scheme" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="78s6gAko0L3" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="78s6gAko0L8" role="3clF46">
         <property role="TrG5h" value="hostname" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="78s6gAko0PR" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="78s6gAko0Q9" role="3clF46">
         <property role="TrG5h" value="apiVersion" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="78s6gAko0UU" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="78s6gAko0Vm" role="3clF46">
         <property role="TrG5h" value="project" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="78s6gAko109" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="78s6gAko154" role="3clF46">
         <property role="TrG5h" value="repository" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="78s6gAko1a8" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="6j8xKyAqz1S" role="3clF46">
         <property role="TrG5h" value="accessToken" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="6j8xKyAqz9b" role="1tU5fm" />
       </node>
     </node>
@@ -275,6 +281,7 @@
         <node concept="3cpWs8" id="78s6gAkpnm9" role="3cqZAp">
           <node concept="3cpWsn" id="78s6gAkpnma" role="3cpWs9">
             <property role="TrG5h" value="builder" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="78s6gAkpnmb" role="1tU5fm">
               <ref role="3uigEE" to="wyt6:~StringBuilder" resolve="StringBuilder" />
             </node>
@@ -379,8 +386,11 @@
       <node concept="3clFbS" id="6j8xKyAr1aX" role="3clF47">
         <node concept="3cpWs6" id="6j8xKyAr1wB" role="3cqZAp">
           <node concept="3cpWs3" id="6j8xKyAr2HB" role="3cqZAk">
-            <node concept="37vLTw" id="6j8xKyAr30l" role="3uHU7w">
-              <ref role="3cqZAo" node="6j8xKyAqyP7" resolve="accessToken" />
+            <node concept="2OqwBi" id="5IbzmGeyD0z" role="3uHU7w">
+              <node concept="Xjq3P" id="5IbzmGeyD0x" role="2Oq$k0" />
+              <node concept="2OwXpG" id="5IbzmGeyD0y" role="2OqNvi">
+                <ref role="2Oxat5" node="6j8xKyAqyP7" resolve="accessToken" />
+              </node>
             </node>
             <node concept="Xl_RD" id="6j8xKyAr1$$" role="3uHU7B">
               <property role="Xl_RC" value="Bearer " />

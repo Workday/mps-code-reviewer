@@ -137,6 +137,7 @@
       <node concept="3Tm1VV" id="4Ew7qBDj0oc" role="1B3o_S" />
       <node concept="37vLTG" id="4Ew7qBDj0xW" role="3clF46">
         <property role="TrG5h" value="dispatcher" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="4Ew7qBDj0xV" role="1tU5fm">
           <ref role="3uigEE" to="ee8f:3c3vDUkV4xB" resolve="Dispatcher" />
         </node>

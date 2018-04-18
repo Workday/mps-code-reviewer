@@ -179,13 +179,14 @@
     <node concept="3clFbW" id="3c3vDUl1pDr" role="jymVt">
       <node concept="37vLTG" id="4Ew7qBDibve" role="3clF46">
         <property role="TrG5h" value="dispatcher" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="4Ew7qBDibGq" role="1tU5fm">
           <ref role="3uigEE" to="ee8f:3c3vDUkV4xB" resolve="Dispatcher" />
         </node>
       </node>
       <node concept="37vLTG" id="3c3vDUl1qS3" role="3clF46">
         <property role="TrG5h" value="project" />
-        <property role="3TUv4t" value="false" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="3c3vDUl4_Uc" role="1tU5fm">
           <ref role="3uigEE" to="4nm9:~Project" resolve="Project" />
         </node>
@@ -228,6 +229,7 @@
       <node concept="3cqZAl" id="3c3vDUl1oqN" role="3clF45" />
       <node concept="37vLTG" id="3c3vDUl1oqO" role="3clF46">
         <property role="TrG5h" value="action" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="3c3vDUl1oqP" role="1tU5fm">
           <ref role="3uigEE" to="ee8f:3c3vDUkV812" resolve="Action" />
         </node>
@@ -268,8 +270,11 @@
                       <node concept="2ShNRf" id="6xT3PQlq9Ds" role="2Oq$k0">
                         <node concept="1pGfFk" id="6xT3PQlq9Dt" role="2ShVmc">
                           <ref role="37wK5l" to="kx0u:~NodeNavigatable.&lt;init&gt;(jetbrains.mps.project.Project,org.jetbrains.mps.openapi.model.SNodeReference)" resolve="NodeNavigatable" />
-                          <node concept="37vLTw" id="3c3vDUl4CRe" role="37wK5m">
-                            <ref role="3cqZAo" node="3c3vDUl4B0B" resolve="mpsProject" />
+                          <node concept="2OqwBi" id="5IbzmGeyD3j" role="37wK5m">
+                            <node concept="Xjq3P" id="5IbzmGeyD3h" role="2Oq$k0" />
+                            <node concept="2OwXpG" id="5IbzmGeyD3i" role="2OqNvi">
+                              <ref role="2Oxat5" node="3c3vDUl4B0B" resolve="mpsProject" />
+                            </node>
                           </node>
                           <node concept="2OqwBi" id="3c3vDUl4uGu" role="37wK5m">
                             <node concept="37vLTw" id="3c3vDUl4unP" role="2Oq$k0">
@@ -292,8 +297,11 @@
                 </node>
               </node>
               <node concept="2OqwBi" id="3c3vDUl1FI8" role="ukAjM">
-                <node concept="37vLTw" id="3c3vDUl4CL0" role="2Oq$k0">
-                  <ref role="3cqZAo" node="3c3vDUl4B0B" resolve="mpsProject" />
+                <node concept="2OqwBi" id="5IbzmGeyD3n" role="2Oq$k0">
+                  <node concept="Xjq3P" id="5IbzmGeyD3l" role="2Oq$k0" />
+                  <node concept="2OwXpG" id="5IbzmGeyD3m" role="2OqNvi">
+                    <ref role="2Oxat5" node="3c3vDUl4B0B" resolve="mpsProject" />
+                  </node>
                 </node>
                 <node concept="liA8E" id="3c3vDUl1Gib" role="2OqNvi">
                   <ref role="37wK5l" to="z1c3:~Project.getRepository():org.jetbrains.mps.openapi.module.SRepository" resolve="getRepository" />
