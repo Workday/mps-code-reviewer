@@ -141,30 +141,37 @@
       <node concept="3Tm1VV" id="6AMQKPcBaub" role="1B3o_S" />
       <node concept="37vLTG" id="6AMQKPcBauc" role="3clF46">
         <property role="TrG5h" value="scheme" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="6AMQKPcBaud" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="6AMQKPcBaue" role="3clF46">
         <property role="TrG5h" value="hostname" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="6AMQKPcBauf" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="6AMQKPcBaug" role="3clF46">
         <property role="TrG5h" value="apiVersion" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="6AMQKPcBauh" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="6AMQKPcBaui" role="3clF46">
         <property role="TrG5h" value="project" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="6AMQKPcBauj" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="6AMQKPcBauk" role="3clF46">
         <property role="TrG5h" value="repository" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="6AMQKPcBaul" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="6AMQKPcBaum" role="3clF46">
         <property role="TrG5h" value="accessToken" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="6AMQKPcBaun" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="6AMQKPcBauo" role="3clF46">
         <property role="TrG5h" value="mockPullRequestId" />
+        <property role="3TUv4t" value="true" />
         <node concept="10Oyi0" id="6AMQKPcBaup" role="1tU5fm" />
       </node>
     </node>

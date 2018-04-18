@@ -415,6 +415,7 @@
         <node concept="3cpWs8" id="4xwNC9qEouw" role="3cqZAp">
           <node concept="3cpWsn" id="4xwNC9qEoux" role="3cpWs9">
             <property role="TrG5h" value="userLabel" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="4xwNC9qEouo" role="1tU5fm">
               <ref role="3uigEE" to="dxuu:~JLabel" resolve="JLabel" />
             </node>
@@ -769,6 +770,7 @@
         <node concept="3cpWs8" id="2uD4oyGkyLl" role="3cqZAp">
           <node concept="3cpWsn" id="2uD4oyGkyLm" role="3cpWs9">
             <property role="TrG5h" value="timeLabel" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="2uD4oyGkyLi" role="1tU5fm">
               <ref role="3uigEE" to="dxuu:~JLabel" resolve="JLabel" />
             </node>
@@ -960,6 +962,7 @@
       </node>
       <node concept="37vLTG" id="2uD4oyGiHEU" role="3clF46">
         <property role="TrG5h" value="background" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="2uD4oyGiHET" role="1tU5fm">
           <ref role="3uigEE" to="z60i:~Color" resolve="Color" />
         </node>

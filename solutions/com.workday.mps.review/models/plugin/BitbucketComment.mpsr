@@ -489,6 +489,7 @@
         <node concept="3cpWs8" id="__fp3cuOuA" role="3cqZAp">
           <node concept="3cpWsn" id="__fp3cuOuB" role="3cpWs9">
             <property role="TrG5h" value="parsedNodePortion" />
+            <property role="3TUv4t" value="true" />
             <node concept="17QB3L" id="__fp3cuOuy" role="1tU5fm" />
             <node concept="1rXfSq" id="__fp3cuOuC" role="33vP2m">
               <ref role="37wK5l" node="__fp3cuwMY" resolve="parseNodePortion" />
@@ -506,6 +507,7 @@
             <node concept="3cpWs8" id="__fp3cuXSb" role="3cqZAp">
               <node concept="3cpWsn" id="__fp3cuXSc" role="3cpWs9">
                 <property role="TrG5h" value="nodeId" />
+                <property role="3TUv4t" value="true" />
                 <node concept="10Q1$e" id="__fp3cuXRY" role="1tU5fm">
                   <node concept="17QB3L" id="__fp3cv5bZ" role="10Q1$1" />
                 </node>
@@ -613,6 +615,7 @@
         <node concept="3cpWs8" id="3okjBs8od8z" role="3cqZAp">
           <node concept="3cpWsn" id="3okjBs8od8$" role="3cpWs9">
             <property role="TrG5h" value="otherComment" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="3okjBs8od8_" role="1tU5fm">
               <ref role="3uigEE" node="2hVa5m$1$n6" resolve="BitbucketComment" />
             </node>
@@ -649,6 +652,7 @@
       <node concept="10P_77" id="3okjBs8o3IS" role="3clF45" />
       <node concept="37vLTG" id="3okjBs8o4_R" role="3clF46">
         <property role="TrG5h" value="o" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="3okjBs8o4_Q" role="1tU5fm">
           <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
         </node>
@@ -663,6 +667,7 @@
         <node concept="3cpWs8" id="__fp3cu6Zs" role="3cqZAp">
           <node concept="3cpWsn" id="__fp3cu6Zt" role="3cpWs9">
             <property role="TrG5h" value="hasNodeId" />
+            <property role="3TUv4t" value="true" />
             <node concept="10P_77" id="__fp3cu6Zq" role="1tU5fm" />
             <node concept="2OqwBi" id="__fp3cu6Zu" role="33vP2m">
               <node concept="2OqwBi" id="__fp3cu6Zv" role="2Oq$k0">
@@ -687,6 +692,7 @@
             <node concept="3cpWs8" id="__fp3cudQz" role="3cqZAp">
               <node concept="3cpWsn" id="__fp3cudQ$" role="3cpWs9">
                 <property role="TrG5h" value="indexOfTextStart" />
+                <property role="3TUv4t" value="true" />
                 <node concept="10Oyi0" id="__fp3cudQv" role="1tU5fm" />
                 <node concept="3cpWs3" id="__fp3cvNHX" role="33vP2m">
                   <node concept="3cmrfG" id="__fp3cvP5e" role="3uHU7w">
@@ -761,6 +767,7 @@
       <node concept="3Tm6S6" id="__fp3ctYMo" role="1B3o_S" />
       <node concept="37vLTG" id="__fp3cu1VG" role="3clF46">
         <property role="TrG5h" value="commentText" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="__fp3cu1VF" role="1tU5fm" />
       </node>
     </node>
@@ -773,6 +780,7 @@
         <node concept="3cpWs8" id="__fp3cuwN0" role="3cqZAp">
           <node concept="3cpWsn" id="__fp3cuwN1" role="3cpWs9">
             <property role="TrG5h" value="hasNodeId" />
+            <property role="3TUv4t" value="true" />
             <node concept="10P_77" id="__fp3cuwN2" role="1tU5fm" />
             <node concept="2OqwBi" id="__fp3cuwN3" role="33vP2m">
               <node concept="2OqwBi" id="__fp3cuwN4" role="2Oq$k0">
@@ -797,6 +805,7 @@
             <node concept="3cpWs8" id="__fp3cu$ZZ" role="3cqZAp">
               <node concept="3cpWsn" id="__fp3cu_02" role="3cpWs9">
                 <property role="TrG5h" value="indexOfColon" />
+                <property role="3TUv4t" value="true" />
                 <node concept="10Oyi0" id="__fp3cu$ZX" role="1tU5fm" />
                 <node concept="2OqwBi" id="__fp3cuAda" role="33vP2m">
                   <node concept="37vLTw" id="__fp3cu_GZ" role="2Oq$k0">
@@ -814,6 +823,7 @@
             <node concept="3cpWs8" id="__fp3cuwNb" role="3cqZAp">
               <node concept="3cpWsn" id="__fp3cuwNc" role="3cpWs9">
                 <property role="TrG5h" value="indexOfNewline" />
+                <property role="3TUv4t" value="true" />
                 <node concept="10Oyi0" id="__fp3cuwNd" role="1tU5fm" />
                 <node concept="2OqwBi" id="__fp3cuwNe" role="33vP2m">
                   <node concept="37vLTw" id="__fp3cuwNf" role="2Oq$k0">
@@ -884,6 +894,7 @@
       <node concept="3Tm6S6" id="__fp3cuwNA" role="1B3o_S" />
       <node concept="37vLTG" id="__fp3cuwNB" role="3clF46">
         <property role="TrG5h" value="commentText" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="__fp3cuwNC" role="1tU5fm" />
       </node>
     </node>

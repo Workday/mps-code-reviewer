@@ -186,6 +186,7 @@
             <node concept="3cpWs8" id="3okjBs8jFJR" role="3cqZAp">
               <node concept="3cpWsn" id="3okjBs8jFJS" role="3cpWs9">
                 <property role="TrG5h" value="inlineCommentManager" />
+                <property role="3TUv4t" value="true" />
                 <node concept="3uibUv" id="3okjBs8jFJT" role="1tU5fm">
                   <ref role="3uigEE" to="ii13:3okjBs8glGa" resolve="InlineCommentManager" />
                 </node>
@@ -290,6 +291,7 @@
                 <node concept="3cpWs8" id="3okjBs8jCER" role="3cqZAp">
                   <node concept="3cpWsn" id="3okjBs8jCES" role="3cpWs9">
                     <property role="TrG5h" value="inlineCommentManager" />
+                    <property role="3TUv4t" value="true" />
                     <node concept="3uibUv" id="3okjBs8jCEG" role="1tU5fm">
                       <ref role="3uigEE" to="ii13:3okjBs8glGa" resolve="InlineCommentManager" />
                     </node>
@@ -311,6 +313,7 @@
                 <node concept="3cpWs8" id="3okjBs8mbaA" role="3cqZAp">
                   <node concept="3cpWsn" id="3okjBs8mbaB" role="3cpWs9">
                     <property role="TrG5h" value="inlineComponent" />
+                    <property role="3TUv4t" value="true" />
                     <node concept="3uibUv" id="3okjBs8mbal" role="1tU5fm">
                       <ref role="3uigEE" to="dxuu:~JComponent" resolve="JComponent" />
                     </node>

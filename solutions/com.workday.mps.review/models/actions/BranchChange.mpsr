@@ -117,6 +117,7 @@
       <node concept="3Tm1VV" id="7Ndzh9v4Kar" role="1B3o_S" />
       <node concept="37vLTG" id="7Ndzh9v4KY9" role="3clF46">
         <property role="TrG5h" value="branchName" />
+        <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="7Ndzh9v4KY8" role="1tU5fm" />
       </node>
     </node>

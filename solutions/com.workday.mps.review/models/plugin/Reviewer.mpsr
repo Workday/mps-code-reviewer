@@ -242,6 +242,7 @@
         <node concept="3cpWs8" id="1KDc5EfHWer" role="3cqZAp">
           <node concept="3cpWsn" id="1KDc5EfHWes" role="3cpWs9">
             <property role="TrG5h" value="group" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="1KDc5EfHWet" role="1tU5fm">
               <ref role="3uigEE" to="qkt:~DefaultActionGroup" resolve="DefaultActionGroup" />
             </node>
@@ -298,6 +299,7 @@
         <node concept="3cpWs8" id="1KDc5EfHWf8" role="3cqZAp">
           <node concept="3cpWsn" id="1KDc5EfHWf9" role="3cpWs9">
             <property role="TrG5h" value="toolbar" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="1KDc5EfHWfa" role="1tU5fm">
               <ref role="3uigEE" to="dxuu:~JComponent" resolve="JComponent" />
             </node>

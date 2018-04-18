@@ -408,6 +408,7 @@
     <node concept="3clFbW" id="57bl67CHysz" role="jymVt">
       <node concept="37vLTG" id="__fp3coHcw" role="3clF46">
         <property role="TrG5h" value="project" />
+        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="__fp3coTJU" role="1tU5fm">
           <ref role="3uigEE" to="4nm9:~Project" resolve="Project" />
         </node>
@@ -427,6 +428,7 @@
         <node concept="3cpWs8" id="__fp3coU_6" role="3cqZAp">
           <node concept="3cpWsn" id="__fp3coU_7" role="3cpWs9">
             <property role="TrG5h" value="currentRepository" />
+            <property role="3TUv4t" value="true" />
             <node concept="3uibUv" id="__fp3coU_3" role="1tU5fm">
               <ref role="3uigEE" to="5mlj:~GitRepository" resolve="GitRepository" />
             </node>
