@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:a13717ec-0f28-4c83-aaaa-0b10931768b8(com.workday.mps.review.plugin)" content="root">
   <persistence version="9" />
-  <imports />
+  <imports>
+    <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" implicit="true" />
+  </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
@@ -20,6 +22,9 @@
         <child id="1083245396908" name="enumConstant" index="Qtgdg" />
       </concept>
       <concept id="1083245299891" name="jetbrains.mps.baseLanguage.structure.EnumConstantDeclaration" flags="ig" index="QsSxf" />
+      <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
+        <child id="1145553007750" name="creator" index="2ShVmc" />
+      </concept>
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
@@ -57,6 +62,9 @@
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
       <concept id="1068580123140" name="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" flags="ig" index="3clFbW" />
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
@@ -65,12 +73,16 @@
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
+      <concept id="1212685548494" name="jetbrains.mps.baseLanguage.structure.ClassCreator" flags="nn" index="1pGfFk" />
       <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
         <property id="521412098689998745" name="nonStatic" index="2bfB8j" />
         <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
       </concept>
       <concept id="7812454656619025416" name="jetbrains.mps.baseLanguage.structure.MethodDeclaration" flags="ng" index="1rXfSm">
         <property id="8355037393041754995" name="isNative" index="2aFKle" />
+      </concept>
+      <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
+        <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
@@ -97,12 +109,40 @@
       <node concept="Xl_RD" id="24VqSbHfL20" role="37wK5m">
         <property role="Xl_RC" value="opened the pull request" />
       </node>
+      <node concept="2ShNRf" id="2uD4oyGig24" role="37wK5m">
+        <node concept="1pGfFk" id="2uD4oyGih2r" role="2ShVmc">
+          <ref role="37wK5l" to="z60i:~Color.&lt;init&gt;(int,int,int)" resolve="Color" />
+          <node concept="3cmrfG" id="6RM_ByP9MTD" role="37wK5m">
+            <property role="3cmrfH" value="74" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP9Ndr" role="37wK5m">
+            <property role="3cmrfH" value="103" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP9Nxl" role="37wK5m">
+            <property role="3cmrfH" value="133" />
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="QsSxf" id="24VqSbHfJik" role="Qtgdg">
       <property role="TrG5h" value="MERGED" />
       <ref role="37wK5l" node="24VqSbHfIQO" resolve="BitbucketActionType" />
       <node concept="Xl_RD" id="24VqSbHfL_X" role="37wK5m">
         <property role="Xl_RC" value="merged the pull request" />
+      </node>
+      <node concept="2ShNRf" id="6RM_ByP9eIe" role="37wK5m">
+        <node concept="1pGfFk" id="6RM_ByP9Bpk" role="2ShVmc">
+          <ref role="37wK5l" to="z60i:~Color.&lt;init&gt;(int,int,int)" resolve="Color" />
+          <node concept="3cmrfG" id="6RM_ByP9BEF" role="37wK5m">
+            <property role="3cmrfH" value="20" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP9BWJ" role="37wK5m">
+            <property role="3cmrfH" value="137" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP9CvD" role="37wK5m">
+            <property role="3cmrfH" value="44" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="QsSxf" id="24VqSbHfJpa" role="Qtgdg">
@@ -111,12 +151,40 @@
       <node concept="Xl_RD" id="24VqSbHfMa0" role="37wK5m">
         <property role="Xl_RC" value="marked needs work" />
       </node>
+      <node concept="2ShNRf" id="2uD4oyGiotY" role="37wK5m">
+        <node concept="1pGfFk" id="2uD4oyGiotZ" role="2ShVmc">
+          <ref role="37wK5l" to="z60i:~Color.&lt;init&gt;(int,int,int)" resolve="Color" />
+          <node concept="3cmrfG" id="6RM_ByP9CVL" role="37wK5m">
+            <property role="3cmrfH" value="246" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP9Dhn" role="37wK5m">
+            <property role="3cmrfH" value="146" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP9DBd" role="37wK5m">
+            <property role="3cmrfH" value="50" />
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="QsSxf" id="24VqSbHfKdg" role="Qtgdg">
       <property role="TrG5h" value="APPROVED" />
       <ref role="37wK5l" node="24VqSbHfIQO" resolve="BitbucketActionType" />
       <node concept="Xl_RD" id="24VqSbHfMHX" role="37wK5m">
         <property role="Xl_RC" value="marked approved" />
+      </node>
+      <node concept="2ShNRf" id="2uD4oyGiovc" role="37wK5m">
+        <node concept="1pGfFk" id="2uD4oyGiovd" role="2ShVmc">
+          <ref role="37wK5l" to="z60i:~Color.&lt;init&gt;(int,int,int)" resolve="Color" />
+          <node concept="3cmrfG" id="6RM_ByP9OSz" role="37wK5m">
+            <property role="3cmrfH" value="20" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP9Pcl" role="37wK5m">
+            <property role="3cmrfH" value="137" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP9Pwf" role="37wK5m">
+            <property role="3cmrfH" value="44" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="QsSxf" id="24VqSbHfKkG" role="Qtgdg">
@@ -125,12 +193,40 @@
       <node concept="Xl_RD" id="24VqSbHfNi0" role="37wK5m">
         <property role="Xl_RC" value="marked unapproved" />
       </node>
+      <node concept="2ShNRf" id="2uD4oyGipq1" role="37wK5m">
+        <node concept="1pGfFk" id="2uD4oyGipq2" role="2ShVmc">
+          <ref role="37wK5l" to="z60i:~Color.&lt;init&gt;(int,int,int)" resolve="Color" />
+          <node concept="3cmrfG" id="6RM_ByP92gN" role="37wK5m">
+            <property role="3cmrfH" value="208" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP92$B" role="37wK5m">
+            <property role="3cmrfH" value="65" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByP92Sx" role="37wK5m">
+            <property role="3cmrfH" value="55" />
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="QsSxf" id="4dp0YvduhNn" role="Qtgdg">
       <property role="TrG5h" value="RESCOPED" />
       <ref role="37wK5l" node="24VqSbHfIQO" resolve="BitbucketActionType" />
       <node concept="Xl_RD" id="4dp0YvdujOm" role="37wK5m">
         <property role="Xl_RC" value="updated the pull request" />
+      </node>
+      <node concept="2ShNRf" id="2uD4oyGipIs" role="37wK5m">
+        <node concept="1pGfFk" id="2uD4oyGiqIN" role="2ShVmc">
+          <ref role="37wK5l" to="z60i:~Color.&lt;init&gt;(int,int,int)" resolve="Color" />
+          <node concept="3cmrfG" id="6RM_ByPa43n" role="37wK5m">
+            <property role="3cmrfH" value="246" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByPa4n9" role="37wK5m">
+            <property role="3cmrfH" value="195" />
+          </node>
+          <node concept="3cmrfG" id="6RM_ByPa4Fb" role="37wK5m">
+            <property role="3cmrfH" value="66" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="24VqSbHfIga" role="jymVt" />
@@ -141,6 +237,16 @@
       <property role="3TUv4t" value="true" />
       <node concept="17QB3L" id="24VqSbHfN_Y" role="1tU5fm" />
       <node concept="3Tm6S6" id="24VqSbHfNIH" role="1B3o_S" />
+    </node>
+    <node concept="312cEg" id="2uD4oyGidBr" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="displayColor" />
+      <property role="3TUv4t" value="true" />
+      <node concept="3Tm6S6" id="2uD4oyGidcQ" role="1B3o_S" />
+      <node concept="3uibUv" id="2uD4oyGidAC" role="1tU5fm">
+        <ref role="3uigEE" to="z60i:~Color" resolve="Color" />
+      </node>
     </node>
     <node concept="2tJIrI" id="24VqSbHfNJq" role="jymVt" />
     <node concept="3Tm1VV" id="24VqSbHfHSU" role="1B3o_S" />
@@ -160,11 +266,31 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="2uD4oyGibCM" role="3cqZAp">
+          <node concept="37vLTI" id="2uD4oyGieLU" role="3clFbG">
+            <node concept="37vLTw" id="2uD4oyGifpL" role="37vLTx">
+              <ref role="3cqZAo" node="2uD4oyGiaLO" resolve="displayColor" />
+            </node>
+            <node concept="2OqwBi" id="2uD4oyGibTo" role="37vLTJ">
+              <node concept="Xjq3P" id="2uD4oyGibCK" role="2Oq$k0" />
+              <node concept="2OwXpG" id="2uD4oyGie5s" role="2OqNvi">
+                <ref role="2Oxat5" node="2uD4oyGidBr" resolve="displayColor" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="37vLTG" id="24VqSbHfJ8O" role="3clF46">
         <property role="TrG5h" value="displayName" />
         <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="24VqSbHfJ8N" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="2uD4oyGiaLO" role="3clF46">
+        <property role="TrG5h" value="displayColor" />
+        <property role="3TUv4t" value="true" />
+        <node concept="3uibUv" id="2uD4oyGibak" role="1tU5fm">
+          <ref role="3uigEE" to="z60i:~Color" resolve="Color" />
+        </node>
       </node>
       <node concept="3Tm6S6" id="24VqSbHfNiH" role="1B3o_S" />
     </node>
@@ -187,6 +313,28 @@
       </node>
       <node concept="3Tm1VV" id="24VqSbHi9kn" role="1B3o_S" />
       <node concept="17QB3L" id="24VqSbHi9zO" role="3clF45" />
+    </node>
+    <node concept="2tJIrI" id="2uD4oyGitKv" role="jymVt" />
+    <node concept="3clFb_" id="2uD4oyGiuLW" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="getDisplayColor" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="true" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="2uD4oyGiuLZ" role="3clF47">
+        <node concept="3cpWs6" id="2uD4oyGiviT" role="3cqZAp">
+          <node concept="2OqwBi" id="2uD4oyGiw53" role="3cqZAk">
+            <node concept="Xjq3P" id="2uD4oyGiv$b" role="2Oq$k0" />
+            <node concept="2OwXpG" id="2uD4oyGiwzR" role="2OqNvi">
+              <ref role="2Oxat5" node="2uD4oyGidBr" resolve="displayColor" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="2uD4oyGiu0A" role="1B3o_S" />
+      <node concept="3uibUv" id="2uD4oyGiuL2" role="3clF45">
+        <ref role="3uigEE" to="z60i:~Color" resolve="Color" />
+      </node>
     </node>
   </node>
 </model>

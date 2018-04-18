@@ -1422,6 +1422,19 @@
                                 </node>
                               </node>
                             </node>
+                            <node concept="3clFbF" id="2uD4oyGli8B" role="3cqZAp">
+                              <node concept="2OqwBi" id="2uD4oyGli8C" role="3clFbG">
+                                <node concept="37vLTw" id="2uD4oyGli8D" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="4dp0Yvdya7G" resolve="commentInputArea" />
+                                </node>
+                                <node concept="liA8E" id="2uD4oyGli8E" role="2OqNvi">
+                                  <ref role="37wK5l" to="r791:~JTextComponent.setText(java.lang.String):void" resolve="setText" />
+                                  <node concept="Xl_RD" id="2uD4oyGli8F" role="37wK5m">
+                                    <property role="Xl_RC" value="" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
                           </node>
                           <node concept="1Wc70l" id="4dp0YvdL0CI" role="3clFbw">
                             <node concept="3y3z36" id="4dp0YvdL2p0" role="3uHU7B">
@@ -1533,6 +1546,19 @@
                                     <node concept="37vLTw" id="4dp0YvdJfED" role="37wK5m">
                                       <ref role="3cqZAo" node="4dp0YvdDklx" resolve="currentlySelectedNode" />
                                     </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="3clFbF" id="2uD4oyGlfx7" role="3cqZAp">
+                              <node concept="2OqwBi" id="2uD4oyGlgJf" role="3clFbG">
+                                <node concept="37vLTw" id="2uD4oyGlgj4" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="4dp0Yvdya7G" resolve="commentInputArea" />
+                                </node>
+                                <node concept="liA8E" id="2uD4oyGlhp9" role="2OqNvi">
+                                  <ref role="37wK5l" to="r791:~JTextComponent.setText(java.lang.String):void" resolve="setText" />
+                                  <node concept="Xl_RD" id="2uD4oyGlhRA" role="37wK5m">
+                                    <property role="Xl_RC" value="" />
                                   </node>
                                 </node>
                               </node>
@@ -2252,7 +2278,7 @@
             </node>
             <node concept="liA8E" id="6hum7g6MncJ" role="2OqNvi">
               <ref role="37wK5l" to="z60i:~Container.add(java.awt.Component):java.awt.Component" resolve="add" />
-              <node concept="37vLTw" id="__fp3cs_NN" role="37wK5m">
+              <node concept="37vLTw" id="5jaFXd_Bd3h" role="37wK5m">
                 <ref role="3cqZAo" node="__fp3csfnx" resolve="stateLabelPanel" />
               </node>
             </node>
@@ -2585,13 +2611,13 @@
                 <node concept="1pGfFk" id="__fp3cl556" role="2ShVmc">
                   <ref role="37wK5l" to="z60i:~Color.&lt;init&gt;(float,float,float)" resolve="Color" />
                   <node concept="2$xPTn" id="__fp3cl5WE" role="37wK5m">
-                    <property role="2$xPTl" value="0.96f" />
+                    <property role="2$xPTl" value="0.95f" />
                   </node>
                   <node concept="2$xPTn" id="__fp3cl734" role="37wK5m">
-                    <property role="2$xPTl" value="0.96f" />
+                    <property role="2$xPTl" value="0.95f" />
                   </node>
                   <node concept="2$xPTn" id="__fp3cl7Ib" role="37wK5m">
-                    <property role="2$xPTl" value="0.96f" />
+                    <property role="2$xPTl" value="0.95f" />
                   </node>
                 </node>
               </node>

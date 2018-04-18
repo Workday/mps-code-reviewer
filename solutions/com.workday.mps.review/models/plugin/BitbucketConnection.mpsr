@@ -2223,6 +2223,28 @@
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
     </node>
+    <node concept="2tJIrI" id="3LQpZV9_Dfa" role="jymVt" />
+    <node concept="3clFb_" id="3LQpZV9_HL7" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="getConfig" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="3LQpZV9_HLa" role="3clF47">
+        <node concept="3cpWs6" id="3LQpZV9_JXv" role="3cqZAp">
+          <node concept="2OqwBi" id="3LQpZV9_Kkt" role="3cqZAk">
+            <node concept="Xjq3P" id="3LQpZV9_K4G" role="2Oq$k0" />
+            <node concept="2OwXpG" id="3LQpZV9_MhY" role="2OqNvi">
+              <ref role="2Oxat5" node="78s6gAknWJ0" resolve="config" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tmbuc" id="3LQpZV9_FuK" role="1B3o_S" />
+      <node concept="3uibUv" id="3LQpZV9_HCN" role="3clF45">
+        <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="4dp0Yvdvc6l" role="jymVt" />
     <node concept="3clFb_" id="FcpLTGXQA2" role="jymVt">
       <property role="TrG5h" value="nextRequestId" />
