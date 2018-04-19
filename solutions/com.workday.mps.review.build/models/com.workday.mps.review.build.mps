@@ -435,25 +435,6 @@
             <ref role="3bR37D" node="NvAZPok1$i" resolve="com.workday.mps.review.git" />
           </node>
         </node>
-        <node concept="1SiIV0" id="NvAZPok1Aq" role="3bR37C">
-          <node concept="1BurEX" id="NvAZPok1Ar" role="1SiIV1">
-            <node concept="398BVA" id="NvAZPok1Al" role="1BurEY">
-              <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
-              <node concept="2Ry0Ak" id="NvAZPok1Am" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="NvAZPok1An" role="2Ry0An">
-                  <property role="2Ry0Am" value="com.workday.mps.review" />
-                  <node concept="2Ry0Ak" id="NvAZPok1Ao" role="2Ry0An">
-                    <property role="2Ry0Am" value="lib" />
-                    <node concept="2Ry0Ak" id="NvAZPok1Ap" role="2Ry0An">
-                      <property role="2Ry0Am" value="gson-2.8.0.jar" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="1SiIV0" id="NvAZPok1S8" role="3bR37C">
           <node concept="3bR9La" id="NvAZPok1S9" role="1SiIV1">
             <property role="3bR36h" value="true" />
@@ -518,6 +499,25 @@
           <node concept="3bR9La" id="4dp0YvdNW$2" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4nMF5a0Wj$u" role="3bR37C">
+          <node concept="1BurEX" id="4nMF5a0Wj$v" role="1SiIV1">
+            <node concept="398BVA" id="4nMF5a0Wj$p" role="1BurEY">
+              <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
+              <node concept="2Ry0Ak" id="4nMF5a0Wj$q" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4nMF5a0Wj$r" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.workday.mps.review" />
+                  <node concept="2Ry0Ak" id="4nMF5a0Wj$s" role="2Ry0An">
+                    <property role="2Ry0Am" value="lib" />
+                    <node concept="2Ry0Ak" id="4nMF5a0Wj$t" role="2Ry0An">
+                      <property role="2Ry0Am" value="gson-2.8.2.jar" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>

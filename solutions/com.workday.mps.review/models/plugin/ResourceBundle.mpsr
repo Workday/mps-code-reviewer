@@ -54,7 +54,7 @@
     <node concept="3MtHw9" id="3LQpZV9_kli" role="3MtHw3">
       <property role="3MtHw8" value=" " />
       <property role="TrG5h" value="TestPullRequestId" />
-      <property role="3MtHw7" value="Pull Request ID" />
+      <property role="3MtHw7" value="Pull Request ID Override (All requests will be against this review)" />
     </node>
   </node>
 </model>

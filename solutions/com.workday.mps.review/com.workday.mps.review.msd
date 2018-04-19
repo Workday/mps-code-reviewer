@@ -8,12 +8,13 @@
       <sourceRoot location="gson-2.8.0.jar" />
       <sourceRoot location="okhttp-3.10.0.jar" />
       <sourceRoot location="okio-1.14.0.jar" />
+      <sourceRoot location="gson-2.8.2.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="${module}/lib/gson-2.8.0.jar" />
     <stubModelEntry path="${module}/lib/okhttp-3.10.0.jar" />
     <stubModelEntry path="${module}/lib/okio-1.14.0.jar" />
+    <stubModelEntry path="${module}/lib/gson-2.8.2.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
