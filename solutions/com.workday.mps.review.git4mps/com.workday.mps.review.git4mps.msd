@@ -13,8 +13,8 @@
     <facet type="ideaPlugin" pluginId="Git4Idea" />
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="${module}/lib/git4idea-rt.jar" />
-    <stubModelEntry path="${module}/lib/git4idea.jar" />
+    <stubModelEntry path="${mps_home}/plugins/git4idea/lib/git4idea-rt.jar" />
+    <stubModelEntry path="${mps_home}/plugins/git4idea/lib/git4idea.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
