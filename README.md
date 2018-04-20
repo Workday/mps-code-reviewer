@@ -1,4 +1,4 @@
-# mps-code-review
+# MPS Code Reviewer Plugin
 
 A code review tool for MPS providing basic review interaction, in-line comment viewing, and node-specific comments.
 
