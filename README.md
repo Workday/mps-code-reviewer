@@ -1,6 +1,6 @@
-# MPS Code Reviewer Plugin
+# MPS Code Review [![Build Status](https://travis-ci.org/Workday/mps-code-reviewer.svg?branch=master)](https://travis-ci.org/Workday/mps-code-reviewer)
 
-A code review tool for MPS providing basic review interaction, in-line comment viewing, and node-specific comments.
+A code review plugin for MPS providing basic review interaction, in-line comment viewing, and node-specific comments.
 
 ## Features
 
