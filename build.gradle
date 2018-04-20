@@ -119,10 +119,10 @@ task buildPlugin(group: 'MPS Build',
     println()
   }
 }
+
 defaultTasks 'build'
 assemble.dependsOn buildPlugin
-// TODO: run tests as part of build task
-build.dependsOn buildPlugin
+// TODO: run tests as part of check
 
 void runAnt(Object buildfile, String... targets) {
     exec 'BUILD FAILED', ['ant', '-buildfile', buildfile, *targets] as Object[]
