@@ -33,11 +33,12 @@ Note: Providing Pull Request ID overrides all requests to work with the specifie
 
 ## Deployment
 
-Running `gw build` will build the MPS plugin zip which, upon completion, can be found in 
+Running `gw build` will build the following two MPS plugins as zip files:
 ```
 dist/build/artifacts/reviewPlugin/com.workday.yp.review.zip
+dist/build/artifacts/reviewPlugin/com.workday.yp.review.git.zip
 ```
-This can be installed as a plugin in MPS.
+These two plugins can then be installed into MPS.
 
 ## Built With
 
