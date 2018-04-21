@@ -342,7 +342,7 @@
                             <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
                           </node>
                           <node concept="liA8E" id="4Ew7qBDgcI6" role="2OqNvi">
-                            <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
+                            <ref role="37wK5l" to="hr4p:~GitRemoteBranch.getNameForRemoteOperations():java.lang.String" resolve="getNameForRemoteOperations" />
                           </node>
                         </node>
                       </node>
@@ -431,7 +431,7 @@
                                 <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
                               </node>
                               <node concept="liA8E" id="4Ew7qBDgd$e" role="2OqNvi">
-                                <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
+                                <ref role="37wK5l" to="hr4p:~GitRemoteBranch.getNameForRemoteOperations():java.lang.String" resolve="getNameForRemoteOperations" />
                               </node>
                             </node>
                           </node>
