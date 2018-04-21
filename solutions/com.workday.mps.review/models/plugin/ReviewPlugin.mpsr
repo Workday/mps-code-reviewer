@@ -427,8 +427,11 @@
           <node concept="1rXfSq" id="2uD4oyGl0SQ" role="3clFbG">
             <ref role="37wK5l" node="5jaFXd_xWMC" resolve="initConnection" />
             <node concept="2YIFZM" id="2uD4oyGl1s8" role="37wK5m">
-              <ref role="37wK5l" node="3e72Pa5IA1n" resolve="getInstance" />
+              <ref role="37wK5l" node="3e72Pa5IA1n" resolve="forProject" />
               <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="ReviewPreferences" />
+              <node concept="37vLTw" id="1jOf_cBgU00" role="37wK5m">
+                <ref role="3cqZAo" node="4GdANuvXtP2" resolve="project" />
+              </node>
             </node>
           </node>
         </node>
@@ -624,8 +627,11 @@
         <node concept="3clFbF" id="3e72Pa5IXE4" role="3cqZAp">
           <node concept="2OqwBi" id="3e72Pa5IYbu" role="3clFbG">
             <node concept="2YIFZM" id="3e72Pa5IY1k" role="2Oq$k0">
-              <ref role="37wK5l" node="3e72Pa5IA1n" resolve="getInstance" />
+              <ref role="37wK5l" node="3e72Pa5IA1n" resolve="forProject" />
               <ref role="1Pybhc" node="3vXSZsAPOLr" resolve="ReviewPreferences" />
+              <node concept="37vLTw" id="1jOf_cBh01f" role="37wK5m">
+                <ref role="3cqZAo" node="4GdANuvXtP2" resolve="project" />
+              </node>
             </node>
             <node concept="liA8E" id="3e72Pa5IYpw" role="2OqNvi">
               <ref role="37wK5l" node="3e72Pa5ICUn" resolve="addConfigListener" />
@@ -1112,7 +1118,6 @@
                         </node>
                       </node>
                     </node>
-                    <node concept="3clFbH" id="43gPW_apl_G" role="3cqZAp" />
                     <node concept="3SKdUt" id="43gPW_apl_H" role="3cqZAp">
                       <node concept="3SKdUq" id="43gPW_apl_I" role="3SKWNk">
                         <property role="3SKdUp" value="Make asynchronous call to backend for review details" />
@@ -1492,13 +1497,10 @@
         <node concept="3clFbF" id="43gPW_apn4$" role="3cqZAp">
           <node concept="2YIFZM" id="43gPW_apnf1" role="3clFbG">
             <ref role="1Pybhc" to="zn9m:~Disposer" resolve="Disposer" />
-            <ref role="37wK5l" to="zn9m:~Disposer.register(com.intellij.openapi.Disposable,com.intellij.openapi.Disposable,java.lang.String):void" resolve="register" />
+            <ref role="37wK5l" to="zn9m:~Disposer.register(com.intellij.openapi.Disposable,com.intellij.openapi.Disposable):void" resolve="register" />
             <node concept="Xjq3P" id="43gPW_apnsy" role="37wK5m" />
             <node concept="37vLTw" id="43gPW_apnDq" role="37wK5m">
               <ref role="3cqZAo" node="43gPW_aomb9" resolve="listenerManager" />
-            </node>
-            <node concept="Xl_RD" id="43gPW_apnWd" role="37wK5m">
-              <property role="Xl_RC" value="ReviewPlugin.listenerManager" />
             </node>
           </node>
         </node>

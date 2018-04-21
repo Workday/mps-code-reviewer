@@ -49,6 +49,7 @@
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
@@ -68,6 +69,10 @@
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
+      <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
+        <child id="1068580123160" name="condition" index="3clFbw" />
+        <child id="1068580123161" name="ifTrue" index="3clFbx" />
+      </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
@@ -90,6 +95,11 @@
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
+      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
+        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
+        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
+      </concept>
+      <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
@@ -463,13 +473,26 @@
     </node>
     <node concept="2xpOpl" id="7Ch0QDHzxNG" role="uR5co">
       <node concept="3clFbS" id="7Ch0QDHzxNH" role="2VODD2">
-        <node concept="3clFbF" id="3yDmncoAIlA" role="3cqZAp">
-          <node concept="2YIFZM" id="3yDmncoAIn6" role="3clFbG">
-            <ref role="37wK5l" to="zn9m:~Disposer.dispose(com.intellij.openapi.Disposable):void" resolve="dispose" />
-            <ref role="1Pybhc" to="zn9m:~Disposer" resolve="Disposer" />
-            <node concept="2OqwBi" id="3yDmncoAIyt" role="37wK5m">
-              <node concept="2WthIp" id="3yDmncoAIob" role="2Oq$k0" />
-              <node concept="2BZ7hE" id="3yDmncoAIIl" role="2OqNvi">
+        <node concept="3clFbJ" id="1jOf_cBiYto" role="3cqZAp">
+          <node concept="3clFbS" id="1jOf_cBiYtq" role="3clFbx">
+            <node concept="3clFbF" id="3yDmncoAIlA" role="3cqZAp">
+              <node concept="2YIFZM" id="3yDmncoAIn6" role="3clFbG">
+                <ref role="37wK5l" to="zn9m:~Disposer.dispose(com.intellij.openapi.Disposable):void" resolve="dispose" />
+                <ref role="1Pybhc" to="zn9m:~Disposer" resolve="Disposer" />
+                <node concept="2OqwBi" id="3yDmncoAIyt" role="37wK5m">
+                  <node concept="2WthIp" id="3yDmncoAIob" role="2Oq$k0" />
+                  <node concept="2BZ7hE" id="3yDmncoAIIl" role="2OqNvi">
+                    <ref role="2WH_rO" node="7Ndzh9v56Df" resolve="plugin" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3y3z36" id="1jOf_cBiZbz" role="3clFbw">
+            <node concept="10Nm6u" id="1jOf_cBiZbP" role="3uHU7w" />
+            <node concept="2OqwBi" id="1jOf_cBiYEq" role="3uHU7B">
+              <node concept="2WthIp" id="1jOf_cBiYva" role="2Oq$k0" />
+              <node concept="2BZ7hE" id="1jOf_cBiYQ3" role="2OqNvi">
                 <ref role="2WH_rO" node="7Ndzh9v56Df" resolve="plugin" />
               </node>
             </node>
