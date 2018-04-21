@@ -2,12 +2,12 @@
 <model ref="r:ec7bafde-32c3-436f-8b07-0d22626aed52(com.workday.mps.review.git.plugin)" content="root">
   <persistence version="9" />
   <imports>
-    <import index="hr4p" ref="b435930b-30fc-42f3-9225-ec36209b7a33/java:git4idea(com.workday.mps.review.git4mps/)" implicit="true" />
+    <import index="hr4p" ref="b435930b-30fc-42f3-9225-ec36209b7a33/java:git4idea(git4mps/)" implicit="true" />
     <import index="4nm9" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.project(MPS.IDEA/)" implicit="true" />
     <import index="mhfm" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/java:org.jetbrains.annotations(Annotations/)" implicit="true" />
     <import index="4b2m" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.util.messages(MPS.IDEA/)" implicit="true" />
-    <import index="5mlj" ref="b435930b-30fc-42f3-9225-ec36209b7a33/java:git4idea.repo(com.workday.mps.review.git4mps/)" implicit="true" />
-    <import index="rfyv" ref="b435930b-30fc-42f3-9225-ec36209b7a33/java:git4idea.branch(com.workday.mps.review.git4mps/)" implicit="true" />
+    <import index="5mlj" ref="b435930b-30fc-42f3-9225-ec36209b7a33/java:git4idea.repo(git4mps/)" implicit="true" />
+    <import index="rfyv" ref="b435930b-30fc-42f3-9225-ec36209b7a33/java:git4idea.branch(git4mps/)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>

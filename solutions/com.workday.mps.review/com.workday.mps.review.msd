@@ -60,8 +60,8 @@
     <module reference="39100436-4455-4b98-b3a6-4512d25abac4(com.workday.mps.flux)" version="0" />
     <module reference="301737e2-0a75-4665-a1a3-af0218114a24(com.workday.mps.review)" version="0" />
     <module reference="b7b6b13b-3ca1-4444-85ae-5f7f691136b9(com.workday.mps.review.git)" version="0" />
-    <module reference="b435930b-30fc-42f3-9225-ec36209b7a33(com.workday.mps.review.git4mps)" version="0" />
     <module reference="fb4f8661-54a7-4583-ba4f-fad87946ade2(dependencies)" version="0" />
+    <module reference="b435930b-30fc-42f3-9225-ec36209b7a33(git4mps)" version="0" />
   </dependencyVersions>
 </solution>
 

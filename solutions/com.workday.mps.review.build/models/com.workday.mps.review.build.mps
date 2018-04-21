@@ -256,11 +256,11 @@
       <node concept="3981dG" id="7SqVNqmc0B5" role="39821P">
         <node concept="3_J27D" id="7SqVNqmc0B6" role="Nbhlr">
           <node concept="3Mxwew" id="7SqVNqmc0B7" role="3MwsjC">
-            <property role="3MwjfP" value="com.workday.mps.review.git.zip" />
+            <property role="3MwjfP" value="git4mps.zip" />
           </node>
         </node>
         <node concept="m$_wl" id="7SqVNqmc0B8" role="39821P">
-          <ref role="m_rDy" node="24ZpFMHUaDd" resolve="com.workday.mps.review.git" />
+          <ref role="m_rDy" node="24ZpFMHUaDd" resolve="git4mps" />
           <node concept="398223" id="7SqVNqmc0HO" role="39821P">
             <node concept="3_J27D" id="7SqVNqmc0HP" role="Nbhlr">
               <node concept="3Mxwew" id="7SqVNqmc0HW" role="3MwsjC">
@@ -268,7 +268,7 @@
               </node>
             </node>
             <node concept="L2wRC" id="7SqVNqmc0Jt" role="39821P">
-              <ref role="L2wRA" node="7SqVNqmbZUB" resolve="com.workday.mps.review.git4mps" />
+              <ref role="L2wRA" node="7SqVNqmbZUB" resolve="git4mps" />
               <node concept="3yLZsm" id="386y71hfagv" role="3yL2VB">
                 <property role="3yLZsk" value="/plugins/git4idea/lib/git4idea-rt.jar" />
                 <node concept="398BVA" id="386y71hfaj_" role="3yLZsn">
@@ -312,11 +312,51 @@
     </node>
     <node concept="10PD9b" id="3c3vDUluHHH" role="10PD9s" />
     <node concept="3b7kt6" id="3c3vDUluIVL" role="10PD9s" />
+    <node concept="m$_wf" id="24ZpFMHUaDd" role="3989C9">
+      <property role="m$_wk" value="git4mps" />
+      <node concept="3_J27D" id="24ZpFMHUaDh" role="m$_yQ">
+        <node concept="3Mxwew" id="24ZpFMHUaDi" role="3MwsjC">
+          <property role="3MwjfP" value="Git Integration - MPS Stubs" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="24ZpFMHUaDj" role="m_cZH">
+        <node concept="3Mxwew" id="24ZpFMHUaDk" role="3MwsjC">
+          <property role="3MwjfP" value="git4mps" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="24ZpFMHUaDl" role="m$_w8">
+        <node concept="3Mxwew" id="24ZpFMHUaDm" role="3MwsjC">
+          <property role="3MwjfP" value="1.0.0" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="24ZpFMHUaDn" role="3s6cr7">
+        <node concept="3Mxwew" id="24ZpFMHUaDo" role="3MwsjC">
+          <property role="3MwjfP" value="MPS BaseLanguage stubs for git4idea IDEA plugin. This is necessary for MPS plugins to work with the Git Integration." />
+        </node>
+      </node>
+      <node concept="m$_yC" id="24ZpFMHUaDq" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
+      </node>
+      <node concept="m$_yC" id="24ZpFMHUaDr" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:RJsmGEieyQ" resolve="jetbrains.mps.vcs" />
+      </node>
+      <node concept="m$_yC" id="7SqVNqmc1me" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:I6XuqGYf8K" resolve="Git4Idea" />
+      </node>
+      <node concept="m$_yB" id="7SqVNqmc0Ql" role="m$_yh">
+        <property role="1ZOk41" value="true" />
+        <ref role="m$_yA" node="7SqVNqmbZUB" resolve="git4mps" />
+      </node>
+      <node concept="2iUeEo" id="lCZbGfRXeR" role="2iVFfd">
+        <property role="2iUeEt" value="Workday" />
+        <property role="2iUeEu" value="https://www.workday.com/" />
+      </node>
+    </node>
     <node concept="m$_wf" id="7ZoWiKcez96" role="3989C9">
       <property role="m$_wk" value="com.workday.mps.review" />
       <node concept="3_J27D" id="7ZoWiKcez98" role="m$_yQ">
         <node concept="3Mxwew" id="7ZoWiKcez9x" role="3MwsjC">
-          <property role="3MwjfP" value="com.workday.mps.review" />
+          <property role="3MwjfP" value="MPS Code Review" />
         </node>
       </node>
       <node concept="3_J27D" id="7ZoWiKcez9a" role="m_cZH">
@@ -331,7 +371,7 @@
       </node>
       <node concept="3_J27D" id="7ZoWiKcezc5" role="3s6cr7">
         <node concept="3Mxwew" id="7ZoWiKcezc7" role="3MwsjC">
-          <property role="3MwjfP" value="MPS Code Review Plugin" />
+          <property role="3MwjfP" value="MPS code review plugin for interaction with pull requests. Provides basic review information, inline comment support, and more." />
         </node>
       </node>
       <node concept="2iUeEo" id="7ZoWiKcezcd" role="2iVFfd">
@@ -345,7 +385,7 @@
         <ref role="m$_y1" to="ffeo:RJsmGEieyQ" resolve="jetbrains.mps.vcs" />
       </node>
       <node concept="m$_yC" id="24ZpFMHUaIA" role="m$_yJ">
-        <ref role="m$_y1" node="24ZpFMHUaDd" resolve="com.workday.mps.review.git" />
+        <ref role="m$_y1" node="24ZpFMHUaDd" resolve="git4mps" />
       </node>
       <node concept="m$_yB" id="7SqVNqmc1gN" role="m$_yh">
         <ref role="m$_yA" node="3c3vDUlvEDO" resolve="com.workday.mps.flux" />
@@ -360,44 +400,84 @@
         <ref role="m$_yA" node="NvAZPok1Na" resolve="com.workday.mps.review.lang" />
       </node>
     </node>
-    <node concept="m$_wf" id="24ZpFMHUaDd" role="3989C9">
-      <property role="m$_wk" value="com.workday.mps.review.git" />
-      <node concept="3_J27D" id="24ZpFMHUaDh" role="m$_yQ">
-        <node concept="3Mxwew" id="24ZpFMHUaDi" role="3MwsjC">
-          <property role="3MwjfP" value="MPS BaseLanguage subs plugin for git4idea IntelliJ IDEA plugin" />
+    <node concept="1E1JtA" id="7SqVNqmbZUB" role="3989C9">
+      <property role="BnDLt" value="true" />
+      <property role="TrG5h" value="git4mps" />
+      <property role="3LESm3" value="b435930b-30fc-42f3-9225-ec36209b7a33" />
+      <property role="2GAjPV" value="true" />
+      <node concept="398BVA" id="7SqVNqmbZUC" role="3LF7KH">
+        <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
+        <node concept="2Ry0Ak" id="7SqVNqmbZUD" role="iGT6I">
+          <property role="2Ry0Am" value="solutions" />
+          <node concept="2Ry0Ak" id="7SqVNqmbZUE" role="2Ry0An">
+            <property role="2Ry0Am" value="git4mps" />
+            <node concept="2Ry0Ak" id="2_WcI2qoxAf" role="2Ry0An">
+              <property role="2Ry0Am" value="git4mps.msd" />
+            </node>
+          </node>
         </node>
       </node>
-      <node concept="3_J27D" id="24ZpFMHUaDj" role="m_cZH">
-        <node concept="3Mxwew" id="24ZpFMHUaDk" role="3MwsjC">
-          <property role="3MwjfP" value="com.workday.mps.review.git" />
+      <node concept="1SiIV0" id="7SqVNqmbZUG" role="3bR37C">
+        <node concept="3bR9La" id="7SqVNqmbZUH" role="1SiIV1">
+          <property role="3bR36h" value="false" />
+          <ref role="3bR37D" to="ffeo:44LXwdzyvTi" resolve="Annotations" />
         </node>
       </node>
-      <node concept="3_J27D" id="24ZpFMHUaDl" role="m$_w8">
-        <node concept="3Mxwew" id="24ZpFMHUaDm" role="3MwsjC">
-          <property role="3MwjfP" value="1.0.0" />
+      <node concept="1SiIV0" id="7SqVNqmbZUI" role="3bR37C">
+        <node concept="3bR9La" id="7SqVNqmbZUJ" role="1SiIV1">
+          <property role="3bR36h" value="false" />
+          <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
         </node>
       </node>
-      <node concept="3_J27D" id="24ZpFMHUaDn" role="3s6cr7">
-        <node concept="3Mxwew" id="24ZpFMHUaDo" role="3MwsjC">
-          <property role="3MwjfP" value="MPS BaseLanguage subs plugin for git4idea IntelliJ IDEA plugin" />
+      <node concept="1SiIV0" id="7SqVNqmbZUK" role="3bR37C">
+        <node concept="3bR9La" id="7SqVNqmbZUL" role="1SiIV1">
+          <property role="3bR36h" value="false" />
+          <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
         </node>
       </node>
-      <node concept="2iUeEo" id="24ZpFMHUaDp" role="2iVFfd">
-        <property role="2iUeEt" value="Workday" />
-        <property role="2iUeEu" value="https://www.workday.com/" />
+      <node concept="1SiIV0" id="1VZZCFrVOm3" role="3bR37C">
+        <node concept="1BurEX" id="1VZZCFrVOm4" role="1SiIV1">
+          <node concept="398BVA" id="1VZZCFrVOlU" role="1BurEY">
+            <ref role="398BVh" node="24ZpFMHU9es" resolve="mps_home" />
+            <node concept="2Ry0Ak" id="1VZZCFrVOlV" role="iGT6I">
+              <property role="2Ry0Am" value="plugins" />
+              <node concept="2Ry0Ak" id="1VZZCFrW21g" role="2Ry0An">
+                <property role="2Ry0Am" value="git4idea" />
+                <node concept="2Ry0Ak" id="1VZZCFrW21h" role="2Ry0An">
+                  <property role="2Ry0Am" value="lib" />
+                  <node concept="2Ry0Ak" id="1VZZCFrW21i" role="2Ry0An">
+                    <property role="2Ry0Am" value="git4idea-rt.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3yrxFa" id="1WYef1dBkhn" role="2gdwQb">
+            <ref role="3yrxFb" node="5ded7SEwYHh" />
+          </node>
+        </node>
       </node>
-      <node concept="m$_yC" id="24ZpFMHUaDq" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
-      </node>
-      <node concept="m$_yC" id="24ZpFMHUaDr" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:RJsmGEieyQ" resolve="jetbrains.mps.vcs" />
-      </node>
-      <node concept="m$_yC" id="7SqVNqmc1me" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:I6XuqGYf8K" resolve="Git4Idea" />
-      </node>
-      <node concept="m$_yB" id="7SqVNqmc0Ql" role="m$_yh">
-        <property role="1ZOk41" value="true" />
-        <ref role="m$_yA" node="7SqVNqmbZUB" resolve="com.workday.mps.review.git4mps" />
+      <node concept="1SiIV0" id="1VZZCFrVOme" role="3bR37C">
+        <node concept="1BurEX" id="1VZZCFrVOmf" role="1SiIV1">
+          <node concept="398BVA" id="1VZZCFrVOm5" role="1BurEY">
+            <ref role="398BVh" node="24ZpFMHU9es" resolve="mps_home" />
+            <node concept="2Ry0Ak" id="1VZZCFrVOm6" role="iGT6I">
+              <property role="2Ry0Am" value="plugins" />
+              <node concept="2Ry0Ak" id="1VZZCFrW25J" role="2Ry0An">
+                <property role="2Ry0Am" value="git4idea" />
+                <node concept="2Ry0Ak" id="1VZZCFrW25K" role="2Ry0An">
+                  <property role="2Ry0Am" value="lib" />
+                  <node concept="2Ry0Ak" id="1VZZCFrW25L" role="2Ry0An">
+                    <property role="2Ry0Am" value="git4idea.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3yrxFa" id="1WYef1dBkhX" role="2gdwQb">
+            <ref role="3yrxFb" node="5ded7SEwYN$" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="1E1JtA" id="3c3vDUlvEDO" role="3989C9">
@@ -629,7 +709,7 @@
       <node concept="1SiIV0" id="24ZpFMHUaBW" role="3bR37C">
         <node concept="3bR9La" id="24ZpFMHUaBX" role="1SiIV1">
           <property role="3bR36h" value="true" />
-          <ref role="3bR37D" node="7SqVNqmbZUB" resolve="com.workday.mps.review.git4mps" />
+          <ref role="3bR37D" node="7SqVNqmbZUB" resolve="git4mps" />
         </node>
       </node>
       <node concept="3rtmxn" id="7Uvm6D4BW1I" role="3bR31x">
@@ -720,86 +800,6 @@
                 <property role="2Ry0Am" value="com.workday.mps.review.lang" />
               </node>
             </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1E1JtA" id="7SqVNqmbZUB" role="3989C9">
-      <property role="BnDLt" value="true" />
-      <property role="TrG5h" value="com.workday.mps.review.git4mps" />
-      <property role="3LESm3" value="b435930b-30fc-42f3-9225-ec36209b7a33" />
-      <property role="2GAjPV" value="false" />
-      <node concept="398BVA" id="7SqVNqmbZUC" role="3LF7KH">
-        <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
-        <node concept="2Ry0Ak" id="7SqVNqmbZUD" role="iGT6I">
-          <property role="2Ry0Am" value="solutions" />
-          <node concept="2Ry0Ak" id="7SqVNqmbZUE" role="2Ry0An">
-            <property role="2Ry0Am" value="com.workday.mps.review.git4mps" />
-            <node concept="2Ry0Ak" id="7SqVNqmbZUF" role="2Ry0An">
-              <property role="2Ry0Am" value="com.workday.mps.review.git4mps.msd" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1SiIV0" id="7SqVNqmbZUG" role="3bR37C">
-        <node concept="3bR9La" id="7SqVNqmbZUH" role="1SiIV1">
-          <property role="3bR36h" value="false" />
-          <ref role="3bR37D" to="ffeo:44LXwdzyvTi" resolve="Annotations" />
-        </node>
-      </node>
-      <node concept="1SiIV0" id="7SqVNqmbZUI" role="3bR37C">
-        <node concept="3bR9La" id="7SqVNqmbZUJ" role="1SiIV1">
-          <property role="3bR36h" value="false" />
-          <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
-        </node>
-      </node>
-      <node concept="1SiIV0" id="7SqVNqmbZUK" role="3bR37C">
-        <node concept="3bR9La" id="7SqVNqmbZUL" role="1SiIV1">
-          <property role="3bR36h" value="false" />
-          <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
-        </node>
-      </node>
-      <node concept="1SiIV0" id="1VZZCFrVOm3" role="3bR37C">
-        <node concept="1BurEX" id="1VZZCFrVOm4" role="1SiIV1">
-          <node concept="398BVA" id="1VZZCFrVOlU" role="1BurEY">
-            <ref role="398BVh" node="24ZpFMHU9es" resolve="mps_home" />
-            <node concept="2Ry0Ak" id="1VZZCFrVOlV" role="iGT6I">
-              <property role="2Ry0Am" value="plugins" />
-              <node concept="2Ry0Ak" id="1VZZCFrW21g" role="2Ry0An">
-                <property role="2Ry0Am" value="git4idea" />
-                <node concept="2Ry0Ak" id="1VZZCFrW21h" role="2Ry0An">
-                  <property role="2Ry0Am" value="lib" />
-                  <node concept="2Ry0Ak" id="1VZZCFrW21i" role="2Ry0An">
-                    <property role="2Ry0Am" value="git4idea-rt.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3yrxFa" id="1WYef1dBkhn" role="2gdwQb">
-            <ref role="3yrxFb" node="5ded7SEwYHh" />
-          </node>
-        </node>
-      </node>
-      <node concept="1SiIV0" id="1VZZCFrVOme" role="3bR37C">
-        <node concept="1BurEX" id="1VZZCFrVOmf" role="1SiIV1">
-          <node concept="398BVA" id="1VZZCFrVOm5" role="1BurEY">
-            <ref role="398BVh" node="24ZpFMHU9es" resolve="mps_home" />
-            <node concept="2Ry0Ak" id="1VZZCFrVOm6" role="iGT6I">
-              <property role="2Ry0Am" value="plugins" />
-              <node concept="2Ry0Ak" id="1VZZCFrW25J" role="2Ry0An">
-                <property role="2Ry0Am" value="git4idea" />
-                <node concept="2Ry0Ak" id="1VZZCFrW25K" role="2Ry0An">
-                  <property role="2Ry0Am" value="lib" />
-                  <node concept="2Ry0Ak" id="1VZZCFrW25L" role="2Ry0An">
-                    <property role="2Ry0Am" value="git4idea.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3yrxFa" id="1WYef1dBkhX" role="2gdwQb">
-            <ref role="3yrxFb" node="5ded7SEwYN$" />
           </node>
         </node>
       </node>
