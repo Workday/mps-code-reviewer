@@ -521,7 +521,7 @@
                                   </node>
                                 </node>
                                 <node concept="liA8E" id="6j8xKyArFGw" role="2OqNvi">
-                                  <ref role="37wK5l" to="wyt6:~Class.getName():java.lang.String" resolve="getName" />
+                                  <ref role="37wK5l" to="wyt6:~Class.getSimpleName():java.lang.String" resolve="getSimpleName" />
                                 </node>
                               </node>
                               <node concept="Xl_RD" id="6j8xKyArFGx" role="3uHU7B">
@@ -617,7 +617,7 @@
                                   </node>
                                 </node>
                                 <node concept="liA8E" id="6j8xKyArPCK" role="2OqNvi">
-                                  <ref role="37wK5l" to="wyt6:~Class.getName():java.lang.String" resolve="getName" />
+                                  <ref role="37wK5l" to="wyt6:~Class.getSimpleName():java.lang.String" resolve="getSimpleName" />
                                 </node>
                               </node>
                               <node concept="Xl_RD" id="6j8xKyArPCL" role="3uHU7B">
