@@ -7,8 +7,8 @@
       <modulePath path="$PROJECT_DIR$/solutions/com.workday.mps.review.build.meta/com.workday.mps.review.build.meta.msd" folder="build" />
       <modulePath path="$PROJECT_DIR$/solutions/com.workday.mps.review.build/com.workday.mps.review.build.msd" folder="build" />
       <modulePath path="$PROJECT_DIR$/solutions/com.workday.mps.review.git/com.workday.review.git.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.workday.mps.review.git4mps/com.workday.mps.review.git4mps.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.workday.mps.review/com.workday.mps.review.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/git4mps/git4mps.msd" folder="" />
     </projectModules>
   </component>
 </project>

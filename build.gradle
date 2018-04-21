@@ -67,7 +67,7 @@ task copyGit4mpsCompileDependenciesToLib(type: Copy) {
   from {
     configurations.git4mpsCompile.resolve()
   }
-  into 'solutions/com.workday.mps.review.git4mps/lib'
+  into 'solutions/git4mps/lib'
 }
 copyGit4mpsCompileDependenciesToLib.mustRunAfter unzipMps
 
@@ -109,8 +109,19 @@ task generateBuildScripts(group: 'MPS Build',
   }
 }
 
+task buildPluginIncremental(group: 'MPS Build',
+                 description: 'Assembles the code reviewer plugin from generated source. Useful when working with MPS',
+                 dependsOn: generateBuildScripts) {
+  doLast {
+    println 'Building code reviewer plugin ===================================='
+    runAnt "${rootDir}/dist/reviewPlugin.xml", 'build'
+    println 'Code reviewer plugin has been successfully built ================='
+    println()
+  }
+}
+
 task buildPlugin(group: 'MPS Build',
-                 description: 'Generates the code reviewer plugin',
+                 description: 'Generates and assembles the code reviewer plugin',
                  dependsOn: generateBuildScripts) {
   doLast {
     println 'Building code reviewer plugin ===================================='
@@ -119,6 +130,8 @@ task buildPlugin(group: 'MPS Build',
     println()
   }
 }
+
+
 
 defaultTasks 'build'
 assemble.dependsOn buildPlugin

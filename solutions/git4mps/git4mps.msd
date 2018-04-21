@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="com.workday.mps.review.git4mps" uuid="b435930b-30fc-42f3-9225-ec36209b7a33" moduleVersion="0" pluginKind="PLUGIN_OTHER" compileInMPS="true">
+<solution name="git4mps" uuid="b435930b-30fc-42f3-9225-ec36209b7a33" moduleVersion="0" pluginKind="PLUGIN_OTHER" compileInMPS="true">
   <models>
-    <modelRoot contentPath="${module}" type="default">
-      <sourceRoot location="models" />
-    </modelRoot>
     <modelRoot contentPath="${module}/lib" type="java_classes">
       <sourceRoot location="git4idea-rt.jar" />
       <sourceRoot location="git4idea.jar" />
@@ -33,7 +30,7 @@
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
-    <module reference="b435930b-30fc-42f3-9225-ec36209b7a33(com.workday.mps.review.git4mps)" version="0" />
+    <module reference="b435930b-30fc-42f3-9225-ec36209b7a33(git4mps)" version="0" />
   </dependencyVersions>
 </solution>
 
