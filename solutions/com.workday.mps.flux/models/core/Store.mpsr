@@ -419,20 +419,35 @@
             <node concept="liA8E" id="6j8xKyAsxoY" role="2OqNvi">
               <ref role="37wK5l" node="6j8xKyArLjh" resolve="printDebug" />
               <node concept="3cpWs3" id="6j8xKyAsz$K" role="37wK5m">
-                <node concept="1rXfSq" id="5IbzmGeyCZL" role="3uHU7w">
-                  <ref role="37wK5l" to="wyt6:~Object.toString():java.lang.String" resolve="toString" />
-                </node>
                 <node concept="3cpWs3" id="6j8xKyAsy6a" role="3uHU7B">
                   <node concept="3cpWs3" id="6j8xKyAsxP$" role="3uHU7B">
                     <node concept="Xl_RD" id="6j8xKyAsxsa" role="3uHU7B">
                       <property role="Xl_RC" value="&gt;&gt; Dispatching Action &lt;" />
                     </node>
-                    <node concept="37vLTw" id="6j8xKyAsxUz" role="3uHU7w">
-                      <ref role="3cqZAo" node="4Ew7qBDhkhL" resolve="action" />
+                    <node concept="2OqwBi" id="43gPW_akRup" role="3uHU7w">
+                      <node concept="2OqwBi" id="43gPW_akRc6" role="2Oq$k0">
+                        <node concept="37vLTw" id="6j8xKyAsxUz" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4Ew7qBDhkhL" resolve="action" />
+                        </node>
+                        <node concept="liA8E" id="43gPW_akRhn" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~Object.getClass():java.lang.Class" resolve="getClass" />
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="43gPW_akRIe" role="2OqNvi">
+                        <ref role="37wK5l" to="wyt6:~Class.getSimpleName():java.lang.String" resolve="getSimpleName" />
+                      </node>
                     </node>
                   </node>
                   <node concept="Xl_RD" id="6j8xKyAsybr" role="3uHU7w">
                     <property role="Xl_RC" value="&gt; on Store " />
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="43gPW_alxMQ" role="3uHU7w">
+                  <node concept="1rXfSq" id="43gPW_alxMR" role="2Oq$k0">
+                    <ref role="37wK5l" to="wyt6:~Object.getClass():java.lang.Class" resolve="getClass" />
+                  </node>
+                  <node concept="liA8E" id="43gPW_alxMS" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~Class.getSimpleName():java.lang.String" resolve="getSimpleName" />
                   </node>
                 </node>
               </node>
@@ -460,16 +475,31 @@
                 <node concept="liA8E" id="6j8xKyAssEf" role="2OqNvi">
                   <ref role="37wK5l" node="6j8xKyArLjh" resolve="printDebug" />
                   <node concept="3cpWs3" id="6j8xKyAsvmq" role="37wK5m">
-                    <node concept="1rXfSq" id="5IbzmGeyCZM" role="3uHU7w">
-                      <ref role="37wK5l" to="wyt6:~Object.toString():java.lang.String" resolve="toString" />
+                    <node concept="2OqwBi" id="43gPW_alxia" role="3uHU7w">
+                      <node concept="1rXfSq" id="43gPW_alx4N" role="2Oq$k0">
+                        <ref role="37wK5l" to="wyt6:~Object.getClass():java.lang.Class" resolve="getClass" />
+                      </node>
+                      <node concept="liA8E" id="43gPW_alxAq" role="2OqNvi">
+                        <ref role="37wK5l" to="wyt6:~Class.getSimpleName():java.lang.String" resolve="getSimpleName" />
+                      </node>
                     </node>
                     <node concept="3cpWs3" id="6j8xKyAst_o" role="3uHU7B">
                       <node concept="3cpWs3" id="6j8xKyAstmg" role="3uHU7B">
                         <node concept="Xl_RD" id="6j8xKyAssHr" role="3uHU7B">
                           <property role="Xl_RC" value="&gt;&gt; Action &lt;" />
                         </node>
-                        <node concept="37vLTw" id="6j8xKyAstmx" role="3uHU7w">
-                          <ref role="3cqZAo" node="4Ew7qBDhkhL" resolve="action" />
+                        <node concept="2OqwBi" id="43gPW_akRTr" role="3uHU7w">
+                          <node concept="2OqwBi" id="43gPW_akRTs" role="2Oq$k0">
+                            <node concept="37vLTw" id="43gPW_akRTt" role="2Oq$k0">
+                              <ref role="3cqZAo" node="4Ew7qBDhkhL" resolve="action" />
+                            </node>
+                            <node concept="liA8E" id="43gPW_akRTu" role="2OqNvi">
+                              <ref role="37wK5l" to="wyt6:~Object.getClass():java.lang.Class" resolve="getClass" />
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="43gPW_akRTv" role="2OqNvi">
+                            <ref role="37wK5l" to="wyt6:~Class.getSimpleName():java.lang.String" resolve="getSimpleName" />
+                          </node>
                         </node>
                       </node>
                       <node concept="Xl_RD" id="6j8xKyAstKd" role="3uHU7w">
