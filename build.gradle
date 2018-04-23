@@ -1,5 +1,8 @@
 import org.apache.tools.ant.util.TeeOutputStream
 
+// the mps version we build (and install) the plugins for. Necessary to compute a user's plugin directory 
+ext.mpsMajor = "2017.3"
+
 buildscript {
   repositories {
     mavenCentral()
@@ -161,3 +164,60 @@ void execAndFailIfTextFound(String textToFind, Object... args) {
       throw new GradleException('ANT build failure')
   }
 }
+
+
+def userHome = System.properties['user.home']
+def mpsPluginsDirPattern
+if (System.properties['os.name'].toLowerCase().contains('mac')) {
+    mpsPluginsDirPattern = "$userHome/Library/Application Support/%s"
+} else {
+    mpsPluginsDirPattern = "$userHome/.%s/config/plugins"
+}
+
+if (project.hasProperty("MPS_PATHS_SELECTOR")) {
+    ext.mpsPluginsDir = sprintf(mpsPluginsDirPattern, project.getProperty("MPS_PATHS_SELECTOR"))
+} else {
+    ext.mpsPluginsDir = sprintf(mpsPluginsDirPattern, "MPS$mpsMajor")
+}
+
+task install_git4mps(type: Copy,
+    description: "Install git4mps into the MPS plugin repository",
+	dependsOn: build) {
+    from zipTree("$rootDir/dist/build/artifacts/reviewPlugin/git4mps.zip")
+    into "$mpsPluginsDir"
+}
+
+task install_mpsreview(type: Copy,
+    description: "Install mps.review into the MPS plugin repository",
+	dependsOn: build) {
+    from zipTree("$rootDir/dist/build/artifacts/reviewPlugin/com.workday.mps.review.zip")
+    into "$mpsPluginsDir"
+}
+
+task install(description: "Install the required plugins into the MPS plugin repository by copying them into the user's home dir",
+    group: "MPS Build",
+	dependsOn: [install_git4mps, install_mpsreview]) {
+    doFirst {
+        // check parent gradle file for definition of the variables
+        println "Installing required mps-code-reviewer plugins to '$mpsPluginsDir'"
+        if (!project.hasProperty("MPS_PATHS_SELECTOR")) {
+            println "To change 'MPS<VERSION>' part, pass MPS_PATHS_SELECTOR property to gradle with -PMPS_PATHS_SELECTOR=<custom path selector>"
+            println "The path selector only contains the the actual selector for instance \"MPS2017.3\" not the full qualified path to the user plugin directory."
+        }
+    }
+}
+
+task uninstall(type: Delete, description: "uninstall the plugins from the MPS plugin repository",
+    group: "MPS Build") {
+	delete "$mpsPluginsDir"+"/git4mps", "$mpsPluginsDir"+"/com.workday.mps.review"
+    doFirst {
+        // check parent gradle file for definition of the variables
+        println "Uninstalling required mps-code-reviewer plugins from '$mpsPluginsDir'"
+        if (!project.hasProperty("MPS_PATHS_SELECTOR")) {
+            println "To change 'MPS<VERSION>' part, pass MPS_PATHS_SELECTOR property to gradle with -PMPS_PATHS_SELECTOR=<custom path selector>"
+            println "The path selector only contains the the actual selector for instance \"MPS2017.3\" not the full qualified path to the user plugin directory."
+        }
+    }
+}
+
+
