@@ -4,7 +4,7 @@
   <imports>
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
-    <import index="z1c4" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.project(MPS.Platform/)" implicit="true" />
+    <import index="z1c3" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.project(MPS.Platform/)" implicit="true" />
   </imports>
   <registry>
     <language id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin">
@@ -55,7 +55,6 @@
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
-        <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
@@ -309,36 +308,6 @@
               </node>
             </node>
           </node>
-          <node concept="3cpWs8" id="5ihn07CbbWy" role="3cqZAp">
-            <node concept="3cpWsn" id="5ihn07CbbWz" role="3cpWs9">
-              <property role="TrG5h" value="thatId" />
-              <property role="3TUv4t" value="true" />
-              <node concept="3uibUv" id="5ihn07CbbWw" role="1tU5fm">
-                <ref role="3uigEE" to="wyt6:~Integer" resolve="Integer" />
-              </node>
-              <node concept="2OqwBi" id="5ihn07CbbW$" role="33vP2m">
-                <node concept="2WthIp" id="5ihn07CbbW_" role="2Oq$k0" />
-                <node concept="34pFcN" id="5ihn07CbbWA" role="2OqNvi">
-                  <ref role="2WH_rO" node="5xIRlXi231B" resolve="overridePullRequestId" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3cpWs8" id="5ihn07Cbi6i" role="3cqZAp">
-            <node concept="3cpWsn" id="5ihn07Cbi6j" role="3cpWs9">
-              <property role="TrG5h" value="thisId" />
-              <property role="3TUv4t" value="true" />
-              <node concept="3uibUv" id="5ihn07Cbi6d" role="1tU5fm">
-                <ref role="3uigEE" to="wyt6:~Integer" resolve="Integer" />
-              </node>
-              <node concept="2OqwBi" id="5ihn07Cbi6k" role="33vP2m">
-                <node concept="3yMSdA" id="5ihn07Cbi6l" role="2Oq$k0" />
-                <node concept="liA8E" id="5ihn07Cbi6m" role="2OqNvi">
-                  <ref role="37wK5l" node="5xIRlXi420C" resolve="getOverridePullRequestId" />
-                </node>
-              </node>
-            </node>
-          </node>
           <node concept="3clFbF" id="5xIRlXiad4Q" role="3cqZAp">
             <node concept="3vZ8ra" id="5xIRlXiad4R" role="3clFbG">
               <node concept="37vLTw" id="5xIRlXiad4S" role="37vLTJ">
@@ -348,11 +317,17 @@
                 <node concept="2YIFZM" id="5xIRlXidXPK" role="3fr31v">
                   <ref role="37wK5l" to="33ny:~Objects.equals(java.lang.Object,java.lang.Object):boolean" resolve="equals" />
                   <ref role="1Pybhc" to="33ny:~Objects" resolve="Objects" />
-                  <node concept="37vLTw" id="5ihn07CbbWB" role="37wK5m">
-                    <ref role="3cqZAo" node="5ihn07CbbWz" resolve="thatId" />
+                  <node concept="2OqwBi" id="5ihn07CbYHc" role="37wK5m">
+                    <node concept="2WthIp" id="5ihn07CbYHd" role="2Oq$k0" />
+                    <node concept="34pFcN" id="5ihn07CbYHe" role="2OqNvi">
+                      <ref role="2WH_rO" node="5xIRlXi231B" resolve="overridePullRequestId" />
+                    </node>
                   </node>
-                  <node concept="37vLTw" id="5ihn07Cbi6n" role="37wK5m">
-                    <ref role="3cqZAo" node="5ihn07Cbi6j" resolve="thisId" />
+                  <node concept="2OqwBi" id="5ihn07CbZXd" role="37wK5m">
+                    <node concept="3yMSdA" id="5ihn07CbZXe" role="2Oq$k0" />
+                    <node concept="liA8E" id="5ihn07CbZXf" role="2OqNvi">
+                      <ref role="37wK5l" node="5xIRlXi420C" resolve="getOverridePullRequestId" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -659,7 +634,7 @@
               <node concept="2OqwBi" id="5xIRlXi8EJD" role="37wK5m">
                 <node concept="1KvdUw" id="5xIRlXi8EJE" role="2Oq$k0" />
                 <node concept="liA8E" id="5xIRlXi8EJF" role="2OqNvi">
-                  <ref role="37wK5l" to="z1c4:~MPSProject.getProject():com.intellij.openapi.project.Project" resolve="getProject" />
+                  <ref role="37wK5l" to="z1c3:~MPSProject.getProject():com.intellij.openapi.project.Project" resolve="getProject" />
                 </node>
               </node>
             </node>
@@ -810,7 +785,7 @@
               <node concept="2OqwBi" id="5xIRlXi9wHN" role="37wK5m">
                 <node concept="1KvdUw" id="5xIRlXi9wHO" role="2Oq$k0" />
                 <node concept="liA8E" id="5xIRlXi9wHP" role="2OqNvi">
-                  <ref role="37wK5l" to="z1c4:~MPSProject.getProject():com.intellij.openapi.project.Project" resolve="getProject" />
+                  <ref role="37wK5l" to="z1c3:~MPSProject.getProject():com.intellij.openapi.project.Project" resolve="getProject" />
                 </node>
               </node>
             </node>

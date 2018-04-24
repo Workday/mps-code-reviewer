@@ -558,7 +558,7 @@
                       </node>
                     </node>
                     <node concept="liA8E" id="__fp3czp0E" role="2OqNvi">
-                      <ref role="37wK5l" to="m3q8:4Ew7qBDr_4A" resolve="getCommentedNode" />
+                      <ref role="37wK5l" to="m3q8:4Ew7qBDr_4A" resolve="getCommentedNodeURL" />
                     </node>
                   </node>
                   <node concept="10Nm6u" id="__fp3czsci" role="3uHU7w" />
@@ -917,7 +917,7 @@
                                             </node>
                                           </node>
                                           <node concept="liA8E" id="6hum7g6LKZN" role="2OqNvi">
-                                            <ref role="37wK5l" to="m3q8:4Ew7qBDr_4A" resolve="getCommentedNode" />
+                                            <ref role="37wK5l" to="m3q8:4Ew7qBDr_4A" resolve="getCommentedNodeURL" />
                                           </node>
                                         </node>
                                       </node>
@@ -938,7 +938,7 @@
                                   </node>
                                 </node>
                                 <node concept="liA8E" id="3okjBs8iA4j" role="2OqNvi">
-                                  <ref role="37wK5l" to="m3q8:4Ew7qBDr_4A" resolve="getCommentedNode" />
+                                  <ref role="37wK5l" to="m3q8:4Ew7qBDr_4A" resolve="getCommentedNodeURL" />
                                 </node>
                               </node>
                             </node>
