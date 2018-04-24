@@ -10,9 +10,18 @@ A code review plugin for MPS providing basic review interaction, in-line comment
 * Submit comments to a pull request
 * Commenting on the currently selected node.
 
+## Plugin Use
+
+The plugin binaries can be found [here](https://github.com/Workday/mps-code-reviewer/releases).
+
+The review tool will be enabled in the right-hand sidebar. It will not do anything until it is properly configured in:
+```
+Preferences -> Other Settings -> BitbucketCodeReviewConfiguration
+```
+
 ## Getting Started
 
-Read our [contribution guidelines](CONTRIBUTING.md) before making changes to the project. Substantial contributions will require a [Contributor License Agreement](https://docs.google.com/a/workday.com/forms/d/e/1FAIpQLSclaAYSjgNkwTkyPo5IHm8_XTiW7q4iusHZGYtJac-6kS6gjg/viewform) before a pull request can be merged.
+Read our [contribution guidelines](CONTRIBUTING.md) before making changes to the project. Substantial contributions will require a Contributor License Agreement before a pull request can be merged.
 
 ### Prerequisites
 
@@ -26,7 +35,7 @@ Open the project folder using MPS and rebuild the project. Once this has complet
 
 If you wish to connect to a review, enter information in 
 ```
-Preferences -> Other Settings -> Bitbucket Review Configuration
+Preferences -> Other Settings -> BitbucketCodeReviewConfiguration
 ```
 
 Note: Providing Pull Request ID overrides all requests to work with the specified pull request. This is useful for performing testing when working within the project.
@@ -38,11 +47,11 @@ Running `gw build` will build the following two MPS plugins as zip files:
 dist/build/artifacts/reviewPlugin/com.workday.yp.review.zip
 dist/build/artifacts/reviewPlugin/com.workday.yp.review.git.zip
 ```
-These two plugins can then be installed into MPS.
+Once the plugins are built, `gw install` will install or update the plugins. Subsequently, `gw uninstall` will uninstall the plugins.
 
 ## Built With
 
-* [Mbeddr Platform](http://mbeddr.com/) - MPS library providing tons of awesome features.
+* [Mbeddr Platform](http://mbeddr.com/) - MPS library providing tons of awesome features. In particular, we are using Conditional Editors to provide the inline comment view.
 
 ## Contributing
 
@@ -54,7 +63,7 @@ Read our [contribution guidelines](CONTRIBUTING.md) for details on contributions
 * **Tamas Szabo** - [szabta89](https://github.com/szabta89)
 * **Justin Horton** - [justinhorton](https://github.com/justinhorton)
 
-See also the list of [contributors](CONTRIBUTORS) who participated in this project.
+See also the list of [contributors](CONTRIBUTORS.md) who participated in this project.
 
 ## License
 
