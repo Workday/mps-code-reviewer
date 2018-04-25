@@ -52,6 +52,7 @@
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
+      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
@@ -92,9 +93,12 @@
   </registry>
   <node concept="312cEu" id="5xIRlXi6V0N">
     <property role="TrG5h" value="GBC" />
+    <node concept="2tJIrI" id="2n3pEWhlmby" role="jymVt" />
     <node concept="3clFbW" id="5xIRlXi7bIk" role="jymVt">
       <node concept="3cqZAl" id="5xIRlXi7bIl" role="3clF45" />
-      <node concept="3clFbS" id="5xIRlXi7bIn" role="3clF47" />
+      <node concept="3clFbS" id="5xIRlXi7bIn" role="3clF47">
+        <node concept="3clFbH" id="2n3pEWhlmbo" role="3cqZAp" />
+      </node>
       <node concept="3Tm1VV" id="5xIRlXi7bhx" role="1B3o_S" />
     </node>
     <node concept="2tJIrI" id="5xIRlXi7agN" role="jymVt" />

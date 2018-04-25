@@ -87,7 +87,7 @@
   </registry>
   <node concept="3HP615" id="4Ew7qBDr4JM">
     <property role="3GE5qa" value="" />
-    <property role="TrG5h" value="ReviewConnection" />
+    <property role="TrG5h" value="CodeReviewerConnection" />
     <node concept="2tJIrI" id="6j8xKyAvxZU" role="jymVt" />
     <node concept="3clFb_" id="4Ew7qBDr4YG" role="jymVt">
       <property role="1EzhhJ" value="true" />
@@ -262,7 +262,6 @@
       </node>
     </node>
     <node concept="2tJIrI" id="4dp0YvduZlv" role="jymVt" />
-    <node concept="2tJIrI" id="4Ew7qBDr4JW" role="jymVt" />
     <node concept="3Tm1VV" id="4Ew7qBDr4JN" role="1B3o_S" />
     <node concept="16euLQ" id="FcpLTGYsvN" role="16eVyc">
       <property role="TrG5h" value="A" />
