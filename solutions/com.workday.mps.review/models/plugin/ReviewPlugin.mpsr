@@ -248,8 +248,6 @@
         <ref role="3uigEE" to="oxj5:57bl67CHuVr" resolve="GitBranchChangeListener" />
       </node>
     </node>
-    <node concept="2tJIrI" id="43gPW_aovVL" role="jymVt" />
-    <node concept="2tJIrI" id="4GdANuvXmw7" role="jymVt" />
     <node concept="312cEg" id="168JFiaglBC" role="jymVt">
       <property role="34CwA1" value="false" />
       <property role="eg7rD" value="false" />
@@ -271,7 +269,6 @@
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="7Ndzh9v4Pjd" role="jymVt" />
     <node concept="312cEg" id="7Ndzh9v4QBi" role="jymVt">
       <property role="34CwA1" value="false" />
       <property role="eg7rD" value="false" />
@@ -949,7 +946,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="78s6gAkluu_" role="3cqZAp" />
         <node concept="3cpWs6" id="78s6gAklbN9" role="3cqZAp">
           <node concept="37vLTw" id="78s6gAklcaB" role="3cqZAk">
             <ref role="3cqZAo" node="78s6gAkkDiA" resolve="inlineCommentAction" />
@@ -958,6 +954,40 @@
       </node>
       <node concept="3Tm1VV" id="78s6gAkmpBU" role="1B3o_S" />
       <node concept="3uibUv" id="78s6gAkkCFq" role="3clF45">
+        <ref role="3uigEE" to="qkt:~AnAction" resolve="AnAction" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="5ihn07Cfbz3" role="jymVt" />
+    <node concept="3clFb_" id="5ihn07CfeJT" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="initNavigateAction" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="5ihn07CfeJW" role="3clF47">
+        <node concept="3cpWs8" id="5ihn07Cfg5h" role="3cqZAp">
+          <node concept="3cpWsn" id="5ihn07Cfg5i" role="3cpWs9">
+            <property role="TrG5h" value="action" />
+            <property role="3TUv4t" value="true" />
+            <node concept="3uibUv" id="5ihn07Cg6hL" role="1tU5fm">
+              <ref role="3uigEE" node="5ihn07Cg2qW" resolve="NavigateToNodeUIAction" />
+            </node>
+            <node concept="2ShNRf" id="5ihn07Cfg5k" role="33vP2m">
+              <node concept="1pGfFk" id="5ihn07Cgb0l" role="2ShVmc">
+                <ref role="37wK5l" node="5ihn07Cg2St" resolve="NavigateToNodeUIAction" />
+                <node concept="Xjq3P" id="5ihn07Cm5PS" role="37wK5m" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="5ihn07Cfg6k" role="3cqZAp">
+          <node concept="37vLTw" id="5ihn07Cfg6l" role="3cqZAk">
+            <ref role="3cqZAo" node="5ihn07Cfg5i" resolve="action" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="5ihn07Cfd8v" role="1B3o_S" />
+      <node concept="3uibUv" id="5ihn07CfeHO" role="3clF45">
         <ref role="3uigEE" to="qkt:~AnAction" resolve="AnAction" />
       </node>
     </node>
@@ -1384,6 +1414,28 @@
         <ref role="3uigEE" to="oxj5:57bl67CHuVr" resolve="GitBranchChangeListener" />
       </node>
     </node>
+    <node concept="2tJIrI" id="4jyU69Om44P" role="jymVt" />
+    <node concept="3clFb_" id="4jyU69Om7iC" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="getSettingsStore" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="4jyU69Om7iF" role="3clF47">
+        <node concept="3cpWs6" id="4jyU69Om8UF" role="3cqZAp">
+          <node concept="2OqwBi" id="4jyU69OmaHq" role="3cqZAk">
+            <node concept="Xjq3P" id="4jyU69Om956" role="2Oq$k0" />
+            <node concept="2OwXpG" id="4jyU69Omc6r" role="2OqNvi">
+              <ref role="2Oxat5" node="__fp3cerZp" resolve="settingsStore" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="4jyU69Om5F6" role="1B3o_S" />
+      <node concept="3uibUv" id="4jyU69Om7gu" role="3clF45">
+        <ref role="3uigEE" to="czez:4Ew7qBDg_9q" resolve="SettingsStore" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="5jaFXd_xTNS" role="jymVt" />
     <node concept="3clFb_" id="5jaFXd_xWMC" role="jymVt">
       <property role="1EzhhJ" value="false" />
@@ -1651,6 +1703,29 @@
         <ref role="3uigEE" node="43gPW_amd93" resolve="NodeSelectionListenerManager" />
       </node>
     </node>
+    <node concept="2tJIrI" id="5ihn07Cm72O" role="jymVt" />
+    <node concept="3clFb_" id="5ihn07Cmatx" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="getProject" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="5ihn07Cmat$" role="3clF47">
+        <node concept="3cpWs6" id="5ihn07Cmc7c" role="3cqZAp">
+          <node concept="2OqwBi" id="5ihn07Cmc$q" role="3cqZAk">
+            <node concept="Xjq3P" id="5ihn07Cmch$" role="2Oq$k0" />
+            <node concept="2OwXpG" id="5ihn07Cmeco" role="2OqNvi">
+              <ref role="2Oxat5" node="__fp3coL0M" resolve="project" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="5ihn07Cm8NI" role="1B3o_S" />
+      <node concept="3uibUv" id="5ihn07Cmarn" role="3clF45">
+        <ref role="3uigEE" to="4nm9:~Project" resolve="Project" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="5ihn07Cm7lz" role="jymVt" />
     <node concept="3Tm1VV" id="3okjBs8k0Vq" role="1B3o_S" />
   </node>
 </model>
