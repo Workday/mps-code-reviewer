@@ -306,39 +306,58 @@
       <property role="od$2w" value="false" />
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="3e72Pa5I$re" role="3clF47">
-        <node concept="3clFbF" id="3e72Pa5I$rf" role="3cqZAp">
-          <node concept="37vLTI" id="3e72Pa5I$rg" role="3clFbG">
-            <node concept="37vLTw" id="3e72Pa5I$rh" role="37vLTx">
-              <ref role="3cqZAo" node="3e72Pa5I$rk" resolve="newConfig" />
+        <node concept="3clFbJ" id="2n3pEWhjIdQ" role="3cqZAp">
+          <node concept="3clFbS" id="2n3pEWhjIdS" role="3clFbx">
+            <node concept="3clFbF" id="3e72Pa5I$rf" role="3cqZAp">
+              <node concept="37vLTI" id="3e72Pa5I$rg" role="3clFbG">
+                <node concept="37vLTw" id="3e72Pa5I$rh" role="37vLTx">
+                  <ref role="3cqZAo" node="3e72Pa5I$rk" resolve="newConfiguration" />
+                </node>
+                <node concept="2OqwBi" id="5IbzmGeyD2D" role="37vLTJ">
+                  <node concept="Xjq3P" id="5IbzmGeyD2B" role="2Oq$k0" />
+                  <node concept="2OwXpG" id="5IbzmGeyD2C" role="2OqNvi">
+                    <ref role="2Oxat5" node="3e72Pa5I$mW" resolve="configuration" />
+                  </node>
+                </node>
+              </node>
             </node>
-            <node concept="2OqwBi" id="5IbzmGeyD2D" role="37vLTJ">
-              <node concept="Xjq3P" id="5IbzmGeyD2B" role="2Oq$k0" />
-              <node concept="2OwXpG" id="5IbzmGeyD2C" role="2OqNvi">
-                <ref role="2Oxat5" node="3e72Pa5I$mW" resolve="configuration" />
+            <node concept="2Gpval" id="3e72Pa5JbPv" role="3cqZAp">
+              <node concept="2GrKxI" id="3e72Pa5JbPx" role="2Gsz3X">
+                <property role="TrG5h" value="changeListener" />
+              </node>
+              <node concept="2OqwBi" id="5IbzmGeyD2H" role="2GsD0m">
+                <node concept="Xjq3P" id="5IbzmGeyD2F" role="2Oq$k0" />
+                <node concept="2OwXpG" id="5IbzmGeyD2G" role="2OqNvi">
+                  <ref role="2Oxat5" node="3c3vDUl46XJ" resolve="changeListeners" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="3e72Pa5JbP_" role="2LFqv$">
+                <node concept="3clFbF" id="3e72Pa5JcgW" role="3cqZAp">
+                  <node concept="2OqwBi" id="3e72Pa5JcrX" role="3clFbG">
+                    <node concept="2GrUjf" id="3e72Pa5JcgV" role="2Oq$k0">
+                      <ref role="2Gs0qQ" node="3e72Pa5JbPx" resolve="changeListener" />
+                    </node>
+                    <node concept="liA8E" id="3e72Pa5JcQU" role="2OqNvi">
+                      <ref role="37wK5l" node="3e72Pa5H_WY" resolve="onPreferencesChange" />
+                      <node concept="Xjq3P" id="3e72Pa5JdPb" role="37wK5m" />
+                    </node>
+                  </node>
+                </node>
               </node>
             </node>
           </node>
-        </node>
-        <node concept="2Gpval" id="3e72Pa5JbPv" role="3cqZAp">
-          <node concept="2GrKxI" id="3e72Pa5JbPx" role="2Gsz3X">
-            <property role="TrG5h" value="changeListener" />
-          </node>
-          <node concept="2OqwBi" id="5IbzmGeyD2H" role="2GsD0m">
-            <node concept="Xjq3P" id="5IbzmGeyD2F" role="2Oq$k0" />
-            <node concept="2OwXpG" id="5IbzmGeyD2G" role="2OqNvi">
-              <ref role="2Oxat5" node="3c3vDUl46XJ" resolve="changeListeners" />
-            </node>
-          </node>
-          <node concept="3clFbS" id="3e72Pa5JbP_" role="2LFqv$">
-            <node concept="3clFbF" id="3e72Pa5JcgW" role="3cqZAp">
-              <node concept="2OqwBi" id="3e72Pa5JcrX" role="3clFbG">
-                <node concept="2GrUjf" id="3e72Pa5JcgV" role="2Oq$k0">
-                  <ref role="2Gs0qQ" node="3e72Pa5JbPx" resolve="changeListener" />
+          <node concept="3fqX7Q" id="2n3pEWhjJai" role="3clFbw">
+            <node concept="2YIFZM" id="2n3pEWhjJak" role="3fr31v">
+              <ref role="37wK5l" to="33ny:~Objects.equals(java.lang.Object,java.lang.Object):boolean" resolve="equals" />
+              <ref role="1Pybhc" to="33ny:~Objects" resolve="Objects" />
+              <node concept="2OqwBi" id="2n3pEWhjJal" role="37wK5m">
+                <node concept="Xjq3P" id="2n3pEWhjJam" role="2Oq$k0" />
+                <node concept="2OwXpG" id="2n3pEWhjJan" role="2OqNvi">
+                  <ref role="2Oxat5" node="3e72Pa5I$mW" resolve="configuration" />
                 </node>
-                <node concept="liA8E" id="3e72Pa5JcQU" role="2OqNvi">
-                  <ref role="37wK5l" node="3e72Pa5H_WY" resolve="onPreferencesChange" />
-                  <node concept="Xjq3P" id="3e72Pa5JdPb" role="37wK5m" />
-                </node>
+              </node>
+              <node concept="37vLTw" id="2n3pEWhjJao" role="37wK5m">
+                <ref role="3cqZAo" node="3e72Pa5I$rk" resolve="newConfiguration" />
               </node>
             </node>
           </node>
@@ -346,7 +365,7 @@
       </node>
       <node concept="3cqZAl" id="3e72Pa5I$rj" role="3clF45" />
       <node concept="37vLTG" id="3e72Pa5I$rk" role="3clF46">
-        <property role="TrG5h" value="newConfig" />
+        <property role="TrG5h" value="newConfiguration" />
         <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="3e72Pa5I$rl" role="1tU5fm">
           <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
