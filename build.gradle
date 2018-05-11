@@ -117,6 +117,7 @@ task buildPluginIncremental(group: 'MPS Build',
                  dependsOn: generateBuildScripts) {
   doLast {
     println 'Building code reviewer plugin ===================================='
+    runAnt "${rootDir}/dist/git4mpsPlugin.xml", 'build'
     runAnt "${rootDir}/dist/reviewPlugin.xml", 'build'
     println 'Code reviewer plugin has been successfully built ================='
     println()
@@ -128,12 +129,48 @@ task buildPlugin(group: 'MPS Build',
                  dependsOn: generateBuildScripts) {
   doLast {
     println 'Building code reviewer plugin ===================================='
+    runAnt "${rootDir}/dist/git4mpsPlugin.xml", 'clean', 'generate', 'build'
     runAnt "${rootDir}/dist/reviewPlugin.xml", 'clean', 'generate', 'build'
     println 'Code reviewer plugin has been successfully built ================='
     println()
   }
 }
 
+task zipGit4mpsBuildPlugin(group: 'MPS Build',
+               type: Zip,
+               description: 'Archive git4mps build plugin into zip file') {
+  from "${rootDir}/dist/build/artifacts/git4mpsPlugin/"
+  include "com.workday.mps.git4mps.build/**"
+  destinationDir = file("${rootDir}/dist/build/artifacts/")
+  archiveName = 'com.workday.mps.git4mps.build.zip'
+}
+
+task zipGit4mpsPlugin(group: 'MPS Build',
+               type: Zip,
+               description: 'Archive git4mps plugin into zip file') {
+  from "${rootDir}/dist/build/artifacts/git4mpsPlugin/"
+  include "com.workday.mps.git4mps/**"
+  destinationDir = file("${rootDir}/dist/build/artifacts/")
+  archiveName = 'com.workday.mps.git4mps.zip'
+}
+
+task zipCodeReviewerPlugin(group: 'MPS Build',
+               type: Zip,
+               description: 'Archive code reviewer plugin into zip file') {
+  from "${rootDir}/dist/build/artifacts/reviewPlugin/"
+  include "com.workday.mps.review/**"
+  destinationDir = file("${rootDir}/dist/build/artifacts/")
+  archiveName = 'com.workday.mps.review.zip'
+}
+
+task zipPlugin(group: 'MPS Build',
+               description: 'Archive plugins into zip files',
+               dependsOn: [buildPlugin, zipGit4mpsBuildPlugin, zipGit4mpsPlugin, zipCodeReviewerPlugin]) {
+  doLast {
+    println 'Plugins have been successfully zipped ================='
+    println()
+  }
+}
 
 
 defaultTasks 'build'

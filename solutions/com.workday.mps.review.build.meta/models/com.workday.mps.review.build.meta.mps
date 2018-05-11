@@ -4,11 +4,9 @@
   <languages>
     <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="5" />
     <use id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build" version="0" />
-    <use id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml" version="0" />
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
-    <import index="hh2c" ref="r:5c70a88b-9c77-4970-b930-a9ff601a03a0(jetbrains.mps.ide.idea.plugin.build)" />
     <import index="al5i" ref="r:742f344d-4dc4-4862-992c-4bc94b094870(com.mbeddr.mpsutil.dev.build)" />
   </imports>
   <registry>
@@ -80,6 +78,36 @@
     <property role="2DA0ip" value="../../buildScripts" />
     <property role="TrG5h" value="reviewPluginBuildScripts" />
     <property role="turDy" value="reviewPluginBuildScripts.xml" />
+    <node concept="1E1JtA" id="3PM$dUaz5gE" role="3989C9">
+      <property role="BnDLt" value="true" />
+      <property role="TrG5h" value="com.workday.mps.git4mps" />
+      <property role="3LESm3" value="35a83c38-8969-4574-b716-a7b3acd78eec" />
+      <property role="2GAjPV" value="false" />
+      <node concept="398BVA" id="3PM$dUaz5hF" role="3LF7KH">
+        <ref role="398BVh" node="3c3vDUluIXm" resolve="project.home" />
+        <node concept="2Ry0Ak" id="3PM$dUaz5hZ" role="iGT6I">
+          <property role="2Ry0Am" value="solutions" />
+          <node concept="2Ry0Ak" id="3PM$dUaz5ii" role="2Ry0An">
+            <property role="2Ry0Am" value="com.workday.mps.git4mps" />
+            <node concept="2Ry0Ak" id="7mrE8nX2hsP" role="2Ry0An">
+              <property role="2Ry0Am" value="com.workday.mps.git4mps.msd" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1SiIV0" id="3PM$dUaz5i_" role="3bR37C">
+        <node concept="3bR9La" id="3PM$dUaz5iA" role="1SiIV1">
+          <property role="3bR36h" value="false" />
+          <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="3PM$dUaz5iB" role="3bR37C">
+        <node concept="3bR9La" id="3PM$dUaz5iC" role="1SiIV1">
+          <property role="3bR36h" value="false" />
+          <ref role="3bR37D" to="al5i:7Pr7tifzlku" resolve="com.mbeddr.platform" />
+        </node>
+      </node>
+    </node>
     <node concept="2sgV4H" id="4hhvq7oWSQZ" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="4hhvq7oWSR0" role="2JcizS">
@@ -129,6 +157,9 @@
     </node>
     <node concept="55IIr" id="3c3vDUluHHF" role="auvoZ" />
     <node concept="1l3spV" id="3c3vDUluHHG" role="1l3spN">
+      <node concept="L2wRC" id="3PM$dUaz5kc" role="39821P">
+        <ref role="L2wRA" node="3PM$dUaz5gE" resolve="com.workday.mps.git4mps" />
+      </node>
       <node concept="L2wRC" id="24ZpFMHU7Vd" role="39821P">
         <ref role="L2wRA" node="24ZpFMHU7Uv" resolve="com.workday.mps.review.build" />
       </node>
@@ -162,6 +193,12 @@
         <node concept="3bR9La" id="24ZpFMHUlOD" role="1SiIV1">
           <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="al5i:7Pr7tifzlku" resolve="com.mbeddr.platform" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="3PM$dUazcEx" role="3bR37C">
+        <node concept="3bR9La" id="3PM$dUazcEy" role="1SiIV1">
+          <property role="3bR36h" value="false" />
+          <ref role="3bR37D" node="3PM$dUaz5gE" resolve="com.workday.mps.git4mps" />
         </node>
       </node>
     </node>
