@@ -35,6 +35,35 @@
   
   <target name="assemble" depends="classes, declare-mps-tasks">
     <mkdir dir="${build.layout}" />
+    <mkdir dir="${build.tmp}/default/com.workday.mps.git4mps.jar" />
+    <mkdir dir="${build.tmp}/default/com.workday.mps.git4mps.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/com.workday.mps.git4mps.jar/META-INF/module.xml">
+      <module namespace="com.workday.mps.git4mps" type="solution" uuid="35a83c38-8969-4574-b716-a7b3acd78eec">
+        <dependencies />
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="com.workday.mps.git4mps-src.jar" descriptor="com.workday.mps.git4mps.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/com.workday.mps.git4mps.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/com.workday.mps.git4mps" />
+      <fileset dir="${project.home}/solutions/com.workday.mps.git4mps/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/com.workday.mps.git4mps.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-com.workday.mps.git4mps-models">
+      <fileset dir="${project.home}/solutions/com.workday.mps.git4mps/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.layout}/com.workday.mps.git4mps-src.jar" duplicate="preserve">
+      <fileset dir="${project.home}/solutions/com.workday.mps.git4mps/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${project.home}/solutions/com.workday.mps.git4mps/com.workday.mps.git4mps.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-com.workday.mps.git4mps-models" prefix="module/models" />
+    </jar>
     <mkdir dir="${build.tmp}/default/com.workday.mps.review.build.jar" />
     <mkdir dir="${build.tmp}/default/com.workday.mps.review.build.jar/META-INF" />
     <echoxml file="${build.tmp}/default/com.workday.mps.review.build.jar/META-INF/module.xml">
@@ -78,7 +107,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.com.workday.mps.review.build" />
+  <target name="compileJava" depends="java.compile.com.workday.mps.git4mps, java.compile.com.workday.mps.review.build" />
   
   <target name="processResources" />
   
@@ -159,6 +188,7 @@
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.workflow.preset.jar" />
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.ide.build.jar" />
       <chunk>
+        <module file="${project.home}/solutions/com.workday.mps.git4mps/com.workday.mps.git4mps.msd" />
         <module file="${project.home}/solutions/com.workday.mps.review.build/com.workday.mps.review.build.msd" />
       </chunk>
       <jvmargs>
@@ -177,7 +207,21 @@
   
   <target name="makeDependents" />
   
-  <target name="java.compile.com.workday.mps.review.build">
+  <target name="java.compile.com.workday.mps.git4mps">
+    <mkdir dir="${project.home}/solutions/com.workday.mps.git4mps/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/com.workday.mps.git4mps" />
+    <javac destdir="${build.tmp}/java/out/com.workday.mps.git4mps" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${project.home}/solutions/com.workday.mps.git4mps/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name="java.compile.com.workday.mps.review.build" depends="java.compile.com.workday.mps.git4mps">
     <mkdir dir="${project.home}/solutions/com.workday.mps.review.build/source_gen" />
     <mkdir dir="${build.tmp}/java/out/com.workday.mps.review.build" />
     <javac destdir="${build.tmp}/java/out/com.workday.mps.review.build" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -186,12 +230,14 @@
         <path location="${project.home}/solutions/com.workday.mps.review.build/source_gen" />
       </src>
       <classpath>
+        <pathelement path="${build.tmp}/java/out/com.workday.mps.git4mps" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.jar" />
       </classpath>
     </javac>
   </target>
   
   <target name="cleanSources">
+    <delete dir="${project.home}/solutions/com.workday.mps.git4mps/source_gen" />
     <delete dir="${project.home}/solutions/com.workday.mps.review.build/source_gen" />
   </target>
 </project>
