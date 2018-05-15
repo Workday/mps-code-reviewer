@@ -201,7 +201,7 @@
     </node>
     <node concept="1l3spV" id="3wrDZJThql0" role="1l3spN">
       <node concept="m$_wl" id="7mrE8nX2hr0" role="39821P">
-        <ref role="m_rDy" node="3wrDZJThqkR" resolve="git4mps" />
+        <ref role="m_rDy" node="3wrDZJThqkR" resolve="com.workday.mps.git4mps" />
         <node concept="398223" id="7mrE8nX9Ool" role="39821P">
           <node concept="3_J27D" id="7mrE8nX9Oon" role="Nbhlr">
             <node concept="3Mxwew" id="7mrE8nX9Opj" role="3MwsjC">
@@ -262,9 +262,12 @@
           </node>
         </node>
       </node>
+      <node concept="m$_wl" id="7Oiry496RLE" role="39821P">
+        <ref role="m_rDy" node="7Oiry496Rtp" resolve="com.workday.mps.git4mps.build" />
+      </node>
     </node>
     <node concept="m$_wf" id="3wrDZJThqkR" role="3989C9">
-      <property role="m$_wk" value="git4mps" />
+      <property role="m$_wk" value="com.workday.mps.git4mps" />
       <node concept="3_J27D" id="3wrDZJThqkS" role="m$_yQ">
         <node concept="3Mxwew" id="3wrDZJThqkT" role="3MwsjC">
           <property role="3MwjfP" value="Git Integration - MPS Stubs" />
@@ -272,22 +275,16 @@
       </node>
       <node concept="3_J27D" id="3wrDZJThqkU" role="m$_w8">
         <node concept="3Mxwew" id="3wrDZJThqkV" role="3MwsjC">
-          <property role="3MwjfP" value="1.0" />
+          <property role="3MwjfP" value="1.0.0" />
         </node>
       </node>
       <node concept="m$_yB" id="7SqVNqmc0Ql" role="m$_yh">
         <property role="1ZOk41" value="true" />
         <ref role="m$_yA" node="3wrDZJThqp9" resolve="git4mps" />
       </node>
-      <node concept="m$_yB" id="3wrDZJThsby" role="m$_yh">
-        <ref role="m$_yA" node="3wrDZJThs02" resolve="com.workday.mps.git4mps" />
-      </node>
-      <node concept="m$_yC" id="3wrDZJThsgm" role="m$_yJ">
-        <ref role="m$_y1" to="al5i:33r_JpZ6k_l" resolve="com.mbeddr.platform.build" />
-      </node>
       <node concept="3_J27D" id="3wrDZJThqkY" role="m_cZH">
         <node concept="3Mxwew" id="3wrDZJThqkZ" role="3MwsjC">
-          <property role="3MwjfP" value="git4mps" />
+          <property role="3MwjfP" value="com.workday.mps.git4mps" />
         </node>
       </node>
       <node concept="3_J27D" id="3wrDZJThql5" role="3s6cr7">
@@ -296,6 +293,40 @@
         </node>
       </node>
       <node concept="2iUeEo" id="3wrDZJThql9" role="2iVFfd">
+        <property role="2iUeEt" value="Workday" />
+        <property role="2iUeEu" value="https://www.workday.com/" />
+      </node>
+      <node concept="m$_yC" id="7Oiry496RCC" role="m$_yJ">
+        <ref role="m$_y1" node="4GMBmWUHpN2" resolve="Git4Idea" />
+      </node>
+      <node concept="m$_yC" id="7Oiry496REE" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
+      </node>
+    </node>
+    <node concept="m$_wf" id="7Oiry496Rtp" role="3989C9">
+      <property role="m$_wk" value="com.workday.mps.git4mps.build" />
+      <node concept="3_J27D" id="7Oiry496Rtr" role="m$_yQ">
+        <node concept="3Mxwew" id="7Oiry496RyJ" role="3MwsjC">
+          <property role="3MwjfP" value="com.workday.mps.git4mps.build" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="7Oiry496Rtt" role="m_cZH">
+        <node concept="3Mxwew" id="7Oiry496RyL" role="3MwsjC">
+          <property role="3MwjfP" value="com.workday.mps.git4mps.build" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="7Oiry496Rtv" role="m$_w8">
+        <node concept="3Mxwew" id="7Oiry496Rzr" role="3MwsjC">
+          <property role="3MwjfP" value="1.0.0" />
+        </node>
+      </node>
+      <node concept="m$_yB" id="7Oiry496R$5" role="m$_yh">
+        <ref role="m$_yA" node="3wrDZJThs02" resolve="com.workday.mps.git4mps" />
+      </node>
+      <node concept="m$_yC" id="7Oiry496R$J" role="m$_yJ">
+        <ref role="m$_y1" to="al5i:33r_JpZ6k_l" resolve="com.mbeddr.platform.build" />
+      </node>
+      <node concept="2iUeEo" id="7Oiry496RFm" role="2iVFfd">
         <property role="2iUeEt" value="Workday" />
         <property role="2iUeEu" value="https://www.workday.com/" />
       </node>
