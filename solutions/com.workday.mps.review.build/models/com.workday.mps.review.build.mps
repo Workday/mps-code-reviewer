@@ -161,15 +161,6 @@
     <node concept="2sgV4H" id="3wrDZJThzXr" role="1l3spa">
       <ref role="1l3spb" to="mp9h:3wrDZJThqks" resolve="git4mpsPlugin" />
     </node>
-    <node concept="2sgV4H" id="3wrDZJThqlq" role="1l3spa">
-      <ref role="1l3spb" to="mp9h:4GMBmWUHnV9" resolve="IDEA_gitplugin_stubs" />
-      <node concept="398BVA" id="3wrDZJThqlr" role="2JcizS">
-        <ref role="398BVh" node="24ZpFMHU9es" resolve="mps_home" />
-        <node concept="2Ry0Ak" id="3wrDZJThqls" role="iGT6I">
-          <property role="2Ry0Am" value="plugins" />
-        </node>
-      </node>
-    </node>
     <node concept="398rNT" id="24ZpFMHU9ep" role="1l3spd">
       <property role="TrG5h" value="project.home" />
       <node concept="55IIr" id="24ZpFMHU9eq" role="398pKh">
@@ -267,7 +258,7 @@
         <ref role="m$_y1" to="ffeo:RJsmGEieyQ" resolve="jetbrains.mps.vcs" />
       </node>
       <node concept="m$_yC" id="3wrDZJThzY1" role="m$_yJ">
-        <ref role="m$_y1" to="mp9h:3wrDZJThqkR" resolve="git4mps" />
+        <ref role="m$_y1" to="mp9h:3wrDZJThqkR" resolve="com.workday.mps.git4mps" />
       </node>
       <node concept="m$_yB" id="7SqVNqmc1gN" role="m$_yh">
         <ref role="m$_yA" node="3c3vDUlvEDO" resolve="com.workday.mps.flux" />

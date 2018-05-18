@@ -205,7 +205,7 @@
         <node concept="398223" id="7mrE8nX9Ool" role="39821P">
           <node concept="3_J27D" id="7mrE8nX9Oon" role="Nbhlr">
             <node concept="3Mxwew" id="7mrE8nX9Opj" role="3MwsjC">
-              <property role="3MwjfP" value="libs" />
+              <property role="3MwjfP" value="lib" />
             </node>
           </node>
           <node concept="3ygNvl" id="7mrE8nX9Oqw" role="39821P">
@@ -295,9 +295,6 @@
       <node concept="2iUeEo" id="3wrDZJThql9" role="2iVFfd">
         <property role="2iUeEt" value="Workday" />
         <property role="2iUeEu" value="https://www.workday.com/" />
-      </node>
-      <node concept="m$_yC" id="7Oiry496RCC" role="m$_yJ">
-        <ref role="m$_y1" node="4GMBmWUHpN2" resolve="Git4Idea" />
       </node>
       <node concept="m$_yC" id="7Oiry496REE" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
