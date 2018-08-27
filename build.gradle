@@ -153,6 +153,7 @@ task zipGit4mpsPlugin(group: 'MPS Build',
   destinationDir = file("${rootDir}/dist/build/artifacts/")
   archiveName = 'com.workday.mps.git4mps.zip'
 }
+zipGit4mpsPlugin.mustRunAfter buildPlugin
 
 task zipGit4mpsWithBuildPlugin(group: 'MPS Build',
                type: Zip,
@@ -162,6 +163,7 @@ task zipGit4mpsWithBuildPlugin(group: 'MPS Build',
   destinationDir = file("${rootDir}/dist/build/artifacts/")
   archiveName = 'git4mps.zip'
 }
+zipGit4mpsWithBuildPlugin.mustRunAfter buildPlugin
 
 task zipCodeReviewerPlugin(group: 'MPS Build',
                type: Zip,
@@ -171,15 +173,17 @@ task zipCodeReviewerPlugin(group: 'MPS Build',
   destinationDir = file("${rootDir}/dist/build/artifacts/")
   archiveName = 'com.workday.mps.review.zip'
 }
+zipCodeReviewerPlugin.mustRunAfter buildPlugin
 
 task zipPlugin(group: 'MPS Build',
                description: 'Archive plugins into zip files',
-               dependsOn: [buildPlugin, zipGit4mpsBuildPlugin, zipGit4mpsPlugin, zipGit4mpsWithBuildPlugin, zipCodeReviewerPlugin]) {
+               dependsOn: [zipGit4mpsBuildPlugin, zipGit4mpsPlugin, zipGit4mpsWithBuildPlugin, zipCodeReviewerPlugin]) {
   doLast {
     println 'Plugins have been successfully zipped ================='
     println()
   }
 }
+zipPlugin.mustRunAfter buildPlugin
 
 
 defaultTasks 'build'

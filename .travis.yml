@@ -1,11 +1,13 @@
 language: java
+before_deploy: 
+  - ./gradlew zipPlugins
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
     secure: HHz8uE5JL/jW+dkfv6gRY4OMrTiz2Bnjsy0Hc8Jug8eISbSLSTvp/nV6fvSOKs7AEDzXedXXp0ktaLjcuW8sZm4mWbbiwKLPzcxnMZXnK6PxC75nSFJ71VdmuRcnLTsV0v0UPCyJmY9za95DiBKGBR16PIp+JOMd6p0aGYNEF5hB5LOmINoKJ0mHGiPG4VdVFRQRS4sa16jyWjyCiQ37/Hr7lAVuzzp+xnzwc2BXdxk6giQqWnAqKNsO9tGFf0i94WSnTG1gvTeIcp1jPSC2w+OkjQeRC3vy63RUpuYJJiPk3lDMP/dSrTjiKCAzwqJrBY4SeO0eOYDgfvTF8TWR4PiaKLsQLGxGcduXJDtM8stV0/EXw+ljsLKNvZSINJodB8UXL/C4MbFRLyg2231UbSEen2NL4t/EFZET8Ip6d5pa1qITfz2MCJgc2AcGnlQp0PwnaAgmB9unSyeVoPSQP+fljmsA2Xlx5N4GdFQIDfyxDnm/Ubl+v+UxCmtmja7WKkSaVjdLPduRFS+ZfzFFsnhQSpwfOSqCf0EwWEYIpaB8u3EdAbMnRGdlXXJgrrObyYvneGxEZCZe+XDpnjW3bUj7CV8Jnqu/meZ0j+0+r4VoUTop/ELvOLO3WoGCOCG692jAe+2r8u/ncfB/mzQ/wLKxZgCY6sRfx635AIXHFdo=
   file-glob: true
-  file: dist/build/artifacts/reviewPlugin/*
+  file: dist/build/artifacts/*.zip
   on:
     repo: Workday/mps-code-reviewer
     tags: true
