@@ -175,7 +175,7 @@ task zipCodeReviewerPlugin(group: 'MPS Build',
 }
 zipCodeReviewerPlugin.mustRunAfter buildPlugin
 
-task zipPlugin(group: 'MPS Build',
+task zipPlugins(group: 'MPS Build',
                description: 'Archive plugins into zip files',
                dependsOn: [zipGit4mpsBuildPlugin, zipGit4mpsPlugin, zipGit4mpsWithBuildPlugin, zipCodeReviewerPlugin]) {
   doLast {
@@ -183,7 +183,7 @@ task zipPlugin(group: 'MPS Build',
     println()
   }
 }
-zipPlugin.mustRunAfter buildPlugin
+zipPlugins.mustRunAfter buildPlugin
 
 
 defaultTasks 'build'
