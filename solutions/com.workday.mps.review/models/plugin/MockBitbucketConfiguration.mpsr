@@ -169,9 +169,6 @@
           <node concept="37vLTw" id="6AMQKPcBb7k" role="37wK5m">
             <ref role="3cqZAo" node="6AMQKPcBaue" resolve="hostname" />
           </node>
-          <node concept="37vLTw" id="6AMQKPcBcbk" role="37wK5m">
-            <ref role="3cqZAo" node="6AMQKPcBaug" resolve="apiVersion" />
-          </node>
           <node concept="37vLTw" id="6AMQKPcBcgB" role="37wK5m">
             <ref role="3cqZAo" node="6AMQKPcBaui" resolve="project" />
           </node>
@@ -206,11 +203,6 @@
         <property role="TrG5h" value="hostname" />
         <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="6AMQKPcBauf" role="1tU5fm" />
-      </node>
-      <node concept="37vLTG" id="6AMQKPcBaug" role="3clF46">
-        <property role="TrG5h" value="apiVersion" />
-        <property role="3TUv4t" value="true" />
-        <node concept="17QB3L" id="6AMQKPcBauh" role="1tU5fm" />
       </node>
       <node concept="37vLTG" id="6AMQKPcBaui" role="3clF46">
         <property role="TrG5h" value="project" />
