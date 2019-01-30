@@ -21,9 +21,7 @@
         <child id="1068580123133" name="returnType" index="3clF45" />
         <child id="1068580123135" name="body" index="3clF47" />
       </concept>
-      <concept id="1068580123165" name="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" flags="ig" index="3clFb_">
-        <property id="1178608670077" name="isAbstract" index="1EzhhJ" />
-      </concept>
+      <concept id="1068580123165" name="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" flags="ig" index="3clFb_" />
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS" />
       <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
         <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
@@ -73,7 +71,6 @@
     <property role="3GE5qa" value="" />
     <property role="TrG5h" value="Comment" />
     <node concept="3clFb_" id="4Ew7qBDr$0X" role="jymVt">
-      <property role="1EzhhJ" value="true" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="getId" />
       <node concept="3clFbS" id="4Ew7qBDr$10" role="3clF47" />
@@ -92,7 +89,6 @@
     </node>
     <node concept="2tJIrI" id="4Ew7qBDr_F$" role="jymVt" />
     <node concept="3clFb_" id="4Ew7qBDrzUh" role="jymVt">
-      <property role="1EzhhJ" value="true" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="getText" />
       <node concept="3clFbS" id="4Ew7qBDrzUk" role="3clF47" />
@@ -111,7 +107,6 @@
     </node>
     <node concept="2tJIrI" id="4Ew7qBDr_PZ" role="jymVt" />
     <node concept="3clFb_" id="4Ew7qBDr$8S" role="jymVt">
-      <property role="1EzhhJ" value="true" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="getAuthor" />
       <node concept="3clFbS" id="4Ew7qBDr$8V" role="3clF47" />
@@ -132,7 +127,6 @@
     </node>
     <node concept="2tJIrI" id="4Ew7qBDrA0y" role="jymVt" />
     <node concept="3clFb_" id="4Ew7qBDr$t_" role="jymVt">
-      <property role="1EzhhJ" value="true" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="getUpdatedDate" />
       <node concept="3clFbS" id="4Ew7qBDr$tC" role="3clF47" />
@@ -153,7 +147,6 @@
     </node>
     <node concept="2tJIrI" id="4Ew7qBDrAij" role="jymVt" />
     <node concept="3clFb_" id="4Ew7qBDr$PG" role="jymVt">
-      <property role="1EzhhJ" value="true" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="getReplies" />
       <node concept="3clFbS" id="4Ew7qBDr$PJ" role="3clF47" />
@@ -179,7 +172,6 @@
     </node>
     <node concept="2tJIrI" id="4Ew7qBDrAv8" role="jymVt" />
     <node concept="3clFb_" id="4Ew7qBDr_ki" role="jymVt">
-      <property role="1EzhhJ" value="true" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="getFilePath" />
       <node concept="3clFbS" id="4Ew7qBDr_kl" role="3clF47" />
@@ -198,7 +190,6 @@
     </node>
     <node concept="2tJIrI" id="4Ew7qBDrAD$" role="jymVt" />
     <node concept="3clFb_" id="4Ew7qBDr_4A" role="jymVt">
-      <property role="1EzhhJ" value="true" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="getCommentedNodeURL" />
       <node concept="3clFbS" id="4Ew7qBDr_4D" role="3clF47" />
