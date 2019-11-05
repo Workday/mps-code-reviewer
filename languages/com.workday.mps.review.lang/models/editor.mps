@@ -210,7 +210,7 @@
             </node>
             <node concept="3cpWs8" id="4jyU69Omf_3" role="3cqZAp">
               <node concept="3cpWsn" id="4jyU69Omf_4" role="3cpWs9">
-                <property role="TrG5h" value="stire" />
+                <property role="TrG5h" value="store" />
                 <property role="3TUv4t" value="true" />
                 <node concept="3uibUv" id="4jyU69Omf$W" role="1tU5fm">
                   <ref role="3uigEE" to="czez:4Ew7qBDg_9q" resolve="SettingsStore" />
@@ -258,7 +258,7 @@
               </node>
               <node concept="2OqwBi" id="4jyU69Omgba" role="3clFbw">
                 <node concept="37vLTw" id="4jyU69Omf_8" role="2Oq$k0">
-                  <ref role="3cqZAo" node="4jyU69Omf_4" resolve="stire" />
+                  <ref role="3cqZAo" node="4jyU69Omf_4" resolve="store" />
                 </node>
                 <node concept="liA8E" id="4jyU69Omgys" role="2OqNvi">
                   <ref role="37wK5l" to="czez:4Ew7qBDgA00" resolve="getShowInlineComments" />

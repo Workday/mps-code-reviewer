@@ -5,6 +5,7 @@
     <import index="mhfm" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/java:org.jetbrains.annotations(Annotations/)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="ee8f" ref="r:76b35c96-0206-4f74-890e-e39504808bf8(com.workday.mps.flux.core)" implicit="true" />
+    <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -101,7 +102,6 @@
   </registry>
   <node concept="312cEu" id="4dp0Yvdvjqg">
     <property role="TrG5h" value="PostCommentRequest" />
-    <node concept="2tJIrI" id="5ihn07Cd_af" role="jymVt" />
     <node concept="312cEg" id="4dp0YvdIZ8u" role="jymVt">
       <property role="34CwA1" value="false" />
       <property role="eg7rD" value="false" />
@@ -116,7 +116,7 @@
       <property role="eg7rD" value="false" />
       <property role="TrG5h" value="commentText" />
       <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="4dp0Yvdvqzt" role="1B3o_S" />
+      <node concept="3Tm6S6" id="$fM5Mj0bip" role="1B3o_S" />
       <node concept="17QB3L" id="4dp0Yvdvjup" role="1tU5fm" />
       <node concept="2AHcQZ" id="4dp0YvdvjwX" role="2AJF6D">
         <ref role="2AI5Lk" to="mhfm:~NotNull" resolve="NotNull" />
@@ -128,7 +128,7 @@
       <property role="eg7rD" value="false" />
       <property role="TrG5h" value="nodeURL" />
       <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="4dp0YvdvqF5" role="1B3o_S" />
+      <node concept="3Tm6S6" id="$fM5Mj0bzq" role="1B3o_S" />
       <node concept="17QB3L" id="5ihn07Clpg0" role="1tU5fm" />
       <node concept="2AHcQZ" id="4dp0YvdvjwB" role="2AJF6D">
         <ref role="2AI5Lk" to="mhfm:~Nullable" resolve="Nullable" />
@@ -140,7 +140,7 @@
       <property role="eg7rD" value="false" />
       <property role="TrG5h" value="replyToId" />
       <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="4dp0YvdvqMH" role="1B3o_S" />
+      <node concept="3Tm6S6" id="$fM5Mj0bOr" role="1B3o_S" />
       <node concept="3uibUv" id="4dp0YvdvjtK" role="1tU5fm">
         <ref role="3uigEE" to="wyt6:~Integer" resolve="Integer" />
       </node>
@@ -154,7 +154,7 @@
       <property role="eg7rD" value="false" />
       <property role="TrG5h" value="filePath" />
       <property role="3TUv4t" value="true" />
-      <node concept="3Tm1VV" id="4jyU69OlrVT" role="1B3o_S" />
+      <node concept="3Tm6S6" id="$fM5Mj0c5s" role="1B3o_S" />
       <node concept="17QB3L" id="4jyU69Olszg" role="1tU5fm" />
       <node concept="2AHcQZ" id="4jyU69OlrVV" role="2AJF6D">
         <ref role="2AI5Lk" to="mhfm:~Nullable" resolve="Nullable" />
@@ -417,6 +417,9 @@
       </node>
       <node concept="3Tm1VV" id="4dp0YvdJ1hT" role="1B3o_S" />
       <node concept="10Oyi0" id="4dp0YvdJ1o0" role="3clF45" />
+      <node concept="2AHcQZ" id="$fM5Mj0ihS" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
     </node>
     <node concept="2tJIrI" id="4dp0YvdJ1PJ" role="jymVt" />
     <node concept="3clFb_" id="4dp0YvdJ1ZX" role="jymVt">
@@ -440,6 +443,9 @@
       <node concept="2AHcQZ" id="4dp0YvdJ4BW" role="2AJF6D">
         <ref role="2AI5Lk" to="mhfm:~NotNull" resolve="NotNull" />
       </node>
+      <node concept="2AHcQZ" id="$fM5Mj0i0y" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
     </node>
     <node concept="2tJIrI" id="4dp0YvdJ2w0" role="jymVt" />
     <node concept="3clFb_" id="4dp0YvdJ2U3" role="jymVt">
@@ -462,6 +468,9 @@
       <node concept="17QB3L" id="5ihn07ClqbR" role="3clF45" />
       <node concept="2AHcQZ" id="4dp0YvdJ4na" role="2AJF6D">
         <ref role="2AI5Lk" to="mhfm:~Nullable" resolve="Nullable" />
+      </node>
+      <node concept="2AHcQZ" id="$fM5Mj0hJa" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
     </node>
     <node concept="2tJIrI" id="4dp0YvdJ3pD" role="jymVt" />
@@ -488,11 +497,38 @@
       <node concept="2AHcQZ" id="4dp0YvdJ46o" role="2AJF6D">
         <ref role="2AI5Lk" to="mhfm:~Nullable" resolve="Nullable" />
       </node>
+      <node concept="2AHcQZ" id="$fM5Mj0htM" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
     </node>
     <node concept="2tJIrI" id="5ihn07Cd$UD" role="jymVt" />
     <node concept="3Tm1VV" id="4dp0Yvdvjqh" role="1B3o_S" />
     <node concept="3uibUv" id="4dp0YvdIG2S" role="EKbjA">
       <ref role="3uigEE" to="ee8f:3c3vDUkV812" resolve="Action" />
+    </node>
+    <node concept="3uibUv" id="$fM5Mj08WL" role="EKbjA">
+      <ref role="3uigEE" to="m3q8:$fM5Mj005B" resolve="ReviewHostConnection.PostCommentRequest" />
+    </node>
+    <node concept="3clFb_" id="$fM5Mj09fd" role="jymVt">
+      <property role="TrG5h" value="getFilePath" />
+      <node concept="3Tm1VV" id="$fM5Mj09ff" role="1B3o_S" />
+      <node concept="17QB3L" id="$fM5Mj09fg" role="3clF45" />
+      <node concept="3clFbS" id="$fM5Mj09fh" role="3clF47">
+        <node concept="3cpWs6" id="$fM5Mj09zt" role="3cqZAp">
+          <node concept="2OqwBi" id="$fM5Mj09E6" role="3cqZAk">
+            <node concept="Xjq3P" id="$fM5Mj09zV" role="2Oq$k0" />
+            <node concept="2OwXpG" id="$fM5Mj0a2z" role="2OqNvi">
+              <ref role="2Oxat5" node="4jyU69OlrVS" resolve="filePath" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="$fM5Mj0j3s" role="2AJF6D">
+        <ref role="2AI5Lk" to="mhfm:~Nullable" resolve="Nullable" />
+      </node>
+      <node concept="2AHcQZ" id="$fM5Mj09fi" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
     </node>
   </node>
 </model>
