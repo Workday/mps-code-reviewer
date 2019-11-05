@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model ref="r:075d5413-1a6e-46af-885e-9528522410c5(com.workday.mps.review.bitbucketserver.plugin)" content="root">
+  <persistence version="9" />
+  <imports />
+  <registry>
+    <language id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone">
+      <concept id="7520713872864775836" name="jetbrains.mps.lang.plugin.standalone.structure.StandalonePluginDescriptor" flags="ng" index="2DaZZR" />
+    </language>
+  </registry>
+  <node concept="2DaZZR" id="3t9Q9qjGrwW" />
+</model>
+

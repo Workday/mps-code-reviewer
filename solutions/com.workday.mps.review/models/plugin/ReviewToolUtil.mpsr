@@ -123,6 +123,12 @@
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
     </language>
+    <language id="c0080a47-7e37-4558-bee9-9ae18e690549" name="jetbrains.mps.lang.extension">
+      <concept id="6626851894249711936" name="jetbrains.mps.lang.extension.structure.ExtensionPointExpression" flags="nn" index="2O5UvJ">
+        <reference id="6626851894249712469" name="extensionPoint" index="2O5UnU" />
+      </concept>
+      <concept id="3175313036448560967" name="jetbrains.mps.lang.extension.structure.GetExtensionObjectsOperation" flags="nn" index="SfwO_" />
+    </language>
     <language id="63650c59-16c8-498a-99c8-005c7ee9515d" name="jetbrains.mps.lang.access">
       <concept id="8974276187400348173" name="jetbrains.mps.lang.access.structure.CommandClosureLiteral" flags="nn" index="1QHqEC" />
       <concept id="8974276187400348170" name="jetbrains.mps.lang.access.structure.BaseExecuteCommandStatement" flags="nn" index="1QHqEJ">
@@ -130,6 +136,9 @@
         <child id="8974276187400348171" name="commandClosureLiteral" index="1QHqEI" />
       </concept>
       <concept id="8974276187400348181" name="jetbrains.mps.lang.access.structure.ExecuteLightweightCommandStatement" flags="nn" index="1QHqEK" />
+    </language>
+    <language id="774bf8a0-62e5-41e1-af63-f4812e60e48b" name="jetbrains.mps.baseLanguage.checkedDots">
+      <concept id="4079382982702596667" name="jetbrains.mps.baseLanguage.checkedDots.structure.CheckedDotExpression" flags="nn" index="2EnYce" />
     </language>
     <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
       <concept id="1199569711397" name="jetbrains.mps.baseLanguage.closures.structure.ClosureLiteral" flags="nn" index="1bVj0M">
@@ -156,6 +165,9 @@
       <concept id="4222318806802425298" name="jetbrains.mps.lang.core.structure.SuppressErrorsAnnotation" flags="ng" index="15s5l7" />
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
+      <concept id="1151689724996" name="jetbrains.mps.baseLanguage.collections.structure.SequenceType" flags="in" index="A3Dl8">
+        <child id="1151689745422" name="elementType" index="A3Ik2" />
+      </concept>
       <concept id="1153943597977" name="jetbrains.mps.baseLanguage.collections.structure.ForEachStatement" flags="nn" index="2Gpval">
         <child id="1153944400369" name="variable" index="2Gsz3X" />
         <child id="1153944424730" name="inputSequence" index="2GsD0m" />
@@ -176,7 +188,7 @@
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="3okjBs8jl9H" role="3clF47">
         <node concept="3cpWs6" id="3okjBs8jlyt" role="3cqZAp">
-          <node concept="2OqwBi" id="3okjBs8jnbt" role="3cqZAk">
+          <node concept="2EnYce" id="7fmxmtE3Dux" role="3cqZAk">
             <node concept="2OqwBi" id="3okjBs8jm5Z" role="2Oq$k0">
               <node concept="37vLTw" id="3okjBs8jlN0" role="2Oq$k0">
                 <ref role="3cqZAo" node="3okjBs8jlH2" resolve="project" />
@@ -200,6 +212,26 @@
         <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="3okjBs8jmFw" role="1tU5fm">
           <ref role="3uigEE" to="4nm9:~Project" resolve="Project" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="$fM5MiRVA3" role="jymVt" />
+    <node concept="2YIFZL" id="$fM5MiRWbn" role="jymVt">
+      <property role="TrG5h" value="getReviewHostDefinitions" />
+      <node concept="3clFbS" id="$fM5MiRWbq" role="3clF47">
+        <node concept="3cpWs6" id="$fM5MiRWmf" role="3cqZAp">
+          <node concept="2OqwBi" id="$fM5MiRWB4" role="3cqZAk">
+            <node concept="2O5UvJ" id="$fM5MiRWq0" role="2Oq$k0">
+              <ref role="2O5UnU" node="3t9Q9qjGrzp" resolve="ReviewHostExtensionPoint" />
+            </node>
+            <node concept="SfwO_" id="$fM5MiRWOj" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="$fM5MiRVMV" role="1B3o_S" />
+      <node concept="A3Dl8" id="$fM5MiRW16" role="3clF45">
+        <node concept="3uibUv" id="$fM5MiRWbj" role="A3Ik2">
+          <ref role="3uigEE" node="3t9Q9qjGrzs" resolve="ReviewHostDefinition" />
         </node>
       </node>
     </node>
