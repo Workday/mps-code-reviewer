@@ -115,7 +115,6 @@
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
       <concept id="5253498789149585690" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnModule" flags="ng" index="3bR9La">
-        <property id="5253498789149547713" name="reexport" index="3bR36h" />
         <reference id="5253498789149547705" name="module" index="3bR37D" />
       </concept>
       <concept id="4356762679305675652" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_ModuleXml_CustomJarLocation" flags="ng" index="3yLZsm">
@@ -352,19 +351,16 @@
       </node>
       <node concept="1SiIV0" id="3wrDZJThqpe" role="3bR37C">
         <node concept="3bR9La" id="3wrDZJThqpf" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:44LXwdzyvTi" resolve="Annotations" />
         </node>
       </node>
       <node concept="1SiIV0" id="3wrDZJThqpg" role="3bR37C">
         <node concept="3bR9La" id="3wrDZJThqph" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
         </node>
       </node>
       <node concept="1SiIV0" id="3wrDZJThqpi" role="3bR37C">
         <node concept="3bR9La" id="3wrDZJThqpj" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
         </node>
       </node>
@@ -417,7 +413,6 @@
       <property role="BnDLt" value="true" />
       <property role="TrG5h" value="com.workday.mps.git4mps" />
       <property role="3LESm3" value="35a83c38-8969-4574-b716-a7b3acd78eec" />
-      <property role="2GAjPV" value="false" />
       <node concept="398BVA" id="3wrDZJThs49" role="3LF7KH">
         <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
         <node concept="2Ry0Ak" id="3wrDZJThs5n" role="iGT6I">
@@ -432,13 +427,11 @@
       </node>
       <node concept="1SiIV0" id="3wrDZJThsa3" role="3bR37C">
         <node concept="3bR9La" id="3wrDZJThsa4" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
         </node>
       </node>
       <node concept="1SiIV0" id="3wrDZJThsa5" role="3bR37C">
         <node concept="3bR9La" id="3wrDZJThsa6" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="al5i:7Pr7tifzlku" resolve="com.mbeddr.platform" />
         </node>
       </node>

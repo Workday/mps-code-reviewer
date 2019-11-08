@@ -108,7 +108,6 @@
       <concept id="3570488090019868065" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_AutoPluginLayoutType" flags="ng" index="pUk6x" />
       <concept id="868032131020265945" name="jetbrains.mps.build.mps.structure.BuildMPSPlugin" flags="ng" index="3b7kt6" />
       <concept id="5253498789149381388" name="jetbrains.mps.build.mps.structure.BuildMps_Module" flags="ng" index="3bQrTs">
-        <property id="1500819558096356884" name="doNotCompile" index="2GAjPV" />
         <child id="5253498789149547825" name="sources" index="3bR31x" />
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
@@ -260,9 +259,6 @@
       <node concept="m$_yC" id="3c3vDUlxVVQ" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:RJsmGEieyQ" resolve="jetbrains.mps.vcs" />
       </node>
-      <node concept="m$_yC" id="3wrDZJThzY1" role="m$_yJ">
-        <ref role="m$_y1" to="mp9h:3wrDZJThqkR" resolve="com.workday.mps.git4mps" />
-      </node>
       <node concept="m$_yB" id="7SqVNqmc1gN" role="m$_yh">
         <ref role="m$_yA" node="3c3vDUlvEDO" resolve="com.workday.mps.flux" />
       </node>
@@ -275,12 +271,14 @@
       <node concept="m$_yB" id="7SqVNqmc1ks" role="m$_yh">
         <ref role="m$_yA" node="NvAZPok1Na" resolve="com.workday.mps.review.lang" />
       </node>
+      <node concept="m$_yC" id="3wrDZJThzY1" role="m$_yJ">
+        <ref role="m$_y1" to="mp9h:3wrDZJThqkR" resolve="com.workday.mps.git4mps" />
+      </node>
     </node>
     <node concept="1E1JtA" id="3c3vDUlvEDO" role="3989C9">
       <property role="BnDLt" value="true" />
       <property role="TrG5h" value="com.workday.mps.flux" />
       <property role="3LESm3" value="39100436-4455-4b98-b3a6-4512d25abac4" />
-      <property role="2GAjPV" value="false" />
       <node concept="398BVA" id="3c3vDUlvEG7" role="3LF7KH">
         <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
         <node concept="2Ry0Ak" id="3c3vDUlvEIj" role="iGT6I">
@@ -295,7 +293,6 @@
       </node>
       <node concept="1SiIV0" id="3c3vDUlvEOj" role="3bR37C">
         <node concept="3bR9La" id="3c3vDUlvEOk" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
         </node>
       </node>
@@ -315,12 +312,16 @@
           </node>
         </node>
       </node>
+      <node concept="1SiIV0" id="5Zy$4XF1DfB" role="3bR37C">
+        <node concept="3bR9La" id="5Zy$4XF1DfC" role="1SiIV1">
+          <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
+        </node>
+      </node>
     </node>
     <node concept="1E1JtA" id="NvAZPok1o0" role="3989C9">
       <property role="BnDLt" value="true" />
       <property role="TrG5h" value="com.workday.mps.review" />
       <property role="3LESm3" value="301737e2-0a75-4665-a1a3-af0218114a24" />
-      <property role="2GAjPV" value="false" />
       <node concept="398BVA" id="NvAZPok1o2" role="3LF7KH">
         <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
         <node concept="2Ry0Ak" id="NvAZPok1o3" role="iGT6I">
@@ -341,13 +342,11 @@
       </node>
       <node concept="1SiIV0" id="NvAZPok1oa" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1ob" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1oc" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1od" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
         </node>
       </node>
@@ -359,13 +358,11 @@
       </node>
       <node concept="1SiIV0" id="NvAZPok1Af" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1Ag" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1Aj" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1Ak" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" node="NvAZPok1$i" resolve="com.workday.mps.review.git" />
         </node>
       </node>
@@ -431,7 +428,6 @@
       </node>
       <node concept="1SiIV0" id="4dp0YvdNW$1" role="3bR37C">
         <node concept="3bR9La" id="4dp0YvdNW$2" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
         </node>
       </node>
@@ -459,7 +455,6 @@
       <property role="BnDLt" value="true" />
       <property role="TrG5h" value="com.workday.mps.review.git" />
       <property role="3LESm3" value="b7b6b13b-3ca1-4444-85ae-5f7f691136b9" />
-      <property role="2GAjPV" value="false" />
       <node concept="398BVA" id="NvAZPok1$k" role="3LF7KH">
         <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
         <node concept="2Ry0Ak" id="NvAZPok1$l" role="iGT6I">
@@ -474,38 +469,27 @@
       </node>
       <node concept="1SiIV0" id="NvAZPok1$o" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1$p" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1$q" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1$r" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1$s" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1$t" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1$u" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1$v" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1$w" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1$x" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:44LXwdzyvTi" resolve="Annotations" />
-        </node>
-      </node>
-      <node concept="1SiIV0" id="24ZpFMHUaBW" role="3bR37C">
-        <node concept="3bR9La" id="3wrDZJThzY_" role="1SiIV1">
-          <property role="3bR36h" value="true" />
-          <ref role="3bR37D" to="mp9h:3wrDZJThqp9" resolve="git4mps" />
         </node>
       </node>
       <node concept="3rtmxn" id="7Uvm6D4BW1I" role="3bR31x">
@@ -524,12 +508,17 @@
           </node>
         </node>
       </node>
+      <node concept="1SiIV0" id="7bWAWwGZSRP" role="3bR37C">
+        <node concept="3bR9La" id="7bWAWwGZSRQ" role="1SiIV1">
+          <property role="3bR36h" value="true" />
+          <ref role="3bR37D" to="mp9h:3wrDZJThqp9" resolve="git4mps" />
+        </node>
+      </node>
     </node>
     <node concept="1E1JtD" id="NvAZPok1Na" role="3989C9">
       <property role="BnDLt" value="true" />
       <property role="TrG5h" value="com.workday.mps.review.lang" />
       <property role="3LESm3" value="374dabf8-c190-4644-a3e1-b17a25f2e467" />
-      <property role="2GAjPV" value="false" />
       <node concept="398BVA" id="NvAZPok1Pm" role="3LF7KH">
         <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
         <node concept="2Ry0Ak" id="NvAZPok1Pn" role="iGT6I">
@@ -544,37 +533,31 @@
       </node>
       <node concept="1SiIV0" id="NvAZPok1SL" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1SM" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1SN" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1SO" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1SP" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1SQ" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1SR" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1SS" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1ST" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1SU" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
         </node>
       </node>
       <node concept="1SiIV0" id="NvAZPok1SV" role="3bR37C">
         <node concept="3bR9La" id="NvAZPok1SW" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" node="NvAZPok1o0" resolve="com.workday.mps.review" />
         </node>
       </node>

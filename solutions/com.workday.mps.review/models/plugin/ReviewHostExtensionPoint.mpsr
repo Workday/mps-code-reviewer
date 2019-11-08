@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:a13717ec-0f28-4c83-aaaa-0b10931768b8(com.workday.mps.review.plugin)" content="root">
   <persistence version="9" />
-  <imports />
+  <imports>
+    <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" implicit="true" />
+  </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
@@ -26,7 +28,7 @@
     <property role="3GE5qa" value="extension" />
     <property role="TrG5h" value="ReviewHostExtensionPoint" />
     <node concept="3uibUv" id="3t9Q9qjGsDn" role="luc8K">
-      <ref role="3uigEE" node="3t9Q9qjGrzs" resolve="ReviewHostDefinition" />
+      <ref role="3uigEE" to="m3q8:3t9Q9qjGrzs" resolve="ReviewHostDefinition" />
     </node>
   </node>
 </model>

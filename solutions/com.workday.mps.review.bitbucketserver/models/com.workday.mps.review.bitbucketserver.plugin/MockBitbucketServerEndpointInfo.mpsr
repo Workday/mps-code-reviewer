@@ -14,6 +14,7 @@
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
       <concept id="1188207840427" name="jetbrains.mps.baseLanguage.structure.AnnotationInstance" flags="nn" index="2AHcQZ">
         <reference id="1188208074048" name="annotation" index="2AI5Lk" />
@@ -143,7 +144,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="6AMQKPcB9R$">
-    <property role="TrG5h" value="MockBitbucketConfiguration" />
+    <property role="TrG5h" value="MockBitbucketServerEndpointInfo" />
     <node concept="2tJIrI" id="6AMQKPcBatp" role="jymVt" />
     <node concept="312cEg" id="6AMQKPcBcEb" role="jymVt">
       <property role="34CwA1" value="false" />
@@ -158,7 +159,7 @@
       <node concept="3cqZAl" id="6AMQKPcBatv" role="3clF45" />
       <node concept="3clFbS" id="6AMQKPcBatw" role="3clF47">
         <node concept="XkiVB" id="6AMQKPcBaU$" role="3cqZAp">
-          <ref role="37wK5l" node="78s6gAko0FB" resolve="BitbucketConfiguration" />
+          <ref role="37wK5l" node="78s6gAko0FB" resolve="BitbucketServerEndpointInfo" />
           <node concept="37vLTw" id="6AMQKPcBaYp" role="37wK5m">
             <ref role="3cqZAo" node="6AMQKPcBauc" resolve="scheme" />
           </node>
@@ -219,6 +220,75 @@
         <property role="TrG5h" value="mockPullRequestId" />
         <property role="3TUv4t" value="true" />
         <node concept="10Oyi0" id="6AMQKPcBaup" role="1tU5fm" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="31cpcO1_Z10" role="jymVt" />
+    <node concept="3clFbW" id="31cpcO1A00o" role="jymVt">
+      <node concept="3cqZAl" id="31cpcO1A00p" role="3clF45" />
+      <node concept="3clFbS" id="31cpcO1A00r" role="3clF47">
+        <node concept="XkiVB" id="31cpcO1A294" role="3cqZAp">
+          <ref role="37wK5l" node="78s6gAko0FB" resolve="BitbucketServerEndpointInfo" />
+          <node concept="2OqwBi" id="31cpcO1A8LJ" role="37wK5m">
+            <node concept="37vLTw" id="31cpcO1A8CJ" role="2Oq$k0">
+              <ref role="3cqZAo" node="31cpcO1A1DQ" resolve="info" />
+            </node>
+            <node concept="liA8E" id="31cpcO1A8Ti" role="2OqNvi">
+              <ref role="37wK5l" node="3e72Pa5InCa" resolve="getScheme" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="31cpcO1A9lB" role="37wK5m">
+            <node concept="37vLTw" id="31cpcO1A9cn" role="2Oq$k0">
+              <ref role="3cqZAo" node="31cpcO1A1DQ" resolve="info" />
+            </node>
+            <node concept="liA8E" id="31cpcO1A9tu" role="2OqNvi">
+              <ref role="37wK5l" node="3e72Pa5IpsQ" resolve="getHostname" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="31cpcO1Acsx" role="37wK5m">
+            <node concept="37vLTw" id="31cpcO1AcfL" role="2Oq$k0">
+              <ref role="3cqZAo" node="31cpcO1A1DQ" resolve="info" />
+            </node>
+            <node concept="liA8E" id="31cpcO1Ac_s" role="2OqNvi">
+              <ref role="37wK5l" node="3e72Pa5Itrg" resolve="getProject" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="31cpcO1AawQ" role="37wK5m">
+            <node concept="37vLTw" id="31cpcO1Aagr" role="2Oq$k0">
+              <ref role="3cqZAo" node="31cpcO1A1DQ" resolve="info" />
+            </node>
+            <node concept="liA8E" id="31cpcO1AaD1" role="2OqNvi">
+              <ref role="37wK5l" node="3e72Pa5Iv$8" resolve="getRepository" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="31cpcO1Ab6Y" role="37wK5m">
+            <node concept="37vLTw" id="31cpcO1AaXg" role="2Oq$k0">
+              <ref role="3cqZAo" node="31cpcO1A1DQ" resolve="info" />
+            </node>
+            <node concept="liA8E" id="31cpcO1Abft" role="2OqNvi">
+              <ref role="37wK5l" node="3e72Pa5IxkH" resolve="getAccessToken" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="31cpcO1AcYq" role="3cqZAp">
+          <node concept="37vLTI" id="31cpcO1AfRv" role="3clFbG">
+            <node concept="3cmrfG" id="31cpcO1Agmu" role="37vLTx">
+              <property role="3cmrfH" value="1412" />
+            </node>
+            <node concept="2OqwBi" id="31cpcO1Ad2B" role="37vLTJ">
+              <node concept="Xjq3P" id="31cpcO1AcYo" role="2Oq$k0" />
+              <node concept="2OwXpG" id="31cpcO1Adea" role="2OqNvi">
+                <ref role="2Oxat5" node="6AMQKPcBcEb" resolve="mockPullRequestId" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="31cpcO1_ZbC" role="1B3o_S" />
+      <node concept="37vLTG" id="31cpcO1A1DQ" role="3clF46">
+        <property role="TrG5h" value="info" />
+        <node concept="3uibUv" id="31cpcO1A84r" role="1tU5fm">
+          <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketServerEndpointInfo" />
+        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="6AMQKPcBi5G" role="jymVt" />
@@ -355,7 +425,7 @@
               <node concept="1eOMI4" id="2n3pEWhjjnz" role="3fr31v">
                 <node concept="2ZW3vV" id="2n3pEWhjjn$" role="1eOMHV">
                   <node concept="3uibUv" id="2n3pEWhjk1q" role="2ZW6by">
-                    <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketConfiguration" />
+                    <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketServerEndpointInfo" />
                   </node>
                   <node concept="37vLTw" id="2n3pEWhjjnA" role="2ZW6bz">
                     <ref role="3cqZAo" node="2n3pEWhj7$w" resolve="obj" />
@@ -386,11 +456,11 @@
                   <property role="TrG5h" value="that" />
                   <property role="3TUv4t" value="true" />
                   <node concept="3uibUv" id="2n3pEWhjkqu" role="1tU5fm">
-                    <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketConfiguration" />
+                    <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketServerEndpointInfo" />
                   </node>
                   <node concept="10QFUN" id="2n3pEWhj7$Y" role="33vP2m">
                     <node concept="3uibUv" id="2n3pEWhjkRH" role="10QFUM">
-                      <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketConfiguration" />
+                      <ref role="3uigEE" node="6AMQKPcB9R$" resolve="MockBitbucketServerEndpointInfo" />
                     </node>
                     <node concept="37vLTw" id="2n3pEWhj7_0" role="10QFUP">
                       <ref role="3cqZAo" node="2n3pEWhj7$w" resolve="obj" />
@@ -446,7 +516,7 @@
     <node concept="2tJIrI" id="2n3pEWhj7qJ" role="jymVt" />
     <node concept="3Tm1VV" id="6AMQKPcB9R_" role="1B3o_S" />
     <node concept="3uibUv" id="6AMQKPcBahk" role="1zkMxy">
-      <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
+      <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketServerEndpointInfo" />
     </node>
   </node>
 </model>

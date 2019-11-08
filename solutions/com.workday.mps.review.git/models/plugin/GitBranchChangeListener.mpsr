@@ -194,8 +194,8 @@
               <ref role="3uigEE" to="5mlj:~GitRepository" resolve="GitRepository" />
             </node>
             <node concept="2YIFZM" id="__fp3coU_8" role="33vP2m">
-              <ref role="37wK5l" to="rfyv:~GitBranchUtil.getCurrentRepository(com.intellij.openapi.project.Project):git4idea.repo.GitRepository" resolve="getCurrentRepository" />
               <ref role="1Pybhc" to="rfyv:~GitBranchUtil" resolve="GitBranchUtil" />
+              <ref role="37wK5l" to="rfyv:~GitBranchUtil.getCurrentRepository(com.intellij.openapi.project.Project)" resolve="getCurrentRepository" />
               <node concept="37vLTw" id="__fp3coU_9" role="37wK5m">
                 <ref role="3cqZAo" node="__fp3coHcw" resolve="project" />
               </node>
@@ -284,7 +284,7 @@
                 <ref role="3cqZAo" node="57bl67CHv4_" resolve="repository" />
               </node>
               <node concept="liA8E" id="57bl67CHv4I" role="2OqNvi">
-                <ref role="37wK5l" to="5mlj:~GitRepository.getCurrentBranch():git4idea.GitLocalBranch" resolve="getCurrentBranch" />
+                <ref role="37wK5l" to="5mlj:~GitRepository.getCurrentBranch()" resolve="getCurrentBranch" />
               </node>
             </node>
           </node>
@@ -303,7 +303,7 @@
                     <ref role="3cqZAo" node="57bl67CHv4E" resolve="newLocalBranch" />
                   </node>
                   <node concept="liA8E" id="57bl67CHv4Q" role="2OqNvi">
-                    <ref role="37wK5l" to="hr4p:~GitLocalBranch.findTrackedBranch(git4idea.repo.GitRepository):git4idea.GitRemoteBranch" resolve="findTrackedBranch" />
+                    <ref role="37wK5l" to="hr4p:~GitLocalBranch.findTrackedBranch(git4idea.repo.GitRepository)" resolve="findTrackedBranch" />
                     <node concept="37vLTw" id="57bl67CHv4R" role="37wK5m">
                       <ref role="3cqZAo" node="57bl67CHv4_" resolve="repository" />
                     </node>
@@ -342,7 +342,7 @@
                             <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
                           </node>
                           <node concept="liA8E" id="4Ew7qBDgcI6" role="2OqNvi">
-                            <ref role="37wK5l" to="hr4p:~GitRemoteBranch.getNameForRemoteOperations():java.lang.String" resolve="getNameForRemoteOperations" />
+                            <ref role="37wK5l" to="hr4p:~GitRemoteBranch.getNameForRemoteOperations()" resolve="getNameForRemoteOperations" />
                           </node>
                         </node>
                       </node>
@@ -431,7 +431,7 @@
                                 <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
                               </node>
                               <node concept="liA8E" id="4Ew7qBDgd$e" role="2OqNvi">
-                                <ref role="37wK5l" to="hr4p:~GitRemoteBranch.getNameForRemoteOperations():java.lang.String" resolve="getNameForRemoteOperations" />
+                                <ref role="37wK5l" to="hr4p:~GitRemoteBranch.getNameForRemoteOperations()" resolve="getNameForRemoteOperations" />
                               </node>
                             </node>
                           </node>
@@ -447,7 +447,7 @@
                               </node>
                             </node>
                             <node concept="liA8E" id="57bl67CJ4TT" role="2OqNvi">
-                              <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
+                              <ref role="37wK5l" to="hr4p:~GitBranch.getFullName()" resolve="getFullName" />
                             </node>
                           </node>
                           <node concept="liA8E" id="57bl67CJ4TU" role="2OqNvi">
@@ -457,7 +457,7 @@
                                 <ref role="3cqZAo" node="57bl67CHv4M" resolve="newRemoteBranch" />
                               </node>
                               <node concept="liA8E" id="57bl67CJ4TX" role="2OqNvi">
-                                <ref role="37wK5l" to="hr4p:~GitBranch.getFullName():java.lang.String" resolve="getFullName" />
+                                <ref role="37wK5l" to="hr4p:~GitBranch.getFullName()" resolve="getFullName" />
                               </node>
                             </node>
                           </node>

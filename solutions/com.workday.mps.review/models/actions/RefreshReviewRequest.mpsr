@@ -4,6 +4,7 @@
   <imports>
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="mhfm" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/java:org.jetbrains.annotations(Annotations/)" implicit="true" />
+    <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
     <import index="ee8f" ref="r:76b35c96-0206-4f74-890e-e39504808bf8(com.workday.mps.flux.core)" implicit="true" />
   </imports>
   <registry>
@@ -27,6 +28,12 @@
         <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
+      </concept>
+      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
+        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
         <property id="8606350594693632173" name="isTransient" index="eg7rD" />
@@ -68,6 +75,10 @@
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
+        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+        <child id="1068499141038" name="actualArgument" index="37wK5m" />
+      </concept>
       <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
         <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
       </concept>
@@ -93,7 +104,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="4jyU69Ors1N">
-    <property role="3GE5qa" value="" />
+    <property role="3GE5qa" value="refreshReview" />
     <property role="TrG5h" value="RefreshReviewRequest" />
     <node concept="2tJIrI" id="4jyU69Ors1O" role="jymVt" />
     <node concept="312cEg" id="4jyU69OrLUT" role="jymVt">
@@ -133,13 +144,20 @@
       <node concept="3clFbS" id="4jyU69Ors1V" role="3clF47">
         <node concept="3clFbF" id="4jyU69OrLYx" role="3cqZAp">
           <node concept="37vLTI" id="4jyU69OrMla" role="3clFbG">
-            <node concept="37vLTw" id="4jyU69OrMpm" role="37vLTx">
-              <ref role="3cqZAo" node="4jyU69OrCVl" resolve="pullRequestId" />
-            </node>
             <node concept="2OqwBi" id="4jyU69OrM0X" role="37vLTJ">
               <node concept="Xjq3P" id="4jyU69OrLYv" role="2Oq$k0" />
               <node concept="2OwXpG" id="4jyU69OrM4N" role="2OqNvi">
                 <ref role="2Oxat5" node="4jyU69OrLUT" resolve="pullRequestId" />
+              </node>
+            </node>
+            <node concept="2YIFZM" id="7l1rc0fzcpu" role="37vLTx">
+              <ref role="37wK5l" to="33ny:~Objects.requireNonNull(java.lang.Object,java.lang.String)" resolve="requireNonNull" />
+              <ref role="1Pybhc" to="33ny:~Objects" resolve="Objects" />
+              <node concept="37vLTw" id="7l1rc0fzcpv" role="37wK5m">
+                <ref role="3cqZAo" node="4jyU69OrCVl" resolve="pullRequestId" />
+              </node>
+              <node concept="Xl_RD" id="7l1rc0fzcpw" role="37wK5m">
+                <property role="Xl_RC" value="Must provide ID" />
               </node>
             </node>
           </node>
@@ -169,8 +187,15 @@
       <node concept="3clFbS" id="4jyU69OrLJf" role="3clF47">
         <node concept="3clFbF" id="4jyU69OrO_P" role="3cqZAp">
           <node concept="37vLTI" id="4jyU69OrOTf" role="3clFbG">
-            <node concept="37vLTw" id="4jyU69OrOV_" role="37vLTx">
-              <ref role="3cqZAo" node="4jyU69OrD41" resolve="branchName" />
+            <node concept="2YIFZM" id="7l1rc0fzcT1" role="37vLTx">
+              <ref role="37wK5l" to="33ny:~Objects.requireNonNull(java.lang.Object,java.lang.String)" resolve="requireNonNull" />
+              <ref role="1Pybhc" to="33ny:~Objects" resolve="Objects" />
+              <node concept="37vLTw" id="7l1rc0fzcT2" role="37wK5m">
+                <ref role="3cqZAo" node="4jyU69OrD41" resolve="branchName" />
+              </node>
+              <node concept="Xl_RD" id="7l1rc0fzcT3" role="37wK5m">
+                <property role="Xl_RC" value="Must provide branch name" />
+              </node>
             </node>
             <node concept="2OqwBi" id="4jyU69OrOCh" role="37vLTJ">
               <node concept="Xjq3P" id="4jyU69OrO_N" role="2Oq$k0" />

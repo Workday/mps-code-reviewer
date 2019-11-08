@@ -102,7 +102,7 @@
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="4Ew7qBDr4YH" role="3clF47" />
       <node concept="3Tm1VV" id="4Ew7qBDr4ZN" role="1B3o_S" />
-      <node concept="10Oyi0" id="3yDmnco$qg5" role="3clF45" />
+      <node concept="3cqZAl" id="isM1ULZEBk" role="3clF45" />
       <node concept="37vLTG" id="4Ew7qBDr4ZP" role="3clF46">
         <property role="TrG5h" value="branchName" />
         <property role="3TUv4t" value="false" />
@@ -112,7 +112,6 @@
         <property role="TrG5h" value="onSuccess" />
         <property role="3TUv4t" value="false" />
         <node concept="1ajhzC" id="3yDmncoAdB4" role="1tU5fm">
-          <node concept="10Oyi0" id="__fp3cwAAK" role="1ajw0F" />
           <node concept="3uibUv" id="4Ew7qBDr4ZT" role="1ajw0F">
             <ref role="3uigEE" node="4Ew7qBDj1oK" resolve="Review" />
           </node>
@@ -123,7 +122,6 @@
         <property role="TrG5h" value="onFailure" />
         <property role="3TUv4t" value="false" />
         <node concept="1ajhzC" id="3yDmncoAdCn" role="1tU5fm">
-          <node concept="10Oyi0" id="__fp3cwAIm" role="1ajw0F" />
           <node concept="17QB3L" id="3yDmncoyzLu" role="1ajw0F" />
           <node concept="3cqZAl" id="4Ew7qBDr4ZY" role="1ajl9A" />
         </node>
@@ -144,7 +142,7 @@
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="3yDmncoz_rI" role="3clF47" />
       <node concept="3Tm1VV" id="3yDmncoz_rJ" role="1B3o_S" />
-      <node concept="10Oyi0" id="3yDmnco$qlK" role="3clF45" />
+      <node concept="3cqZAl" id="isM1ULZEDp" role="3clF45" />
       <node concept="37vLTG" id="3yDmncoz_rL" role="3clF46">
         <property role="TrG5h" value="reviewId" />
         <property role="3TUv4t" value="false" />
@@ -154,7 +152,6 @@
         <property role="TrG5h" value="onSuccess" />
         <property role="3TUv4t" value="false" />
         <node concept="1ajhzC" id="3yDmncoAdwP" role="1tU5fm">
-          <node concept="10Oyi0" id="__fp3cwAA3" role="1ajw0F" />
           <node concept="3uibUv" id="3yDmncoz_rP" role="1ajw0F">
             <ref role="3uigEE" node="4Ew7qBDj1oK" resolve="Review" />
           </node>
@@ -165,7 +162,6 @@
         <property role="TrG5h" value="onFailure" />
         <property role="3TUv4t" value="false" />
         <node concept="1ajhzC" id="3yDmncoAdvu" role="1tU5fm">
-          <node concept="10Oyi0" id="__fp3cwAGZ" role="1ajw0F" />
           <node concept="17QB3L" id="3yDmncoz_rW" role="1ajw0F" />
           <node concept="3cqZAl" id="3yDmncoz_rU" role="1ajl9A" />
         </node>
@@ -186,7 +182,7 @@
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="4Ew7qBDr8Ob" role="3clF47" />
       <node concept="3Tm1VV" id="4Ew7qBDr8Oc" role="1B3o_S" />
-      <node concept="10Oyi0" id="3yDmnco$qrr" role="3clF45" />
+      <node concept="3cqZAl" id="isM1ULZEFu" role="3clF45" />
       <node concept="37vLTG" id="4Ew7qBDr8Oe" role="3clF46">
         <property role="TrG5h" value="reviewId" />
         <property role="3TUv4t" value="false" />
@@ -196,7 +192,6 @@
         <property role="TrG5h" value="onSuccess" />
         <property role="3TUv4t" value="false" />
         <node concept="1ajhzC" id="3yDmncoAdye" role="1tU5fm">
-          <node concept="10Oyi0" id="__fp3cwACc" role="1ajw0F" />
           <node concept="_YKpA" id="3yDmncozLo4" role="1ajw0F">
             <node concept="16syzq" id="FcpLTGYszG" role="_ZDj9">
               <ref role="16sUi3" node="FcpLTGYsvN" resolve="A" />
@@ -209,7 +204,6 @@
         <property role="TrG5h" value="onFailure" />
         <property role="3TUv4t" value="false" />
         <node concept="1ajhzC" id="3yDmncoAdzG" role="1tU5fm">
-          <node concept="10Oyi0" id="__fp3cwAFD" role="1ajw0F" />
           <node concept="17QB3L" id="3yDmncoyzR2" role="1ajw0F" />
           <node concept="3cqZAl" id="4Ew7qBDr8On" role="1ajl9A" />
         </node>
@@ -217,7 +211,7 @@
       <node concept="P$JXv" id="6j8xKyAvxwT" role="lGtFl">
         <node concept="TZ5HA" id="6j8xKyAvxwU" role="TZ5H$">
           <node concept="1dT_AC" id="6j8xKyAvxwV" role="1dT_Ay">
-            <property role="1dT_AB" value="Retrieves all actions for the given pull request, invoking the onSuccess handler with the results if successful." />
+            <property role="1dT_AB" value="Retrieves all activities for the given pull request, invoking the onSuccess handler with the results if successful." />
           </node>
         </node>
       </node>
@@ -228,7 +222,7 @@
       <property role="TrG5h" value="postCommentToReview" />
       <node concept="3clFbS" id="__fp3cw3b8" role="3clF47" />
       <node concept="3Tm1VV" id="__fp3cw3b9" role="1B3o_S" />
-      <node concept="10Oyi0" id="__fp3cw39c" role="3clF45" />
+      <node concept="3cqZAl" id="isM1ULZEHz" role="3clF45" />
       <node concept="37vLTG" id="4dp0Yvdvw8H" role="3clF46">
         <property role="TrG5h" value="request" />
         <node concept="3uibUv" id="$fM5Mj08I8" role="1tU5fm">
@@ -240,7 +234,6 @@
         <property role="3TUv4t" value="false" />
         <node concept="1ajhzC" id="__fp3cw3gN" role="1tU5fm">
           <node concept="3cqZAl" id="__fp3cw3kz" role="1ajl9A" />
-          <node concept="10Oyi0" id="__fp3cwADA" role="1ajw0F" />
           <node concept="3uibUv" id="__fp3cw3kX" role="1ajw0F">
             <ref role="3uigEE" node="4Ew7qBDrroM" resolve="Comment" />
           </node>
@@ -251,7 +244,6 @@
         <property role="3TUv4t" value="false" />
         <node concept="1ajhzC" id="__fp3cw3mP" role="1tU5fm">
           <node concept="3cqZAl" id="__fp3cw3nR" role="1ajl9A" />
-          <node concept="10Oyi0" id="__fp3cwAEj" role="1ajw0F" />
           <node concept="17QB3L" id="__fp3cw3nm" role="1ajw0F" />
         </node>
       </node>
@@ -259,11 +251,6 @@
         <node concept="TZ5HA" id="__fp3cw3uU" role="TZ5H$">
           <node concept="1dT_AC" id="__fp3cw3uV" role="1dT_Ay">
             <property role="1dT_AB" value="Posts a comment to the pull request, invoking the onSuccess handler with the resulting comment if successful" />
-          </node>
-        </node>
-        <node concept="TZ5HA" id="$fM5Mj000O" role="TZ5H$">
-          <node concept="1dT_AC" id="$fM5Mj000P" role="1dT_Ay">
-            <property role="1dT_AB" value="TODO: PostCommentRequest should be replaced with a non-action parameter to remove the cyclic dependency" />
           </node>
         </node>
       </node>

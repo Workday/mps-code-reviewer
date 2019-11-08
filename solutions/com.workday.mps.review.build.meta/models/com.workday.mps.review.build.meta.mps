@@ -56,11 +56,9 @@
       </concept>
       <concept id="868032131020265945" name="jetbrains.mps.build.mps.structure.BuildMPSPlugin" flags="ng" index="3b7kt6" />
       <concept id="5253498789149381388" name="jetbrains.mps.build.mps.structure.BuildMps_Module" flags="ng" index="3bQrTs">
-        <property id="1500819558096356884" name="doNotCompile" index="2GAjPV" />
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
       <concept id="5253498789149585690" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnModule" flags="ng" index="3bR9La">
-        <property id="5253498789149547713" name="reexport" index="3bR36h" />
         <reference id="5253498789149547705" name="module" index="3bR37D" />
       </concept>
       <concept id="3189788309731840247" name="jetbrains.mps.build.mps.structure.BuildMps_Solution" flags="ng" index="1E1JtA" />
@@ -82,7 +80,6 @@
       <property role="BnDLt" value="true" />
       <property role="TrG5h" value="com.workday.mps.git4mps" />
       <property role="3LESm3" value="35a83c38-8969-4574-b716-a7b3acd78eec" />
-      <property role="2GAjPV" value="false" />
       <node concept="398BVA" id="3PM$dUaz5hF" role="3LF7KH">
         <ref role="398BVh" node="3c3vDUluIXm" resolve="project.home" />
         <node concept="2Ry0Ak" id="3PM$dUaz5hZ" role="iGT6I">
@@ -97,13 +94,11 @@
       </node>
       <node concept="1SiIV0" id="3PM$dUaz5i_" role="3bR37C">
         <node concept="3bR9La" id="3PM$dUaz5iA" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
         </node>
       </node>
       <node concept="1SiIV0" id="3PM$dUaz5iB" role="3bR37C">
         <node concept="3bR9La" id="3PM$dUaz5iC" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="al5i:7Pr7tifzlku" resolve="com.mbeddr.platform" />
         </node>
       </node>
@@ -170,7 +165,6 @@
       <property role="BnDLt" value="true" />
       <property role="TrG5h" value="com.workday.mps.review.build" />
       <property role="3LESm3" value="aa79ef09-da8f-4761-af89-e6223d0e9718" />
-      <property role="2GAjPV" value="false" />
       <node concept="398BVA" id="24ZpFMHU7Uz" role="3LF7KH">
         <ref role="398BVh" node="3c3vDUluIXm" resolve="project.home" />
         <node concept="2Ry0Ak" id="24ZpFMHU7UD" role="iGT6I">
@@ -185,19 +179,16 @@
       </node>
       <node concept="1SiIV0" id="24ZpFMHU7UP" role="3bR37C">
         <node concept="3bR9La" id="24ZpFMHU7UQ" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
         </node>
       </node>
       <node concept="1SiIV0" id="24ZpFMHUlOC" role="3bR37C">
         <node concept="3bR9La" id="24ZpFMHUlOD" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" to="al5i:7Pr7tifzlku" resolve="com.mbeddr.platform" />
         </node>
       </node>
       <node concept="1SiIV0" id="3PM$dUazcEx" role="3bR37C">
         <node concept="3bR9La" id="3PM$dUazcEy" role="1SiIV1">
-          <property role="3bR36h" value="false" />
           <ref role="3bR37D" node="3PM$dUaz5gE" resolve="com.workday.mps.git4mps" />
         </node>
       </node>

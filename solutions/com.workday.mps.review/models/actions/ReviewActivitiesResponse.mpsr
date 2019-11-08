@@ -89,7 +89,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="4Ew7qBDrBXx">
-    <property role="3GE5qa" value="" />
+    <property role="3GE5qa" value="reviewActivities" />
     <property role="TrG5h" value="ReviewActivitiesResponse" />
     <node concept="312cEg" id="4Ew7qBD$IMU" role="jymVt">
       <property role="34CwA1" value="false" />

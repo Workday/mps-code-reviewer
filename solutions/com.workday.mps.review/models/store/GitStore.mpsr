@@ -100,6 +100,7 @@
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
+      <concept id="1146644641414" name="jetbrains.mps.baseLanguage.structure.ProtectedVisibility" flags="nn" index="3Tmbuc" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
@@ -151,7 +152,7 @@
       <property role="1EzhhJ" value="false" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="onAction" />
-      <node concept="3Tm1VV" id="5lBYkAh44In" role="1B3o_S" />
+      <node concept="3Tmbuc" id="isM1UM01g$" role="1B3o_S" />
       <node concept="3cqZAl" id="5lBYkAh44Io" role="3clF45" />
       <node concept="37vLTG" id="5lBYkAh44Ip" role="3clF46">
         <property role="TrG5h" value="action" />

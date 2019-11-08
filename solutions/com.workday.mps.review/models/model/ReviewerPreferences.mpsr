@@ -4,6 +4,15 @@
   <imports />
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1109279763828" name="jetbrains.mps.baseLanguage.structure.TypeVariableDeclaration" flags="ng" index="16euLQ">
+        <child id="1214996921760" name="bound" index="3ztrMU" />
+      </concept>
+      <concept id="1109279851642" name="jetbrains.mps.baseLanguage.structure.GenericDeclaration" flags="ng" index="16eOlS">
+        <child id="1109279881614" name="typeVariableDeclaration" index="16eVyc" />
+      </concept>
+      <concept id="1109283449304" name="jetbrains.mps.baseLanguage.structure.TypeVariableReference" flags="in" index="16syzq">
+        <reference id="1109283546497" name="typeVariableDeclaration" index="16sUi3" />
+      </concept>
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
         <child id="1068580123133" name="returnType" index="3clF45" />
         <child id="1068580123135" name="body" index="3clF47" />
@@ -15,6 +24,7 @@
       </concept>
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
+        <child id="1109201940907" name="parameter" index="11_B2D" />
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
@@ -22,9 +32,22 @@
       <concept id="1107796713796" name="jetbrains.mps.baseLanguage.structure.Interface" flags="ig" index="3HP615" />
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
     </language>
+    <language id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc">
+      <concept id="5349172909345501395" name="jetbrains.mps.baseLanguage.javadoc.structure.BaseDocComment" flags="ng" index="P$AiS">
+        <child id="8465538089690331502" name="body" index="TZ5H$" />
+      </concept>
+      <concept id="8465538089690331500" name="jetbrains.mps.baseLanguage.javadoc.structure.CommentLine" flags="ng" index="TZ5HA">
+        <child id="8970989240999019149" name="part" index="1dT_Ay" />
+      </concept>
+      <concept id="8970989240999019143" name="jetbrains.mps.baseLanguage.javadoc.structure.TextCommentLinePart" flags="ng" index="1dT_AC">
+        <property id="8970989240999019144" name="text" index="1dT_AB" />
+      </concept>
+      <concept id="2068944020170241612" name="jetbrains.mps.baseLanguage.javadoc.structure.ClassifierDocComment" flags="ng" index="3UR2Jj" />
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -34,15 +57,49 @@
   <node concept="3HP615" id="$fM5MiZEMp">
     <property role="TrG5h" value="ReviewerPreferences" />
     <property role="3GE5qa" value="" />
+    <node concept="3clFb_" id="31cpcO1BAKb" role="jymVt">
+      <property role="TrG5h" value="getHostDefinition" />
+      <node concept="3clFbS" id="31cpcO1BAKe" role="3clF47" />
+      <node concept="3Tm1VV" id="31cpcO1BAKf" role="1B3o_S" />
+      <node concept="3uibUv" id="31cpcO1BAHZ" role="3clF45">
+        <ref role="3uigEE" node="3t9Q9qjGrzs" resolve="ReviewHostDefinition" />
+        <node concept="16syzq" id="31cpcO1BRE5" role="11_B2D">
+          <ref role="16sUi3" node="31cpcO1BRA6" resolve="T" />
+        </node>
+      </node>
+    </node>
     <node concept="3clFb_" id="$fM5MiZF83" role="jymVt">
       <property role="TrG5h" value="getHostPreferences" />
       <node concept="3clFbS" id="$fM5MiZF86" role="3clF47" />
       <node concept="3Tm1VV" id="$fM5MiZF87" role="1B3o_S" />
-      <node concept="3uibUv" id="$fM5MiZF7T" role="3clF45">
-        <ref role="3uigEE" node="$fM5MiPoj_" resolve="ReviewHostPreferences" />
+      <node concept="16syzq" id="31cpcO1BRIL" role="3clF45">
+        <ref role="16sUi3" node="31cpcO1BRA6" resolve="T" />
       </node>
     </node>
     <node concept="3Tm1VV" id="$fM5MiZEMq" role="1B3o_S" />
+    <node concept="16euLQ" id="31cpcO1BRA6" role="16eVyc">
+      <property role="TrG5h" value="T" />
+      <node concept="3uibUv" id="31cpcO1BRGT" role="3ztrMU">
+        <ref role="3uigEE" node="$fM5MiPoj_" resolve="ReviewHostPreferences" />
+      </node>
+    </node>
+    <node concept="3UR2Jj" id="2vTg_aa1lJ0" role="lGtFl">
+      <node concept="TZ5HA" id="2vTg_aa1lJ1" role="TZ5H$">
+        <node concept="1dT_AC" id="2vTg_aa1lJ2" role="1dT_Ay">
+          <property role="1dT_AB" value="Represents the preferences for the reviewer plugin, including the Host Definition's preferences." />
+        </node>
+      </node>
+      <node concept="TZ5HA" id="2vTg_aa1lJs" role="TZ5H$">
+        <node concept="1dT_AC" id="2vTg_aa1lJt" role="1dT_Ay">
+          <property role="1dT_AB" value="" />
+        </node>
+      </node>
+      <node concept="TZ5HA" id="2vTg_aa1lJy" role="TZ5H$">
+        <node concept="1dT_AC" id="2vTg_aa1lJz" role="1dT_Ay">
+          <property role="1dT_AB" value="Objects extending this should override equals to detect preferences changes." />
+        </node>
+      </node>
+    </node>
   </node>
 </model>
 

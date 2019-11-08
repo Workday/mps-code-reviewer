@@ -97,6 +97,7 @@
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
+      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
@@ -148,6 +149,7 @@
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
+      <concept id="1146644641414" name="jetbrains.mps.baseLanguage.structure.ProtectedVisibility" flags="nn" index="3Tmbuc" />
       <concept id="1170345865475" name="jetbrains.mps.baseLanguage.structure.AnonymousClass" flags="ig" index="1Y3b0j">
         <reference id="1170346070688" name="classifier" index="1Y3XeK" />
       </concept>
@@ -245,7 +247,7 @@
       <property role="1EzhhJ" value="false" />
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="onAction" />
-      <node concept="3Tm1VV" id="3c3vDUl1oqM" role="1B3o_S" />
+      <node concept="3Tmbuc" id="isM1UM06Bp" role="1B3o_S" />
       <node concept="3cqZAl" id="3c3vDUl1oqN" role="3clF45" />
       <node concept="37vLTG" id="3c3vDUl1oqO" role="3clF46">
         <property role="TrG5h" value="action" />
@@ -444,6 +446,7 @@
                 </node>
               </node>
             </node>
+            <node concept="3clFbH" id="78f4qd59y5" role="3cqZAp" />
           </node>
           <node concept="3eNFk2" id="4dp0YvdBEMZ" role="3eNLev">
             <node concept="2ZW3vV" id="4dp0YvdBEWB" role="3eO9$A">
@@ -483,6 +486,7 @@
                   <ref role="37wK5l" to="ee8f:3c3vDUl4aO_" resolve="emitChangeEvent" />
                 </node>
               </node>
+              <node concept="3clFbH" id="78f4qd59w7" role="3cqZAp" />
             </node>
           </node>
           <node concept="3eNFk2" id="4jyU69OmFWV" role="3eNLev">
