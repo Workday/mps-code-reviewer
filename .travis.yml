@@ -1,4 +1,6 @@
 language: java
+jdk:
+  - openjdk8
 before_deploy: 
   - ./gradlew zipPlugins
 deploy:
