@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:a13717ec-0f28-4c83-aaaa-0b10931768b8(com.workday.mps.review.plugin)" content="root">
+<model ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" content="root">
   <persistence version="9" />
   <imports>
     <import index="dush" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.persistence(MPS.OpenAPI/)" implicit="true" />
-    <import index="m3q8" ref="r:abfa740c-751e-47d8-bae6-a0943e92d720(com.workday.mps.review.model)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -76,7 +75,7 @@
     </language>
   </registry>
   <node concept="3HP615" id="3t9Q9qjGrzs">
-    <property role="3GE5qa" value="extension" />
+    <property role="3GE5qa" value="host" />
     <property role="TrG5h" value="ReviewHostDefinition" />
     <node concept="2tJIrI" id="$fM5MiPowH" role="jymVt" />
     <node concept="3clFb_" id="$fM5MiPov_" role="jymVt">
@@ -152,7 +151,7 @@
       <node concept="3clFbS" id="$fM5MiTnBu" role="3clF47" />
       <node concept="3Tm1VV" id="$fM5MiTnBv" role="1B3o_S" />
       <node concept="3uibUv" id="$fM5MiUl7E" role="3clF45">
-        <ref role="3uigEE" to="m3q8:$fM5MiUjQT" resolve="ReviewHostPreferencesView" />
+        <ref role="3uigEE" node="$fM5MiUjQT" resolve="ReviewHostPreferencesView" />
         <node concept="16syzq" id="$fM5MiVmCk" role="11_B2D">
           <ref role="16sUi3" node="$fM5MiRv26" resolve="T" />
         </node>
@@ -177,7 +176,7 @@
       <node concept="3clFbS" id="$fM5MiRvqZ" role="3clF47" />
       <node concept="3Tm1VV" id="$fM5MiRvr0" role="1B3o_S" />
       <node concept="3uibUv" id="$fM5MiRvq_" role="3clF45">
-        <ref role="3uigEE" to="m3q8:4Ew7qBDr4JM" resolve="ReviewHostConnection" />
+        <ref role="3uigEE" node="4Ew7qBDr4JM" resolve="ReviewHostConnection" />
       </node>
       <node concept="P$JXv" id="$fM5MiXaCy" role="lGtFl">
         <node concept="TZ5HA" id="$fM5MiXaCz" role="TZ5H$">
@@ -192,7 +191,7 @@
     <node concept="16euLQ" id="$fM5MiRv26" role="16eVyc">
       <property role="TrG5h" value="T" />
       <node concept="3uibUv" id="$fM5MiRv27" role="3ztrMU">
-        <ref role="3uigEE" to="m3q8:$fM5MiPoj_" resolve="ReviewHostPreferences" />
+        <ref role="3uigEE" node="$fM5MiPoj_" resolve="ReviewHostPreferences" />
       </node>
     </node>
     <node concept="3UR2Jj" id="$fM5MiXbuF" role="lGtFl">

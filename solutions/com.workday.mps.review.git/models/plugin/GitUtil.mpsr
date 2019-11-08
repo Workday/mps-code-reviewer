@@ -141,7 +141,7 @@
                   </node>
                   <node concept="2YIFZM" id="A8HCyhXCao" role="33vP2m">
                     <ref role="1Pybhc" to="rfyv:~GitBranchUtil" resolve="GitBranchUtil" />
-                    <ref role="37wK5l" to="rfyv:~GitBranchUtil.getCurrentRepository(com.intellij.openapi.project.Project):git4idea.repo.GitRepository" resolve="getCurrentRepository" />
+                    <ref role="37wK5l" to="rfyv:~GitBranchUtil.getCurrentRepository(com.intellij.openapi.project.Project)" resolve="getCurrentRepository" />
                     <node concept="37vLTw" id="A8HCyhXFks" role="37wK5m">
                       <ref role="3cqZAo" node="A8HCyhX$Z8" resolve="project" />
                     </node>
@@ -174,7 +174,7 @@
                             <ref role="3cqZAo" node="A8HCyhX_cJ" resolve="repository" />
                           </node>
                           <node concept="liA8E" id="A8HCyhXFHr" role="2OqNvi">
-                            <ref role="37wK5l" to="5mlj:~GitRepository.getCurrentBranch():git4idea.GitLocalBranch" resolve="getCurrentBranch" />
+                            <ref role="37wK5l" to="5mlj:~GitRepository.getCurrentBranch()" resolve="getCurrentBranch" />
                           </node>
                         </node>
                       </node>
@@ -205,7 +205,7 @@
                                   <ref role="3cqZAo" node="A8HCyhXFHo" resolve="localBranch" />
                                 </node>
                                 <node concept="liA8E" id="A8HCyhXGiO" role="2OqNvi">
-                                  <ref role="37wK5l" to="hr4p:~GitLocalBranch.findTrackedBranch(git4idea.repo.GitRepository):git4idea.GitRemoteBranch" resolve="findTrackedBranch" />
+                                  <ref role="37wK5l" to="hr4p:~GitLocalBranch.findTrackedBranch(git4idea.repo.GitRepository)" resolve="findTrackedBranch" />
                                   <node concept="37vLTw" id="A8HCyhXGiP" role="37wK5m">
                                     <ref role="3cqZAo" node="A8HCyhX_cJ" resolve="repository" />
                                   </node>

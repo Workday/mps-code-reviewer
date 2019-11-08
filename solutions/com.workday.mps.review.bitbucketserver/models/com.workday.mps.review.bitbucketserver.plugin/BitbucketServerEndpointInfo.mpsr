@@ -172,7 +172,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="78s6gAknNLU">
-    <property role="TrG5h" value="BitbucketConfiguration" />
+    <property role="TrG5h" value="BitbucketServerEndpointInfo" />
     <node concept="Wx3nA" id="mdNiBlPvYq" role="jymVt">
       <property role="TrG5h" value="repositoryUrlRegex" />
       <property role="2dlcS1" value="false" />
@@ -977,7 +977,7 @@
               <node concept="1eOMI4" id="2n3pEWhjbA3" role="3fr31v">
                 <node concept="2ZW3vV" id="2n3pEWhja7c" role="1eOMHV">
                   <node concept="3uibUv" id="2n3pEWhja_t" role="2ZW6by">
-                    <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
+                    <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketServerEndpointInfo" />
                   </node>
                   <node concept="37vLTw" id="2n3pEWhj9Wv" role="2ZW6bz">
                     <ref role="3cqZAo" node="2n3pEWhhX$o" resolve="obj" />
@@ -1008,11 +1008,11 @@
                   <property role="TrG5h" value="that" />
                   <property role="3TUv4t" value="true" />
                   <node concept="3uibUv" id="2n3pEWhiP1T" role="1tU5fm">
-                    <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
+                    <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketServerEndpointInfo" />
                   </node>
                   <node concept="10QFUN" id="2n3pEWhiPco" role="33vP2m">
                     <node concept="3uibUv" id="2n3pEWhiPcm" role="10QFUM">
-                      <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketConfiguration" />
+                      <ref role="3uigEE" node="78s6gAknNLU" resolve="BitbucketServerEndpointInfo" />
                     </node>
                     <node concept="37vLTw" id="2n3pEWhiPiK" role="10QFUP">
                       <ref role="3cqZAo" node="2n3pEWhhX$o" resolve="obj" />
