@@ -147,16 +147,12 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
-      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
   </registry>
   <node concept="312cEu" id="4Ew7qBDj0gV">
-    <property role="3GE5qa" value="store" />
     <property role="TrG5h" value="ReviewStore" />
     <node concept="312cEg" id="isM1UM2WPF" role="jymVt">
       <property role="TrG5h" value="host" />
@@ -386,6 +382,22 @@
       <node concept="3uibUv" id="3yDmncozLXV" role="3clF45">
         <ref role="3uigEE" to="m3q8:4Ew7qBDj1oK" resolve="Review" />
       </node>
+    </node>
+    <node concept="2tJIrI" id="5AeQVo25vSP" role="jymVt" />
+    <node concept="3clFb_" id="5AeQVo25wlP" role="jymVt">
+      <property role="TrG5h" value="isLoading" />
+      <node concept="3clFbS" id="5AeQVo25wlS" role="3clF47">
+        <node concept="3cpWs6" id="5AeQVo25x0m" role="3cqZAp">
+          <node concept="2OqwBi" id="5AeQVo25xpu" role="3cqZAk">
+            <node concept="Xjq3P" id="5AeQVo25x35" role="2Oq$k0" />
+            <node concept="2OwXpG" id="5AeQVo25xJo" role="2OqNvi">
+              <ref role="2Oxat5" node="isM1UM39Ol" resolve="loading" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="5AeQVo25vZw" role="1B3o_S" />
+      <node concept="10P_77" id="5AeQVo25w3u" role="3clF45" />
     </node>
     <node concept="2tJIrI" id="78f4qd56DE" role="jymVt" />
     <node concept="3clFb_" id="78f4qd57o3" role="jymVt">

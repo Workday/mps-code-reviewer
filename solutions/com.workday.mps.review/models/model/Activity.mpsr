@@ -14,6 +14,7 @@
       <concept id="1188208481402" name="jetbrains.mps.baseLanguage.structure.HasAnnotation" flags="ng" index="2AJDlI">
         <child id="1188208488637" name="annotation" index="2AJF6D" />
       </concept>
+      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
         <child id="1068580123133" name="returnType" index="3clF45" />
         <child id="1068580123135" name="body" index="3clF47" />
@@ -60,6 +61,20 @@
   <node concept="3HP615" id="4Ew7qBDj1ou">
     <property role="TrG5h" value="Activity" />
     <property role="3GE5qa" value="" />
+    <node concept="3clFb_" id="5ecfaE_6E8t" role="jymVt">
+      <property role="TrG5h" value="getId" />
+      <node concept="3clFbS" id="5ecfaE_6E8w" role="3clF47" />
+      <node concept="3Tm1VV" id="5ecfaE_6E8x" role="1B3o_S" />
+      <node concept="10Oyi0" id="5ecfaE_6E8j" role="3clF45" />
+      <node concept="P$JXv" id="5ecfaE_6E93" role="lGtFl">
+        <node concept="TZ5HA" id="5ecfaE_6E94" role="TZ5H$">
+          <node concept="1dT_AC" id="5ecfaE_6E95" role="1dT_Ay">
+            <property role="1dT_AB" value="The identity of the activity" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="5ecfaE_6DO1" role="jymVt" />
     <node concept="3clFb_" id="4Ew7qBDtzBt" role="jymVt">
       <property role="2aFKle" value="false" />
       <property role="TrG5h" value="getDate" />
