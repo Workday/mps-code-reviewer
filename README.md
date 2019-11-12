@@ -14,12 +14,18 @@ A code review plugin for MPS providing basic review interaction, in-line comment
 
 The plugin binaries can be found [here](https://github.com/Workday/mps-code-reviewer/releases).
 
+* Select the latest version and download `git4mps.zip` and `com.workday.mps.review.zip`
+* Open MPS's properties window and select `Plugins`.
+* Click the gear option to the right of the "Updates" tab and select "Install Plugin from Disk".
+* Navigate to and select the two artifacts you previously downloaded (`git4mps.zip` and `com.workday.mps.review.zip`)
+* Restart MPS
+
 The review tool will be enabled in the right-hand sidebar. It will not do anything until it is properly configured in:
 ```
-Preferences -> Other Settings -> BitbucketCodeReviewConfiguration
+Preferences -> Other Settings -> Reviewer
 ```
 
-## Getting Started
+## Getting Started (Contributors)
 
 Read our [contribution guidelines](CONTRIBUTING.md) before making changes to the project. Substantial contributions will require a Contributor License Agreement before a pull request can be merged.
 

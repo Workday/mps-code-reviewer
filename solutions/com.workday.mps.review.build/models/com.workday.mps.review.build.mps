@@ -583,6 +583,34 @@
         </node>
       </node>
     </node>
+    <node concept="1E1JtA" id="57_FRfxHnnh" role="3989C9">
+      <property role="BnDLt" value="true" />
+      <property role="TrG5h" value="com.workday.mps.review.bitbucketserver" />
+      <property role="3LESm3" value="97a3c10c-9c46-4e4f-8f26-7b5af61248a2" />
+      <node concept="398BVA" id="57_FRfxHnpA" role="3LF7KH">
+        <ref role="398BVh" node="24ZpFMHU9ep" resolve="project.home" />
+        <node concept="2Ry0Ak" id="57_FRfxHnqa" role="iGT6I">
+          <property role="2Ry0Am" value="solutions" />
+          <node concept="2Ry0Ak" id="57_FRfxHnqu" role="2Ry0An">
+            <property role="2Ry0Am" value="com.workday.mps.review.bitbucketserver" />
+            <node concept="2Ry0Ak" id="57_FRfxHnr1" role="2Ry0An">
+              <property role="2Ry0Am" value="com.workday.mps.review.bitbucketserver.msd" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1SiIV0" id="57_FRfxHnrx" role="3bR37C">
+        <node concept="3bR9La" id="57_FRfxHnry" role="1SiIV1">
+          <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="57_FRfxHnrz" role="3bR37C">
+        <node concept="3bR9La" id="57_FRfxHnr$" role="1SiIV1">
+          <property role="3bR36h" value="true" />
+          <ref role="3bR37D" node="NvAZPok1o0" resolve="com.workday.mps.review" />
+        </node>
+      </node>
+    </node>
   </node>
 </model>
 
