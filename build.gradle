@@ -1,7 +1,7 @@
 import org.apache.tools.ant.util.TeeOutputStream
 
 // the mps version we build (and install) the plugins for. Necessary to compute a user's plugin directory 
-ext.mpsMajor = "2018.3"
+ext.mpsMajor = "2019.5"
 
 
 buildscript {
@@ -253,7 +253,7 @@ task install(description: "Install the required plugins into the MPS plugin repo
         println "Installing required mps-code-reviewer plugins to '$mpsPluginsDir'"
         if (!project.hasProperty("MPS_PATHS_SELECTOR")) {
             println "To change 'MPS<VERSION>' part, pass MPS_PATHS_SELECTOR property to gradle with -PMPS_PATHS_SELECTOR=<custom path selector>"
-            println "The path selector only contains the actual selector fragment (i.e. \"MPS2017.3\") and not the fully qualified path to the user plugin directory."
+            println "The path selector only contains the actual selector fragment (i.e. \"MPS2019.1\") and not the fully qualified path to the user plugin directory."
         }
     }
 }
@@ -266,7 +266,7 @@ task uninstall(type: Delete, description: "uninstall the plugins from the MPS pl
         println "Uninstalling required mps-code-reviewer plugins from '$mpsPluginsDir'"
         if (!project.hasProperty("MPS_PATHS_SELECTOR")) {
             println "To change 'MPS<VERSION>' part, pass MPS_PATHS_SELECTOR property to gradle with -PMPS_PATHS_SELECTOR=<custom path selector>"
-            println "The path selector only contains the actual selector fragment (i.e. \"MPS2017.3\") and not the fully qualified path to the user plugin directory."
+            println "The path selector only contains the actual selector fragment (i.e. \"MPS2019.1\") and not the fully qualified path to the user plugin directory."
         }
     }
 }
