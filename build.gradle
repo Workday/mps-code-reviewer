@@ -1,7 +1,7 @@
 import org.apache.tools.ant.util.TeeOutputStream
 
 // the mps version we build (and install) the plugins for. Necessary to compute a user's plugin directory 
-ext.mpsMajor = "2019.5"
+ext.mpsMajor = "2019.1"
 
 
 buildscript {
