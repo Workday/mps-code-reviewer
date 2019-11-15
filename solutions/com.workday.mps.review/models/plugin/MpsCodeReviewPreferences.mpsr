@@ -84,7 +84,7 @@
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
-      <concept id="7024111702304501418" name="jetbrains.mps.baseLanguage.structure.AndAssignmentExpression" flags="nn" index="3vZ8ra" />
+      <concept id="7024111702304501416" name="jetbrains.mps.baseLanguage.structure.OrAssignmentExpression" flags="nn" index="3vZ8r8" />
     </language>
     <language id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers">
       <concept id="1205752633985" name="jetbrains.mps.baseLanguage.classifiers.structure.ThisClassifierExpression" flags="nn" index="2WthIp" />
@@ -133,32 +133,32 @@
             </node>
           </node>
           <node concept="3clFbF" id="$fM5MiWUEH" role="3cqZAp">
-            <node concept="3vZ8ra" id="$fM5MiX1xI" role="3clFbG">
-              <node concept="3fqX7Q" id="$fM5MiX3uH" role="37vLTx">
-                <node concept="2YIFZM" id="$fM5MiX3uJ" role="3fr31v">
+            <node concept="3vZ8r8" id="6ky$bTaBNAi" role="3clFbG">
+              <node concept="37vLTw" id="6ky$bTaBNAu" role="37vLTJ">
+                <ref role="3cqZAo" node="$fM5MiWRm2" resolve="modified" />
+              </node>
+              <node concept="3fqX7Q" id="6ky$bTaBNAk" role="37vLTx">
+                <node concept="2YIFZM" id="6ky$bTaBNAl" role="3fr31v">
                   <ref role="37wK5l" to="33ny:~Objects.equals(java.lang.Object,java.lang.Object)" resolve="equals" />
                   <ref role="1Pybhc" to="33ny:~Objects" resolve="Objects" />
-                  <node concept="2OqwBi" id="$fM5MiX4hI" role="37wK5m">
-                    <node concept="2WthIp" id="$fM5MiX3T8" role="2Oq$k0" />
-                    <node concept="34pFcN" id="$fM5MiX4ON" role="2OqNvi">
+                  <node concept="2OqwBi" id="6ky$bTaBNAm" role="37wK5m">
+                    <node concept="2WthIp" id="6ky$bTaBNAn" role="2Oq$k0" />
+                    <node concept="34pFcN" id="6ky$bTaBNAo" role="2OqNvi">
                       <ref role="2WH_rO" node="$fM5MiOVvD" resolve="hostConfiguration" />
                     </node>
                   </node>
-                  <node concept="2OqwBi" id="5qx7eBAXZ5V" role="37wK5m">
-                    <node concept="2OqwBi" id="$fM5MiX6yj" role="2Oq$k0">
-                      <node concept="3yMSdA" id="$fM5MiX5Ih" role="2Oq$k0" />
-                      <node concept="liA8E" id="5Zy$4XF2XXO" role="2OqNvi">
+                  <node concept="2OqwBi" id="6ky$bTaBNAp" role="37wK5m">
+                    <node concept="2OqwBi" id="6ky$bTaBNAq" role="2Oq$k0">
+                      <node concept="3yMSdA" id="6ky$bTaBNAr" role="2Oq$k0" />
+                      <node concept="liA8E" id="6ky$bTaBNAs" role="2OqNvi">
                         <ref role="37wK5l" node="$fM5MiWqUk" resolve="getHostPreferencesData" />
                       </node>
                     </node>
-                    <node concept="liA8E" id="5qx7eBAXZTn" role="2OqNvi">
+                    <node concept="liA8E" id="6ky$bTaBNAt" role="2OqNvi">
                       <ref role="37wK5l" node="44EDGiDM5lg" resolve="asBean" />
                     </node>
                   </node>
                 </node>
-              </node>
-              <node concept="37vLTw" id="$fM5MiWUEF" role="37vLTJ">
-                <ref role="3cqZAo" node="$fM5MiWRm2" resolve="modified" />
               </node>
             </node>
           </node>
