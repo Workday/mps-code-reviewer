@@ -141,11 +141,8 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
-      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
-        <property id="6329021646629104958" name="text" index="3SKdUp" />
-      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+        <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
@@ -156,6 +153,14 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -203,8 +208,58 @@
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="4Ew7qBDvHkY" role="3clF47">
         <node concept="3SKdUt" id="FcpLTGZdZK" role="3cqZAp">
-          <node concept="3SKdUq" id="FcpLTGZdZM" role="3SKWNk">
-            <property role="3SKdUp" value="type adapter is NOT a hierarchy adapter, because we just use it to identify the activity subclass" />
+          <node concept="1PaTwC" id="6OjMhS4fBTc" role="3ndbpf">
+            <node concept="3oM_SD" id="6OjMhS4fBTd" role="1PaTwD">
+              <property role="3oM_SC" value="type" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTe" role="1PaTwD">
+              <property role="3oM_SC" value="adapter" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTf" role="1PaTwD">
+              <property role="3oM_SC" value="is" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTg" role="1PaTwD">
+              <property role="3oM_SC" value="NOT" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTh" role="1PaTwD">
+              <property role="3oM_SC" value="a" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTi" role="1PaTwD">
+              <property role="3oM_SC" value="hierarchy" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTj" role="1PaTwD">
+              <property role="3oM_SC" value="adapter," />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTk" role="1PaTwD">
+              <property role="3oM_SC" value="because" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTl" role="1PaTwD">
+              <property role="3oM_SC" value="we" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTm" role="1PaTwD">
+              <property role="3oM_SC" value="just" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTn" role="1PaTwD">
+              <property role="3oM_SC" value="use" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTo" role="1PaTwD">
+              <property role="3oM_SC" value="it" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTp" role="1PaTwD">
+              <property role="3oM_SC" value="to" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTq" role="1PaTwD">
+              <property role="3oM_SC" value="identify" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTr" role="1PaTwD">
+              <property role="3oM_SC" value="the" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTs" role="1PaTwD">
+              <property role="3oM_SC" value="activity" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBTt" role="1PaTwD">
+              <property role="3oM_SC" value="subclass" />
+            </node>
           </node>
         </node>
         <node concept="3cpWs6" id="FcpLTGYWV5" role="3cqZAp">
@@ -591,8 +646,37 @@
             <property role="TyiWL" value="false" />
             <node concept="3clFbS" id="Jm1BRJQGDK" role="3clFbx">
               <node concept="3SKdUt" id="4xwNC9qCM6Q" role="3cqZAp">
-                <node concept="3SKdUq" id="4xwNC9qCM6R" role="3SKWNk">
-                  <property role="3SKdUp" value="unknown action type, return a generic activity as a placeholder" />
+                <node concept="1PaTwC" id="6OjMhS4fBTu" role="3ndbpf">
+                  <node concept="3oM_SD" id="6OjMhS4fBTv" role="1PaTwD">
+                    <property role="3oM_SC" value="unknown" />
+                  </node>
+                  <node concept="3oM_SD" id="6OjMhS4fBTw" role="1PaTwD">
+                    <property role="3oM_SC" value="action" />
+                  </node>
+                  <node concept="3oM_SD" id="6OjMhS4fBTx" role="1PaTwD">
+                    <property role="3oM_SC" value="type," />
+                  </node>
+                  <node concept="3oM_SD" id="6OjMhS4fBTy" role="1PaTwD">
+                    <property role="3oM_SC" value="return" />
+                  </node>
+                  <node concept="3oM_SD" id="6OjMhS4fBTz" role="1PaTwD">
+                    <property role="3oM_SC" value="a" />
+                  </node>
+                  <node concept="3oM_SD" id="6OjMhS4fBT$" role="1PaTwD">
+                    <property role="3oM_SC" value="generic" />
+                  </node>
+                  <node concept="3oM_SD" id="6OjMhS4fBT_" role="1PaTwD">
+                    <property role="3oM_SC" value="activity" />
+                  </node>
+                  <node concept="3oM_SD" id="6OjMhS4fBTA" role="1PaTwD">
+                    <property role="3oM_SC" value="as" />
+                  </node>
+                  <node concept="3oM_SD" id="6OjMhS4fBTB" role="1PaTwD">
+                    <property role="3oM_SC" value="a" />
+                  </node>
+                  <node concept="3oM_SD" id="6OjMhS4fBTC" role="1PaTwD">
+                    <property role="3oM_SC" value="placeholder" />
+                  </node>
                 </node>
               </node>
               <node concept="3cpWs6" id="24VqSbHfEA3" role="3cqZAp">
@@ -711,8 +795,37 @@
             </node>
           </node>
           <node concept="3SKdUt" id="4xwNC9qCLEv" role="3cqZAp">
-            <node concept="3SKdUq" id="4xwNC9qCLEx" role="3SKWNk">
-              <property role="3SKdUp" value="unknown action type, return a generic activity as a placeholder" />
+            <node concept="1PaTwC" id="6OjMhS4fBTD" role="3ndbpf">
+              <node concept="3oM_SD" id="6OjMhS4fBTE" role="1PaTwD">
+                <property role="3oM_SC" value="unknown" />
+              </node>
+              <node concept="3oM_SD" id="6OjMhS4fBTF" role="1PaTwD">
+                <property role="3oM_SC" value="action" />
+              </node>
+              <node concept="3oM_SD" id="6OjMhS4fBTG" role="1PaTwD">
+                <property role="3oM_SC" value="type," />
+              </node>
+              <node concept="3oM_SD" id="6OjMhS4fBTH" role="1PaTwD">
+                <property role="3oM_SC" value="return" />
+              </node>
+              <node concept="3oM_SD" id="6OjMhS4fBTI" role="1PaTwD">
+                <property role="3oM_SC" value="a" />
+              </node>
+              <node concept="3oM_SD" id="6OjMhS4fBTJ" role="1PaTwD">
+                <property role="3oM_SC" value="generic" />
+              </node>
+              <node concept="3oM_SD" id="6OjMhS4fBTK" role="1PaTwD">
+                <property role="3oM_SC" value="activity" />
+              </node>
+              <node concept="3oM_SD" id="6OjMhS4fBTL" role="1PaTwD">
+                <property role="3oM_SC" value="as" />
+              </node>
+              <node concept="3oM_SD" id="6OjMhS4fBTM" role="1PaTwD">
+                <property role="3oM_SC" value="a" />
+              </node>
+              <node concept="3oM_SD" id="6OjMhS4fBTN" role="1PaTwD">
+                <property role="3oM_SC" value="placeholder" />
+              </node>
             </node>
           </node>
           <node concept="3cpWs6" id="4xwNC9qBTon" role="3cqZAp">
