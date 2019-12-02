@@ -161,11 +161,8 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
-      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
-        <property id="6329021646629104958" name="text" index="3SKdUp" />
-      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+        <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
@@ -177,6 +174,14 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
   </registry>
@@ -341,8 +346,25 @@
           </node>
         </node>
         <node concept="3SKdUt" id="7Ndzh9v4Qvq" role="3cqZAp">
-          <node concept="3SKdUq" id="7Ndzh9v4Qvs" role="3SKWNk">
-            <property role="3SKdUp" value="Get on the Magic IDEA Bus!" />
+          <node concept="1PaTwC" id="6OjMhS4fBUJ" role="3ndbpf">
+            <node concept="3oM_SD" id="6OjMhS4fBUK" role="1PaTwD">
+              <property role="3oM_SC" value="Get" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUL" role="1PaTwD">
+              <property role="3oM_SC" value="on" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUM" role="1PaTwD">
+              <property role="3oM_SC" value="the" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUN" role="1PaTwD">
+              <property role="3oM_SC" value="Magic" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUO" role="1PaTwD">
+              <property role="3oM_SC" value="IDEA" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUP" role="1PaTwD">
+              <property role="3oM_SC" value="Bus!" />
+            </node>
           </node>
         </node>
         <node concept="3clFbF" id="4GdANuvXuPa" role="3cqZAp">
@@ -371,8 +393,16 @@
         </node>
         <node concept="3clFbH" id="4dp0YvdKaPh" role="3cqZAp" />
         <node concept="3SKdUt" id="4Ew7qBDgwF4" role="3cqZAp">
-          <node concept="3SKdUq" id="4Ew7qBDgwF6" role="3SKWNk">
-            <property role="3SKdUp" value="Create the stores" />
+          <node concept="1PaTwC" id="6OjMhS4fBUQ" role="3ndbpf">
+            <node concept="3oM_SD" id="6OjMhS4fBUR" role="1PaTwD">
+              <property role="3oM_SC" value="Create" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUS" role="1PaTwD">
+              <property role="3oM_SC" value="the" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUT" role="1PaTwD">
+              <property role="3oM_SC" value="stores" />
+            </node>
           </node>
         </node>
         <node concept="3clFbF" id="7Ndzh9v4S8E" role="3cqZAp">
@@ -546,8 +576,31 @@
         </node>
         <node concept="3clFbH" id="4jyU69Oq_5w" role="3cqZAp" />
         <node concept="3SKdUt" id="4Ew7qBDgw1m" role="3cqZAp">
-          <node concept="3SKdUq" id="4Ew7qBDgw1o" role="3SKWNk">
-            <property role="3SKdUp" value="Hook up the GitBranchChangeListener to dispatch BranchChange events" />
+          <node concept="1PaTwC" id="6OjMhS4fBUU" role="3ndbpf">
+            <node concept="3oM_SD" id="6OjMhS4fBUV" role="1PaTwD">
+              <property role="3oM_SC" value="Hook" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUW" role="1PaTwD">
+              <property role="3oM_SC" value="up" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUX" role="1PaTwD">
+              <property role="3oM_SC" value="the" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUY" role="1PaTwD">
+              <property role="3oM_SC" value="GitBranchChangeListener" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBUZ" role="1PaTwD">
+              <property role="3oM_SC" value="to" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBV0" role="1PaTwD">
+              <property role="3oM_SC" value="dispatch" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBV1" role="1PaTwD">
+              <property role="3oM_SC" value="BranchChange" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBV2" role="1PaTwD">
+              <property role="3oM_SC" value="events" />
+            </node>
           </node>
         </node>
         <node concept="3clFbF" id="4Ew7qBDglyg" role="3cqZAp">
@@ -1123,8 +1176,16 @@
                 </node>
                 <node concept="3clFbH" id="8YTjRIagO" role="3cqZAp" />
                 <node concept="3SKdUt" id="8YTjRIaAb" role="3cqZAp">
-                  <node concept="3SKdUq" id="8YTjRIaAd" role="3SKWNk">
-                    <property role="3SKdUp" value="Update that review!" />
+                  <node concept="1PaTwC" id="6OjMhS4fBV3" role="3ndbpf">
+                    <node concept="3oM_SD" id="6OjMhS4fBV4" role="1PaTwD">
+                      <property role="3oM_SC" value="Update" />
+                    </node>
+                    <node concept="3oM_SD" id="6OjMhS4fBV5" role="1PaTwD">
+                      <property role="3oM_SC" value="that" />
+                    </node>
+                    <node concept="3oM_SD" id="6OjMhS4fBV6" role="1PaTwD">
+                      <property role="3oM_SC" value="review!" />
+                    </node>
                   </node>
                 </node>
                 <node concept="3cpWs8" id="8YTjRIa5M" role="3cqZAp">

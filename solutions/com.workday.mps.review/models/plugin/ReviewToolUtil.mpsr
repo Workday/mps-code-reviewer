@@ -116,11 +116,8 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
-      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
-        <property id="6329021646629104958" name="text" index="3SKdUp" />
-      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+        <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
     </language>
@@ -164,6 +161,14 @@
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
       <concept id="4222318806802425298" name="jetbrains.mps.lang.core.structure.SuppressErrorsAnnotation" flags="ng" index="15s5l7" />
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
+      </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="1151689724996" name="jetbrains.mps.baseLanguage.collections.structure.SequenceType" flags="in" index="A3Dl8">
@@ -328,13 +333,71 @@
               <node concept="3clFbJ" id="__fp3cnldR" role="3cqZAp">
                 <node concept="3clFbS" id="__fp3cnldS" role="3clFbx">
                   <node concept="3SKdUt" id="__fp3cnldT" role="3cqZAp">
-                    <node concept="3SKdUq" id="__fp3cnldU" role="3SKWNk">
-                      <property role="3SKdUp" value="if source is a folder data source then we use file-per-root persistence" />
+                    <node concept="1PaTwC" id="6OjMhS4fBVk" role="3ndbpf">
+                      <node concept="3oM_SD" id="6OjMhS4fBVl" role="1PaTwD">
+                        <property role="3oM_SC" value="if" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVm" role="1PaTwD">
+                        <property role="3oM_SC" value="source" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVn" role="1PaTwD">
+                        <property role="3oM_SC" value="is" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVo" role="1PaTwD">
+                        <property role="3oM_SC" value="a" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVp" role="1PaTwD">
+                        <property role="3oM_SC" value="folder" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVq" role="1PaTwD">
+                        <property role="3oM_SC" value="data" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVr" role="1PaTwD">
+                        <property role="3oM_SC" value="source" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVs" role="1PaTwD">
+                        <property role="3oM_SC" value="then" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVt" role="1PaTwD">
+                        <property role="3oM_SC" value="we" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVu" role="1PaTwD">
+                        <property role="3oM_SC" value="use" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVv" role="1PaTwD">
+                        <property role="3oM_SC" value="file-per-root" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVw" role="1PaTwD">
+                        <property role="3oM_SC" value="persistence" />
+                      </node>
                     </node>
                   </node>
                   <node concept="3SKdUt" id="__fp3cnldV" role="3cqZAp">
-                    <node concept="3SKdUq" id="__fp3cnldW" role="3SKWNk">
-                      <property role="3SKdUp" value="look for the .model file in this case" />
+                    <node concept="1PaTwC" id="6OjMhS4fBVx" role="3ndbpf">
+                      <node concept="3oM_SD" id="6OjMhS4fBVy" role="1PaTwD">
+                        <property role="3oM_SC" value="look" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVz" role="1PaTwD">
+                        <property role="3oM_SC" value="for" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBV$" role="1PaTwD">
+                        <property role="3oM_SC" value="the" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBV_" role="1PaTwD">
+                        <property role="3oM_SC" value=".model" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVA" role="1PaTwD">
+                        <property role="3oM_SC" value="file" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVB" role="1PaTwD">
+                        <property role="3oM_SC" value="in" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVC" role="1PaTwD">
+                        <property role="3oM_SC" value="this" />
+                      </node>
+                      <node concept="3oM_SD" id="6OjMhS4fBVD" role="1PaTwD">
+                        <property role="3oM_SC" value="case" />
+                      </node>
                     </node>
                   </node>
                   <node concept="3clFbF" id="__fp3cnldX" role="3cqZAp">
@@ -387,13 +450,74 @@
                   </node>
                   <node concept="3clFbS" id="__fp3cnleg" role="3eOfB_">
                     <node concept="3SKdUt" id="__fp3cnleh" role="3cqZAp">
-                      <node concept="3SKdUq" id="__fp3cnlei" role="3SKWNk">
-                        <property role="3SKdUp" value="if source is a file data source then we use file-per-model persistence" />
+                      <node concept="1PaTwC" id="6OjMhS4fBVE" role="3ndbpf">
+                        <node concept="3oM_SD" id="6OjMhS4fBVF" role="1PaTwD">
+                          <property role="3oM_SC" value="if" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVG" role="1PaTwD">
+                          <property role="3oM_SC" value="source" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVH" role="1PaTwD">
+                          <property role="3oM_SC" value="is" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVI" role="1PaTwD">
+                          <property role="3oM_SC" value="a" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVJ" role="1PaTwD">
+                          <property role="3oM_SC" value="file" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVK" role="1PaTwD">
+                          <property role="3oM_SC" value="data" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVL" role="1PaTwD">
+                          <property role="3oM_SC" value="source" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVM" role="1PaTwD">
+                          <property role="3oM_SC" value="then" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVN" role="1PaTwD">
+                          <property role="3oM_SC" value="we" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVO" role="1PaTwD">
+                          <property role="3oM_SC" value="use" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVP" role="1PaTwD">
+                          <property role="3oM_SC" value="file-per-model" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVQ" role="1PaTwD">
+                          <property role="3oM_SC" value="persistence" />
+                        </node>
                       </node>
                     </node>
                     <node concept="3SKdUt" id="__fp3cnlej" role="3cqZAp">
-                      <node concept="3SKdUq" id="__fp3cnlek" role="3SKWNk">
-                        <property role="3SKdUp" value="simply ask the data source for its backing file" />
+                      <node concept="1PaTwC" id="6OjMhS4fBVR" role="3ndbpf">
+                        <node concept="3oM_SD" id="6OjMhS4fBVS" role="1PaTwD">
+                          <property role="3oM_SC" value="simply" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVT" role="1PaTwD">
+                          <property role="3oM_SC" value="ask" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVU" role="1PaTwD">
+                          <property role="3oM_SC" value="the" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVV" role="1PaTwD">
+                          <property role="3oM_SC" value="data" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVW" role="1PaTwD">
+                          <property role="3oM_SC" value="source" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVX" role="1PaTwD">
+                          <property role="3oM_SC" value="for" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVY" role="1PaTwD">
+                          <property role="3oM_SC" value="its" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBVZ" role="1PaTwD">
+                          <property role="3oM_SC" value="backing" />
+                        </node>
+                        <node concept="3oM_SD" id="6OjMhS4fBW0" role="1PaTwD">
+                          <property role="3oM_SC" value="file" />
+                        </node>
                       </node>
                     </node>
                     <node concept="3clFbF" id="__fp3cnlel" role="3cqZAp">

@@ -133,11 +133,8 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
-      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
-        <property id="6329021646629104958" name="text" index="3SKdUp" />
-      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
-        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+        <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
@@ -156,6 +153,14 @@
       </concept>
       <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
         <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
+      </concept>
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="ng" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="ng" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
   </registry>
@@ -434,8 +439,31 @@
         </node>
         <node concept="3clFbH" id="5jaFXd__F6Y" role="3cqZAp" />
         <node concept="3SKdUt" id="5jaFXd__Eme" role="3cqZAp">
-          <node concept="3SKdUq" id="5jaFXd__Emg" role="3SKWNk">
-            <property role="3SKdUp" value="Fill border and interior, but not the component" />
+          <node concept="1PaTwC" id="6OjMhS4fBX5" role="3ndbpf">
+            <node concept="3oM_SD" id="6OjMhS4fBX6" role="1PaTwD">
+              <property role="3oM_SC" value="Fill" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBX7" role="1PaTwD">
+              <property role="3oM_SC" value="border" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBX8" role="1PaTwD">
+              <property role="3oM_SC" value="and" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBX9" role="1PaTwD">
+              <property role="3oM_SC" value="interior," />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXa" role="1PaTwD">
+              <property role="3oM_SC" value="but" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXb" role="1PaTwD">
+              <property role="3oM_SC" value="not" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXc" role="1PaTwD">
+              <property role="3oM_SC" value="the" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXd" role="1PaTwD">
+              <property role="3oM_SC" value="component" />
+            </node>
           </node>
         </node>
         <node concept="3cpWs8" id="7Ch0QDHAblO" role="3cqZAp">
@@ -608,8 +636,46 @@
           </node>
         </node>
         <node concept="3SKdUt" id="5jaFXd_AVJT" role="3cqZAp">
-          <node concept="3SKdUq" id="5jaFXd_AVJV" role="3SKWNk">
-            <property role="3SKdUp" value="This can be used to not paint the non-border portion of the component" />
+          <node concept="1PaTwC" id="6OjMhS4fBXe" role="3ndbpf">
+            <node concept="3oM_SD" id="6OjMhS4fBXf" role="1PaTwD">
+              <property role="3oM_SC" value="This" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXg" role="1PaTwD">
+              <property role="3oM_SC" value="can" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXh" role="1PaTwD">
+              <property role="3oM_SC" value="be" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXi" role="1PaTwD">
+              <property role="3oM_SC" value="used" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXj" role="1PaTwD">
+              <property role="3oM_SC" value="to" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXk" role="1PaTwD">
+              <property role="3oM_SC" value="not" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXl" role="1PaTwD">
+              <property role="3oM_SC" value="paint" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXm" role="1PaTwD">
+              <property role="3oM_SC" value="the" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXn" role="1PaTwD">
+              <property role="3oM_SC" value="non-border" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXo" role="1PaTwD">
+              <property role="3oM_SC" value="portion" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXp" role="1PaTwD">
+              <property role="3oM_SC" value="of" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXq" role="1PaTwD">
+              <property role="3oM_SC" value="the" />
+            </node>
+            <node concept="3oM_SD" id="6OjMhS4fBXr" role="1PaTwD">
+              <property role="3oM_SC" value="component" />
+            </node>
           </node>
         </node>
         <node concept="1X3_iC" id="5jaFXd_ARpc" role="lGtFl">
