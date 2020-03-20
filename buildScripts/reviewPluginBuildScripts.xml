@@ -60,7 +60,7 @@
       <fileset dir="${build.tmp}/default/com.workday.mps.git4mps.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-com.workday.mps.git4mps-models">
-      <fileset dir="${project.home}/solutions/com.workday.mps.git4mps/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${project.home}/solutions/com.workday.mps.git4mps/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/com.workday.mps.git4mps-src.jar" duplicate="preserve">
       <fileset dir="${project.home}/solutions/com.workday.mps.git4mps/source_gen">
@@ -97,7 +97,7 @@
       <fileset dir="${build.tmp}/default/com.workday.mps.review.build.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-com.workday.mps.review.build-models">
-      <fileset dir="${project.home}/solutions/com.workday.mps.review.build/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${project.home}/solutions/com.workday.mps.review.build/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/com.workday.mps.review.build-src.jar" duplicate="preserve">
       <fileset dir="${project.home}/solutions/com.workday.mps.review.build/source_gen">
@@ -137,11 +137,11 @@
     <echo message="generating" />
     <generate strictMode="true" parallelMode="true" parallelThreads="8" useInplaceTransform="false" hideWarnings="false" createStaticRefs="true" fork="true" skipUnmodifiedModels="${mps.generator.skipUnmodifiedModels}">
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.build" />
-      <plugin path="${artifacts.com.mbeddr.platform}/de.slisson.mps.all" />
+      <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.extensions.build" />
       <plugin path="${artifacts.mps}/plugins/mps-build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.jar" />
-      <library file="${artifacts.com.mbeddr.platform}/de.slisson.mps.all/languages/de.slisson.mps.all/de.itemis.mps.extensions.build.jar" />
+      <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.extensions.build/languages/de.itemis.mps.extensions.build/de.itemis.mps.extensions.build.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/closures.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/collections.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
@@ -195,13 +195,14 @@
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.refactoring.participant.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.typesystemEngine.jar" />
       <library file="${artifacts.mps}/languages/make/jetbrains.mps.make.facets.jar" />
+      <library file="${artifacts.mps}/languages/make/jetbrains.mps.make.jar" />
       <library file="${artifacts.mps}/languages/make/jetbrains.mps.make.runtime.jar" />
       <library file="${artifacts.mps}/languages/make/jetbrains.mps.smodel.resources.jar" />
       <library file="${artifacts.mps}/languages/mps-stubs.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.baseLanguage.search.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.baseLanguage.util.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.platform.jar" />
-      <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.ui.jar" />
+      <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.refactoring.platform.jar" />
       <library file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
       <library file="${artifacts.mps}/languages/runtimes/jetbrains.mps.dataFlow.runtime.jar" />
       <library file="${artifacts.mps}/languages/runtimes/jetbrains.mps.findUsages.runtime.jar" />

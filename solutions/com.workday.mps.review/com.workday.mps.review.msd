@@ -10,6 +10,11 @@
       <sourceRoot location="gson-2.8.2.jar" />
     </modelRoot>
   </models>
+  <facets>
+    <facet type="java">
+      <classes generated="true" path="${module}/classes_gen" />
+    </facet>
+  </facets>
   <stubModelEntries>
     <stubModelEntry path="${module}/lib/okhttp-3.10.0.jar" />
     <stubModelEntry path="${module}/lib/okio-1.14.0.jar" />
