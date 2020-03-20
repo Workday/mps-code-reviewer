@@ -43,6 +43,30 @@ dependencies {
   git4mpsCompile files('artifacts/MPS/plugins/git4idea/lib/git4idea-rt.jar')
 }
 
+def expected_java_version = JavaVersion.VERSION_11
+def jdk_home
+
+if (System.getenv('JAVA11_HOME') != null) {
+    jdk_home = System.getenv('JAVA11_HOME')
+} else {
+    if (JavaVersion.current() != expected_java_version) {
+        throw new GradleException("This build script requires Java 11 but you are currently using ${JavaVersion.current()}.\n"
+        	+ "Try one of the following:\n"
+            + "* Set JAVA_HOME to point to a Java 11 distribution\n"
+            + "* If you want to keep your JAVA_HOME pointing to another distribution, you can also use the JAVA11_HOME environment variable\n"
+            + "* Run Gradle using Java 11 directly")
+    }
+    jdk_home = System.getProperty('java.home')
+}
+
+// Check JDK location
+if (!new File(jdk_home, "lib").exists()) {
+    throw new GradleException("Unable to locate JDK home folder. Detected folder is: $jdk_home")
+}
+logger.info 'Using JDK from {}', jdk_home
+
+ext.jdk_home = jdk_home
+
 task unzipMps(type: Copy, description: "Unzips MPS into the artifacts folder.") {
   dependsOn configurations.mps
   from {
@@ -198,6 +222,7 @@ void runAnt(Object buildfile, String... targets) {
 void exec(String textToFind, Object... args) {
     exec {
         commandLine = args
+        environment "JAVA_HOME", jdk_home
     }
 }
 
@@ -209,6 +234,7 @@ void execAndFailIfTextFound(String textToFind, Object... args) {
       commandLine = args
       standardOutput = teeOutput
       errorOutput = teeOutput
+      environment "JAVA_HOME", jdk_home
   }
   String testOutput = taskOutput.toString()
   if (testOutput.contains(textToFind)) {
